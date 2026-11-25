@@ -1,0 +1,2 @@
+# Optional documentation export; firmware/runtime requirements are unchanged.
+Pillow==12.3.0

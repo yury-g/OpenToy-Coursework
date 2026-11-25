@@ -1,0 +1,25 @@
+{
+  "kind": "C++ native face renderer with synthetic observations; header/footer annotated in Python; not camera or device video, no speed evidence",
+  "frames": 120,
+  "step_ms": 100,
+  "metadata": {
+    "app_id": "copy-face",
+    "display_name_short": "COPY-FACE",
+    "display_name": "Copy-Face",
+    "firmware_version": "0.2.1-proto",
+    "version_created": "2026-11-17",
+    "hardware_target": "crowpanel-dhe04209d-v1.0-p4",
+    "battery_source": "unavailable",
+    "vision_source": "local-sc2336-five-point-face-detector",
+    "mouth_source": "neutral-live; synthetic-lip-contours-in-simulation"
+  },
+  "source_sha256": {
+    "core/Tracking.h": "5e5f02ce328b6a8d8dcde27c6de01d3e4aaca4a29dd7d374d9c025c2f9bae05a",
+    "core/Geometry.h": "a1ab93fe146b26547efce5be8b9dd678330e44940712761a2c9797619a1e0cd6",
+    "core/DeveloperView.h": "9b1700c30b098e5d973c9d9377d020ccde78094e71494a6c2ce67fc4d673077b",
+    "core/Strokes.h": "5d37a91f80441a55256aec6982ed22d14c06c1a839c419755c69f4d956cc42e8",
+    "core/Scene.h": "a3247751723fab9d4fde1b993db6a45afe236662a9e69bf4eea05f4b7f54ae26",
+    "firmware/reference/Smooth.h": "e961d28945551f2e7aefec152b7aa77199b180671cc3896770121cb2de6a7866",
+    "tools/preview.cpp": "411310ce45c4b10363da010e322555a73cc719be7e36c9fb8e8408dc1c2214b3"
+  }
+}

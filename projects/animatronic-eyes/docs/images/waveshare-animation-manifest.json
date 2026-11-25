@@ -1,0 +1,15 @@
+{
+  "kind": "source simulation, not hardware footage",
+  "battery_mv": "illustrative 4100",
+  "frames": 270,
+  "duration_ms": 27000,
+  "sources": {
+    "tools/waveshare_frames.cpp": "ce75d7744c7fe271ed2934308ee8ef492b8b6cd8eb7112227c9babaa58653390",
+    "firmware/WaveshareEyes/Round.h": "5af37dea31cfd3a27ea879d6628553cf76b3f6eb6f3961b32c271cda379ad8b7",
+    "firmware/WaveshareEyes/Status.h": "f2c21817fe3006fcdd836c11db2a7d92b4409e5a147481a0bf12a27d5b222879",
+    "firmware/WaveshareEyes/MenuView.h": "6c247dad37f4a4855a1117f696c9a8e5885e4fc3b199489cb4e354c16d951717",
+    "firmware/WaveshareEyes/Menu.h": "10bbb4ceaf7f5e3a978226d77a2417233438dd2f96a5305e60376bdaafd83ee2",
+    "firmware/WaveshareEyes/Metadata.h": "372bd3657cd5476901b90192353bd5cc9de249c3e5f14be7170be11c1cd92fbe",
+    "firmware/AnimatronicEyes/Companion.h": "99b9744c06d50321409c7d539f9e62c9756dae7155f597d8344605fd49351b1f"
+  }
+}

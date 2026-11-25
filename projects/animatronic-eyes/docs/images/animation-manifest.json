@@ -1,0 +1,33 @@
+{
+  "simulation": true,
+  "scripted_inputs": true,
+  "status_strip_omitted": true,
+  "distinct_nesso_frames": 290,
+  "both_full_blinks": [
+    true,
+    true
+  ],
+  "unequal_moods": true,
+  "animatronic-family.gif": {
+    "frames": 443,
+    "duration_ms": 24000,
+    "sha256": "84bca03df0dfbcdc9eecf44fff5d7d0dcbeaa3f71659c8d29dc995d768d92c3c"
+  },
+  "nesso-eyes-behavior.gif": {
+    "frames": 297,
+    "duration_ms": 24000,
+    "sha256": "c1cc158ccc300d08c35e25f47a378af4f8acc2c19d92fb605613bbdbb16e7c17"
+  },
+  "source_sha256": {
+    "firmware/NessoEyes/Idle.h": "da8c1b084640e95e74703e7bb1de8c82ccb882840867b94b2c2e5e072b9d27a8",
+    "firmware/NessoEyes/TouchReaction.h": "bd84a3167fe864e581c49c6703602761a41379799b29b78dd82df87f397b3659",
+    "firmware/NessoEyes/Presentation.h": "648c862bc1d2192e0b4f56e079f661ca4db968034c016b38202668f84916ee69",
+    "shared/opentoy/EyePixels.h": "37353fd955238f644bd6fa8d380471503799aac65a61b6f6eb46a469667fcaa9",
+    "shared/opentoy/DoodlePixels.h": "8d025c8fce2f42289dbc57b20d95331baef1f6ac50611a5fe172ccdc14fdad1a",
+    "firmware/AnimatronicEyes/Controls.h": "3304f5dca39d582ef0aa59a498f2b46f7f6ab3ff291958ccdd9606e5835aa1a7",
+    "firmware/AnimatronicEyes/Companion.h": "99b9744c06d50321409c7d539f9e62c9756dae7155f597d8344605fd49351b1f",
+    "firmware/AnimatronicEyes/Personality.h": "1071123b07a3dc537ca3c484a519ae852e1a1ab1e68350c098f97d9e632de14d",
+    "tools/family_frames.cpp": "72fa622717ccd0dca9178d3cd27e0495170f2e8549ae2612e83780b811ac75ab",
+    "tools/render_family.py": "b54398ebb1d70b8ed399d2af79d67369eeac4865277baf083e7bb1f4f5ee5ecd"
+  }
+}

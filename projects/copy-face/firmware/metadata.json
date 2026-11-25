@@ -1,0 +1,11 @@
+{
+  "app_id": "copy-face",
+  "display_name_short": "COPY-FACE",
+  "display_name": "Copy-Face",
+  "firmware_version": "0.2.1-proto",
+  "version_created": "2026-11-17",
+  "hardware_target": "crowpanel-dhe04209d-v1.0-p4",
+  "battery_source": "unavailable",
+  "vision_source": "local-sc2336-five-point-face-detector",
+  "mouth_source": "neutral-live; synthetic-lip-contours-in-simulation"
+}
