@@ -1,0 +1,210 @@
+<!-- SPDX-License-Identifier: MIT; OpenToy Face v2 visual prototype, no hardware connection. -->
+<div id="opentoy-face-motion">
+  <div class="viz-row" aria-label="Animation approach">
+    <button class="btn" type="button" data-mode="procedural" aria-pressed="true">Procedural curves</button>
+    <button class="btn" type="button" data-mode="morph" aria-pressed="false">Preset morph</button>
+  </div>
+  <div class="viz-row" aria-label="Expression presets">
+    <button class="btn" type="button" data-expression="happy" aria-pressed="true">Happy</button>
+    <button class="btn" type="button" data-expression="surprised" aria-pressed="false">Surprised</button>
+    <button class="btn" type="button" data-expression="angry" aria-pressed="false">Angry</button>
+    <button class="btn" type="button" data-expression="sorry" aria-pressed="false">Sorry</button>
+    <button class="btn" type="button" data-expression="nervous" aria-pressed="false">Nervous</button>
+  </div>
+  <figure class="face-preview">
+    <canvas width="128" height="64" role="img" aria-label="Happy playful doodle face, 128 by 64 design preview"></canvas>
+    <figcaption class="text-small text-muted">Face v2 · 128 × 64 design simulation</figcaption>
+  </figure>
+  <div class="face-controls">
+    <fieldset>
+      <legend>Eyes &amp; brows · left stick</legend>
+      <label class="form-label" for="ft-eye">Eye bend · up/down <output class="tabular-nums" data-value="eye">0</output></label>
+      <input class="form-range" id="ft-eye" data-axis="eye" type="range" min="-100" max="100" value="0" />
+      <label class="form-label" for="ft-brow">Brow bend · left/right <output class="tabular-nums" data-value="brow">0</output></label>
+      <input class="form-range" id="ft-brow" data-axis="brow" type="range" min="-100" max="100" value="0" />
+      <label class="form-label" for="ft-blink">Blink · left trigger <output class="tabular-nums" data-value="blink">0</output></label>
+      <input class="form-range" id="ft-blink" data-axis="blink" type="range" min="0" max="100" value="0" />
+    </fieldset>
+    <fieldset>
+      <legend>Mouth · right stick</legend>
+      <label class="form-label" for="ft-mouth">Mouth bend · up/down <output class="tabular-nums" data-value="mouth">0</output></label>
+      <input class="form-range" id="ft-mouth" data-axis="mouth" type="range" min="-100" max="100" value="0" />
+      <label class="form-label" for="ft-skew">Side pull · left/right <output class="tabular-nums" data-value="skew">0</output></label>
+      <input class="form-range" id="ft-skew" data-axis="skew" type="range" min="-100" max="100" value="0" />
+      <label class="form-label" for="ft-jaw">Open mouth · right trigger <output class="tabular-nums" data-value="jaw">25</output></label>
+      <input class="form-range" id="ft-jaw" data-axis="jaw" type="range" min="0" max="100" value="25" />
+    </fieldset>
+  </div>
+  <div class="viz-row">
+    <label class="form-check"><input class="form-check-input" type="checkbox" data-option="wiggle" checked /><span class="form-check-label">Elastic wiggle</span></label>
+    <label class="form-check"><input class="form-check-input" type="checkbox" data-option="pixel" checked /><span class="form-check-label">Pixel view</span></label>
+    <button class="btn" type="button" data-demo>Play motion demo</button>
+  </div>
+  <div class="text-small text-muted" data-detail aria-live="polite">Happy · resting</div>
+</div>
+<style>
+  #opentoy-face-motion .face-preview { margin:1rem 0; display:flex; flex-direction:column; align-items:center; gap:.5rem; }
+  #opentoy-face-motion canvas { display:block; width:100%; max-width:640px; aspect-ratio:2; image-rendering:pixelated; }
+  #opentoy-face-motion .face-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem 1.5rem; margin-bottom:1rem; }
+  #opentoy-face-motion fieldset { min-width:0; margin:0; padding:0; border:0; }
+  #opentoy-face-motion legend { margin-bottom:.6rem; }
+  #opentoy-face-motion output { float:right; }
+  #opentoy-face-motion [data-detail] { margin-top:.5rem; }
+  @media(max-width:480px) { #opentoy-face-motion .face-controls { grid-template-columns:1fr; } }
+</style>
+<script>
+(() => {
+  const root=document.getElementById('opentoy-face-motion');
+  const canvas=root.querySelector('canvas'),ctx=canvas.getContext('2d');
+  const scratch=document.createElement('canvas'),ink=scratch.getContext('2d',{willReadFrequently:true});
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const presets={
+    happy:{eye:.85,brow:0,mouth:.9,width:16,eyeWidth:10,eyeY:29,asym:.08,wave:0,jaw:.25},
+    surprised:{eye:1.35,brow:-.3,mouth:0,width:7,eyeWidth:6,eyeY:32,asym:0,wave:0,jaw:.92},
+    angry:{eye:-.5,brow:1,mouth:-.7,width:12,eyeWidth:10,eyeY:27,asym:.12,wave:.15,jaw:0},
+    sorry:{eye:-.42,brow:-1,mouth:-.4,width:9,eyeWidth:9,eyeY:30,asym:.1,wave:0,jaw:0},
+    nervous:{eye:.55,brow:-.1,mouth:0,width:14,eyeWidth:8,eyeY:30,asym:.65,wave:1,jaw:0}
+  };
+  const keys=['eye','brow','mouth','skew','jaw','blink'];
+  let state={mode:'procedural',expression:'happy',eye:0,brow:0,mouth:0,skew:0,jaw:.25,blink:0,wiggle:!reduced,pixel:true};
+  const current={},velocity={},moved={eye:-1e6,brow:-1e6,mouth:-1e6},energy={eye:0,brow:0,mouth:0};
+  let frame=0,lastTime=0,demoStart=null,demoPhase=-1;
+  const clamp=(v,lo,hi)=>Math.max(lo,Math.min(hi,v));
+  const title=s=>s.charAt(0).toUpperCase()+s.slice(1);
+  function restore(value){
+    const v=value?.modelContent;
+    if(!v || v.prototype!=='playful-face-motion')return;
+    if(presets[v.expression])state.expression=v.expression;
+    if(['procedural','morph'].includes(v.mode))state.mode=v.mode;
+    for(const k of keys)if(Number.isFinite(v[k]))state[k]=clamp(v[k],k==='jaw'||k==='blink'?0:-1,1);
+    for(const k of ['pixel','wiggle'])if(typeof v[k]==='boolean')state[k]=v[k];
+  }
+  restore(window.openai?.widgetState);
+  const target=()=>{
+    const p=presets[state.expression];
+    if(state.mode==='morph'){
+      const mix=(base,other,t)=>base+(other-base)*Math.abs(t);
+      const eye=presets[state.eye>=0?'surprised':'angry'];
+      const brow=presets[state.brow>=0?'angry':'sorry'];
+      const mouth=presets[state.mouth>=0?'happy':'sorry'];
+      return {eye:mix(p.eye,eye.eye,state.eye),brow:mix(p.brow,brow.brow,state.brow),mouth:mix(p.mouth,mouth.mouth,state.mouth),skew:state.skew,jaw:state.jaw,blink:state.blink,width:mix(p.width,mouth.width,state.mouth),eyeWidth:mix(p.eyeWidth,eye.eyeWidth,state.eye),eyeY:mix(p.eyeY,eye.eyeY,state.eye),asym:p.asym,wave:mix(p.wave,mouth.wave,state.mouth)};
+    }
+    return {eye:clamp(p.eye+state.eye*1.3,-1.1,1.5),brow:clamp(p.brow+state.brow*1.4,-1.4,1.4),mouth:clamp(p.mouth+state.mouth*1.5,-1.2,1.2),skew:state.skew,jaw:state.jaw,blink:state.blink,width:p.width,eyeWidth:p.eyeWidth,eyeY:p.eyeY,asym:p.asym,wave:p.wave};
+  };
+  function save(){
+    if(window.openai?.setWidgetState)Promise.resolve(window.openai.setWidgetState({modelContent:{prototype:'playful-face-motion',...state},privateContent:null})).catch(()=>{});
+  }
+  function controls(){
+    for(const k of keys){root.querySelector('[data-axis="'+k+'"]').value=Math.round(state[k]*100);root.querySelector('[data-value="'+k+'"]').textContent=Math.round(state[k]*100);}
+    for(const b of root.querySelectorAll('[data-expression]'))b.setAttribute('aria-pressed',String(b.dataset.expression===state.expression));
+    for(const b of root.querySelectorAll('[data-mode]'))b.setAttribute('aria-pressed',String(b.dataset.mode===state.mode));
+    for(const k of ['pixel','wiggle'])root.querySelector('[data-option="'+k+'"]').checked=state[k];
+    root.querySelector('[data-demo]').textContent=demoStart===null?'Play motion demo':'Stop motion demo';
+  }
+  function wake(){if(!frame){lastTime=performance.now();frame=requestAnimationFrame(tick);}}
+  function impulse(part,amount=1){moved[part]=performance.now();energy[part]=clamp(Math.abs(amount),.15,1);}
+  function select(expression,remember=true){
+    state={...state,expression,eye:0,brow:0,mouth:0,skew:0,jaw:presets[expression].jaw,blink:0};
+    for(const part of ['eye','brow','mouth'])impulse(part);
+    controls();root.querySelector('[data-detail]').textContent=title(expression)+' · expression morph';wake();if(remember)save();
+  }
+  function wiggle(part,now){
+    const age=(now-moved[part])/1000;
+    return state.wiggle&&!reduced&&age>=0?energy[part]*Math.sin(age*25)*Math.exp(-age*6)*1.4:0;
+  }
+  function line(points){ink.beginPath();points.forEach((p,i)=>i?ink.lineTo(p[0],p[1]):ink.moveTo(p[0],p[1]));ink.stroke();}
+  function draw(now){
+    const res=state.pixel?128:640;
+    if(canvas.width!==res){canvas.width=res;canvas.height=res/2;}
+    if(scratch.width!==res){scratch.width=res;scratch.height=res/2;}
+    ink.setTransform(res/128,0,0,res/128,0,0);
+    // The simulated monochrome OLED has a fixed black/white palette.
+    ink.fillStyle='#000';ink.fillRect(0,0,128,64);ink.strokeStyle='#fff';ink.lineWidth=2;ink.lineCap='round';ink.lineJoin='round';
+    const ew=wiggle('eye',now),bw=wiggle('brow',now),mw=wiggle('mouth',now);
+    for(let i=0;i<2;i++){
+      const x=i?91:37,side=i?1:-1;
+      const bend=current.eye+(i?-1:1)*current.asym*.22;
+      const y=current.eyeY+ew*side*.6;
+      ink.beginPath();ink.moveTo(x-current.eyeWidth,y);ink.quadraticCurveTo(x+ew*.65,y-(1-clamp(current.blink,0,1))*bend*20,x+current.eyeWidth,y+current.asym*side);ink.stroke();
+      const b=current.brow+current.asym*side*.55;
+      const outerY=13-Math.abs(b)*1.5+bw*side,innerY=13+b*5+bw*.6;
+      ink.beginPath();ink.moveTo(x-9,i?innerY:outerY);ink.quadraticCurveTo(x+bw*.5,11-Math.abs(b)*2+bw,x+9,i?outerY:innerY);ink.stroke();
+    }
+    const center=64+current.skew*4,w=current.width,left=center-w,right=center+w;
+    const open=clamp(current.jaw,0,1),curve=current.mouth,skew=current.skew;
+    function mouthLine(sign){
+      const points=[];
+      const cy=clamp(46+curve*13+sign*open*(sign>0?15:9),27,65);
+      for(let i=0;i<=32;i++){
+        const t=i/32,u=1-t;
+        const x=u*u*u*left+3*u*u*t*(left+w*.6)+3*u*t*t*(right-w*.6)+t*t*t*right;
+        const y=u*u*u*(46-skew*2)+3*u*u*t*(cy+mw)+3*u*t*t*(cy-mw*.5)+t*t*t*(46+skew*2)+Math.sin(t*Math.PI*4)*current.wave*1.45;
+        points.push([x,y]);
+      }
+      return points;
+    }
+    if(open<.045)line(mouthLine(0));
+    else {const top=mouthLine(-1),bottom=mouthLine(1);line([...top,...bottom.reverse(),top[0]]);}
+    if(state.expression==='happy'||state.expression==='surprised'){
+      line([[16,26],[13,23]]);line([[15,32],[12,31]]);line([[112,26],[115,23]]);line([[113,32],[116,31]]);
+    }else if(state.expression==='angry'||state.expression==='sorry'){
+      line([[17,36],[14,39]]);line([[20,38],[18,41]]);line([[111,36],[114,39]]);line([[108,38],[110,41]]);
+    }else {line([[111,26],[110,30]]);line([[116,29],[115,33]]);}
+    if(state.pixel){
+      const data=ink.getImageData(0,0,128,64);
+      for(let i=0;i<data.data.length;i+=4){const v=data.data[i]>=112?255:0;data.data[i]=data.data[i+1]=data.data[i+2]=v;data.data[i+3]=255;}
+      ctx.putImageData(data,0,0);
+    }else {ctx.clearRect(0,0,res,res/2);ctx.drawImage(scratch,0,0);}
+    canvas.style.imageRendering=state.pixel?'pixelated':'auto';
+    canvas.setAttribute('aria-label',title(state.expression)+' playful doodle face, '+(state.pixel?'128 by 64 pixel':'smooth curve')+' design preview');
+  }
+  function demo(now){
+    const elapsed=(now-demoStart)/1000;
+    if(elapsed>=10){demoStart=null;controls();save();return;}
+    const phase=Math.floor(elapsed/2),names=Object.keys(presets);
+    if(phase!==demoPhase){demoPhase=phase;select(names[phase],false);}
+    const local=elapsed%2;
+    state.eye=Math.sin(local*Math.PI)*.45;
+    state.brow=Math.sin(local*Math.PI*1.5)*.5;
+    state.mouth=Math.sin(local*Math.PI*2)*.35;
+    state.skew=Math.sin(local*Math.PI*1.2)*.5;
+    state.jaw=clamp(presets[state.expression].jaw+Math.max(0,Math.sin(local*Math.PI*3))*.65,0,1);
+    state.blink=local>.85&&local<1.12?Math.sin((local-.85)/.27*Math.PI):0;
+    for(const part of ['eye','brow','mouth'])if(local<.35)impulse(part,.25);
+    controls();
+  }
+  function tick(now){
+    frame=0;
+    if(demoStart!==null)demo(now);
+    const dt=Math.min((now-lastTime)/1000,.03);lastTime=now;
+    const goal=target();let moving=false;
+    for(const k of Object.keys(goal)){
+      if(!state.wiggle||reduced){current[k]=goal[k];velocity[k]=0;}
+      else {velocity[k]+=(82*(goal[k]-current[k])-15*velocity[k])*dt;current[k]+=velocity[k]*dt;}
+      if(Math.abs(goal[k]-current[k])>.003||Math.abs(velocity[k])>.02)moving=true;
+    }
+    draw(now);
+    const recent=Object.values(moved).some(t=>now-t<1250);
+    if(moving||recent||demoStart!==null)wake();
+    else root.querySelector('[data-detail]').textContent=title(state.expression)+' · '+(state.mode==='procedural'?'procedural curves':'preset morph')+' · resting';
+  }
+  root.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
+    demoStart=null;state.mode=b.dataset.mode;for(const part of ['eye','brow','mouth'])impulse(part);controls();wake();save();
+  }));
+  root.querySelectorAll('[data-expression]').forEach(b=>b.addEventListener('click',()=>{demoStart=null;select(b.dataset.expression);}));
+  root.querySelectorAll('[data-axis]').forEach(input=>{
+    input.addEventListener('input',()=>{
+      demoStart=null;const key=input.dataset.axis,v=Number(input.value)/100,delta=v-state[key];state[key]=v;
+      const part=key==='eye'||key==='blink'?'eye':key==='brow'?'brow':'mouth';impulse(part,delta*2);controls();root.querySelector('[data-detail]').textContent=title(state.expression)+' · bending '+(part==='brow'?'eyebrows':part==='eye'?'eyes':'mouth');wake();
+    });
+    input.addEventListener('change',save);
+  });
+  root.querySelectorAll('[data-option]').forEach(input=>input.addEventListener('change',()=>{state[input.dataset.option]=input.checked;controls();wake();save();}));
+  root.querySelector('[data-demo]').addEventListener('click',()=>{demoStart=demoStart===null?performance.now():null;demoPhase=-1;controls();wake();});
+  window.addEventListener('openai:set_globals',event=>{
+    restore(event.detail?.globals?.widgetState);Object.assign(current,target());for(const k in current)velocity[k]=0;controls();draw(performance.now());
+  });
+  Object.assign(current,target());for(const k in current)velocity[k]=0;
+  controls();draw(performance.now());
+})();
+</script>

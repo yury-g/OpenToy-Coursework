@@ -1,0 +1,100 @@
+{
+  "joint": {
+    "exit_code": 0,
+    "support_enabled": false,
+    "diagnostics": [],
+    "gcode_comments": [
+      "; total filament length [mm] : 9554.39",
+      "; total filament weight [g] : 28.50",
+      "; enable_support = 0",
+      "; independent_support_layer_height = 1",
+      "; layer_height = 0.2",
+      "; max_layer_height = 0.32",
+      "; min_layer_height = 0.08"
+    ]
+  },
+  "base": {
+    "exit_code": 0,
+    "support_enabled": false,
+    "diagnostics": [],
+    "gcode_comments": [
+      "; total filament length [mm] : 12352.20",
+      "; total filament weight [g] : 36.84",
+      "; enable_support = 0",
+      "; independent_support_layer_height = 1",
+      "; layer_height = 0.2",
+      "; max_layer_height = 0.32",
+      "; min_layer_height = 0.08"
+    ]
+  },
+  "stalk": {
+    "exit_code": 0,
+    "support_enabled": true,
+    "diagnostics": [],
+    "gcode_comments": [
+      "; total filament length [mm] : 3908.59",
+      "; total filament weight [g] : 11.66",
+      "; enable_support = 1",
+      "; independent_support_layer_height = 1",
+      "; layer_height = 0.2",
+      "; max_layer_height = 0.32",
+      "; min_layer_height = 0.08"
+    ]
+  },
+  "elbow": {
+    "exit_code": 0,
+    "support_enabled": true,
+    "diagnostics": [],
+    "gcode_comments": [
+      "; total filament length [mm] : 4855.83",
+      "; total filament weight [g] : 14.48",
+      "; enable_support = 1",
+      "; independent_support_layer_height = 1",
+      "; layer_height = 0.2",
+      "; max_layer_height = 0.32",
+      "; min_layer_height = 0.08"
+    ]
+  },
+  "flower": {
+    "exit_code": 0,
+    "support_enabled": false,
+    "diagnostics": [],
+    "gcode_comments": [
+      "; total filament length [mm] : 5106.61",
+      "; total filament weight [g] : 15.23",
+      "; enable_support = 0",
+      "; independent_support_layer_height = 1",
+      "; layer_height = 0.2",
+      "; max_layer_height = 0.32",
+      "; min_layer_height = 0.08"
+    ]
+  },
+  "gauges": {
+    "exit_code": 0,
+    "support_enabled": false,
+    "diagnostics": [],
+    "gcode_comments": [
+      "; total filament length [mm] : 21027.25",
+      "; total filament weight [g] : 62.71",
+      "; enable_support = 0",
+      "; independent_support_layer_height = 1",
+      "; layer_height = 0.2",
+      "; max_layer_height = 0.32",
+      "; min_layer_height = 0.08"
+    ]
+  },
+  "shims": {
+    "exit_code": 0,
+    "support_enabled": false,
+    "diagnostics": [],
+    "gcode_comments": [
+      "; total filament length [mm] : 160.76",
+      "; total filament weight [g] : 0.48",
+      "; enable_support = 0",
+      "; independent_support_layer_height = 1",
+      "; layer_height = 0.2",
+      "; max_layer_height = 0.32",
+      "; min_layer_height = 0.08"
+    ]
+  }
+}

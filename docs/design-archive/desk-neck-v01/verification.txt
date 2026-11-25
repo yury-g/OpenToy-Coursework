@@ -1,0 +1,91 @@
+{
+  "clearance-samples-030-040-045-050.stl": {
+    "watertight": true,
+    "positive_bodies": 4,
+    "bbox_mm": [
+      29.5,
+      189.0,
+      25.5
+    ],
+    "volume_mm3": 24696.47274198463
+  },
+  "neck-one-print-DRAFT.stl": {
+    "watertight": true,
+    "positive_bodies": 1,
+    "bbox_mm": [
+      125.60000000149012,
+      104.0,
+      114.0
+    ],
+    "volume_mm3": 175260.63083434515
+  },
+  "servo-and-horn-fit-gauge.stl": {
+    "watertight": true,
+    "positive_bodies": 3,
+    "bbox_mm": [
+      73.5,
+      53.0,
+      5.0
+    ],
+    "volume_mm3": 4529.642257096587
+  },
+  "kinematic_check": 1125,
+  "collision_hits": [],
+  "full_mechanism_slicer": {
+    "software": "Bambu Studio 2.00.03.54",
+    "profile": "Creality Ender-3 V2 0.4 nozzle",
+    "process": "0.20 mm, 3 walls, 15% infill, no automatic supports",
+    "status": "Completed with floating-cantilever warnings and internal clipping diagnostics; not physically qualified"
+  },
+  "coupon_slicer": {
+    "exit_code": 0,
+    "diagnostics": [
+      "[2026-10-01 15:38:07.028873] [0x00000001fc6abf80] [error]   calc_exclude_triangles:Unable to create plate triangles",
+      "[2026-10-01 15:38:07.230492] [0x000000016dc97000] [error]   ZFiller: encounter idx from clip: 262",
+      "[2026-10-01 15:38:07.230626] [0x000000016dc97000] [error]   ZFiller: encounter idx from clip: 256",
+      "[2026-10-01 15:38:07.231227] [0x000000016dc97000] [error]   ZFiller: encounter idx from clip: 49",
+      "[2026-10-01 15:38:07.231330] [0x000000016dc97000] [error]   ZFiller: encounter idx from clip: 43",
+      "[2026-10-01 15:38:07.232181] [0x00000001fc6abf80] [error]   ZFiller: encounter idx from clip: 40",
+      "[2026-10-01 15:38:07.232185] [0x00000001fc6abf80] [error]   ZFiller: encounter idx from clip: 30",
+      "[2026-10-01 15:38:07.232409] [0x000000016dc97000] [error]   ZFiller: encounter idx from clip: 191",
+      "[2026-10-01 15:38:07.232511] [0x000000016dc97000] [error]   ZFiller: encounter idx from clip: 185",
+      "[2026-10-01 15:38:07.232657] [0x00000001fc6abf80] [error]   ZFiller: encounter idx from clip: 69",
+      "[2026-10-01 15:38:07.232660] [0x00000001fc6abf80] [error]   ZFiller: encounter idx from clip: 59",
+      "[2026-10-01 15:38:07.233064] [0x000000016dc97000] [error]   ZFiller: encounter idx from clip: 120",
+      "[2026-10-01 15:38:07.233164] [0x000000016dc97000] [error]   ZFiller: encounter idx from clip: 114",
+      "[2026-10-01 15:38:07.263252] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 171",
+      "[2026-10-01 15:38:07.263263] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 139",
+      "[2026-10-01 15:38:07.263473] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 169",
+      "[2026-10-01 15:38:07.263475] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 137",
+      "[2026-10-01 15:38:07.263680] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 167",
+      "[2026-10-01 15:38:07.263683] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 135",
+      "[2026-10-01 15:38:07.265917] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 421",
+      "[2026-10-01 15:38:07.265921] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 389",
+      "[2026-10-01 15:38:07.266121] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 419",
+      "[2026-10-01 15:38:07.266124] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 387",
+      "[2026-10-01 15:38:07.266325] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 417",
+      "[2026-10-01 15:38:07.266327] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 385",
+      "[2026-10-01 15:38:07.266886] [0x000000016ecc7000] [error]   ZFiller: encounter idx from clip: 65",
+      "[2026-10-01 15:38:07.268370] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 241",
+      "[2026-10-01 15:38:07.268376] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 209",
+      "[2026-10-01 15:38:07.268573] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 239",
+      "[2026-10-01 15:38:07.268576] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 207",
+      "[2026-10-01 15:38:07.268772] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 237",
+      "[2026-10-01 15:38:07.268774] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 205",
+      "[2026-10-01 15:38:07.270289] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 101",
+      "[2026-10-01 15:38:07.270293] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 69",
+      "[2026-10-01 15:38:07.270498] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 99",
+      "[2026-10-01 15:38:07.270500] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 67",
+      "[2026-10-01 15:38:07.270696] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 97",
+      "[2026-10-01 15:38:07.270698] [0x000000016e8bb000] [error]   ZFiller: encounter idx from clip: 65",
+      "[2026-10-01 15:38:07.271171] [0x000000016d88b000] [error]   ZFiller: encounter idx from clip: 211",
+      "[2026-10-01 15:38:07.283773] [0x000000016d88b000] [error]   ZFiller: encounter idx from clip: 62"
+    ]
+  },
+  "fit-gauge_slicer": {
+    "exit_code": 0,
+    "diagnostics": [
+      "[2026-10-01 15:38:08.123143] [0x00000001fc6abf80] [error]   calc_exclude_triangles:Unable to create plate triangles"
+    ]
+  }
+}
