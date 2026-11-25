@@ -1,0 +1,156 @@
+{
+  "source_url": "https://github.com/adafruit/Adafruit_CAD_Parts/tree/main/5691%20Feather%20ESP32%20S3%20Reverse%20TFT",
+  "source_step_sha256": "e112dae4bd06b1cbfb3ff11d49df02f8e4a21ad6c886cbfccaeb7c8a9b5626b1",
+  "parts": [
+    {
+      "object": "Switch",
+      "name": "Reset component side housing",
+      "material": "metal"
+    },
+    {
+      "object": "Switch001",
+      "name": "Reset component side terminal 1",
+      "material": "metal"
+    },
+    {
+      "object": "Switch002",
+      "name": "Reset component side terminal 2",
+      "material": "metal"
+    },
+    {
+      "object": "Switch003",
+      "name": "Reset component side terminal 3",
+      "material": "metal"
+    },
+    {
+      "object": "Switch004",
+      "name": "Reset component side terminal 4",
+      "material": "metal"
+    },
+    {
+      "object": "Switch005",
+      "name": "Reset component side actuator",
+      "material": "black"
+    },
+    {
+      "object": "Switch006",
+      "name": "D0 BOOT housing",
+      "material": "metal"
+    },
+    {
+      "object": "Switch007",
+      "name": "D0 BOOT terminal 1",
+      "material": "metal"
+    },
+    {
+      "object": "Switch008",
+      "name": "D0 BOOT terminal 2",
+      "material": "metal"
+    },
+    {
+      "object": "Switch009",
+      "name": "D0 BOOT terminal 3",
+      "material": "metal"
+    },
+    {
+      "object": "Switch010",
+      "name": "D0 BOOT terminal 4",
+      "material": "metal"
+    },
+    {
+      "object": "Switch011",
+      "name": "D0 BOOT actuator",
+      "material": "black"
+    },
+    {
+      "object": "Switch012",
+      "name": "D2 housing",
+      "material": "metal"
+    },
+    {
+      "object": "Switch013",
+      "name": "D2 terminal 1",
+      "material": "metal"
+    },
+    {
+      "object": "Switch014",
+      "name": "D2 terminal 2",
+      "material": "metal"
+    },
+    {
+      "object": "Switch015",
+      "name": "D2 terminal 3",
+      "material": "metal"
+    },
+    {
+      "object": "Switch016",
+      "name": "D2 terminal 4",
+      "material": "metal"
+    },
+    {
+      "object": "Switch017",
+      "name": "D2 actuator",
+      "material": "black"
+    },
+    {
+      "object": "Switch018",
+      "name": "Reset display side housing",
+      "material": "metal"
+    },
+    {
+      "object": "Switch019",
+      "name": "Reset display side terminal 1",
+      "material": "metal"
+    },
+    {
+      "object": "Switch020",
+      "name": "Reset display side terminal 2",
+      "material": "metal"
+    },
+    {
+      "object": "Switch021",
+      "name": "Reset display side terminal 3",
+      "material": "metal"
+    },
+    {
+      "object": "Switch022",
+      "name": "Reset display side terminal 4",
+      "material": "metal"
+    },
+    {
+      "object": "Switch023",
+      "name": "Reset display side actuator",
+      "material": "black"
+    },
+    {
+      "object": "Switch024",
+      "name": "D1 housing",
+      "material": "metal"
+    },
+    {
+      "object": "Switch025",
+      "name": "D1 terminal 1",
+      "material": "metal"
+    },
+    {
+      "object": "Switch026",
+      "name": "D1 terminal 2",
+      "material": "metal"
+    },
+    {
+      "object": "Switch027",
+      "name": "D1 terminal 3",
+      "material": "metal"
+    },
+    {
+      "object": "Switch028",
+      "name": "D1 terminal 4",
+      "material": "metal"
+    },
+    {
+      "object": "Switch029",
+      "name": "D1 actuator",
+      "material": "black"
+    }
+  ]
+}

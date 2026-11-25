@@ -1,0 +1,15 @@
+PLANT v0.2 - FINAL DIGITAL REVIEW - 2026-10-01
+Original source files preserved, with hashes in original-source-sha256.json.
+All supplied STL meshes watertight: joint has 2 captive bodies; gauges 3 pairs; shims 3 separate parts; each other part 1 body.
+Collision sampling: 157 poses (125 grid poses plus 32 GIF frames), 18840 all-pair comparisons, threshold 0.05 mm3. No sampled overlapping volume. Includes all printed bodies and representative MG92B motor cases/horns. Sparse samples do not prove continuous-path clearance; exact purchased motor/horn geometry and flexible cables are not certified.
+Bench insertion: 41 positions at 1 mm steps, motor + horn against printed module. No sampled overlaps.
+Tool envelopes: 7 bench access checks clear, assumed driver diameters 3.5/4.5 mm. Fit and accessible center screws require the stated bench-first assembly order. Later nod-horn access requires removing elbow.
+Bambu Studio 02.00.03.54, Ender-3 V2 0.4 profile, PLA, 0.20 mm, 15% gyroid: seven full-height slices exit 0; no floating/cantilever, clipping or plate error diagnostics. Joint/base/flower/gauges/shims no supports; stalk/elbow build-plate supports; elbow 5 walls, others 3.
+The original invalid zero-area bed-exclusion polygon was removed. Degenerate export triangles removed; STL coordinates rounded to 0.0001 mm. No material-size edits were hidden in the mesh cleanup.
+Layer path presence check: 913 model layers and 1948 cross-section components >=0.15 mm2 checked; no component without a model extrusion and no positive extrusion outside 220 x 220 x 250 mm. This is a component-presence check, not a proof of full infill coverage, bridge quality or structural strength.
+Slicer project files are unsliced model/settings 3MFs exported natively. No G-code shipped.
+GIF: 32 actual-CAD frames, examined for camera framing. Blender scene editable.
+Assembly guide: 3 pages rendered and visually reviewed. PDF text re-read successfully.
+Planning torques kg.cm, yaw/nod/roll: 0.323, 0.903, 0.150. These estimates include solid-PLA plastic, downstream motors, horn mass and 24 g fastener/cable allowance. Friction mu=0.5 and 14 mm bearing contact span are assumptions. Nod exceeds the earlier quarter-stall benchmark; no verified continuous-duty rating is available from the cited manufacturer page. Actual assembled friction needs a loaded physical test.
+NOT PHYSICALLY PRINTED OR ASSEMBLED. No successful release, motor fit, screw engagement, powered operation, classroom assembly time or durability claim.
+FIRST ACTION: print clearance gauges, then ONE full joint and fit the exact purchased motor/horn. Qualify one entire prototype before a classroom batch.

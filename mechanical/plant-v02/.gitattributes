@@ -1,0 +1,7 @@
+# Preserve CAD, print and visual assets as binary files.
+*.pdf binary
+*.stl binary
+*.blend binary
+*.3mf binary
+*.png binary
+*.gif binary

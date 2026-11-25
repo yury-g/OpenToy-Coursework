@@ -1,0 +1,12 @@
+*.FCStd binary
+*.step binary
+*.blend binary
+*.stl binary
+*.3mf binary
+*.png binary
+
+# Preserve upstream license text and generated teaching meshes verbatim.
+licenses/*.txt -whitespace
+source/fonts/*.txt -whitespace
+source/assembly.json -diff
+source/clip-cutaway.json -diff

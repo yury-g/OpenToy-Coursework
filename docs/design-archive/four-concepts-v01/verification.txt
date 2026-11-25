@@ -1,0 +1,42 @@
+Verification for CAD prototypes, 2026-10-01
+Digital checks do not establish physical print quality, friction, force or successful sock handling.
+
+GIRAFFE:
+  OpenSCAD mesh exports: passed. Each member is one watertight positive solid.
+  Collision sampling: 43/43 clear, 1591 cross-stage pairs, threshold 0.05 mm3.
+  All 24 animated frames checked; 24-frame GIF exported and camera framing checked.
+  New disconnected layer-island check at 0.20 mm: none; bridging is not certified.
+  Ender-3 V2 0.4 mm, PLA, 0.20 mm, 3 walls / 15% infill: slice exit 0.
+  UNRESOLVED: floating-cantilever warning; 29 clipping/plate diagnostics. No validated G-code supplied.
+  Planning torque kg.cm: 0.527, 0.733, 0.127
+  Solid print envelope mm: 107.5, 108.0, 197.0
+
+PLANT:
+  OpenSCAD mesh exports: passed. Each member is one watertight positive solid.
+  Collision sampling: 52/52 clear, 1924 cross-stage pairs, threshold 0.05 mm3.
+  All 24 animated frames checked; 24-frame GIF exported and camera framing checked.
+  New disconnected layer-island check at 0.20 mm: none; bridging is not certified.
+  Ender-3 V2 0.4 mm, PLA, 0.20 mm, 3 walls / 15% infill: slice exit 0.
+  UNRESOLVED: floating-cantilever warning; 33 clipping/plate diagnostics. No validated G-code supplied.
+  Planning torque kg.cm: 0.351, 0.164, 0.185
+  Solid print envelope mm: 125.6, 108.0, 215.0
+
+ARM:
+  OpenSCAD mesh exports: passed. Each member is one watertight positive solid.
+  Collision sampling: 52/52 clear, 1924 cross-stage pairs, threshold 0.05 mm3.
+  All 24 animated frames checked; 24-frame GIF exported and camera framing checked.
+  New disconnected layer-island check at 0.20 mm: none; bridging is not certified.
+  Ender-3 V2 0.4 mm, PLA, 0.20 mm, 3 walls / 15% infill: slice exit 0.
+  UNRESOLVED: floating-cantilever warning; 3 clipping/plate diagnostics. No validated G-code supplied.
+  Planning torque kg.cm: 0.779, 0.264, 0.112
+  Solid print envelope mm: 145.0, 100.0, 159.0
+
+SWAN:
+  OpenSCAD mesh exports: passed. Each member is one watertight positive solid.
+  Collision sampling: 133/133 clear, 8911 cross-stage pairs, threshold 0.05 mm3.
+  All 24 animated frames checked; 24-frame GIF exported and camera framing checked.
+  New disconnected layer-island check at 0.20 mm: none; bridging is not certified.
+  Ender-3 V2 0.4 mm, PLA, 0.20 mm, 3 walls / 15% infill: slice exit 0.
+  UNRESOLVED: floating-cantilever warning; 7 clipping/plate diagnostics. No validated G-code supplied.
+  Planning torque kg.cm: 0.669, 1.030, 0.419, 0.186
+  Solid print envelope mm: 119.0, 93.0, 169.0
