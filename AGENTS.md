@@ -1,0 +1,27 @@
+# Working on OpenToy
+
+Work on the student's physical machine. Verify native OS, USB serial access and chip identity before claiming hardware access. Full permissions in a cloud container are not local USB/Bluetooth access.
+
+Identify ESP32-S3 and the intended factory MAC before flashing. Preserve existing source. Back up original flash before first replacement. Do not issue erase-flash routinely. Keep private profiles, keys, backups, compiled images and logs outside Git; compiled images embed a private key.
+
+Prioritize bounded live behavior changes. Keep controller input/mapping separate from BLE delivery and rendering. Preserve device identity, update protocol/partition compatibility and deferred boot validation when changing animations. Run host tests and applicable real hardware tests. Report synthetic-input tests separately from physical controller tests, and USB/I2C state separately from observed OLED/touch behavior.
+
+Do not claim iPad operation, direct controller connection, fresh student deployment or a portable installer until each has been tested. Keep third-party licenses and source references intact. Publishing destination must be the owner's verified account/domain; Teaching and Studio identities can differ.
+
+## Project browsing and documentation
+
+Use the hardware/project directory in `projects/README.md`. Feather projects come first in current browsing, with Nesso separate. XIAO and pre-Feather projects are archived through `archive/README.md`; preserve their source paths, releases and shared-code dependencies. Follow the selected project's exact board and setup guide, not historical XIAO instructions by default. Keep external repositories and feature branches explicitly labeled. Older checkpoint notes do not establish what is installed on a reused board today.
+
+Use direct descriptions and control labels in documentation and artwork. Do not add marketing slogans or invent a voice for the owner.
+
+Face v1 (eye puppetry) and Face v2 (doodle puppetry) belong in the active Feather project list, per the owner’s November 15 correction. Do not archive the whole projects based on older XIAO build notes; retain those dated records as history.
+
+The owner named the OpenToy projects **Animatronic Eyes 1 and 2** on November 15, 2026: https://github.com/yury-g/OpenToy-Coursework/tree/main/projects/animatronic-eyes (within OpenToy). Keep both active in the Feather gallery. Use that project folder for current direct QT gamepad builds; retain the historical Face v1/v2 guides and release tags.
+
+3D printed designs belong under `projects/3d-printed-designs/`, with a visual index and each design's own README, print files, CAD, existing renders and assembly/removal guide. Keep the home-page entry compact and link the design from its related hardware project. Reuse existing visuals for documentation organization; distinguish CAD/slicer validation from physical fit tests.
+
+## Shared app status bar
+
+Use the root README as the family device/app/control overview and `docs/CONTROLS.md` for shared interaction roles. Ordinary app controls must use qualified exposed user buttons or touch, never BOOT/RESET/EN. Keep current installed mappings distinct from the target standard until a versioned migration is tested. Update matrices and source links without duplicating changing version/state facts across galleries; preserve existing app guides and archived releases.
+
+Follow `docs/APP-STATUS-BAR.md` for all maintained app changes and new device ports. Show the running app, installed version, that version’s creation date and a genuine local battery reading in a default-visible top status area. Keep a reversible, documented session-only performance mode. Adapt the layout to safe screen bounds, including round displays; do not force an unreadable universal 10-pixel layout. Keep canonical metadata and version history consistent, preserve old release tags, and track migration per target rather than claiming every existing installation already conforms.

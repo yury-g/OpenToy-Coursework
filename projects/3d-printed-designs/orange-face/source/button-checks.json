@@ -1,0 +1,42 @@
+[
+  {
+    "name": "D0 BOOT",
+    "center_mm": [
+      12.62,
+      35.445
+    ],
+    "actuator_recess_mm": 1.8000000000000003,
+    "access_diameter_mm": 7.0,
+    "cover_obstruction_mm3": 0.0
+  },
+  {
+    "name": "D1",
+    "center_mm": [
+      12.62,
+      42.43
+    ],
+    "actuator_recess_mm": 1.8000000000000003,
+    "access_diameter_mm": 7.0,
+    "cover_obstruction_mm3": 0.0
+  },
+  {
+    "name": "D2",
+    "center_mm": [
+      12.62,
+      49.415
+    ],
+    "actuator_recess_mm": 1.8000000000000003,
+    "access_diameter_mm": 7.0,
+    "cover_obstruction_mm3": 0.0
+  },
+  {
+    "name": "Reset display side",
+    "center_mm": [
+      49.45,
+      42.43
+    ],
+    "actuator_recess_mm": 1.8000000000000003,
+    "access_diameter_mm": 5.0,
+    "cover_obstruction_mm3": 0.0
+  }
+]
