@@ -1,0 +1,97 @@
+[
+  {
+    "label": "Neutral",
+    "command": "doodle 0 0 0 0 0 0 0 neutral",
+    "hash": "59988171"
+  },
+  {
+    "label": "Happy \u00b7 A",
+    "command": "doodle 0 0 0 0 25 0 0 happy",
+    "hash": "52790a43"
+  },
+  {
+    "label": "Surprised \u00b7 X",
+    "command": "doodle 0 0 0 0 92 0 0 surprised",
+    "hash": "b0698fbd"
+  },
+  {
+    "label": "Angry \u00b7 B",
+    "command": "doodle 0 0 0 0 0 0 0 angry",
+    "hash": "4860388b"
+  },
+  {
+    "label": "Sorry \u00b7 Y",
+    "command": "doodle 0 0 0 0 0 0 0 sorry",
+    "hash": "cbc3acd2"
+  },
+  {
+    "label": "Nervous \u00b7 RB",
+    "command": "doodle 0 0 0 0 0 0 0 nervous",
+    "hash": "9e231224"
+  },
+  {
+    "label": "Eyes bend up",
+    "command": "doodle 100 0 0 0 25 0 0 happy",
+    "hash": "3d67ca6f"
+  },
+  {
+    "label": "Eyes bend down",
+    "command": "doodle -100 0 0 0 25 0 0 happy",
+    "hash": "f7f29c81"
+  },
+  {
+    "label": "Brows bend left",
+    "command": "doodle 0 -100 0 0 25 0 0 happy",
+    "hash": "c9fc2181"
+  },
+  {
+    "label": "Brows bend right",
+    "command": "doodle 0 100 0 0 25 0 0 happy",
+    "hash": "f4867298"
+  },
+  {
+    "label": "Mouth curves up",
+    "command": "doodle 0 0 100 0 25 0 0 happy",
+    "hash": "8978ec35"
+  },
+  {
+    "label": "Mouth curves down",
+    "command": "doodle 0 0 -100 0 25 0 0 happy",
+    "hash": "b6dcd547"
+  },
+  {
+    "label": "Mouth pulls left",
+    "command": "doodle 0 0 0 -100 25 0 0 happy",
+    "hash": "2c018b73"
+  },
+  {
+    "label": "Mouth pulls right",
+    "command": "doodle 0 0 0 100 25 0 0 happy",
+    "hash": "3ee3731f"
+  },
+  {
+    "label": "Open mouth \u00b7 RT",
+    "command": "doodle 0 0 0 0 100 0 0 neutral",
+    "hash": "a227c3cd"
+  },
+  {
+    "label": "Blink \u00b7 LT",
+    "command": "doodle 0 0 0 0 0 100 100 neutral",
+    "hash": "a0636645"
+  },
+  {
+    "label": "Left wink \u00b7 D-pad",
+    "command": "doodle 0 0 0 0 0 100 0 happy",
+    "hash": "c386dfdd"
+  },
+  {
+    "label": "Right wink \u00b7 D-pad",
+    "command": "doodle 0 0 0 0 0 0 100 happy",
+    "hash": "6166a27d"
+  },
+  {
+    "label": "Combined maximum pose",
+    "command": "doodle 100 -100 -100 100 100 100 0 nervous",
+    "hash": "c5b01ef4"
+  }
+]
