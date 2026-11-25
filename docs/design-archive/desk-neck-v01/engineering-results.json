@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-01",
+  "density_g_per_cm3_assumed": 1.24,
+  "bodies": {
+    "base": {
+      "mass_g_solid_PLA": 64.90702612459813,
+      "center_mm": [
+        0.014201355120904126,
+        -0.03943259594249073,
+        5.737298509241931
+      ],
+      "watertight": true,
+      "positive_bodies": 1
+    },
+    "yaw": {
+      "mass_g_solid_PLA": 68.61715732875818,
+      "center_mm": [
+        -2.4234348181394285,
+        -0.03377521927782657,
+        46.89915879382261
+      ],
+      "watertight": true,
+      "positive_bodies": 1
+    },
+    "pitch": {
+      "mass_g_solid_PLA": 27.307714821109236,
+      "center_mm": [
+        -3.6364522015179506,
+        -18.83773757730861,
+        89.98275764853874
+      ],
+      "watertight": true,
+      "positive_bodies": 1
+    },
+    "face": {
+      "mass_g_solid_PLA": 25.533372059642375,
+      "center_mm": [
+        -5.300232625275395e-16,
+        12.17891798859511,
+        91.0
+      ],
+      "watertight": true,
+      "positive_bodies": 1
+    }
+  },
+  "downstream_mass_g": [
+    167.45824420950981,
+    82.8410868807516,
+    39.533372059642375
+  ],
+  "peak_gravity_kgcm": [
+    0.0,
+    0.048348393071077536,
+    0.0021130913087034956
+  ],
+  "inertia_at_2_rad_s2_kgcm": [
+    0.005309650342952679,
+    0.0012509147263158426,
+    0.00023984583775318123
+  ],
+  "friction_kgcm_assumed_mu": {
+    "0.2": [
+      0.0904274518731353,
+      0.011597752163305225,
+      0.017650416656759763
+    ],
+    "0.35": [
+      0.15824804077798676,
+      0.02029606628578414,
+      0.030888229149329583
+    ],
+    "0.5": [
+      0.22606862968283825,
+      0.02899438040826306,
+      0.0441260416418994
+    ]
+  },
+  "roll_cantilever_contact_multiplier": 2.790429916737703,
+  "additional_unmeasured_startup_reserve_kgcm": 0.1,
+  "total_planning_kgcm_mu_0_5": [
+    0.33137828002579095,
+    0.17859368820565644,
+    0.14647897878835608
+  ],
+  "mesh_collision_checks": 1125,
+  "sampled_collision_hits": [],
+  "joint_gap_mm": 0.45,
+  "pitch_interface_axial_gap_mm": 0.5,
+  "motion_deg": {
+    "yaw": 45,
+    "pitch": 25,
+    "roll": 25
+  }
+}
