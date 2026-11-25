@@ -1,5 +1,7 @@
 # Animatronic Eyes 1 and 2
 
+[Try the Eyes 2 doodle controls](https://yury-g.github.io/OpenToy-Coursework/face-v2/) · Browser design simulation
+
 **New device track:** [Waveshare 1.85C BOX Eyes 1](WAVESHARE.md) — round display, touch pokes, three personalities, quiet reactions and the common app/version/date/battery status bar. [Compatibility matrix](../waveshare-1.85c/README.md) · [Verification](docs/WAVESHARE-VERIFICATION.md).
 
 [Current installed versions and stopping point](STOPPING-POINT.md) · November 16, 2026

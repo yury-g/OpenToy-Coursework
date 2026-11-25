@@ -1,6 +1,6 @@
 # OpenToy
 
-**Open course work in progress · planned through January 10, 2027.** Explore experiments, working builds and unfinished ideas as they develop. This is the public home for ongoing OpenToy work. [Start here](docs/COURSEWORK.md) · [Project source map](docs/COURSEWORK.md#project-source-map) · [How we work](CONTRIBUTING.md)
+**Open courseware under active development. Projected launch out of draft: January 10, 2027.** Explore experiments, working builds and unfinished ideas as they develop. This is the public home for ongoing OpenToy work. [Start here](docs/COURSEWORK.md) · [Project source map](docs/COURSEWORK.md#project-source-map) · [How we work](CONTRIBUTING.md)
 
 OpenToy turns development boards into expressive toys. Poke a blinking eye, tilt a pool of particles, or make two faces react as you bring them together.
 
@@ -9,6 +9,8 @@ OpenToy turns development boards into expressive toys. Poke a blinking eye, tilt
 New here? [Choose a device](projects/README.md), check its supported apps below, then use the build instructions in its project guide. Each firmware image targets a particular board and display.
 
 ## See the projects
+
+[Interactive viewers: assembly, folding and face controls](docs/INTERACTIVE-VIEWERS.md)
 
 Select a preview to open its guide. Nearby Buddy and Battery Faces source snapshots are included in the companion folders. The captions identify recorded screens, simulations and CAD studies.
 

@@ -1,0 +1,51 @@
+name: Publish interactive viewers
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-viewers.yml'
+      - 'tools/build_interactive_viewers.py'
+      - 'projects/3d-printed-designs/ditherCam/**'
+      - 'projects/3d-printed-designs/cyd-trifold/**'
+      - 'companions/nearby-buddy/main/enclosure/viewer/**'
+      - 'docs/simulations/face-v2-fragment.html'
+      - 'LICENSE'
+  pull_request:
+    paths:
+      - '.github/workflows/publish-viewers.yml'
+      - 'tools/build_interactive_viewers.py'
+      - 'projects/3d-printed-designs/ditherCam/**'
+      - 'projects/3d-printed-designs/cyd-trifold/**'
+      - 'companions/nearby-buddy/main/enclosure/viewer/**'
+      - 'docs/simulations/face-v2-fragment.html'
+      - 'LICENSE'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: viewers-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Export original interactive viewers and check local links
+        run: python3 tools/build_interactive_viewers.py --output _site
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy viewers
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,6 +1,6 @@
 # ditherCam — captive top-flip enclosure
 
-[3D printed designs](../README.md) · [All projects](../../README.md) · [ditherCam firmware & experience](../../ditherCam/README.md) · [Public assembly webpage](https://dithercam-assembly.narwhal2025.chatgpt.site) · [Offline assembly guide](assembly/index.html) · [3D flip viewer](index.html)
+[3D printed designs](../README.md) · [All projects](../../README.md) · [ditherCam firmware & experience](../../ditherCam/README.md) · [Interactive assembly guide](https://yury-g.github.io/OpenToy-Coursework/dithercam/assembly/) · [Offline assembly guide](assembly/index.html) · [3D flip viewer](https://yury-g.github.io/OpenToy-Coursework/dithercam/)
 
 One print-in-place captive assembly holds the **Waveshare ESP32-S3-RLCD-4.2** in the upright teal body and the **XIAO ESP32-S3 Sense + OV2640 + Expansion Base** stack inside the pivoting orange top pod. Gravity seats the pod against rigid `0°` Forward and `180°` Selfie stops — no screws, hinge pins, or glue.
 
