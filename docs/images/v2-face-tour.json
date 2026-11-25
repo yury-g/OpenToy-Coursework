@@ -1,0 +1,177 @@
+{
+  "format": "OpenToy Face v2 animation v1",
+  "simulation": true,
+  "width": 640,
+  "height": 384,
+  "oled_width": 128,
+  "oled_height": 64,
+  "generated_frames": 760,
+  "gif_frames": 330,
+  "duration_ms": 38000,
+  "distinct_oled_frames": 311,
+  "frame_ms": 50,
+  "renderer_sha256": "8d025c8fce2f42289dbc57b20d95331baef1f6ac50611a5fe172ccdc14fdad1a",
+  "gif_sha256": "02c7d0b83d8475a13b3e7fb46e3da0aa242a11f24961a7bd92c294d8d4d81572",
+  "poses": [
+    {
+      "label": "Neutral",
+      "command": "doodle 0 0 0 0 0 0 0 neutral",
+      "hash": "59988171",
+      "start_ms": 0,
+      "end_ms": 1900,
+      "settled": true
+    },
+    {
+      "label": "Happy \u00b7 A",
+      "command": "doodle 0 0 0 0 25 0 0 happy",
+      "hash": "52790a43",
+      "start_ms": 1900,
+      "end_ms": 3800,
+      "settled": true
+    },
+    {
+      "label": "Surprised \u00b7 X",
+      "command": "doodle 0 0 0 0 92 0 0 surprised",
+      "hash": "b0698fbd",
+      "start_ms": 3800,
+      "end_ms": 5700,
+      "settled": true
+    },
+    {
+      "label": "Angry \u00b7 B",
+      "command": "doodle 0 0 0 0 0 0 0 angry",
+      "hash": "4860388b",
+      "start_ms": 5700,
+      "end_ms": 7600,
+      "settled": true
+    },
+    {
+      "label": "Sorry \u00b7 Y",
+      "command": "doodle 0 0 0 0 0 0 0 sorry",
+      "hash": "cbc3acd2",
+      "start_ms": 7600,
+      "end_ms": 9500,
+      "settled": true
+    },
+    {
+      "label": "Nervous \u00b7 RB",
+      "command": "doodle 0 0 0 0 0 0 0 nervous",
+      "hash": "9e231224",
+      "start_ms": 9500,
+      "end_ms": 11400,
+      "settled": true
+    },
+    {
+      "label": "Eyes bend up",
+      "command": "doodle 100 0 0 0 25 0 0 happy",
+      "hash": "3d67ca6f",
+      "start_ms": 11400,
+      "end_ms": 13300,
+      "settled": true
+    },
+    {
+      "label": "Eyes bend down",
+      "command": "doodle -100 0 0 0 25 0 0 happy",
+      "hash": "f7f29c81",
+      "start_ms": 13300,
+      "end_ms": 15200,
+      "settled": true
+    },
+    {
+      "label": "Brows bend left",
+      "command": "doodle 0 -100 0 0 25 0 0 happy",
+      "hash": "c9fc2181",
+      "start_ms": 15200,
+      "end_ms": 17100,
+      "settled": true
+    },
+    {
+      "label": "Brows bend right",
+      "command": "doodle 0 100 0 0 25 0 0 happy",
+      "hash": "f4867298",
+      "start_ms": 17100,
+      "end_ms": 19000,
+      "settled": true
+    },
+    {
+      "label": "Mouth curves up",
+      "command": "doodle 0 0 100 0 25 0 0 happy",
+      "hash": "8978ec35",
+      "start_ms": 19000,
+      "end_ms": 20900,
+      "settled": true
+    },
+    {
+      "label": "Mouth curves down",
+      "command": "doodle 0 0 -100 0 25 0 0 happy",
+      "hash": "b6dcd547",
+      "start_ms": 20900,
+      "end_ms": 22800,
+      "settled": true
+    },
+    {
+      "label": "Mouth pulls left",
+      "command": "doodle 0 0 0 -100 25 0 0 happy",
+      "hash": "2c018b73",
+      "start_ms": 22800,
+      "end_ms": 24700,
+      "settled": true
+    },
+    {
+      "label": "Mouth pulls right",
+      "command": "doodle 0 0 0 100 25 0 0 happy",
+      "hash": "3ee3731f",
+      "start_ms": 24700,
+      "end_ms": 26600,
+      "settled": true
+    },
+    {
+      "label": "Open mouth \u00b7 RT",
+      "command": "doodle 0 0 0 0 100 0 0 neutral",
+      "hash": "a227c3cd",
+      "start_ms": 26600,
+      "end_ms": 28500,
+      "settled": true
+    },
+    {
+      "label": "Blink \u00b7 LT",
+      "command": "doodle 0 0 0 0 0 100 100 neutral",
+      "hash": "a0636645",
+      "start_ms": 28500,
+      "end_ms": 30400,
+      "settled": true
+    },
+    {
+      "label": "Left wink \u00b7 D-pad",
+      "command": "doodle 0 0 0 0 0 100 0 happy",
+      "hash": "c386dfdd",
+      "start_ms": 30400,
+      "end_ms": 32300,
+      "settled": true
+    },
+    {
+      "label": "Right wink \u00b7 D-pad",
+      "command": "doodle 0 0 0 0 0 0 100 happy",
+      "hash": "6166a27d",
+      "start_ms": 32300,
+      "end_ms": 34200,
+      "settled": true
+    },
+    {
+      "label": "Combined maximum pose",
+      "command": "doodle 100 -100 -100 100 100 100 0 nervous",
+      "hash": "c5b01ef4",
+      "start_ms": 34200,
+      "end_ms": 36100,
+      "settled": true
+    },
+    {
+      "label": "Neutral / return to rest",
+      "command": "doodle 0 0 0 0 0 0 0 neutral",
+      "hash": "59988171",
+      "start_ms": 36100,
+      "end_ms": 38000,
+      "settled": true
+    }
+  ]
+}

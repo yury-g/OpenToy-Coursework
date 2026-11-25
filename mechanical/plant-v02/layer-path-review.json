@@ -1,0 +1,149 @@
+{
+  "joint": {
+    "placed_model_bounds_mm": [
+      [
+        69.433804392,
+        82.527951508,
+        0.0
+      ],
+      [
+        150.566195608,
+        137.472048492,
+        32.4000016
+      ]
+    ],
+    "model_toolpath_layers": 162,
+    "cross_section_components_checked": 324,
+    "components_without_model_extrusions": [],
+    "outside_bed_extrusions": [],
+    "extrusion_segments_checked": 283408,
+    "gcode_last_model_extrusion_z": 32.4,
+    "note": "Presence of model extrusion within each cross-section component >=0.15 mm2, buffer 0.25 mm; not complete coverage or mechanical-strength certification. Supports/skirts excluded from the model-presence test."
+  },
+  "base": {
+    "placed_model_bounds_mm": [
+      [
+        60.0,
+        60.0,
+        0.0
+      ],
+      [
+        160.0,
+        160.0,
+        40.0
+      ]
+    ],
+    "model_toolpath_layers": 200,
+    "cross_section_components_checked": 380,
+    "components_without_model_extrusions": [],
+    "outside_bed_extrusions": [],
+    "extrusion_segments_checked": 177101,
+    "gcode_last_model_extrusion_z": 40.0,
+    "note": "Presence of model extrusion within each cross-section component >=0.15 mm2, buffer 0.25 mm; not complete coverage or mechanical-strength certification. Supports/skirts excluded from the model-presence test."
+  },
+  "stalk": {
+    "placed_model_bounds_mm": [
+      [
+        60.99999999999999,
+        72.0,
+        0.0
+      ],
+      [
+        159.0,
+        148.0,
+        41.0
+      ]
+    ],
+    "model_toolpath_layers": 205,
+    "cross_section_components_checked": 256,
+    "components_without_model_extrusions": [],
+    "outside_bed_extrusions": [],
+    "extrusion_segments_checked": 48024,
+    "gcode_last_model_extrusion_z": 41.0,
+    "note": "Presence of model extrusion within each cross-section component >=0.15 mm2, buffer 0.25 mm; not complete coverage or mechanical-strength certification. Supports/skirts excluded from the model-presence test."
+  },
+  "elbow": {
+    "placed_model_bounds_mm": [
+      [
+        71.00001,
+        88.5,
+        0.0
+      ],
+      [
+        149.00001,
+        131.5,
+        34.0
+      ]
+    ],
+    "model_toolpath_layers": 170,
+    "cross_section_components_checked": 344,
+    "components_without_model_extrusions": [],
+    "outside_bed_extrusions": [],
+    "extrusion_segments_checked": 40225,
+    "gcode_last_model_extrusion_z": 34.0,
+    "note": "Presence of model extrusion within each cross-section component >=0.15 mm2, buffer 0.25 mm; not complete coverage or mechanical-strength certification. Supports/skirts excluded from the model-presence test."
+  },
+  "flower": {
+    "placed_model_bounds_mm": [
+      [
+        59.999974172616,
+        65.62692440902913,
+        0.0
+      ],
+      [
+        160.000025827384,
+        154.37307559097087,
+        16.0
+      ]
+    ],
+    "model_toolpath_layers": 80,
+    "cross_section_components_checked": 80,
+    "components_without_model_extrusions": [],
+    "outside_bed_extrusions": [],
+    "extrusion_segments_checked": 111438,
+    "gcode_last_model_extrusion_z": 16.0,
+    "note": "Presence of model extrusion within each cross-section component >=0.15 mm2, buffer 0.25 mm; not complete coverage or mechanical-strength certification. Supports/skirts excluded from the model-presence test."
+  },
+  "gauges": {
+    "placed_model_bounds_mm": [
+      [
+        26.500010000000003,
+        80.74999,
+        0.0
+      ],
+      [
+        193.50001,
+        139.24999,
+        18.0
+      ]
+    ],
+    "model_toolpath_layers": 90,
+    "cross_section_components_checked": 552,
+    "components_without_model_extrusions": [],
+    "outside_bed_extrusions": [],
+    "extrusion_segments_checked": 627816,
+    "gcode_last_model_extrusion_z": 18.0,
+    "note": "Presence of model extrusion within each cross-section component >=0.15 mm2, buffer 0.25 mm; not complete coverage or mechanical-strength certification. Supports/skirts excluded from the model-presence test."
+  },
+  "shims": {
+    "placed_model_bounds_mm": [
+      [
+        86.0,
+        104.0,
+        0.0
+      ],
+      [
+        134.0,
+        116.0,
+        1.200000048
+      ]
+    ],
+    "model_toolpath_layers": 6,
+    "cross_section_components_checked": 12,
+    "components_without_model_extrusions": [],
+    "outside_bed_extrusions": [],
+    "extrusion_segments_checked": 2786,
+    "gcode_last_model_extrusion_z": 1.2,
+    "note": "Presence of model extrusion within each cross-section component >=0.15 mm2, buffer 0.25 mm; not complete coverage or mechanical-strength certification. Supports/skirts excluded from the model-presence test."
+  }
+}

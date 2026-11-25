@@ -1,0 +1,15 @@
+{
+  "bench_motor_and_horn_insertion_positions": 41,
+  "insertion_step_mm": 1,
+  "insertion_collisions": [],
+  "tools_checked": 7,
+  "tool_collisions": [],
+  "threshold_mm3": 0.05,
+  "scope": "Bench module, no external links. Tool diameters are assumed. Center screw/spline stack and actual batch dimensions require physical fit. Service the nod horn by first removing the elbow (2 M3 screws).",
+  "nominal_case_gap_per_side_mm": 0.6,
+  "running_gap_per_side_mm": 0.5,
+  "upper_capture_axial_gap_mm": 0.5,
+  "stock_horn_max_width_mm": 8,
+  "stock_horn_max_span_mm": 33,
+  "recess_diameter_mm": 34.6
+}
