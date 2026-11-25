@@ -35,4 +35,4 @@ This repository starts with reviewed source snapshots. Feature and device branch
 
 Device addresses and workstation paths were replaced with examples. Preview metadata was removed. Configure actual devices locally. Original hardware licenses and attribution accompany the manufacturer files. The original development repository and its history are retained separately.
 
-This is a private review copy. The owner will choose when to enable public access. Once public, readers can browse its contents without signing in.
+The owner approved public access on November 25, 2026. This repository is now the home for ongoing OpenToy development, documentation and issues. Readers can browse without signing in. The earlier private repository is retained as historical reference; future changes belong here. See the [working workflow](../CONTRIBUTING.md#one-active-repository).

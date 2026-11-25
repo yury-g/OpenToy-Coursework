@@ -1,6 +1,6 @@
 # OpenToy
 
-**Open course work in progress · planned through January 10, 2027.** Explore experiments, working builds and unfinished ideas as they develop. This review copy currently requires GitHub access. [Start here](docs/COURSEWORK.md) · [Project source map](docs/COURSEWORK.md#project-source-map)
+**Open course work in progress · planned through January 10, 2027.** Explore experiments, working builds and unfinished ideas as they develop. This is the public home for ongoing OpenToy work. [Start here](docs/COURSEWORK.md) · [Project source map](docs/COURSEWORK.md#project-source-map) · [How we work](CONTRIBUTING.md)
 
 OpenToy turns development boards into expressive toys. Poke a blinking eye, tilt a pool of particles, or make two faces react as you bring them together.
 
