@@ -16,7 +16,7 @@ Do not claim iPad operation, direct controller connection, fresh student deploym
 
 Use the hardware/project directory in `projects/README.md`. Feather projects come first in current browsing, with Nesso separate. XIAO and pre-Feather projects are archived through `archive/README.md`; preserve their source paths, releases and shared-code dependencies. Follow the selected project's exact board and setup guide, not historical XIAO instructions by default. Keep external repositories and feature branches explicitly labeled. Older checkpoint notes do not establish what is installed on a reused board today.
 
-Use direct descriptions and control labels in documentation and artwork. Do not add marketing slogans or invent a voice for the owner.
+Use direct descriptions and control labels in documentation and artwork. Reuse the existing README text and the owner’s words. Keep new copy short; do not invent taglines or promotional phrasing. The owner’s current description is: “Open courseware under active development. Projected launch out of draft: January 10, 2027.” Do not add marketing slogans or invent a voice for the owner.
 
 Face v1 (eye puppetry) and Face v2 (doodle puppetry) belong in the active Feather project list, per the owner’s November 15 correction. Do not archive the whole projects based on older XIAO build notes; retain those dated records as history.
 
