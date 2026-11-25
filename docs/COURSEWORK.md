@@ -1,6 +1,6 @@
 # OpenToy course work
 
-This collection is an evolving record of toy experiments and course development, with work planned through **January 10, 2027**. Working builds, prototypes, simulations and ideas each have a place here. Project guides record the evidence available for each device. The gallery captions identify rendered demonstrations and photographed results.
+This collection is an evolving record of toy experiments and course development, with a projected launch out of draft on **January 10, 2027**. Working builds, prototypes, simulations and ideas each have a place here. Project guides record the evidence available for each device. The gallery captions identify rendered demonstrations and photographed results.
 
 Start with a device in the [visual home page](../README.md), open an app guide and check its required hardware and build instructions. Firmware targets a particular chip, display and wiring. Board addresses in this copy are example identities; configure your own devices before pairing or connecting them.
 
