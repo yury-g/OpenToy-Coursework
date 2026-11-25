@@ -1,0 +1,32 @@
+[
+  {
+    "file": "shared/opentoy/Protocol.h",
+    "source": "projects/xiao-class/firmware/ToyBLE/Protocol.h",
+    "sha256": "fa892599901565cf7d391dd7b7a8e57a6b7f70874f098eadb2b9935e3654f669"
+  },
+  {
+    "file": "shared/opentoy/FaceProtocol.h",
+    "source": "projects/xiao-class/firmware/ToyBLE/FaceProtocol.h",
+    "sha256": "02dd6fd8d6bf1f612bdc3eddafe5420a585f23d0763bfc498ad45c37ccf6306f"
+  },
+  {
+    "file": "shared/opentoy/EyePixels.h",
+    "source": "projects/xiao-class/firmware/ToyBLE/EyePixels.h",
+    "sha256": "37353fd955238f644bd6fa8d380471503799aac65a61b6f6eb46a469667fcaa9"
+  },
+  {
+    "file": "shared/opentoy/DoodleProtocol.h",
+    "source": "projects/xiao-class/firmware/ToyBLE/DoodleProtocol.h",
+    "sha256": "d9f5bfd1e83ffb80ef2ea3695cd7a7ae04aa322d75237eb1aa2c9b04e3fcdec5"
+  },
+  {
+    "file": "shared/opentoy/DoodlePixels.h",
+    "source": "projects/xiao-class/firmware/ToyBLE/DoodlePixels.h",
+    "sha256": "8d025c8fce2f42289dbc57b20d95331baef1f6ac50611a5fe172ccdc14fdad1a"
+  },
+  {
+    "file": "shared/Telemetry.h",
+    "source": "projects/gravity-water/firmware/GravityWaterFeather/Telemetry.h",
+    "sha256": "bebe08ac85b947a9f7ba59985392317031008d44412a4b96847561c38a746806"
+  }
+]

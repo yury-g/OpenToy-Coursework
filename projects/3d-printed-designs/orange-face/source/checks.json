@@ -1,0 +1,199 @@
+{
+  "errors": [],
+  "preload": [
+    [
+      "Feather top0",
+      "feather",
+      "PCB",
+      0.47519
+    ],
+    [
+      "Feather top1",
+      "feather",
+      "PCB",
+      0.47519
+    ],
+    [
+      "Feather bottom0",
+      "feather",
+      "PCB",
+      0.47519
+    ],
+    [
+      "Feather bottom1",
+      "feather",
+      "PCB",
+      0.47519
+    ],
+    [
+      "Touch top0",
+      "touch",
+      "PCB",
+      0.47519
+    ],
+    [
+      "Touch top1",
+      "touch",
+      "PCB",
+      0.47519
+    ],
+    [
+      "Touch bottom0",
+      "touch",
+      "PCB",
+      0.47519
+    ],
+    [
+      "Touch bottom1",
+      "touch",
+      "PCB",
+      0.47519
+    ],
+    [
+      "IMU left",
+      "imu",
+      "PCB",
+      0.47519
+    ],
+    [
+      "IMU right",
+      "imu",
+      "PCB",
+      0.47519
+    ]
+  ],
+  "springs": [
+    {
+      "name": "Feather top0",
+      "length_mm": 16.0,
+      "thickness_mm": 1.6,
+      "release_gap_mm": 0.8,
+      "preload_mm": 0.15,
+      "origin": [
+        8,
+        53.86,
+        0
+      ],
+      "angle": 0
+    },
+    {
+      "name": "Feather top1",
+      "length_mm": 16.0,
+      "thickness_mm": 1.6,
+      "release_gap_mm": 0.8,
+      "preload_mm": 0.15,
+      "origin": [
+        35,
+        53.86,
+        0
+      ],
+      "angle": 0
+    },
+    {
+      "name": "Feather bottom0",
+      "length_mm": 16.0,
+      "thickness_mm": 1.6,
+      "release_gap_mm": 0.8,
+      "preload_mm": 0.15,
+      "origin": [
+        25,
+        31,
+        0
+      ],
+      "angle": 180
+    },
+    {
+      "name": "Feather bottom1",
+      "length_mm": 16.0,
+      "thickness_mm": 1.6,
+      "release_gap_mm": 0.8,
+      "preload_mm": 0.15,
+      "origin": [
+        52,
+        31,
+        0
+      ],
+      "angle": 180
+    },
+    {
+      "name": "Touch top0",
+      "length_mm": 16.0,
+      "thickness_mm": 1.6,
+      "release_gap_mm": 0.8,
+      "preload_mm": 0.15,
+      "origin": [
+        33,
+        125.7,
+        0
+      ],
+      "angle": 0
+    },
+    {
+      "name": "Touch top1",
+      "length_mm": 16.0,
+      "thickness_mm": 1.6,
+      "release_gap_mm": 0.8,
+      "preload_mm": 0.15,
+      "origin": [
+        59,
+        125.7,
+        0
+      ],
+      "angle": 0
+    },
+    {
+      "name": "Touch bottom0",
+      "length_mm": 16.0,
+      "thickness_mm": 1.6,
+      "release_gap_mm": 0.8,
+      "preload_mm": 0.15,
+      "origin": [
+        50,
+        100.3,
+        0
+      ],
+      "angle": 180
+    },
+    {
+      "name": "Touch bottom1",
+      "length_mm": 16.0,
+      "thickness_mm": 1.6,
+      "release_gap_mm": 0.8,
+      "preload_mm": 0.15,
+      "origin": [
+        76,
+        100.3,
+        0
+      ],
+      "angle": 180
+    },
+    {
+      "name": "IMU left",
+      "length_mm": 16.0,
+      "thickness_mm": 1.6,
+      "release_gap_mm": 0.8,
+      "preload_mm": 0.15,
+      "origin": [
+        73,
+        44,
+        0
+      ],
+      "angle": 90
+    },
+    {
+      "name": "IMU right",
+      "length_mm": 16.0,
+      "thickness_mm": 1.6,
+      "release_gap_mm": 0.8,
+      "preload_mm": 0.15,
+      "origin": [
+        90.78,
+        61,
+        0
+      ],
+      "angle": 270
+    }
+  ],
+  "solid_count": 1,
+  "valid": true
+}

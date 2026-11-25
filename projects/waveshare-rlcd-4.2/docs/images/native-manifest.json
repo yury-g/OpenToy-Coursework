@@ -1,0 +1,17 @@
+{
+  "kind": "source simulations, not hardware capture",
+  "version": "0.2.0",
+  "created": "2026-11-17",
+  "frames": 240,
+  "duration_ms": 12000,
+  "decoded_pixel_check": true,
+  "sources": {
+    "firmware/RlcdEyes/NativeEyes.h": "675551d74fedf5f8d0c1c0ac7ed18885817d0346986babb827cb75669d17c996",
+    "firmware/RlcdEyes/Display.h": "c2a2e78d53790ddc9297f7a1a7f0d1d04569b3c2c48576539acd5d4bfcf64b45",
+    "tools/preview_frames.cpp": "035eb562cbbf89fd6f37f753c347ec8c975fbccc2d1fb15be9538eb0036b55ae"
+  },
+  "outputs": {
+    "native-comparison.png": "3d1608469dbc7a7d56d87b9a0f4a7dcec3050013798019ba088516ce7dd03457",
+    "native-eyes.gif": "d66805931c98e990852aed33e04d956206f775d83159168aca959145af8c0ebb"
+  }
+}
