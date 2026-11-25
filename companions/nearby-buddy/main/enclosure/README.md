@@ -12,7 +12,7 @@ The [main parts list](../README.md#parts-list-for-two-buddies) links the exact b
 
 ## Inspect it before printing
 
-Download the repository ZIP, then double-click **`enclosure/viewer/index.html`**. The [interactive viewer](viewer/index.html) works offline with embedded geometry. Orbit, zoom, explode, hide parts, change shell opacity and switch from the 3898 to a larger battery, and choose Blueface or Greenface with its native screen graphic. GitHub displays HTML source rather than running the viewer. Individual [STL files](stl) also have GitHub's 3D preview.
+Download the repository ZIP, then double-click **`enclosure/viewer/index.html`**. The [interactive viewer](https://yury-g.github.io/OpenToy-Coursework/nearby-buddy/) works offline with embedded geometry. Orbit, zoom, explode, hide parts, change shell opacity and switch from the 3898 to a larger battery, and choose Blueface or Greenface with its native screen graphic. The linked viewer runs on GitHub Pages. Individual [STL files](stl) also have GitHub's 3D preview.
 
 ![Nearby Buddy in two printed enclosure colors](images/enclosure-studio.png)
 

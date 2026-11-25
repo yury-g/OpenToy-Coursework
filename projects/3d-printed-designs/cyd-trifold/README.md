@@ -1,6 +1,6 @@
 # CYD tri-fold · A6
 
-[OpenToy gallery](../../../README.md) · [Printed designs](../README.md) · [A6 interactive fold viewer](Folio%20Dashboard/index.html)
+[OpenToy gallery](../../../README.md) · [Printed designs](../README.md) · [A6 interactive fold viewer](https://yury-g.github.io/OpenToy-Coursework/cyd-trifold/)
 
 A print-in-place folding frame for three CYD screens. The latest A6 design places the hinges behind the screens and brings the glass within 0.4 mm of the front rim. It prints as one object containing three captive moving frames. Install the three boards after printing.
 
@@ -10,7 +10,7 @@ A print-in-place folding frame for three CYD screens. The latest A6 design place
 
 | Open the canvas | Fold for carrying | Inspect the electronics |
 | --- | --- | --- |
-| [![Three near-flush screens](preview.png)](Folio%20Dashboard/index.html) | [![Folded A6 frame](folded.png)](Folio%20Dashboard/index.html) | [![Electronics side and hinges](electronics.png)](Folio%20Dashboard/index.html) |
+| [![Three near-flush screens](preview.png)](https://yury-g.github.io/OpenToy-Coursework/cyd-trifold/) | [![Folded A6 frame](folded.png)](https://yury-g.github.io/OpenToy-Coursework/cyd-trifold/) | [![Electronics side and hinges](electronics.png)](https://yury-g.github.io/OpenToy-Coursework/cyd-trifold/) |
 | The three glass fronts share a plane, recessed 0.4 mm. | Right frame first, then left. Exterior glass stays exposed. | The four captive hinges sit on the electronics side. |
 
 These are views of the actual A6 CAD viewer with illustrative screen artwork. The interactive version includes folding, board insertion and hinge inspection.
@@ -23,7 +23,7 @@ Open size is 194 × 99 × 27.35 mm. Fold the right frame first by −180°, then
 
 Digital checks covered 362 loaded fold poses, USB approach, connector access, catches, insertion and unobstructed views of the glass. Physical fit, hinge release, strength and fatigue remain untested. Connector positions are approximate. This project currently supplies a mechanical frame and viewer. Coordinated three-screen firmware is future work.
 
-Download the folder to use the interactive HTML viewer locally. GitHub displays the HTML source when opened in its file browser.
+Use the linked viewer online, or download the folder to run its HTML locally.
 
 ## Design history
 

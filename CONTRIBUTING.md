@@ -11,7 +11,7 @@ Use **[yury-g/OpenToy-Coursework](https://github.com/yury-g/OpenToy-Coursework)*
 
 The imported feature/device branches and release tags are preserved source snapshots. Start new work from current `main`; consult [the source map](docs/COURSEWORK.md#project-source-map) for current paths. Do not force-push `main`, rewrite historical tags, or merge the old repository's history into this one. If unfinished work exists only in an old checkout, preserve it there, then copy only the reviewed changes into a new branch here and record their origin. Do not repoint an old checkout's remote and push its old history.
 
-Published simulators are generated from reviewed assets in this repository. Save viewer/source changes here first, then refresh the website from that revision and record the deployment. Keep hosting credentials and machine-specific files outside Git.
+Interactive viewers are generated from reviewed assets in this repository. Merging viewer changes into `main` automatically publishes them through GitHub Pages. The READMEs remain the home for the projects and guides; see [Interactive viewers](docs/INTERACTIVE-VIEWERS.md). Keep credentials and machine-specific files outside Git.
 
 Repository publication does not resume parked hardware or authorize a flash. Follow the current owner instructions and each project's device checks.
 

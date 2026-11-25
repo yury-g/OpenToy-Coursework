@@ -10,6 +10,8 @@ New here? [Choose a device](projects/README.md), check its supported apps below,
 
 ## See the projects
 
+[Interactive viewers: assembly, folding and face controls](docs/INTERACTIVE-VIEWERS.md)
+
 Select a preview to open its guide. Nearby Buddy and Battery Faces source snapshots are included in the companion folders. The captions identify recorded screens, simulations and CAD studies.
 
 <!-- project-gallery:start -->
