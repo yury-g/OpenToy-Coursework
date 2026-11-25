@@ -1,0 +1,27 @@
+SWAN v02 — digital verification, 2026-10-01
+
+Status: unprinted mechanical prototype. Slicer review has unresolved diagnostics.
+
+Passed geometric checks:
+- All 23 OpenSCAD part exports completed with NoError and no compile warnings.
+- All eight delivered STL meshes are watertight with positive volume and fit the nominal 220 x 220 x 250 mm printer envelope.
+- Main envelope: 160 x 182 x 249 mm. Confirm actual usable printer height before a trial.
+- Six load-bearing printed members each contain one positive connected solid. A small enclosed negative-volume cavity in the lower member is not a loose printed part.
+- Four service covers are four positive connected solids; a 0.88 mm3 loose scrap from the curved trim was removed.
+- Neutral assembled plastic, motor proxies, stock-horn proxies and covers have no intersections above 0.05 mm3.
+- All 96 delivered animation frames and eight key poses were collision-clear, including the desk plane, at 17056 tested cross-stage part pairs. Contact pads and wires were not included in these collisions.
+- 24 additional key poses with turn angles -64, 0 and +64 degrees were collision-clear. Intermediate motions between these endpoint poses were not checked.
+- Five insertion routes, 23 positions each, cleared plastic and previously installed modeled motors and horns. Motor 3 uses head bend +60; motor 4 enters from the rear with jaw -23. Base motor horn is installed separately and that manual step is unverified.
+- Of 375 broad grid poses, 166 were clear. Rejected poses are retained in digital-checks.json. All extreme joint angles cannot be combined independently.
+- Main print, small joint coupon and four covers have no new disconnected islands in a 0.20 mm layer section check with 0.20 mm previous-layer proximity allowance. This check does not certify printable bridges or overhangs.
+- All 96 animation frames fit the saved camera view. The looped GIF contains 96 frames at 100 ms each, 600 x 650 pixels.
+
+Slicer review:
+Ender-3 V2, 0.4 mm nozzle, generic PLA, 0.20 mm layers, three walls, 15% infill, automatic support off. Main, coupon and covers completed with exit code zero. Both main and coupon were flagged for floating/overhang regions and ZFiller clipping diagnostics. The cover plate had no floating-region warning after the loose scrap was removed. The native review also logs a plate-triangle setup diagnostic. These logs are retained in digital-checks.json; a successful process exit is not physical print qualification.
+
+Estimated main print: 43.5 hours / 332 g PLA. Coupon: about four hours / 29 g. Estimates vary with printer settings. No qualified G-code is distributed.
+
+Physical limits:
+Print the clearance gauges and one joint first; inspect the slicer's layer preview. Actual A20CLM case/flange geometry, horn screw access, support removal and motor retention need trials. PLA friction and starting torque are assumptions in engineering-results.json. No physical print, grip, payload, button press, pushing force, throwing, thermal or tipping test has been performed. The motion file uses illustrative timing and CAD angles, not calibrated servo commands.
+
+The revised CAD reduces assembly complexity but easy drop-in assembly is not yet established. Follow README.txt for motor insertion order and the provisional A20-family fit warning.

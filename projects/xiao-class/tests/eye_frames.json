@@ -1,0 +1,62 @@
+[
+  {
+    "command": "eyes 0 0 0 0 0 0 bottom neutral",
+    "hash": "f2edb589"
+  },
+  {
+    "command": "eyes 0 -100 0 0 0 0 bottom neutral",
+    "hash": "e59ac1d5"
+  },
+  {
+    "command": "eyes 0 100 0 0 0 0 bottom neutral",
+    "hash": "21889d15"
+  },
+  {
+    "command": "eyes 0 0 -100 0 0 0 bottom neutral",
+    "hash": "01368ca9"
+  },
+  {
+    "command": "eyes 0 0 100 0 0 0 bottom neutral",
+    "hash": "f3f61ca9"
+  },
+  {
+    "command": "eyes 0 0 0 -100 0 0 bottom neutral",
+    "hash": "7dec4d79"
+  },
+  {
+    "command": "eyes 0 0 0 100 0 0 bottom neutral",
+    "hash": "5a39bb5d"
+  },
+  {
+    "command": "eyes 0 0 0 0 100 0 bottom neutral",
+    "hash": "858d2fc8"
+  },
+  {
+    "command": "eyes 0 0 0 0 0 100 bottom neutral",
+    "hash": "905695a8"
+  },
+  {
+    "command": "eyes 0 0 0 0 50 50 bottom neutral",
+    "hash": "031e05a5"
+  },
+  {
+    "command": "eyes 0 0 0 0 50 50 top neutral",
+    "hash": "f9ccb0a9"
+  },
+  {
+    "command": "eyes 0 0 0 0 100 100 bottom neutral",
+    "hash": "55e9a67d"
+  },
+  {
+    "command": "eyes 0 -50 100 100 100 50 bottom happy",
+    "hash": "a213e915"
+  },
+  {
+    "command": "eyes 0 0 0 0 0 0 bottom angry",
+    "hash": "b0aef932"
+  },
+  {
+    "command": "eyes 0 0 0 0 0 0 bottom surprised",
+    "hash": "4b2f45f5"
+  }
+]
