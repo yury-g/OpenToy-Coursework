@@ -1,0 +1,6 @@
+{
+  "name": "XIAO Toy XXXX",
+  "base_mac": "identified-by-provisioning",
+  "port": "identified-by-provisioning",
+  "peripherals": true
+}
