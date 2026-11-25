@@ -1,0 +1,22 @@
+{
+  "format": "OpenToy visual history export v1",
+  "simulation_notice": "Exact firmware buffers and preserved concept/browser/app visuals; no OLED photographs",
+  "v1_reference_hashes": [
+    "f2edb589",
+    "e59ac1d5",
+    "f3f61ca9",
+    "858d2fc8",
+    "f9ccb0a9",
+    "b0aef932"
+  ],
+  "source_images": {
+    "v2-face-concepts-01.png": "f0578e1988b809ff24ab45349978091a621714f303c4f33f6c0b4321b37cc3da",
+    "v2-local-comparison.jpg": "aab29f5145e44ff753ccc194d7cff90e00bc0c3c794fdb18e5fab6f5b56bf5d0",
+    "v2-mac-app.jpg": "6d9dd36cecd00502c201ee1df08b9bead134d7f588f807614a02eec6a1c1ae86",
+    "v2-face-tour.gif": "02c7d0b83d8475a13b3e7fb46e3da0aa242a11f24961a7bd92c294d8d4d81572"
+  },
+  "generated": {
+    "v1-eyes.png": "d2ffef72bd470bf5062ef88a000e4b91d4f4977ef8a805aae2fa4c2812a5cd82",
+    "history-overview.png": "2aabe996d327f541a0b220c87448f167d4ec8ba23eef46d7bc47c06f1346a632"
+  }
+}
