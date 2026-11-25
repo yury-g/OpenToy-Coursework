@@ -1,0 +1,122 @@
+{
+  "recorded_date": "2026-10-02",
+  "original_project": "toy-servo-comparison/outputs",
+  "files": {
+    ".gitattributes": {
+      "sha256": "d3c8f133128962b5cd6ba52001284ba4241430f866eafc7a2eb3e06ed987de62",
+      "original": null
+    },
+    "README.md": {
+      "sha256": "49e9d9f6afdc9e7a7173b342313c3702ebe2ca65ced3b4c4776de028426ea415",
+      "original": null
+    },
+    "desk-neck-v01/README.txt": {
+      "sha256": "9d59011c52038ab6e9c4622db12757b39880266c7f4d858fd052255459a3f016",
+      "original": "desk-toy-cad/README.txt"
+    },
+    "desk-neck-v01/desk-toy-neck.scad": {
+      "sha256": "eaf959deccd18276a3f8620e02bfdf0a592effecf8bd99def6c7cb4a49cbc190",
+      "original": "desk-toy-cad/desk-toy-neck.scad"
+    },
+    "desk-neck-v01/engineering-results.json": {
+      "sha256": "8d36844ae2cd546b088ee348342bde429f9053824adc55fdb34153b0e7c81044",
+      "original": "desk-toy-cad/engineering-results.json"
+    },
+    "desk-neck-v01/motion.gif": {
+      "sha256": "7024a5230aa524117598a4dd1b423411b1270b4fa40b6a05ac7ce885546f0de6",
+      "original": "desk-toy-cad/motion.gif"
+    },
+    "desk-neck-v01/verification.txt": {
+      "sha256": "197aab0b12450a5ef9f6a8e1ae4a28f1c2c8d074b077df05c1345babd26f3fbb",
+      "original": "desk-toy-cad/verification.txt"
+    },
+    "four-concepts-v01/README.txt": {
+      "sha256": "bbb85ee780e83b4d4b179b0d55519bc0d5f1c2e1a75e119a2fe1ba1fe1e8e5d7",
+      "original": "toy-design-variants/README.txt"
+    },
+    "four-concepts-v01/arm-motion.gif": {
+      "sha256": "d3f11b640b34642c12a937d4787829fefa68fd33d4ec81b5cc2eebf867f0b642",
+      "original": "toy-design-variants/arm-motion.gif"
+    },
+    "four-concepts-v01/arm.scad": {
+      "sha256": "cd117fb82d8b8e0b96fb76cbc56b13f3e6a5518902d2b18b9c8488b50de781a9",
+      "original": "toy-design-variants/arm.scad"
+    },
+    "four-concepts-v01/calibration.scad": {
+      "sha256": "0798f3cdd84c7c3151d5e2b919b5e89e9024c5030dee84961117b2cf137d314a",
+      "original": "toy-design-variants/calibration.scad"
+    },
+    "four-concepts-v01/comparison-motion.gif": {
+      "sha256": "43fac2550683f2844619067dfd528cf2c723c5a96b83c9164038bb5b70ed265b",
+      "original": "toy-design-variants/comparison-motion.gif"
+    },
+    "four-concepts-v01/comparison.png": {
+      "sha256": "f855470a8fe85a8ec792f328f4c6075771b6c2a379930cb5a9fbae1e3de5ccce",
+      "original": "toy-design-variants/comparison.png"
+    },
+    "four-concepts-v01/engineering-results.json": {
+      "sha256": "536cdf52218dc6d91552cb0c3dba5aa203bb51dbea321768f3ceed34701ad2d6",
+      "original": "toy-design-variants/engineering-results.json"
+    },
+    "four-concepts-v01/giraffe-motion.gif": {
+      "sha256": "988cf093ffba433cb43f2c803bc1d3ae319baa7c05816910b6486461dcf60b85",
+      "original": "toy-design-variants/giraffe-motion.gif"
+    },
+    "four-concepts-v01/giraffe.scad": {
+      "sha256": "a2d10316b3cf9b6c9cae0c6f8f2a25e3c129bffa891f5154dbb54ac53c0b707a",
+      "original": "toy-design-variants/giraffe.scad"
+    },
+    "four-concepts-v01/plant-motion.gif": {
+      "sha256": "0c0e9a546608da93cb71ec952f99ec9e4608ffb2367b4ad53e4b9499f61fe593",
+      "original": "toy-design-variants/plant-motion.gif"
+    },
+    "four-concepts-v01/plant.scad": {
+      "sha256": "954043aea900d3496554e6bd23b2c945bb52504c492882d2e199aef2514a5ca1",
+      "original": "toy-design-variants/plant.scad"
+    },
+    "four-concepts-v01/servo-toy-library.scad": {
+      "sha256": "c2c204968f765e08c6ae7682600fc2367e5c414ae9c616f42901e87b355f8592",
+      "original": "toy-design-variants/servo-toy-library.scad"
+    },
+    "four-concepts-v01/swan-motion.gif": {
+      "sha256": "e3561a7c1b43eddb2658b81918e04b775fb0924c5cc3bc24ca5c574c318bffef",
+      "original": "toy-design-variants/swan-motion.gif"
+    },
+    "four-concepts-v01/swan.scad": {
+      "sha256": "ad78fa7ac3bed7054f32e3b6e606986bce07b0feeb3e46067ba88fbbbebd8b8a",
+      "original": "toy-design-variants/swan.scad"
+    },
+    "four-concepts-v01/verification.txt": {
+      "sha256": "d2d96a57487ffd2969603483c4df3acf694876f79c54543caf204b97ae957c69",
+      "original": "toy-design-variants/verification.txt"
+    },
+    "swan-neck-v02/README.txt": {
+      "sha256": "311efcb009cfd34967a4603769660b97f36b79839d8771c84f3d7f17e40c7c41",
+      "original": "swan-neck-v02/README.txt"
+    },
+    "swan-neck-v02/calibration.scad": {
+      "sha256": "be4c85ea255cb38f211b2feac968881b181ebf7181be30c8344443aa6f8210e3",
+      "original": "swan-neck-v02/calibration.scad"
+    },
+    "swan-neck-v02/engineering-results.json": {
+      "sha256": "2b5139d75becf0dfbaec163d240b5c45dd5e1df0051500eb9ff66cbdd0fc8bd9",
+      "original": "swan-neck-v02/engineering-results.json"
+    },
+    "swan-neck-v02/servo-toy-library.scad": {
+      "sha256": "66025f53aeeb3c0e0b80fae381f7a11cbe22a8b15fc4c2d461f88ed0180a7e8c",
+      "original": "swan-neck-v02/servo-toy-library.scad"
+    },
+    "swan-neck-v02/swan-motion.gif": {
+      "sha256": "a12d51ab84379deb5ce85f10375ab3f88a0b704bcb8315f59e8aff9c99feaa27",
+      "original": "swan-neck-v02/swan-motion.gif"
+    },
+    "swan-neck-v02/swan-neck.scad": {
+      "sha256": "47521f87e614401bc8030a61ff82ca739c4423044bf84b659013ead7cad6458d",
+      "original": "swan-neck-v02/swan-neck.scad"
+    },
+    "swan-neck-v02/verification.txt": {
+      "sha256": "d516384add6f29c6971ec6b6fe2254c56657c3be40f398a317008bdca1ac8e6e",
+      "original": "swan-neck-v02/verification.txt"
+    }
+  }
+}
