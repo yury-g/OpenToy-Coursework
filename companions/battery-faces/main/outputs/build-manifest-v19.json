@@ -1,0 +1,37 @@
+{
+  "recorded_utc": "2026-10-20T17:45:07.401439+00:00",
+  "monitor_build": "BatteryMonitor-v19-runtime-observer",
+  "reporter_build": "BatteryFaces-v18-green-silver-faces (unchanged)",
+  "installed": [
+    "Tab5 02:00:00:00:00:0a"
+  ],
+  "observed_sources": [
+    "Blue 02:00:00:00:00:01",
+    "Green replacement 02:00:00:00:00:02",
+    "Orange StickS3 02:00:00:00:00:08",
+    "Silver 02:00:00:00:00:09"
+  ],
+  "app_offset": "0x10000",
+  "original_app_capacity": "0xa00000",
+  "app_bytes": 1040128,
+  "app_sha256": "4478dcb9a1724d8d1466a9979ec1dc43657466e2fa2c994140849e40160391ac",
+  "source_sha256": {
+    "firmware/FaceMonitor/main.cpp": "c1f80a3283aae57c2a6682d390579a0173d6085ba6973cc3aa30df5ed08c9458",
+    "firmware/FaceMonitor/RuntimeObserver.h": "12593108078e09f4ec87b981f21ae5fc2f9fda189c778ef8c8c5dc60940f2a3b",
+    "firmware/FaceMonitor/RuntimeStorage.h": "4030a81d0c3388fef2c70198cc8a616064867856fa2d87f7beb96e5206e68753",
+    "firmware/FaceMonitor/RuntimeView.h": "2dd463d8eb4b89d9c021fbc953e4ec5c35f99635dd80cb34011acda4bb40d3d0",
+    "tools/monitor_io.py": "dab58972b65051ae9a30c4540fb75c85bece38e7671b31e9f583d7e3f1f12333",
+    "tools/verify_runtime_observer.py": "8c067e18e277cbffe61f4e3b3a2a340ee2d93ac96595eac9c11f044cab8d36ec"
+  },
+  "host_configurations": 19,
+  "python_transport_tests": 2,
+  "real_discharge_started": false,
+  "hardware_smoke": "runtime-observer-v19-live.json",
+  "restart_proof": "runtime-restart-v19.json",
+  "review": "Independent read-only review completed; material findings repaired and regressions passed. No remaining material issue reported.",
+  "limitations": [
+    "Physical touch not manually reconfirmed; shared release hit-test exercised over USB.",
+    "All telemetry to Tab5 depends on Blue gateway; loss censors remaining runners.",
+    "No cell-current integration, measured capacity/SOH or auto cutoff/cycling."
+  ]
+}

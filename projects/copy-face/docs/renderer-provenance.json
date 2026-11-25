@@ -1,0 +1,34 @@
+{
+  "snapshot_date": "2026-11-17",
+  "source": "CrowPanel device checkout working tree, Eyes 0.2.0 under active verification; imported read-only, no runtime validation transferred",
+  "files": [
+    {
+      "source": "projects/crowpanel/firmware/main/Board.c",
+      "sha256": "97c758beab90fcf8a420bcdf9558b43be7a6cd06ebbac84a63e43ec4948da4ba"
+    },
+    {
+      "source": "projects/crowpanel/firmware/main/Board.h",
+      "sha256": "0ade43336011b97b2d96a75623fa35695630375849c3af9faed0ce33c94114f1"
+    },
+    {
+      "source": "projects/crowpanel/firmware/main/Smooth.h",
+      "sha256": "e961d28945551f2e7aefec152b7aa77199b180671cc3896770121cb2de6a7866"
+    },
+    {
+      "source": "projects/crowpanel/firmware/main/idf_component.yml",
+      "sha256": "c9caa618ba4af9456bcc5f159d90407297f0aeff8c7e1127eac441dad21bccae"
+    },
+    {
+      "source": "projects/crowpanel/firmware/sdkconfig.defaults",
+      "sha256": "22d6f3fe16f154cb937400b006fb6eeb2a201af920fefb9b4ac59562d6d5dfa6"
+    },
+    {
+      "source": "projects/crowpanel/firmware/partitions.csv",
+      "sha256": "eddfb95ca9d07edb5acf84239934e0fed4142cc5ce095f4df265097881d1794a"
+    },
+    {
+      "source": "projects/crowpanel/locks/idf5.4.2.lock",
+      "sha256": "0e3002dff04e0b2adc56974aa885fe9759b8edbb34ac6ad7580195cb53073158"
+    }
+  ]
+}

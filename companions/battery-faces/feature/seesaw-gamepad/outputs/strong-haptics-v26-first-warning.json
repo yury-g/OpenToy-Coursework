@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-10-20T22:51:29.733622+00:00",
+  "complete": false,
+  "scope": "Initial v26 USB burst test; interrupted at first command127 warning",
+  "blue": {
+    "command64_300ms": "passed driver readback, natural stop, zero events",
+    "command127_300ms": {
+      "immediate_readback_drive": 127,
+      "immediate_event1_hex": "20",
+      "warning_diagnostic": "not available in initial firmware; no cause inferred"
+    }
+  },
+  "cleanup": "Both outputs then explicitly confirmed mode0 drive0, saved separately",
+  "proof": "strong-haptics-v26-fault-stop.json"
+}

@@ -1,0 +1,52 @@
+{
+  "recorded_utc": "2026-10-20T22:45:17.555110+00:00",
+  "before": {
+    "NODE": {
+      "blue": "NODE color=blue seen=1 fresh=1 valid=1 pct=97.18 volts=4.161 age_ms=2010 rx=540 seq=271 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "green": "NODE color=green seen=1 fresh=1 valid=1 pct=96.39 volts=4.170 age_ms=1013 rx=539 seq=253 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "pink": "NODE color=pink seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "yellow": "NODE color=yellow seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "rainbow": "NODE color=rainbow seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "purple": "NODE color=purple seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "orange": "NODE color=orange seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "silver": "NODE color=silver seen=1 fresh=1 valid=1 pct=48.50 volts=3.795 age_ms=2824 rx=539 seq=6453 current_valid=0 ma=0.0 charger=UNKNOWN"
+    },
+    "RUNNER": {
+      "blue": "RUNNER color=blue fresh=1 pct=97.18 volts=4.161 points=79 bg_points=79 observed_s=17546 run_observed_s=0 last_contact_s=17773 low_at_s=0 resets=6 interrupted=0 rate_valid=1 pph=-2.715 vph=-0.0076 eta10_min=-1.0",
+      "green": "RUNNER color=green fresh=1 pct=96.39 volts=4.170 points=83 bg_points=83 observed_s=17296 run_observed_s=0 last_contact_s=17774 low_at_s=0 resets=7 interrupted=0 rate_valid=1 pph=2.702 vph=0.0943 eta10_min=-1.0",
+      "orange": "RUNNER color=orange fresh=0 pct=0.00 volts=3.002 points=55 bg_points=55 observed_s=11653 run_observed_s=0 last_contact_s=12319 low_at_s=0 resets=43 interrupted=0 rate_valid=0 pph=0.000 vph=0.0000 eta10_min=-1.0",
+      "silver": "RUNNER color=silver fresh=1 pct=48.50 volts=3.795 points=88 bg_points=88 observed_s=16963 run_observed_s=0 last_contact_s=17772 low_at_s=0 resets=1 interrupted=0 rate_valid=1 pph=-7.629 vph=-0.0277 eta10_min=-1.0"
+    },
+    "ACCESSORY": {
+      "blue": "ACCESSORY color=blue seen=1 fresh=1 ready=1 finding=0 pending=0 age_ms=333 boot=297990309 status_seq=2259 ack_seq=3 session=1 reason=3 remaining_ms=0 io_known=1 mode=idle drive=0 button_down=0 recent_press=0 outline=0 outline_active=0",
+      "green": "ACCESSORY color=green seen=1 fresh=1 ready=1 finding=0 pending=0 age_ms=344 boot=3947335123 status_seq=2027 ack_seq=0 session=0 reason=0 remaining_ms=0 io_known=1 mode=idle drive=0 button_down=0 recent_press=0 outline=0 outline_active=0"
+    },
+    "MONITOR": "MONITOR build=BatteryMonitor-v25-accessory-outline connected=1 width=1280 height=720 packets=1618 uptime_ms=559211 ip=192.168.4.2 panel=1 tiles=3 i2c_mask=511 sda=1 scl=1",
+    "RUNTIME": "RUNTIME phase=WAITING session=0 ready=2 elapsed_s=17774 clock_s=17774 page=faces demo=0 storage=1 saved=1 restored=1 writes=1 snapshot_bytes=3292"
+  },
+  "after": {
+    "NODE": {
+      "blue": "NODE color=blue seen=1 fresh=1 valid=1 pct=97.18 volts=4.161 age_ms=1190 rx=548 seq=275 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "green": "NODE color=green seen=1 fresh=1 valid=1 pct=96.39 volts=4.170 age_ms=194 rx=547 seq=257 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "pink": "NODE color=pink seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "yellow": "NODE color=yellow seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "rainbow": "NODE color=rainbow seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "purple": "NODE color=purple seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "orange": "NODE color=orange seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "silver": "NODE color=silver seen=1 fresh=1 valid=1 pct=49.40 volts=3.798 age_ms=2005 rx=547 seq=6457 current_valid=0 ma=0.0 charger=UNKNOWN"
+    },
+    "RUNNER": {
+      "blue": "RUNNER color=blue fresh=1 pct=97.18 volts=4.161 points=79 bg_points=79 observed_s=17554 run_observed_s=0 last_contact_s=17781 low_at_s=0 resets=6 interrupted=0 rate_valid=1 pph=-2.715 vph=-0.0076 eta10_min=-1.0",
+      "green": "RUNNER color=green fresh=1 pct=96.39 volts=4.170 points=83 bg_points=83 observed_s=17303 run_observed_s=0 last_contact_s=17782 low_at_s=0 resets=7 interrupted=0 rate_valid=1 pph=2.737 vph=0.1057 eta10_min=-1.0",
+      "orange": "RUNNER color=orange fresh=0 pct=0.00 volts=3.002 points=55 bg_points=55 observed_s=11653 run_observed_s=0 last_contact_s=12319 low_at_s=0 resets=43 interrupted=0 rate_valid=0 pph=0.000 vph=0.0000 eta10_min=-1.0",
+      "silver": "RUNNER color=silver fresh=1 pct=49.40 volts=3.798 points=88 bg_points=88 observed_s=16971 run_observed_s=0 last_contact_s=17780 low_at_s=0 resets=1 interrupted=0 rate_valid=1 pph=-9.299 vph=-0.0334 eta10_min=-1.0"
+    },
+    "ACCESSORY": {
+      "blue": "ACCESSORY color=blue seen=1 fresh=1 ready=1 finding=0 pending=0 age_ms=37 boot=297990309 status_seq=2288 ack_seq=3 session=1 reason=3 remaining_ms=0 io_known=1 mode=idle drive=0 button_down=0 recent_press=0 outline=0 outline_active=0",
+      "green": "ACCESSORY color=green seen=1 fresh=1 ready=1 finding=0 pending=0 age_ms=40 boot=3947335123 status_seq=2056 ack_seq=0 session=0 reason=0 remaining_ms=0 io_known=1 mode=idle drive=0 button_down=0 recent_press=0 outline=0 outline_active=0"
+    },
+    "MONITOR": "MONITOR build=BatteryMonitor-v25-accessory-outline connected=1 width=1280 height=720 packets=1642 uptime_ms=566175 ip=192.168.4.2 panel=1 tiles=3 i2c_mask=511 sda=1 scl=1",
+    "RUNTIME": "RUNTIME phase=WAITING session=0 ready=2 elapsed_s=17782 clock_s=17782 page=faces demo=0 storage=1 saved=1 restored=1 writes=1 snapshot_bytes=3292"
+  },
+  "note": "Actual framebuffer; owner operating buttons. No motor commands sent."
+}

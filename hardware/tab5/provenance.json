@@ -1,0 +1,101 @@
+{
+  "checked_date": "2026-11-17",
+  "upstream_commit": "d3ae864f161167af3f9698214012e1d135adc357",
+  "local_originals": [
+    {
+      "path": "originals/Tab5.stl",
+      "bytes": 1702084,
+      "sha256": "5e8e6398d85e4183af9040e9b12b1462fe74629b0ee6065581c7c897a8ba1a74",
+      "source_url": "https://raw.githubusercontent.com/m5stack/M5_Hardware/d3ae864f161167af3f9698214012e1d135adc357/Products/C145_Tab5/Structures/Tab5.stl",
+      "license": "MIT, Copyright (c) 2021 M5Stack"
+    },
+    {
+      "path": "licenses/M5_Hardware-MIT.txt",
+      "bytes": 1063,
+      "sha256": "44611d917bece311f5c8eeffce83d8bf9e9ca3f815d262f694ff4a7996af50ea",
+      "source_url": "https://raw.githubusercontent.com/m5stack/M5_Hardware/d3ae864f161167af3f9698214012e1d135adc357/LICENSE",
+      "license": "MIT, Copyright (c) 2021 M5Stack"
+    }
+  ],
+  "externally_hosted_previews": [
+    {
+      "label": "Overall design block diagram",
+      "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/Tab5_Overall_Design_Block_Diagram.webp",
+      "mirrored": false,
+      "rights": "Redistribution not established for current CDN images"
+    },
+    {
+      "label": "Schematic B08 \u2014 sheet 1 of 5",
+      "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/sch_tab5_b08_page_01.webp",
+      "mirrored": false,
+      "rights": "Redistribution not established for current CDN images"
+    },
+    {
+      "label": "Schematic B08 \u2014 sheet 2 of 5",
+      "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/sch_tab5_b08_page_02.webp",
+      "mirrored": false,
+      "rights": "Redistribution not established for current CDN images"
+    },
+    {
+      "label": "Schematic B08 \u2014 sheet 3 of 5",
+      "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/sch_tab5_b08_page_03.webp",
+      "mirrored": false,
+      "rights": "Redistribution not established for current CDN images"
+    },
+    {
+      "label": "Schematic B08 \u2014 sheet 4 of 5",
+      "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/sch_tab5_b08_page_04.webp",
+      "mirrored": false,
+      "rights": "Redistribution not established for current CDN images"
+    },
+    {
+      "label": "Schematic B08 \u2014 sheet 5 of 5",
+      "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/sch_tab5_b08_page_05.webp",
+      "mirrored": false,
+      "rights": "Redistribution not established for current CDN images"
+    },
+    {
+      "label": "Manufacturer dimension drawing",
+      "url": "https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/C145_Model_Size_page_01.png",
+      "mirrored": false,
+      "rights": "Redistribution not established for current CDN images"
+    }
+  ],
+  "license_review": {
+    "hardware_license": "https://github.com/m5stack/M5_Hardware/blob/d3ae864f161167af3f9698214012e1d135adc357/LICENSE",
+    "docs_license": "https://github.com/m5stack/m5-docs/blob/e5354c5dcc61d16fdc1dff9d92c2c760728d0b60/LICENSE",
+    "decision": "Legacy docs MIT is credited to John Hildenbiddle; no Tab5 source found there. Link CDN images rather than assume coverage.",
+    "docs_checked_tree": "e5354c5dcc61d16fdc1dff9d92c2c760728d0b60"
+  },
+  "revision_uncertainty": "Mechanical STL not explicitly versioned; schematic filenames B08; match to enrolled unit not established",
+  "browser_check": {
+    "date": "2026-11-17",
+    "result": "All seven vendor images loaded in browser on manufacturer page",
+    "schematic_sheet_pixels": [
+      5848,
+      4132
+    ],
+    "block_diagram_pixels": [
+      8018,
+      5846
+    ],
+    "dimension_drawing_pixels": [
+      5847,
+      4134
+    ]
+  },
+  "local_previews": [
+    {
+      "path": "previews/Tab5-back.png",
+      "source": "originals/Tab5.stl",
+      "sha256": "820019a79e1c1802e67c5a41929ec5e246870593a759ecffa0ce160b94226a5e",
+      "license": "Derived from MIT-licensed M5Stack STL"
+    },
+    {
+      "path": "previews/Tab5-front.png",
+      "source": "originals/Tab5.stl",
+      "sha256": "22a5f85a954b95ed6e15fcdc812aff61221efb25caed9b0d0974b55b717ca0a7",
+      "license": "Derived from MIT-licensed M5Stack STL"
+    }
+  ]
+}

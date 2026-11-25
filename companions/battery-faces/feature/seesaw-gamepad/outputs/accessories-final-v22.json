@@ -1,0 +1,92 @@
+{
+  "blue": {
+    "PEER": {
+      "green": "PEER color=green seen=1 fresh=1 age_ms=407 rx=118 seq=115 uptime_ms=228476 valid=1 pct=38.30 volts=3.800 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "pink": "PEER color=pink seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "yellow": "PEER color=yellow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "rainbow": "PEER color=rainbow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "purple": "PEER color=purple seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "orange": "PEER color=orange seen=1 fresh=1 age_ms=1541 rx=123 seq=3814 uptime_ms=7626018 valid=1 pct=81.60 volts=4.016 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "silver": "PEER color=silver seen=1 fresh=1 age_ms=1799 rx=123 seq=517 uptime_ms=1032000 valid=1 pct=68.20 volts=3.891 current_valid=0 ma=0.0 charger=UNKNOWN"
+    },
+    "ACK": {
+      "green": "ACK color=green ok=10 lost=0",
+      "pink": "ACK color=pink ok=0 lost=0",
+      "yellow": "ACK color=yellow ok=0 lost=0",
+      "rainbow": "ACK color=rainbow ok=0 lost=0",
+      "purple": "ACK color=purple ok=0 lost=0",
+      "orange": "ACK color=orange ok=0 lost=0",
+      "silver": "ACK color=silver ok=0 lost=0"
+    },
+    "FACE": "FACE build=BatteryFaces-v22-qwiic-find-breathing mac=02:00:00:00:00:01 mood=happy demo=0 frames=5033 uptime_ms=253711 settled=1 hash=cb6c0435 tft=135x240 gauge=1",
+    "BATT": "BATT valid=1 pct=97.82 volts=4.164 rate=-1.040 hours=94.054 state=DISCHARGING",
+    "DIAG": "DIAG evidence=LEARNING warm=1 window=0 dp=0.000 dv=0.0000 page=0 auto=1 test=1 outcome=0 seconds=0 saved=1",
+    "MICRO": "MICRO seconds=118 dp=0.0000 dv=0.00000 direction=0 samples=61",
+    "DISPLAY": "DISPLAY selected=blue page=0 gestures=0",
+    "RADIO": "RADIO ready=1 paused=0 channel=1 wifi_status=6 sent=127 errors=0 sta=02:00:00:00:00:01",
+    "GATEWAY": "GATEWAY ready=1 clients=1 sent=1003",
+    "POWER": "POWER current_valid=0 ma=0.0 charger=UNKNOWN",
+    "HW": "HW board=feather power=1 backlight=1 panel_reset=1",
+    "HAPTIC": "HAPTIC present=1 ready=1 io=1 address=4a chip=ba button=D2 active=0 duration_ms=180 at_ms=253720 start_ms=181293 amplitude=20 level=LOW mode=0 drive=0 events=00 pulses=20 errors=0",
+    "QWIIC_BUTTON": "QWIIC_BUTTON present=1 ready=1 address=6f id=5d firmware=1.3 pressed=0 led=16 led_readback=16 io=1 presses=0 errors=0",
+    "PERF": "PERF max_render_ms=36",
+    "DEVICE": "DEVICE color=blue face_ink=041f output=tft led=0,0,0"
+  },
+  "green": {
+    "PEER": {
+      "blue": "PEER color=blue seen=1 fresh=1 age_ms=1939 rx=114 seq=127 uptime_ms=252549 valid=1 pct=97.82 volts=4.164 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "pink": "PEER color=pink seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "yellow": "PEER color=yellow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "rainbow": "PEER color=rainbow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "purple": "PEER color=purple seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "orange": "PEER color=orange seen=1 fresh=1 age_ms=303 rx=113 seq=3815 uptime_ms=7628018 valid=1 pct=80.80 volts=4.008 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "silver": "PEER color=silver seen=1 fresh=1 age_ms=582 rx=112 seq=518 uptime_ms=1034000 valid=1 pct=68.20 volts=3.891 current_valid=0 ma=0.0 charger=UNKNOWN"
+    },
+    "ACK": {
+      "blue": "ACK color=blue ok=234 lost=0",
+      "pink": "ACK color=pink ok=0 lost=0",
+      "yellow": "ACK color=yellow ok=0 lost=0",
+      "rainbow": "ACK color=rainbow ok=0 lost=0",
+      "purple": "ACK color=purple ok=0 lost=0",
+      "orange": "ACK color=orange ok=0 lost=0",
+      "silver": "ACK color=silver ok=0 lost=0"
+    },
+    "FACE": "FACE build=BatteryFaces-v22-qwiic-find-breathing mac=02:00:00:00:00:02 mood=sorry demo=0 frames=4570 uptime_ms=229681 settled=1 hash=81610350 tft=135x240 gauge=1",
+    "BATT": "BATT valid=1 pct=38.30 volts=3.800 rate=-2.288 hours=16.742 state=DISCHARGING",
+    "DIAG": "DIAG evidence=LEARNING warm=1 window=0 dp=0.000 dv=0.0000 page=0 auto=1 test=1 outcome=0 seconds=0 saved=1",
+    "MICRO": "MICRO seconds=118 dp=0.0000 dv=0.00375 direction=0 samples=61",
+    "DISPLAY": "DISPLAY selected=green page=0 gestures=0",
+    "RADIO": "RADIO ready=1 paused=0 channel=1 wifi_status=6 sent=115 errors=0 sta=02:00:00:00:00:02",
+    "GATEWAY": "GATEWAY ready=0 clients=0 sent=0",
+    "POWER": "POWER current_valid=0 ma=0.0 charger=UNKNOWN",
+    "HW": "HW board=feather power=1 backlight=1 panel_reset=1",
+    "HAPTIC": "HAPTIC present=1 ready=1 io=1 address=4a chip=ba button=D2 active=0 duration_ms=180 at_ms=229690 start_ms=193324 amplitude=20 level=LOW mode=0 drive=0 events=00 pulses=20 errors=0",
+    "QWIIC_BUTTON": "QWIIC_BUTTON present=1 ready=1 address=6f id=5d firmware=1.3 pressed=0 led=16 led_readback=16 io=1 presses=0 errors=0",
+    "PERF": "PERF max_render_ms=34",
+    "DEVICE": "DEVICE color=green face_ink=07e0 output=tft led=0,0,0"
+  },
+  "tab5": {
+    "NODE": {
+      "blue": "NODE color=blue seen=1 fresh=1 valid=1 pct=97.82 volts=4.164 age_ms=2699 rx=269 seq=127 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "green": "NODE color=green seen=1 fresh=1 valid=1 pct=38.30 volts=3.800 age_ms=1940 rx=265 seq=115 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "pink": "NODE color=pink seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "yellow": "NODE color=yellow seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "rainbow": "NODE color=rainbow seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "purple": "NODE color=purple seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "orange": "NODE color=orange seen=1 fresh=1 valid=1 pct=80.80 volts=4.008 age_ms=1046 rx=259 seq=3815 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "silver": "NODE color=silver seen=1 fresh=1 valid=1 pct=68.20 volts=3.891 age_ms=1324 rx=257 seq=518 current_valid=0 ma=0.0 charger=UNKNOWN"
+    },
+    "RUNNER": {
+      "blue": "RUNNER color=blue fresh=1 pct=97.82 volts=4.164 points=54 bg_points=54 observed_s=6026 run_observed_s=0 last_contact_s=6141 low_at_s=0 resets=4 interrupted=0 rate_valid=0 pph=0.000 vph=0.0000 eta10_min=-1.0",
+      "green": "RUNNER color=green fresh=1 pct=38.30 volts=3.800 points=56 bg_points=56 observed_s=5864 run_observed_s=0 last_contact_s=6143 low_at_s=0 resets=3 interrupted=0 rate_valid=0 pph=0.000 vph=0.0000 eta10_min=-1.0",
+      "orange": "RUNNER color=orange fresh=1 pct=80.80 volts=4.008 points=67 bg_points=67 observed_s=5559 run_observed_s=0 last_contact_s=6143 low_at_s=0 resets=0 interrupted=0 rate_valid=0 pph=0.000 vph=0.0000 eta10_min=-1.0",
+      "silver": "RUNNER color=silver fresh=1 pct=68.20 volts=3.891 points=70 bg_points=70 observed_s=5454 run_observed_s=0 last_contact_s=6143 low_at_s=0 resets=1 interrupted=0 rate_valid=0 pph=0.000 vph=0.0000 eta10_min=-1.0"
+    },
+    "ACCESSORY": {
+      "blue": "ACCESSORY color=blue seen=1 fresh=1 ready=1 finding=0 pending=0 age_ms=49 boot=2246088563 status_seq=323 ack_seq=10 session=10 reason=5 remaining_ms=0",
+      "green": "ACCESSORY color=green seen=1 fresh=1 ready=1 finding=0 pending=0 age_ms=1596 boot=633113910 status_seq=234 ack_seq=10 session=10 reason=5 remaining_ms=0"
+    },
+    "MONITOR": "MONITOR build=BatteryMonitor-v22-find-me-runtime-observer connected=1 width=1280 height=720 packets=1050 uptime_ms=339837 ip=192.168.4.2 panel=1 tiles=4 i2c_mask=511 sda=1 scl=1",
+    "RUNTIME": "RUNTIME phase=WAITING session=0 ready=1 elapsed_s=6144 clock_s=6144 page=faces demo=0 storage=1 saved=1 restored=1 writes=1 snapshot_bytes=3292"
+  }
+}

@@ -1,0 +1,4 @@
+#include <cassert>
+#include <cstdio>
+#include "../firmware/FeatherFace/HapticPulse.h"
+int main(){HapticPulse p;assert(p.start(100));assert(p.active);assert(!p.start(130));assert(!p.due(279));assert(p.due(280));p.stopped();assert(!p.active&&!p.start(400));assert(p.start(800));p.stopped();HapticPulse wrap;assert(wrap.start(0xffffff80));assert(!wrap.due(0x20));assert(wrap.due(0x34));HapticPulse fail;assert(fail.start(0));fail.stopped(false);assert(fail.active&&fail.due(200)&&!fail.start(1000));fail.stopped(true);assert(!fail.active);HapticPulse varied;assert(!varied.start(0,801));assert(varied.start(0,800));assert(!varied.due(799));assert(varied.due(800));varied.stopped();assert(!varied.start(1000,100));assert(varied.start(1300,100));assert(varied.due(1400));puts("haptic pulse: bounded180ms, cooldown, retrigger and wrap PASS");}

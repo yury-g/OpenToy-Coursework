@@ -1,0 +1,93 @@
+{
+  "recorded_utc": "2026-10-20T16:27:04.881201+00:00",
+  "tests": [
+    {
+      "test": "battery_diagnostics_test",
+      "passed": true
+    },
+    {
+      "test": "battery_led_test",
+      "passed": true
+    },
+    {
+      "test": "battery_test",
+      "passed": true
+    },
+    {
+      "test": "cached_face_test",
+      "passed": true
+    },
+    {
+      "test": "camera_capture_test",
+      "passed": true
+    },
+    {
+      "test": "camera_control_test",
+      "passed": true
+    },
+    {
+      "test": "camera_gray_test",
+      "passed": true
+    },
+    {
+      "test": "camera_multisource_test",
+      "passed": true
+    },
+    {
+      "test": "camera_snapshot_test",
+      "passed": true
+    },
+    {
+      "test": "camera_socket_test",
+      "passed": true
+    },
+    {
+      "test": "camera_view_test",
+      "passed": true
+    },
+    {
+      "test": "display_test",
+      "passed": true
+    },
+    {
+      "test": "display_test_watch",
+      "passed": true
+    },
+    {
+      "test": "family_registry_test",
+      "passed": true
+    },
+    {
+      "test": "layout_test",
+      "passed": true
+    },
+    {
+      "test": "microtrend_test",
+      "passed": true
+    },
+    {
+      "test": "monitor_packet_test",
+      "passed": true
+    },
+    {
+      "test": "navigation_test",
+      "passed": true
+    },
+    {
+      "test": "peer_battery_test",
+      "passed": true
+    },
+    {
+      "test": "tab_camera_letterbox_test",
+      "passed": true
+    },
+    {
+      "test": "test_camera_protocol",
+      "passed": true
+    },
+    {
+      "test": "voltage_estimate_test",
+      "passed": true
+    }
+  ]
+}

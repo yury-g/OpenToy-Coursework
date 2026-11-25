@@ -1,0 +1,10 @@
+# Keep manufacturer originals byte-for-byte and avoid enormous CAD text diffs.
+**/source/** -text linguist-vendored=true
+**/originals/** -text linguist-vendored=true
+**/licenses/** -text linguist-vendored=true
+*.step -diff
+*.stp -diff
+*.stl -diff
+*.dxf -diff
+**/previews/** linguist-generated=true
+*.svg -diff

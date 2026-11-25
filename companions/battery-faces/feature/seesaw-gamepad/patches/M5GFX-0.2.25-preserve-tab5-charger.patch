@@ -1,0 +1,25 @@
+--- a/src/M5GFX.cpp
++++ b/src/M5GFX.cpp
+@@ -2549,7 +2549,7 @@
+             0xFF,0xFF,0xFF,
+           };
+ 
+-          static constexpr const uint8_t reg_data_io2[] = {
++          uint8_t reg_data_io2[] = {
+             0x03, 0b10111001, 0,   // PI4IO_REG_IO_DIR
+             0x07, 0b00000110, 0,   // PI4IO_REG_OUT_H_IM
+             0x0D, 0b10111001, 0,   // PI4IO_REG_PULL_SEL
+@@ -2560,6 +2560,13 @@
+             0xFF,0xFF,0xFF,
+           };
+ 
++          // BatteryFaces: preserve both Tab5 charger control pins BEFORE any
++          // direction/latch/pull write, avoiding a transient 1000mA selection.
++          for (unsigned n=0; reg_data_io2[n]!=0xFF; n+=3) {
++            auto old = lgfx::i2c::readRegister8(in_i2c_port, pi4io2_i2c_addr, reg_data_io2[n], 100000);
++            if (!old.has_value()) return board_t::board_unknown;
++            reg_data_io2[n+1] = (reg_data_io2[n+1] & ~0xA0u) | (old.value() & 0xA0u);
++          }
+           i2c_write_register8_array(in_i2c_port, pi4io1_i2c_addr, reg_data_io1_1, 100000);
+           i2c_write_register8_array(in_i2c_port, pi4io2_i2c_addr, reg_data_io2, 100000);
+           lgfx::delay(10);

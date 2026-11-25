@@ -1,0 +1,9 @@
+# Exact M5Stack Tab5 preserved flash layout (16 MiB).
+# Only the factory slot (0x10000, size 0x300000) is written by bounded app installs.
+# Name,   Type, SubType, Offset,   Size,     Flags
+nvs,      data, nvs,     0x9000,   0x6000,
+phy_init, data, phy,     0xf000,   0x1000,
+factory,  app,  factory, 0x10000,  0x300000,
+survey,   data, 0x82,    0x310000, 0x700000,
+human_face_det, data, 0x82, 0xa10000, 0x64000,
+storage,  data, 0x82,    0xa74000, 0x200000,

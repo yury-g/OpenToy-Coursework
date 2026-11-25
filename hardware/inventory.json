@@ -1,0 +1,1068 @@
+{
+  "checked_date": "2026-11-17",
+  "scope": "Manufacturer hardware gallery. Each device README supplies upstream source and license details. Checksums identify this repository copy, not independent certification.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 310,
+      "sha256": "91ba4f8780ad81cfe23363f831aa8d39f270fbb18b2990fde0f0e612f1212deb",
+      "provenance": "README.md"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5399,
+      "sha256": "7e09d4a8a6ff331cdcae2be90f8cb1f746223fb4c156baf24818f561f691f13f",
+      "provenance": "README.md"
+    },
+    {
+      "path": "crowpanel/README.md",
+      "bytes": 4283,
+      "sha256": "7e0bf93258947ceed6f45168bb415a8930d7780fb554630e58cd92a0e24443fd",
+      "provenance": "crowpanel/README.md"
+    },
+    {
+      "path": "crowpanel/previews/electronics.svg",
+      "bytes": 1785,
+      "sha256": "90391af3acff8380f1f781b2c76847a263df924a4c0e087f423942ab7873d1d5",
+      "provenance": "crowpanel/README.md"
+    },
+    {
+      "path": "feather/README.md",
+      "bytes": 2417,
+      "sha256": "6caffd163db83f83b9593ecb552fec67f687661c3d8205422ab6761e0b69ff26",
+      "provenance": "feather/README.md"
+    },
+    {
+      "path": "feather/licenses/Adafruit-PCB-notice.txt",
+      "bytes": 4899,
+      "sha256": "d8bf4b5537e69e46c9b3bd091e18041b4a2ab34c402d8363da7a9ce17c4c4d14",
+      "provenance": "feather/README.md"
+    },
+    {
+      "path": "feather/licenses/CAD-MIT.txt",
+      "bytes": 1076,
+      "sha256": "f60436644e066301d4c2e8f1f0674a157b1f60e4fd5586717b99dde255cc18cd",
+      "provenance": "feather/README.md"
+    },
+    {
+      "path": "feather/licenses/PCB-CC-BY-SA-3.0.txt",
+      "bytes": 22239,
+      "sha256": "075dad5e5fc96c27014fabc269f4f5732909cffd178a486f546d982b6cf86b74",
+      "provenance": "feather/README.md"
+    },
+    {
+      "path": "feather/previews/feather-model-thumb.png",
+      "bytes": 111623,
+      "sha256": "3abfc3f3a91442ca329af517679a599f931c168d0dc0cdf3deec068584d1a20d",
+      "provenance": "feather/README.md"
+    },
+    {
+      "path": "feather/previews/feather-model.png",
+      "bytes": 397240,
+      "sha256": "75000fe2d13411d185908fcf3c99c88a5206dfa0f3ed7dbca23e42a1539ff441",
+      "provenance": "feather/README.md"
+    },
+    {
+      "path": "feather/previews/feather-schematic-thumb.png",
+      "bytes": 92003,
+      "sha256": "b9922e1f3039958de88fc1030a555d13f002f46bcd277a7b2239da49135da26b",
+      "provenance": "feather/README.md"
+    },
+    {
+      "path": "feather/previews/feather-schematic.png",
+      "bytes": 135591,
+      "sha256": "f74d49335c32219faff9d99e1c87380da2a4a4cc29dcb97a10f66240f9bf46f7",
+      "provenance": "feather/README.md"
+    },
+    {
+      "path": "feather/source/5691-reverse-tft-feather.sch",
+      "bytes": 636487,
+      "sha256": "dc2fe163aa731c9a055ad2cbf974b035f8131d5cd5db96a418b6aaf3db72dfc6",
+      "provenance": "feather/README.md"
+    },
+    {
+      "path": "feather/source/5691-reverse-tft-feather.step",
+      "bytes": 3946964,
+      "sha256": "e112dae4bd06b1cbfb3ff11d49df02f8e4a21ad6c886cbfccaeb7c8a9b5626b1",
+      "provenance": "feather/README.md"
+    },
+    {
+      "path": "nesso-n1/README.md",
+      "bytes": 2856,
+      "sha256": "0916814bda90a81c4f159c6b26ae22b5b22e788531f256922559a5a4cdb2417b",
+      "provenance": "nesso-n1/README.md"
+    },
+    {
+      "path": "nesso-n1/checksums.json",
+      "bytes": 1526,
+      "sha256": "626193bc16c4c87f49eb9f01e0851ae420aff3b19a977aebfed27e02b1e02cbe",
+      "provenance": "nesso-n1/README.md"
+    },
+    {
+      "path": "nesso-n1/licenses/Arduino-hardware.txt",
+      "bytes": 208,
+      "sha256": "d48b181ad29e47f113f5cc98ba7e910dee7231d154409f1e6bf7627bd4d253c4",
+      "provenance": "nesso-n1/README.md"
+    },
+    {
+      "path": "nesso-n1/licenses/M5Stack-MIT.txt",
+      "bytes": 1063,
+      "sha256": "44611d917bece311f5c8eeffce83d8bf9e9ca3f815d262f694ff4a7996af50ea",
+      "provenance": "nesso-n1/README.md"
+    },
+    {
+      "path": "nesso-n1/originals/Arduino_Nesso_N1.stl",
+      "bytes": 1034884,
+      "sha256": "38ca3562423fe099824d071ae537cf600b6475a1dcf4571e8414c1dc3741b04e",
+      "provenance": "nesso-n1/README.md"
+    },
+    {
+      "path": "nesso-n1/previews/nesso-all.png",
+      "bytes": 124563,
+      "sha256": "d0d6535191e7bb760c9240ff5870ef4a22e6133b36fa95aac26da18d84c4fbbb",
+      "provenance": "nesso-n1/README.md"
+    },
+    {
+      "path": "nesso-n1/previews/nesso-model.png",
+      "bytes": 98397,
+      "sha256": "3b7762f217cd9c2f2f34f6b5c70e7a3576b3f7f6f1dfac0cfd0ed383bc5957f0",
+      "provenance": "nesso-n1/README.md"
+    },
+    {
+      "path": "nesso-n1/previews/nesso-n1.png",
+      "bytes": 62426,
+      "sha256": "10c6984eec9737ec00d378d934292799eafebccca2a726ca20c32ff431338a20",
+      "provenance": "nesso-n1/README.md"
+    },
+    {
+      "path": "nesso-n1/schematics/nesso-n1.png",
+      "bytes": 308321,
+      "sha256": "e15b98d384d0cb0ddbbe79fe514327928a390176f22116f39981ca1decd38e9d",
+      "provenance": "nesso-n1/README.md"
+    },
+    {
+      "path": "tab5/README.md",
+      "bytes": 4609,
+      "sha256": "e11f7967364b10636d75545f4b8aca07ae3bd2f4985feb3992d00e9222c0eb90",
+      "provenance": "tab5/README.md"
+    },
+    {
+      "path": "tab5/licenses/M5_Hardware-MIT.txt",
+      "bytes": 1063,
+      "sha256": "44611d917bece311f5c8eeffce83d8bf9e9ca3f815d262f694ff4a7996af50ea",
+      "provenance": "tab5/README.md"
+    },
+    {
+      "path": "tab5/originals/Tab5.stl",
+      "bytes": 1702084,
+      "sha256": "5e8e6398d85e4183af9040e9b12b1462fe74629b0ee6065581c7c897a8ba1a74",
+      "provenance": "tab5/README.md"
+    },
+    {
+      "path": "tab5/previews/Tab5-back.png",
+      "bytes": 1614358,
+      "sha256": "8f429bfa022e3e38809ad3aca50f1182c93d048b3e6217b34214242e70b7c2b6",
+      "provenance": "tab5/README.md"
+    },
+    {
+      "path": "tab5/previews/Tab5-front.png",
+      "bytes": 1626552,
+      "sha256": "cea606843458db864567f8676ebc4e24708dd6463664ea1b8213e19a815c0ea0",
+      "provenance": "tab5/README.md"
+    },
+    {
+      "path": "tab5/previews/render-metadata.json",
+      "bytes": 563,
+      "sha256": "4fa1aaa43f5d1196cd1fb507c3459b79bd8ed0f3e0db0ce116d5861addd0bb82",
+      "provenance": "tab5/README.md"
+    },
+    {
+      "path": "tab5/provenance.json",
+      "bytes": 4095,
+      "sha256": "290e016ad591e519cba9f457e5979345dfda145a331abe86df295542a24d833c",
+      "provenance": "tab5/README.md"
+    },
+    {
+      "path": "uno-q/README.md",
+      "bytes": 10614,
+      "sha256": "e4deea88ecc59a8f76650bf56a30484285f2f127733f90222ac28d0b374bc46f",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/checksums.json",
+      "bytes": 16319,
+      "sha256": "0611043fa34266ff00d53d3eaf916cbd944179c63fb7ccef77d7057466f4aaf9",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/licenses/Arduino-hardware.txt",
+      "bytes": 208,
+      "sha256": "d48b181ad29e47f113f5cc98ba7e910dee7231d154409f1e6bf7627bd4d253c4",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/originals/UNO-Q-simplified.stp",
+      "bytes": 1410148,
+      "sha256": "0be7caccc4b64064472271e015b6a8e43a23c6840685840ac9545501fd07f1d0",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-01.png",
+      "bytes": 24955,
+      "sha256": "9c171954811a08bbf719fefe6ef6ff2c690304c7e4ec33deaa0b2207d724dc72",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-02.png",
+      "bytes": 22553,
+      "sha256": "29de436f20fe53826a8f8aaa06605a034f99a6d6a8c0cbafdacd9fc5ab721c10",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-03.png",
+      "bytes": 34460,
+      "sha256": "819b8d8da7f34267b836dac3f3565f7dd31791dec96cc01526834b463dade460",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-04.png",
+      "bytes": 29350,
+      "sha256": "8951fbef0c737d9aba2b1905c40717b0bbefe01f302f6b9aa0e901000d8abcce",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-05.png",
+      "bytes": 17634,
+      "sha256": "2f71062b65406198c998313db5481a05c9b157d36c93c3cd48135017d2b55cdb",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-06.png",
+      "bytes": 21840,
+      "sha256": "e82548e3f9c6689fd01b1f25d18a177cb1a499e60cb67c492139d6f778d32aad",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-07.png",
+      "bytes": 12118,
+      "sha256": "420bd1dde4bfcb7c326f6e553217576aacba5a515ed39bddc92d94b8be9c83ad",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-08.png",
+      "bytes": 29790,
+      "sha256": "1814ba6aabd1c516f54fe00e78e70bf7251ee66ed03a702f23d64324fcb52a5d",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-09.png",
+      "bytes": 30070,
+      "sha256": "15bd56fc9e3423dbedb0c1ad60f44ee10ed97283f6052e3e35133c2b4f472723",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-10.png",
+      "bytes": 37586,
+      "sha256": "a3dfca5141ab1adc8703c4446f4c80e25efb9f997ccc8b460ed16e14abe3addc",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-11.png",
+      "bytes": 25077,
+      "sha256": "0efcf87dcdfa7e034fc6a5558aec5238719eb78f24aa1e8948b42eca771fb69b",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-12.png",
+      "bytes": 18117,
+      "sha256": "2412ed1189c8d060a41948ecb0023a080ce128e97be511bf85b2d2a77d5447d8",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-13.png",
+      "bytes": 31398,
+      "sha256": "7e4397de92b70825de4d510ff3fce2f704b06bf73360bd13fa4fb3133398a039",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-14.png",
+      "bytes": 36068,
+      "sha256": "b8cffeb86f881b4e309b72dbe4740b7bbd52f58f6898e6f16a4ff380ee5a090d",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-15.png",
+      "bytes": 35438,
+      "sha256": "72fd420b0ad32d4fd24d7c6d57ad8955b361b60d95b0cc9dddecf97da5234483",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-16.png",
+      "bytes": 26373,
+      "sha256": "a2ced167eb04494d5803e912f7988e3515ba02607f60a96a9de3c2a12cb84a68",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-17.png",
+      "bytes": 20299,
+      "sha256": "e9229f5ff30f02c747c44f5859cdf35b402f96c8a7d10a10ec8a50cd4a8b15ef",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-18.png",
+      "bytes": 28082,
+      "sha256": "0c4df1e6bd6c6a00d45b45a6cee0ee9b904981dc8f8a7ff0b229dd9502cc898f",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-19.png",
+      "bytes": 40656,
+      "sha256": "a07041a311ccff5c07a2aad71938bd8d1a30fb6ba5192d60954ab4f258718db7",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-20.png",
+      "bytes": 52290,
+      "sha256": "8b9a2b7e3a8ffef7d6db008c3e41e864d2e649b2e41e78386e0f2c52c91ab3b7",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-21.png",
+      "bytes": 61680,
+      "sha256": "ee91c822724b64a16a5779750b3fc11f44ed137883108533a98030316c82b784",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-22.png",
+      "bytes": 27730,
+      "sha256": "0111243cdffde1301e91b7a552e23ad14e43b66754f09f3a626530255761ff36",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-23.png",
+      "bytes": 24184,
+      "sha256": "91f859a56fbb35e3a954658ca762cb5cb5a0db6a0db8788ac1289661eb825187",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-24.png",
+      "bytes": 36346,
+      "sha256": "3c514ec4f713b21adab17ef27f9cd184196be56c53af445dd17ea855e82c2cbd",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-25.png",
+      "bytes": 24419,
+      "sha256": "19cab1f123493ed9eb12b1783860cbecd7b27195526c0cf1bb6f51f20c5f9ab9",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-26.png",
+      "bytes": 20120,
+      "sha256": "1fab8125873c98124f071bb04e8c3080296d487d99283dc15255569794266bab",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-27.png",
+      "bytes": 31518,
+      "sha256": "d352cc6227b719c5b020d1c94f66a7068aa4fd6462ab6678b4208632e94a9d42",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-28.png",
+      "bytes": 28554,
+      "sha256": "ebf6795fc34fdfaf0a2bd79ae34ef780f6ff4edcf50cd89bde4479210c5f386e",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-29.png",
+      "bytes": 17388,
+      "sha256": "13a847c7812a65128f1e7822a7faa4f80b32e844f453712bd5be32365456dc31",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-30.png",
+      "bytes": 22332,
+      "sha256": "c1a2d066b92b3b550b5c3c899f28ee80bbb88b7d15c103262534b2e13a17c818",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-31.png",
+      "bytes": 13529,
+      "sha256": "018a7752725ed13f499c4ade1211cd2aa98b4a0d473b6c15c60864a884e69342",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-32.png",
+      "bytes": 27704,
+      "sha256": "c40773982fc7d1556cf91869045700aa3fc3d6eaeeb372df6fe2fe4d43ae1ea9",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-33.png",
+      "bytes": 31203,
+      "sha256": "3906ee97283b67a6d150846a5aa8b8bd7c673678a9b1f7e7fb2c3525288adccb",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-34.png",
+      "bytes": 38257,
+      "sha256": "30af4ed4b32a76f30934952d79d035ccb924277f1dae230b44481f5b3222dc02",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-35.png",
+      "bytes": 25113,
+      "sha256": "3f4aca96314076861cf37f9e59d8cc09065b316d8768a820f78dfd5dda9a45ca",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-36.png",
+      "bytes": 19308,
+      "sha256": "524d581462c45c47038bef41b6607feac509756c5326b48f9e490f5b4527fd1e",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-37.png",
+      "bytes": 30034,
+      "sha256": "80fe7ea3774ceae65ada0333b96623a1b7e6cbd914180a357264f3dfd0a99598",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-38.png",
+      "bytes": 36612,
+      "sha256": "47baec8fa6c6543a12bc6fda3351907598735956cc5d46b1bf0b2b55b3c3ba17",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-39.png",
+      "bytes": 36422,
+      "sha256": "49397cca72270f0f135a639cadbb9e9f4c0ed758e129b9eda89b5bdb12556bcc",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-40.png",
+      "bytes": 28667,
+      "sha256": "151d1c63123af5c0eb220ef830e3780fe0b70edf0e12b6d4bc3c14bfb932eb7e",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-41.png",
+      "bytes": 20606,
+      "sha256": "32f6cc69f8cf66eff3f9c21ce8daf9014d33334d529c766cc19b3abecaefeca8",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-42.png",
+      "bytes": 29327,
+      "sha256": "b5c1fd68b37f1268d46957ec2675ab3dcdccc8273655d9ab3bd3a9e73a9c06c4",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-43.png",
+      "bytes": 38521,
+      "sha256": "7e129f948de04730e942e5a7f7d1304824c8bbd95833f28c03ae5310e8613964",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-44.png",
+      "bytes": 53374,
+      "sha256": "4ed9d2834338a46497365bdc535fb035e7e2d01984208eae8154c66732d76c97",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-45.png",
+      "bytes": 60604,
+      "sha256": "91a9210d3bdb85861e163a8176b4bd5151737a8c1b406adaf77c6f19c6f76c7e",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-46.png",
+      "bytes": 24369,
+      "sha256": "82d20c4c05835a146c9ade784662c6bbab3e23aaf39c9b7084f321fd31d86582",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-47.png",
+      "bytes": 24847,
+      "sha256": "abc25703fd55ed5248755062e8c2ec89a9975f8d5130b27a08c70e532ad9aeff",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-48.png",
+      "bytes": 37219,
+      "sha256": "ab722e2fece14b0d6643a0eef80127ebba1b0b863be10367b170022d1169ebae",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/page-49.png",
+      "bytes": 6547,
+      "sha256": "117c179c3053e481d5a96bf4c49dbdbe6a34f341c0a9ddbc67d6e73794c32a28",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/previews/uno-model.png",
+      "bytes": 98679,
+      "sha256": "170c70a533da1a1342e1bb4450caf25d24c756e7518b9098256cd4732456341b",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-01.png",
+      "bytes": 127700,
+      "sha256": "f24c1c877d91ebc5f253cfa14a489bb43d1ddd563c32dadfda54bdf08dddd319",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-02.png",
+      "bytes": 116146,
+      "sha256": "bc6ec3d106f9bb75b293839431ec87b565a5f5fac2ecb55c1a6c166ea38c3731",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-03.png",
+      "bytes": 164152,
+      "sha256": "862b49487815ea0eaebc470bc78b5fc2253598be8058022f04d1674189b8bff4",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-04.png",
+      "bytes": 148577,
+      "sha256": "2057458ea23e8799ce806bba04de028e02549d6e6f74a327975abe9a41b57383",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-05.png",
+      "bytes": 99448,
+      "sha256": "dfec5549286e9f6581c34110f7b9d5ef76cf934d7ce952f422fcbc6a464d2af3",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-06.png",
+      "bytes": 112219,
+      "sha256": "02a43cb4384831f9a4d4c73bd0935ce7c1622e5597cdfded85852999069ca008",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-07.png",
+      "bytes": 75277,
+      "sha256": "19302eca838c8ffc9189020bea9abc78cb744933ca61c568299f1949c2744215",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-08.png",
+      "bytes": 161827,
+      "sha256": "2344a91a07b6a777a4080f525cb285d952a40fb4dd293279d9aacf08fbac4d1a",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-09.png",
+      "bytes": 181694,
+      "sha256": "d2f132745cf99b12da90c1e943e9bd1c169d07d889898ab55fe7c4222fc29a57",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-10.png",
+      "bytes": 196051,
+      "sha256": "7136af442de92aa24a37571de6cf6881c04113706b4115546b64588c384288db",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-11.png",
+      "bytes": 143562,
+      "sha256": "dc59535bc38f2ab60c7db9cf96ac3cdd197bd0985429238b024de820be994e27",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-12.png",
+      "bytes": 99419,
+      "sha256": "4f06434c2a6711bcf667b5e0d01b5e90655697d684d8c280b330e137f3728d50",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-13.png",
+      "bytes": 147782,
+      "sha256": "86329d5c8cf871c5e1128adcc4530facbf3e0de1dce29dfa8880ee6ef7d67b31",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-14.png",
+      "bytes": 168423,
+      "sha256": "ca0ce85d365f127d4afc775726909adc423b79a69ceb92a094e1b1d59156cf36",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-15.png",
+      "bytes": 171769,
+      "sha256": "b05074ede826f35bdbe66b4596012042a9168d8f94358ccbff9bfc0ad4069016",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-16.png",
+      "bytes": 123291,
+      "sha256": "b29b48c3f5742d89c52b025fae63166e3b4840c929ab467707508547dbfa7eff",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-17.png",
+      "bytes": 142791,
+      "sha256": "5ea9d7c8d61ac3e745ab29eeb417ea1061e51bd2c43d467f722623ff1a1b502a",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-18.png",
+      "bytes": 186971,
+      "sha256": "320ea9f0b7af34981457a1993bbe85d78334d4898dda883466a610b441229cd8",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-19.png",
+      "bytes": 257274,
+      "sha256": "91283f147ba669c18a243d64293f7f34323482dbf98e00c5fbb3ec5dd4fd5242",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-20.png",
+      "bytes": 287454,
+      "sha256": "901d05114732f1914fd1a66908f86ff4a1123e2b84e484dd7007ba29b8559974",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-21.png",
+      "bytes": 269681,
+      "sha256": "095f8745ecb6b09b0107e19590c02b44ed7652e6bcd536127f7f72585d4a6ce0",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-22.png",
+      "bytes": 147225,
+      "sha256": "d96bb2f76092eb310152a39db093df9495b92a3fb949e5495349ead17fdbc6e8",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-23.png",
+      "bytes": 123210,
+      "sha256": "c9ea37f6365ef14687b4bb631a6c07bd290347229a224defe1c4756369bdeee2",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-24.png",
+      "bytes": 187641,
+      "sha256": "a7b49ad27b033b8ea02aeac193d1170ecd3eeae6c9511e65a2370c4e07972895",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-25.png",
+      "bytes": 132527,
+      "sha256": "512747a9f5ca0f20be45798e126032f6d632f73bfc4115528699c6777b10923e",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-26.png",
+      "bytes": 110734,
+      "sha256": "668f07e46bf5d5aef3c5332cd4c6079122e40971be06a29880936eb15a63d6c0",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-27.png",
+      "bytes": 161828,
+      "sha256": "87ccf6fda541de61eab140ec1a82109e1c18429a4000829817d4230a5b3cd6a1",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-28.png",
+      "bytes": 147867,
+      "sha256": "b348ac4bf84726f6e3c5f5cac5cac1fe853e633b87b216a7939fa69333028b8a",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-29.png",
+      "bytes": 101826,
+      "sha256": "1cfab871ee8be7d5fb7f667b5394685bc08ae68ed810269e023c91a5ee9e9d29",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-30.png",
+      "bytes": 118400,
+      "sha256": "18714941edc19a45f704eb227cc84e8de56aa57c344b835217a80d6e74a48f67",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-31.png",
+      "bytes": 89512,
+      "sha256": "75a69b3b4a4ec332a65f387c9068b85301889568e827cd776f8bec30070b7d8f",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-32.png",
+      "bytes": 157807,
+      "sha256": "78389c6d1ce41e1936e29b868c2da94211f0727dec06eb00825f077372ef5915",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-33.png",
+      "bytes": 196118,
+      "sha256": "736ec3578da03ffd19ac0872643471dd6f479836d8fe24859b5f453ec5c1dc01",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-34.png",
+      "bytes": 211352,
+      "sha256": "f08fdc7261ad02644b94fbcbb7f05d56d42ac854ae9cffb64269f4b149ee64c0",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-35.png",
+      "bytes": 153593,
+      "sha256": "49ba85214df8a23ad774ad13782ff452c649049c3513bf49cb1a238ba1913c9c",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-36.png",
+      "bytes": 114539,
+      "sha256": "744a215e9bd756e492adee4c89d2c02e566f0fc326b501eb073c18dc9a1ee5f0",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-37.png",
+      "bytes": 149437,
+      "sha256": "7acb445af76823152b9bff65ad96641e48aa707345b0c76e37363162b3273951",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-38.png",
+      "bytes": 175991,
+      "sha256": "82ece8cfb98ce3d42d04b73913e2d8f0d502dfedb584ca361ac610034ab71c9b",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-39.png",
+      "bytes": 183252,
+      "sha256": "f2277fc2ee85fd5c1ccacdbf891338c60f86f66115722be112a7933e5cde9a64",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-40.png",
+      "bytes": 148570,
+      "sha256": "1430919c89ccff06407db0e71efa9f5068ea1a620dffc951c38addb36ff35247",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-41.png",
+      "bytes": 153486,
+      "sha256": "1924a315bff842947b13c4f47915281d0e596d3185102db0c9c712777433f7a9",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-42.png",
+      "bytes": 209424,
+      "sha256": "a4629d0c2c9df1127d9a272e35f6bbe3f1fba98143630e46ed75cfd70a8d0eff",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-43.png",
+      "bytes": 253906,
+      "sha256": "69f57862e38782dff06a17556f576b86f1454f84ad0a7cd91e3dc17e9bf55676",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-44.png",
+      "bytes": 301207,
+      "sha256": "1e51994940a10fa4ff230bee0193aa146c6689296183f1a80b6bacda920e3526",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-45.png",
+      "bytes": 267279,
+      "sha256": "2eda112de2154fecdcdc56267b5855191ea132540ba4969c73b3f1c2ddecb04e",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-46.png",
+      "bytes": 138731,
+      "sha256": "7b3dead09a6ea3d527c6f8a4f4dcb09d06c9f07d34b1ba7d68cc5114a022a831",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-47.png",
+      "bytes": 133050,
+      "sha256": "14fb19ca81ba5d74c055ec1f438855278f32ed3ffff8ecebd9bc9d6eb018d352",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-48.png",
+      "bytes": 199487,
+      "sha256": "e299feacf2a65e92417d4028aee3b97bc698923c59c26956a645446e297cd94c",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "uno-q/schematics/page-49.png",
+      "bytes": 26644,
+      "sha256": "e435f91965f6dc219c6a96711f0170c67901f64cc72751d9114fd32fd852abd9",
+      "provenance": "uno-q/README.md"
+    },
+    {
+      "path": "waveshare-rlcd/LICENSE-Waveshare.txt",
+      "bytes": 11338,
+      "sha256": "bb01037d243b2614f6c0bcf65671eff4a004b65ef687a4fd4925a9ab068bd613",
+      "provenance": "waveshare-rlcd/README.md"
+    },
+    {
+      "path": "waveshare-rlcd/README.md",
+      "bytes": 3425,
+      "sha256": "6e9150fac175d4dd6e183017ce7d37855819ed470be1b87e724cd6f7ac427517",
+      "provenance": "waveshare-rlcd/README.md"
+    },
+    {
+      "path": "waveshare-rlcd/previews/electronics.svg",
+      "bytes": 1793,
+      "sha256": "02a16fc1de8b6f5c552cd7cdbe12b90b87df9211efb2830d0ef8c868494a5637",
+      "provenance": "waveshare-rlcd/README.md"
+    },
+    {
+      "path": "waveshare-rlcd/previews/product.webp",
+      "bytes": 44034,
+      "sha256": "ea5cceb25e44a45673ee077f8838fba3941534575e69c1ba60655f35cb89d420",
+      "provenance": "waveshare-rlcd/README.md"
+    },
+    {
+      "path": "waveshare-round/LICENSE-Waveshare.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "provenance": "waveshare-round/README.md"
+    },
+    {
+      "path": "waveshare-round/README.md",
+      "bytes": 2561,
+      "sha256": "fa5459beec44b8745ff1cb381b52a438303f568c52190bcff89866d2646ac7ff",
+      "provenance": "waveshare-round/README.md"
+    },
+    {
+      "path": "waveshare-round/SOURCES.md",
+      "bytes": 1193,
+      "sha256": "c479da45ad995beb4ab65338d5958560b8d9b9dd528eb8c12e74b87b6fc29adf",
+      "provenance": "waveshare-round/README.md"
+    },
+    {
+      "path": "waveshare-round/previews/dimension-sheet.png",
+      "bytes": 188632,
+      "sha256": "50c464cde9b2f92e1f2603e958a758ff838eb488578326a6495f289dd1510d04",
+      "provenance": "waveshare-round/README.md"
+    },
+    {
+      "path": "waveshare-round/previews/dimensions-dxf.png",
+      "bytes": 112767,
+      "sha256": "aa7ee6df7404b5709348d4d19bd782eab2acc2ad36cdee3430a4a85e829a2989",
+      "provenance": "waveshare-round/README.md"
+    },
+    {
+      "path": "waveshare-round/previews/schematic-v2.png",
+      "bytes": 1774985,
+      "sha256": "619041d21f78b5c7bfc6a4fefa25acaa3a99dbb0726a36e2225a4a5b5baee4b3",
+      "provenance": "waveshare-round/README.md"
+    },
+    {
+      "path": "waveshare-round/previews/speaker-box-envelope.svg",
+      "bytes": 1294,
+      "sha256": "764fa3900aad37fa779132f20aa7c9c8d121fff4812f3e6f3e13310100dffa92",
+      "provenance": "waveshare-round/README.md"
+    },
+    {
+      "path": "waveshare-round/source/ESP32-S3-Touch-LCD-1.85C-dimension.dxf",
+      "bytes": 1328350,
+      "sha256": "629ec58370ba5d9e578fc16d0e95a4a075ceee38a560b5707a4c59686e0e2960",
+      "provenance": "waveshare-round/README.md"
+    },
+    {
+      "path": "xiao/README.md",
+      "bytes": 6344,
+      "sha256": "93fe0324855fd3abb02740da1ecef319e4117429b79315bd9f21ebb51c48d8c3",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/licenses/CC-BY-SA-4.0.txt",
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/base-model-thumb.png",
+      "bytes": 98287,
+      "sha256": "307b42944b539900dfcf3dfb8c80ac8c5cab44f7d61859c8f5a5fe6ff72239b5",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/base-model.png",
+      "bytes": 338816,
+      "sha256": "98fa8e65b1792f6a2c6d951bc62aa0c9b081e4af65ace5062e9fbf1df0cd018f",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/base-sheet-1-thumb.png",
+      "bytes": 24539,
+      "sha256": "d9890d26b9e58bbb3bb5be88fa73dd00e60177e049801613ecd74200cb7cd1e9",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/base-sheet-1.svg",
+      "bytes": 232527,
+      "sha256": "7bc9feb51e16e41e575ac0be9bbe53c936852421f694caeff58dab7fbb7a92f1",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/base-sheet-2-thumb.png",
+      "bytes": 32293,
+      "sha256": "593be8f8e2b1858a521de71a28566257dabd25a69985d57e32dd30d2a82f464b",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/base-sheet-2.svg",
+      "bytes": 313167,
+      "sha256": "87d8c650b3d4889a636880f00c2b149e349b5d88063209aa775f92bbd4569841",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/base-sheet-3-thumb.png",
+      "bytes": 38897,
+      "sha256": "2055b1d96f245b0a7172f17408211c2e74f9e2bc626111eeca3d6bb2699b692f",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/base-sheet-3.svg",
+      "bytes": 537980,
+      "sha256": "697f361225b43f7ef325e866d6d446d4551119166d193ab51ffb725c5f168f2a",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/base-sheet-4-thumb.png",
+      "bytes": 101120,
+      "sha256": "5f64029dce288185507e193b146342d8f250c685894d873b44da720ba67502ab",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/base-sheet-4.svg",
+      "bytes": 2307244,
+      "sha256": "c47c710bca81d3e8e3fb9d0216a39a917571792e72fc5d2e8ee5a02e2918e395",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/sense-model-thumb.png",
+      "bytes": 94214,
+      "sha256": "d8c32df5a21bb18f567f08b26152922f2bea8a1c3ce260775e1daedf94dfe36f",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/sense-model.png",
+      "bytes": 337750,
+      "sha256": "a61e83facecf49217a58b7ea06a8a31310079d9ccb778d7a0b9d1c0ee3111272",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/sense-sheet-1-thumb.png",
+      "bytes": 26005,
+      "sha256": "d6a43d2124511043575bb0ef5a826f414d4eabe652af46be7906d72515af1309",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/sense-sheet-1.svg",
+      "bytes": 247780,
+      "sha256": "3a349c51e9b49a72db7be0b490529cf3c7e39d63f7e8fa5c760e49bcbd47fe5f",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/sense-sheet-2-thumb.png",
+      "bytes": 36981,
+      "sha256": "e8c30782a3af7d19c3899326293c114813c2d8920d574a029341f041822d9dfc",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/sense-sheet-2.svg",
+      "bytes": 410984,
+      "sha256": "8ff30ebbd2fa446994290beeb574b41e78e1f84ab8bd8e78feee8de8fd81f6a3",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/sense-sheet-3-thumb.png",
+      "bytes": 64349,
+      "sha256": "209dbcbc0dde66b5ef2447e461909d73894bb4519aed721607fb7b1e5096388f",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/sense-sheet-3.svg",
+      "bytes": 324908,
+      "sha256": "a544091bb6cdb798d6d869d3e72fd27d29ab3a4c93cfcab66450008299b2a668",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/sense-sheet-4-thumb.png",
+      "bytes": 101590,
+      "sha256": "67d09b6a1c580f680fd160dcae7b8dd1d35da5af31cbc495723a2c2ac0f58122",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/previews/sense-sheet-4.svg",
+      "bytes": 2251295,
+      "sha256": "0d59b93d3c352864d2249f4359ed0a71359741f9626435eff87a45a9cb5d3fdf",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/source/base-v1.3/01 Descriptions.kicad_sch",
+      "bytes": 91559,
+      "sha256": "1a01f753269f0a1f018e0f7f0fb6684d1215b1db6633428e1c8b5213e1481e26",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/source/base-v1.3/02 Block Digram.kicad_sch",
+      "bytes": 131009,
+      "sha256": "63738abd3308290165c341d47f5b476a482347db6a4a422c5d54f6767490cca2",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/source/base-v1.3/03 ESP32S3.kicad_sch",
+      "bytes": 445382,
+      "sha256": "2b0d06edef2b3cb47986739bc2a97d54e01bd8bdcf5e21df08fb54be3082c06e",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/source/base-v1.3/XIAO ESP32S3_V1.3.kicad_sch",
+      "bytes": 84325,
+      "sha256": "32a86dbe9d6885650754d113a820511e52823008202616ad2fff541d7fdcfac8",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/source/sense-v1.51/01 Descriptions.kicad_sch",
+      "bytes": 93797,
+      "sha256": "f78b67bf9943d7fb108c4d4de2fbb6b753482f1476368bf1313031db6579a58b",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/source/sense-v1.51/02 Block Diagram.kicad_sch",
+      "bytes": 366380,
+      "sha256": "241558024aa45a1c8fd5a021dc4d341449dd9b05bc7956f9207a4d13df05198c",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/source/sense-v1.51/03 XIAO ESP32-S3-Sense.kicad_sch",
+      "bytes": 487258,
+      "sha256": "0a91eb145e0ced1293e996198fb4959fc71ed42e655f05fab442590078560bfd",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/source/sense-v1.51/XIAO ESP32S3_V1.51.kicad_sch",
+      "bytes": 85151,
+      "sha256": "403922d53b9ab6532195d867b3cf3e9089b544976707f9874d0782cf3afed146",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/source/xiao-esp32s3-base-v3.step",
+      "bytes": 2989345,
+      "sha256": "15032919fa6a05f27cc007a05b289b2c8a670d564df729ec59e47fb68d2edff8",
+      "provenance": "xiao/README.md"
+    },
+    {
+      "path": "xiao/source/xiao-esp32s3-sense.step",
+      "bytes": 5629137,
+      "sha256": "fad46fb6568d249f529ae1a3a5e73720d101c49dea91209111931a88f74a77f9",
+      "provenance": "xiao/README.md"
+    }
+  ]
+}

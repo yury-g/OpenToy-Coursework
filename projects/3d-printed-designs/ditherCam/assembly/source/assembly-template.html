@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ditherCam — Top-Flip Enclosure Assembly Guide</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg-canvas: #070d1a;
+      --bg-surface: #0d162b;
+      --bg-elevated: #14213d;
+      --bg-card: #182747;
+      --border-subtle: #2b3f6b;
+      --border-strong: #46659e;
+      --text-primary: #eef4ff;
+      --text-secondary: #b7c8e8;
+      --text-muted: #8fa6cf;
+      --teal: #2de2c6;
+      --teal-dim: rgba(45, 226, 198, 0.16);
+      --orange: #ff8b3d;
+      --orange-dim: rgba(255, 139, 61, 0.18);
+      --amber: #fbbf24;
+      --amber-dim: rgba(251, 191, 36, 0.16);
+      --danger: #fb7185;
+      --danger-dim: rgba(251, 113, 133, 0.16);
+      --focus-ring: #67e8f9;
+      --target-size: 32px;
+      --radius-lg: 14px;
+      --radius-md: 10px;
+      --radius-sm: 7px;
+    }
+
+    @media (pointer: coarse) {
+      :root {
+        --target-size: 44px;
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
+    }
+
+    body {
+      margin: 0;
+      min-block-size: 100dvh;
+      background: radial-gradient(circle at 20% 0%, #101e3c 0%, var(--bg-canvas) 62%);
+      color: var(--text-primary);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      overflow-wrap: break-word;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .visually-hidden:where(:not(:focus-within, :active)) {
+      position: absolute !important;
+      clip-path: inset(50%) !important;
+      overflow: hidden !important;
+      width: 1px !important;
+      height: 1px !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 1000;
+      padding: 0.65rem 1rem;
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+      border: 2px solid var(--focus-ring);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+    }
+
+    :where(button, input, a, summary, [tabindex]):focus-visible {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 2px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      text-wrap: balance;
+      line-height: 1.25;
+    }
+
+    p, li {
+      text-wrap: pretty;
+    }
+
+    header.app-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.65rem 1.25rem;
+      padding: max(0.65rem, env(safe-area-inset-top, 0px)) 1.15rem 0.65rem;
+      background: rgba(13, 22, 43, 0.92);
+      border-block-end: 1px solid var(--border-subtle);
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      min-inline-size: 0;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .brand h1 {
+      font-size: clamp(1.05rem, 1.3vw + 0.72rem, 1.4rem);
+      font-weight: 700;
+    }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+    }
+
+    .header-links {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.78rem;
+    }
+
+    .header-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 0.3rem 0.58rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      background: var(--bg-elevated);
+      white-space: nowrap;
+    }
+
+    .header-link:hover {
+      color: var(--text-primary);
+      border-color: var(--border-strong);
+      background: #1d3057;
+    }
+
+    .guide-switcher {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      padding: 0.22rem;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+
+    button {
+      font: inherit;
+      color: var(--text-primary);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      min-block-size: var(--target-size);
+      min-inline-size: var(--target-size);
+      padding: 0.38rem 0.7rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      font-weight: 550;
+      font-size: 0.85rem;
+    }
+
+    @media (hover: hover) {
+      button:hover:not([aria-disabled="true"]) {
+        background: #1d3057;
+        border-color: var(--border-strong);
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      button {
+        transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease;
+      }
+    }
+
+    button[aria-pressed="true"] {
+      background: #1a3b5c;
+      border-color: var(--teal);
+      color: var(--teal);
+      box-shadow: inset 0 0 0 1px rgba(45, 226, 198, 0.35);
+    }
+
+    button.btn-orange[aria-pressed="true"] {
+      background: #3d2415;
+      border-color: var(--orange);
+      color: #ffd3b3;
+      box-shadow: inset 0 0 0 1px rgba(255, 139, 61, 0.4);
+    }
+
+    button.btn-amber[aria-pressed="true"] {
+      background: #3a2d12;
+      border-color: var(--amber);
+      color: #fde68a;
+      box-shadow: inset 0 0 0 1px rgba(251, 191, 36, 0.4);
+    }
+
+    button[aria-disabled="true"] {
+      opacity: 0.48;
+      cursor: not-allowed;
+    }
+
+    main.workspace {
+      flex: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 405px);
+      gap: 0.85rem;
+      padding: 0.85rem 1.1rem;
+      align-items: stretch;
+      min-block-size: 0;
+    }
+
+    .stage-column {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      min-inline-size: 0;
+      min-block-size: 0;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem 0.6rem;
+      padding: 0.45rem 0.6rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+
+    .toolbar > :not(button, input, select, textarea, a, [role="button"], label) {
+      min-inline-size: 0;
+    }
+
+    .toolbar-group {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.32rem;
+    }
+
+    .toolbar-sep {
+      inline-size: 1px;
+      block-size: 1.4rem;
+      background: var(--border-subtle);
+      margin-inline: 0.1rem;
+    }
+
+    .stage-shell {
+      position: relative;
+      flex: 1;
+      min-block-size: 440px;
+      block-size: calc(100dvh - 250px);
+      background: radial-gradient(circle at 50% 35%, #122140 0%, #070e1d 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    #stage {
+      inline-size: 100%;
+      block-size: 100%;
+      touch-action: none;
+      cursor: grab;
+    }
+
+    #stage:active {
+      cursor: grabbing;
+    }
+
+    #callout-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .pin {
+      position: absolute;
+      transform: translate(-50%, -100%);
+      padding: 0.16rem 0.46rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 650;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      border: 1px solid var(--border-strong);
+      background: rgba(7, 13, 26, 0.9);
+      color: var(--text-primary);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+    }
+
+    .pin.pin-teal {
+      border-color: var(--teal);
+      color: #b8fff3;
+    }
+
+    .pin.pin-orange {
+      border-color: var(--orange);
+      color: #ffd5b8;
+    }
+
+    .pin.pin-amber {
+      border-color: var(--amber);
+      color: #fef08a;
+    }
+
+    .pin.pin-danger {
+      border-color: var(--danger);
+      color: #fecdd3;
+    }
+
+    .pin::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 1px;
+      height: 7px;
+      background: currentColor;
+      opacity: 0.75;
+    }
+
+    .stage-hud-top {
+      position: absolute;
+      top: 0.6rem;
+      left: 0.7rem;
+      right: 0.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+      pointer-events: none;
+    }
+
+    .hud-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.28rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(9, 16, 32, 0.88);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.77rem;
+      color: var(--text-secondary);
+      max-inline-size: 100%;
+    }
+
+    .hud-pill strong {
+      color: var(--text-primary);
+    }
+
+    .stage-legend {
+      position: absolute;
+      left: 0.7rem;
+      bottom: 0.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.7rem;
+      padding: 0.32rem 0.6rem;
+      border-radius: var(--radius-sm);
+      background: rgba(9, 16, 32, 0.88);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      pointer-events: none;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.32rem;
+    }
+
+    .swatch {
+      inline-size: 0.7rem;
+      block-size: 0.7rem;
+      border-radius: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .scrubber-panel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.6rem 1rem;
+      padding: 0.6rem 0.85rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+
+    .slider-control {
+      display: flex;
+      flex-direction: column;
+      gap: 0.22rem;
+    }
+
+    .slider-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+    }
+
+    .slider-head label {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .slider-val {
+      font-variant-numeric: tabular-nums;
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 0.79rem;
+    }
+
+    .fold-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .fold-presets {
+      display: inline-flex;
+      gap: 0.25rem;
+      flex-shrink: 0;
+    }
+
+    .fold-presets button {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.76rem;
+      min-block-size: 28px;
+    }
+
+    input[type="range"] {
+      --slider-track-size: 0.5rem;
+      --slider-thumb-size: 1.15rem;
+      --slider-track-radius: 999px;
+      --slider-thumb-radius: 50%;
+      --slider-track-color: #283a61;
+      --slider-fill-color: var(--teal);
+      --slider-thumb-color: #aef7eb;
+      --slider-direction: to right;
+      --attr-min: 0;
+      --attr-max: 100;
+      --control-value: 0;
+      --slider-progress: calc(
+        (var(--control-value) - var(--attr-min)) /
+        max(1, (var(--attr-max) - var(--attr-min))) * 100%
+      );
+
+      appearance: none;
+      inline-size: 100%;
+      block-size: 2.1rem;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    input[type="range"].range-orange {
+      --slider-fill-color: var(--orange);
+      --slider-thumb-color: #ffd3b3;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      block-size: var(--slider-track-size);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--slider-track-radius);
+      background: linear-gradient(
+        var(--slider-direction),
+        var(--slider-fill-color) var(--slider-progress),
+        var(--slider-track-color) var(--slider-progress)
+      );
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      inline-size: var(--slider-thumb-size);
+      block-size: var(--slider-thumb-size);
+      margin-block-start: calc((var(--slider-track-size) - var(--slider-thumb-size)) / 2 - 1px);
+      border: 2px solid var(--bg-canvas);
+      border-radius: var(--slider-thumb-radius);
+      background: var(--slider-thumb-color);
+    }
+
+    input[type="range"]::-moz-range-track {
+      block-size: var(--slider-track-size);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--slider-track-radius);
+      background: var(--slider-track-color);
+    }
+
+    input[type="range"]::-moz-range-progress {
+      block-size: var(--slider-track-size);
+      border-radius: var(--slider-track-radius);
+      background: var(--slider-fill-color);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      inline-size: var(--slider-thumb-size);
+      block-size: var(--slider-thumb-size);
+      border: 2px solid var(--bg-canvas);
+      border-radius: var(--slider-thumb-radius);
+      background: var(--slider-thumb-color);
+    }
+
+    aside.inspector {
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      min-block-size: 0;
+      max-block-size: calc(100dvh - 96px);
+    }
+
+    .tablist {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      border-block-end: 1px solid var(--border-subtle);
+      background: #0b1326;
+      flex-shrink: 0;
+    }
+
+    .tablist button[role="tab"] {
+      flex: 1 0 auto;
+      position: relative;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      color: var(--text-secondary);
+      padding: 0.65rem 0.85rem;
+      min-block-size: 44px;
+    }
+
+    .tablist button[role="tab"][aria-selected="true"] {
+      color: var(--teal);
+      background: rgba(45, 226, 198, 0.08);
+    }
+
+    .tablist button[role="tab"][aria-selected="true"]::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      border-block-end: 3px solid var(--teal);
+    }
+
+    .tabpanels {
+      flex: 1;
+      overflow-y: auto;
+      min-block-size: 0;
+    }
+
+    .tabpanel-inner {
+      padding: 0.8rem 0.95rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .step-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .step-counter {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .detail-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.8rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .detail-card h2 {
+      font-size: 1.05rem;
+      color: var(--text-primary);
+    }
+
+    .detail-card p {
+      margin: 0;
+      font-size: 0.89rem;
+      color: var(--text-secondary);
+    }
+
+    .bullet-list {
+      margin: 0;
+      padding-inline-start: 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.85rem;
+      color: var(--text-primary);
+    }
+
+    .clip-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .clip-item {
+      padding: 0.4rem 0.58rem;
+      border-radius: var(--radius-sm);
+      background: rgba(7, 13, 26, 0.65);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.81rem;
+    }
+
+    .clip-item strong {
+      display: block;
+      color: var(--text-primary);
+    }
+
+    .clip-note {
+      font-size: 0.77rem;
+      color: var(--teal);
+    }
+
+    .clip-item.is-pod .clip-note {
+      color: var(--orange);
+    }
+
+    .step-drawer {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.45rem 0.6rem;
+    }
+
+    .step-drawer summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 650;
+      color: var(--text-secondary);
+      padding: 0.2rem 0.1rem;
+      user-select: none;
+    }
+
+    .step-list {
+      list-style: none;
+      margin: 0.45rem 0 0.1rem;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.28rem;
+    }
+
+    .step-btn {
+      inline-size: 100%;
+      justify-content: flex-start;
+      text-align: left;
+      padding: 0.35rem 0.55rem;
+      min-block-size: 32px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      gap: 0.5rem;
+    }
+
+    .step-btn[aria-current="step"] {
+      background: var(--bg-card);
+      border-color: var(--teal);
+    }
+
+    .step-btn.pod-step[aria-current="step"] {
+      border-color: var(--orange);
+    }
+
+    .step-badge {
+      flex-shrink: 0;
+      inline-size: 1.35rem;
+      block-size: 1.35rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.74rem;
+      font-weight: 700;
+      background: var(--teal-dim);
+      color: var(--teal);
+      border: 1px solid rgba(45, 226, 198, 0.45);
+    }
+
+    .step-btn.pod-step .step-badge {
+      background: var(--orange-dim);
+      color: var(--orange);
+      border-color: rgba(255, 139, 61, 0.45);
+    }
+
+    .step-btn-meta {
+      display: flex;
+      flex-direction: column;
+      min-inline-size: 0;
+    }
+
+    .step-btn-title {
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .step-btn-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .alert-box {
+      padding: 0.6rem 0.7rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      line-height: 1.42;
+      border: 1px solid;
+    }
+
+    .alert-box strong {
+      display: block;
+      margin-block-end: 0.16rem;
+    }
+
+    .alert-warn {
+      background: var(--amber-dim);
+      border-color: rgba(251, 191, 36, 0.55);
+      color: #fef3c7;
+    }
+
+    .alert-stop {
+      background: var(--danger-dim);
+      border-color: rgba(251, 113, 133, 0.6);
+      color: #ffe4e6;
+    }
+
+    .alert-info {
+      background: rgba(45, 226, 198, 0.1);
+      border-color: rgba(45, 226, 198, 0.4);
+      color: #d7fff8;
+    }
+
+    .trouble-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .trouble-card h3 {
+      font-size: 0.92rem;
+      color: var(--text-primary);
+    }
+
+    .trouble-card p, .trouble-card li {
+      font-size: 0.83rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .trouble-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-block-start: 0.2rem;
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+
+    .spec-table th, .spec-table td {
+      text-align: left;
+      padding: 0.42rem 0.48rem;
+      border-block-end: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+
+    .spec-table th {
+      color: var(--text-muted);
+      font-weight: 600;
+      width: 38%;
+    }
+
+    .spec-table td {
+      color: var(--text-primary);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.75rem;
+    }
+
+    footer.app-footer {
+      padding: 0.48rem 1.15rem max(0.6rem, env(safe-area-inset-bottom, 0px));
+      border-block-start: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      font-size: 0.77rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.35rem 1rem;
+    }
+
+    @media (max-width: 920px) {
+      main.workspace {
+        grid-template-columns: 1fr;
+        padding: 0.6rem;
+        gap: 0.65rem;
+      }
+
+      .stage-shell {
+        block-size: 46dvh;
+        min-block-size: 290px;
+      }
+
+      aside.inspector {
+        max-block-size: none;
+      }
+    }
+
+    @media (forced-colors: active) {
+      :root {
+        --bg-canvas: Canvas;
+        --bg-surface: Canvas;
+        --bg-elevated: ButtonFace;
+        --bg-card: Canvas;
+        --text-primary: CanvasText;
+        --text-secondary: CanvasText;
+        --text-muted: GrayText;
+        --border-subtle: ButtonText;
+        --border-strong: Highlight;
+        --teal: Highlight;
+        --orange: Highlight;
+      }
+
+      button[aria-pressed="true"],
+      .step-btn[aria-current="step"] {
+        outline: 2px solid Highlight;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-stage-heading" class="skip-link visually-hidden">Skip to assembly stage</a>
+
+  <header class="app-header">
+    <div class="brand">
+      <span class="eyebrow">ditherCam · Captive Top-Flip Enclosure</span>
+      <h1 id="main-stage-heading" tabindex="-1">ditherCam Assembly Guide (RLCD + XIAO Sense)</h1>
+    </div>
+    <div class="header-meta">
+      <nav class="header-links" aria-label="Related ditherCam pages">
+        <a class="header-link" href="https://dithercam-assembly.narwhal2025.chatgpt.site/flip/">Fold viewer</a>
+        <a class="header-link" href="https://github.com/yury-g/OpenToy-Coursework/tree/main/projects/ditherCam">OpenToy source (access required)</a>
+      </nav>
+      <div class="guide-switcher" role="group" aria-label="Select assembly guide">
+        <button type="button" id="guide-all" aria-pressed="true">All 6 Steps</button>
+        <button type="button" id="guide-rlcd" aria-pressed="false">RLCD (1–3)</button>
+        <button type="button" id="guide-pod" class="btn-orange" aria-pressed="false">Camera Pod (4–6)</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <div class="stage-column">
+      <div class="toolbar" role="toolbar" focusgroup="toolbar wrap" aria-label="Viewport and assembly controls" aria-controls="stage">
+        <div class="toolbar-group" role="group" aria-label="Animation and parts">
+          <button type="button" id="btn-play" aria-pressed="false">Play step</button>
+          <button type="button" id="btn-explode" aria-pressed="false">Explode</button>
+          <button type="button" id="btn-shell" aria-pressed="true">Transparent shell</button>
+          <button type="button" id="btn-battery" class="btn-amber" aria-pressed="false">Optional battery</button>
+          <button type="button" id="btn-labels" aria-pressed="true">Labels</button>
+          <button type="button" id="btn-pose" aria-pressed="false">Upright pose</button>
+        </div>
+        <span class="toolbar-sep" role="separator" aria-orientation="vertical"></span>
+        <div class="toolbar-group" role="group" aria-label="Camera presets">
+          <button type="button" id="btn-view-step">Step focus</button>
+          <button type="button" id="btn-view-front">Front</button>
+          <button type="button" id="btn-view-rear">Rear</button>
+          <button type="button" id="btn-view-top">Top</button>
+        </div>
+      </div>
+
+      <div class="stage-shell">
+        <div id="stage" aria-label="Interactive 3D assembly viewport. Drag to orbit, scroll or pinch to zoom, right-drag to pan."></div>
+        <div id="callout-layer" aria-hidden="true"></div>
+        <div class="stage-hud-top">
+          <div class="hud-pill" id="hud-step-pill"><strong>Step 1/6</strong> · Orient RLCD</div>
+          <div class="hud-pill" id="hud-validation-pill">Paused · Drag to orbit</div>
+        </div>
+        <div class="stage-legend">
+          <span class="legend-item"><span class="swatch" style="background:#2de2c6"></span>RLCD (teal)</span>
+          <span class="legend-item"><span class="swatch" style="background:#ff8b3d"></span>Camera Stack + Small Screen (orange)</span>
+          <span class="legend-item"><span class="swatch" style="background:#fbbf24"></span>Optional Battery</span>
+          <span class="legend-item"><span class="swatch" style="background:#fb7185"></span>Rigid Tabs / Detents</span>
+        </div>
+      </div>
+
+      <div class="scrubber-panel">
+        <div class="slider-control">
+          <div class="slider-head">
+            <label for="scrub-slider" id="scrub-label">Step insertion scrub</label>
+            <span class="slider-val" id="scrub-readout">25% · Ready above rear opening</span>
+          </div>
+          <input id="scrub-slider" type="range" min="0" max="100" step="1" value="25" aria-valuetext="25 percent">
+        </div>
+
+        <div class="slider-control">
+          <div class="slider-head">
+            <label for="fold-slider">Captive pod fold</label>
+            <span class="slider-val" id="fold-readout">90° · Loading / Install</span>
+          </div>
+          <div class="fold-row">
+            <input id="fold-slider" class="range-orange" type="range" min="0" max="180" step="1" value="90" aria-valuetext="90 degrees">
+            <div class="fold-presets">
+              <button type="button" id="btn-fold-0">0°</button>
+              <button type="button" id="btn-fold-90">90°</button>
+              <button type="button" id="btn-fold-180">180°</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="inspector" aria-label="Assembly instructions and troubleshooting">
+      <div class="tablist" focusgroup="tablist nomemory" aria-label="Inspector sections">
+        <button type="button" id="tab-steps" aria-selected="true" focusgroupstart>Steps</button>
+        <button type="button" id="tab-trouble">Troubleshoot</button>
+        <button type="button" id="tab-specs">CAD vs Fit</button>
+      </div>
+
+      <div class="tabpanels">
+        <div role="tabpanel" id="panel-steps" aria-labelledby="tab-steps" tabindex="0">
+          <div class="tabpanel-inner">
+            <div class="step-nav">
+              <span class="step-counter" id="step-counter">Step 1 of 6</span>
+              <div class="toolbar-group">
+                <button type="button" id="btn-prev-step">Prev</button>
+                <button type="button" id="btn-next-step">Next</button>
+              </div>
+            </div>
+
+            <section class="detail-card" aria-labelledby="step-title">
+              <h2 id="step-title">1. Identify &amp; Orient RLCD</h2>
+              <p id="step-summary"></p>
+              <ul class="bullet-list" id="step-bullets"></ul>
+              <div id="step-clips-wrap">
+                <h3 style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.25rem;">Highlighted Clips &amp; Features</h3>
+                <ul class="clip-list" id="step-clips"></ul>
+              </div>
+              <div id="step-alerts"></div>
+            </section>
+
+            <details class="step-drawer" id="step-drawer">
+              <summary>All 6 assembly steps</summary>
+              <ol class="step-list" id="step-list"></ol>
+            </details>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="panel-trouble" aria-labelledby="tab-trouble" hidden>
+          <div class="tabpanel-inner">
+            <div class="alert-box alert-stop">
+              <strong>STOP Rule — PLA &amp; Electronics Safety</strong>
+              Stop immediately if you feel hard resistance or see white PLA stress marks. Identify which highlighted tab or clip is making contact first. Never force the screen glass, pin headers, camera ribbon, or battery pouch.
+            </div>
+
+            <article class="trouble-card">
+              <h3>1. Board won't enter the opening</h3>
+              <ul class="bullet-list">
+                <li><strong>RLCD:</strong> Lay the housing flat on a soft cloth as shown. Remove the original acrylic <em>stand legs</em> first, but <strong>keep the protective rear acrylic backing</strong>. Screen glass faces down into the front bezel; enter from the open rear bay with the top button edge aligned to <strong>SNAP · PWR · BROWSE</strong>.</li>
+                <li><strong>Camera Pod:</strong> Flip the pod straight up (`90°`). Remove all USB cables and the MicroSD card before sliding. Keep XIAO, Sense camera, and Expansion Base plugged together as one unit with the lens and small screen facing the stepped front faceplate.</li>
+              </ul>
+              <div class="trouble-actions">
+                <button type="button" class="jump-step" data-step="0">Show RLCD Entry</button>
+                <button type="button" class="jump-step" data-step="3">Show Pod Entry</button>
+              </div>
+            </article>
+
+            <article class="trouble-card">
+              <h3>2. Stops just before fully seated</h3>
+              <ul class="bullet-list">
+                <li><strong>RLCD hang-up:</strong> Check whether the top button edge is tucked under the two <strong>rigid top tabs</strong> (do not bend these) before lowering the bottom edge past the four <strong>lower and side clips</strong>. Ease those four clips gently outward in the board plane—never pull away from the screen.</li>
+                <li><strong>Pod hang-up near bottom:</strong> The two bottom mounting-hole detents click into the Expansion Base corner holes. To ease seating or release, pull their side finger tabs gently away from the circuit board toward the back wall.</li>
+              </ul>
+              <div class="trouble-actions">
+                <button type="button" class="jump-step" data-step="2">Inspect RLCD Clips</button>
+                <button type="button" class="jump-step" data-step="4">Inspect Pod Detents</button>
+              </div>
+            </article>
+
+            <article class="trouble-card">
+              <h3>3. Lens or small screen window mismatch</h3>
+              <ul class="bullet-list">
+                <li><strong>Do NOT rotate the board 180° or force it.</strong> Confirm the stepped front faceplate matches the camera lens side and small OLED screen side, and check that cables are disconnected.</li>
+                <li><strong>Hardware revision caveat:</strong> The 3D model uses an approximate vendor envelope (the actual firmware camera sensor is OV2640, and exact lens variant, header height, or RLCD revision may differ).</li>
+              </ul>
+              <div class="trouble-actions">
+                <button type="button" class="jump-step" data-step="5">Inspect Seated Windows</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="panel-specs" aria-labelledby="tab-specs" hidden>
+          <div class="tabpanel-inner">
+            <div class="alert-box alert-warn">
+              <strong>CAD Validation vs Real Physical Fit</strong>
+              Digital checks prove rigid geometry clearance on vendor envelopes—not physical PLA spring deflection, layer friction, or your exact board tolerances.
+            </div>
+
+            <table class="spec-table">
+              <caption>Verified CAD coordinates &amp; validation status</caption>
+              <tbody>
+                <tr><th scope="row">Coordinate frame</th><td>Print coordinates; tabletop use = <code>rotateX(-90°)</code>, <code>translateZ(104.5)</code></td></tr>
+                <tr><th scope="row">Captive hinge</th><td>Axis <code>(0, 0, 22)</code>; 543 poses (0–180° × 3 axial shifts) 0 moving collisions</td></tr>
+                <tr><th scope="row">Camera pod slide</th><td><code>fold = 90°</code>, <code>-Z_print</code> from <code>+50 mm</code> to <code>0 mm</code>; 101 CAD samples ≤ <code>0.00104 mm³</code> (excludes detent tips)</td></tr>
+                <tr><th scope="row">Pod detents</th><td><code>(±25.01, -21.10, 6.35)</code>; release toward <code>+Y_print</code>; physical spring untested</td></tr>
+                <tr><th scope="row">Lens / OLED</th><td>Lens <code>(-25.15, -45.36, 23.85)</code> (<code>-Y_print</code>); OLED <code>(5.8, -25.65, 23.95)</code> (675 rays clear)</td></tr>
+                <tr><th scope="row">RLCD orientation</th><td>Screen <code>-Z_print</code>; entry <code>+Z_print</code>; buttons top <code>Y ≈ 28</code> (<code>SNAP/PWR/BROWSE</code>)</td></tr>
+                <tr><th scope="row">RLCD keepers / retainers</th><td>Rigid keepers <code>(±21.5, 28.1, 20)</code>; bottom <code>(±38, 99.5, 20)</code>; sides <code>(-45.6, 79, 20)</code> &amp; <code>(48.9, 79, 20)</code></td></tr>
+                <tr><th scope="row">RLCD tilt path</th><td>Illustrative animation ONLY — NOT validated in CAD or physical print</td></tr>
+                <tr><th scope="row">Optional battery</th><td>Schematic <code>58×42.5×4 mm</code> in <code>6 mm</code> bay; <code>x[-29,29], y[-14.8,-10.8], z[2.6,45.1]</code>; inserts <code>+X → -X</code>; thickness unknown</td></tr>
+                <tr><th scope="row">Camera stack mesh</th><td>Uses <code>hw_xiao_stack.stl</code> (no battery/SD); <code>hw_xiao_pod.stl</code> excluded</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <p id="live-status" class="visually-hidden" role="status"></p>
+
+  <footer class="app-footer">
+    <span>Offline self-contained 3D assembly guide · Printed prototype · No network requests</span>
+    <span>Camera sensor: OV2640 (vendor envelope) · Live wireless previews and photos implemented in firmware</span>
+  </footer>
+
+  <script id="assets" type="application/json">__ASSETS__</script>
+  <script>__SCRIPT__</script>
+</body>
+</html>

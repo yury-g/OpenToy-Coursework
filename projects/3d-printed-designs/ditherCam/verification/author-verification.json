@@ -1,0 +1,563 @@
+{
+  "openscad_backend": "CGAL",
+  "overall_dimensions_mm": {
+    "print_pose_bbox": [
+      108.0,
+      152.1,
+      58.0
+    ],
+    "forward_mode_0deg_bbox": [
+      108.0,
+      69.6,
+      126.5
+    ],
+    "selfie_mode_180deg_bbox": [
+      108.0,
+      83.6,
+      130.7
+    ],
+    "tabletop_sole_footprint": [
+      108.0,
+      58.0
+    ]
+  },
+  "meshes": {
+    "body": {
+      "watertight": true,
+      "is_volume": true,
+      "shell_count": 1,
+      "volume_mm3": 69070.1,
+      "mass_pla_g": 85.6,
+      "bbox_print_mm": [
+        108.0,
+        110.9,
+        58.0
+      ],
+      "bed_contact": {
+        "z_min_mm": 0.0,
+        "bed_area_mm2": 3038.86,
+        "com_xy_in_bed_hull": true
+      }
+    },
+    "pod": {
+      "watertight": true,
+      "is_volume": true,
+      "shell_count": 1,
+      "volume_mm3": 26453.7,
+      "mass_pla_g": 32.8,
+      "bbox_print_mm": [
+        72.5,
+        52.6,
+        48.2
+      ],
+      "bed_contact": {
+        "z_min_mm": 0.0,
+        "bed_area_mm2": 1725.05,
+        "com_xy_in_bed_hull": true
+      }
+    },
+    "print_assembly_stl": {
+      "watertight": true,
+      "shell_count": 2,
+      "volume_mm3": 95523.81,
+      "equals_body_plus_pod": true,
+      "bbox_print_mm": [
+        108.0,
+        152.1,
+        58.0
+      ],
+      "fits_snapmaker_u1_270x270": true
+    },
+    "print_assembly_3mf": {
+      "watertight": true,
+      "shell_count": 2,
+      "volume_mm3": 95523.81,
+      "single_compound_object": true
+    }
+  },
+  "print_pose_clearance": {
+    "boolean_intersection_mm3": 0.0,
+    "min_surface_gap_mm": 0.502
+  },
+  "kinematic_sweep_0_to_180": {
+    "sampled_angle_count": 97,
+    "max_shell_penetration_mm3": 0.0,
+    "max_hardware_penetration_mm3": 0.0,
+    "max_lens_cone_penetration_mm3": 0.0,
+    "body_rlcd_static_penetration_mm3": 0.0,
+    "pod_xiaohw_static_penetration_mm3": 0.0,
+    "collision_angles": []
+  },
+  "hard_stops_beyond_endpoints": {
+    "-3.0deg_interference_mm3": 25.849,
+    "-1.5deg_interference_mm3": 8.648,
+    "181.5deg_interference_mm3": 233.473,
+    "183.0deg_interference_mm3": 515.435
+  },
+  "captive_axial_retention": {
+    "shift_-2.2mm": {
+      "0deg": 168.64,
+      "90deg": 205.821,
+      "180deg": 761.444
+    },
+    "shift_-1.6mm": {
+      "0deg": 102.377,
+      "90deg": 125.166,
+      "180deg": 453.711
+    },
+    "shift_-0.4mm": {
+      "0deg": 0.0,
+      "90deg": 0.0,
+      "180deg": 0.0
+    },
+    "shift_+0.4mm": {
+      "0deg": 0.0,
+      "90deg": 0.0,
+      "180deg": 0.0
+    },
+    "shift_+1.6mm": {
+      "0deg": 102.377,
+      "90deg": 125.166,
+      "180deg": 246.118
+    },
+    "shift_+2.2mm": {
+      "0deg": 168.64,
+      "90deg": 205.821,
+      "180deg": 418.067
+    }
+  },
+  "insertion_paths": {
+    "rlcd_rear_insertion_sweep": {
+      "seated_interference_mm3": 0.0,
+      "clear_above_hooks_dz30_mm3": 0.0,
+      "notes": "Tuck top edge under passive 0.95 mm rear tabs at ~3 deg, then push down past 4x 20x1.5 mm bed-rooted compliant clips (1.05 mm deflection, 0.60% PLA strain).",
+      "samples": [
+        {
+          "dz_mm": 45.0,
+          "raw_interference_mm3": 0.0
+        },
+        {
+          "dz_mm": 30.0,
+          "raw_interference_mm3": 0.0
+        },
+        {
+          "dz_mm": 20.0,
+          "raw_interference_mm3": 0.0
+        },
+        {
+          "dz_mm": 15.0,
+          "raw_interference_mm3": 0.191
+        },
+        {
+          "dz_mm": 8.0,
+          "raw_interference_mm3": 0.0
+        },
+        {
+          "dz_mm": 3.0,
+          "raw_interference_mm3": 3.427
+        },
+        {
+          "dz_mm": 0.0,
+          "raw_interference_mm3": 0.0
+        }
+      ]
+    },
+    "lipo_plus_x_cassette_sweep": {
+      "seated_interference_mm3": 0.0,
+      "clear_approach_dx65_mm3": 0.0,
+      "notes": "Slide 58x42.5x4 mm LiPo straight along -X into smooth 6.0 mm bay; +X 20x1.5 mm in-layer latch deflects 0.95 mm laterally during passage and snaps clear behind cell edge (0.0 mm3 seated contact).",
+      "samples": [
+        {
+          "dx_mm": 65.0,
+          "raw_interference_mm3": 0.0
+        },
+        {
+          "dx_mm": 45.0,
+          "raw_interference_mm3": 0.0
+        },
+        {
+          "dx_mm": 25.0,
+          "raw_interference_mm3": 0.0
+        },
+        {
+          "dx_mm": 10.0,
+          "raw_interference_mm3": 0.0
+        },
+        {
+          "dx_mm": 2.0,
+          "raw_interference_mm3": 0.0
+        },
+        {
+          "dx_mm": 0.0,
+          "raw_interference_mm3": 0.0
+        }
+      ]
+    },
+    "xiao_stack_top_down_insertion_sweep": {
+      "seated_interference_mm3": 0.0,
+      "rigid_max_interference_mm3": 0.00104,
+      "worst_rigid_dz_mm": 13.0,
+      "detent_tip_max_deflection_mm3": 6.682,
+      "clear_above_pod_dz48_mm3": 0.0,
+      "notes": "Slide assembled Expansion Base + XIAO Sense + Camera straight down from open +Z_p top behind integral stepped faceplate (0..50 mm at 0.5 mm step). Rigid housing/rails have 0.0 mm3 collision; only BL/BR \u00d82.20 mm pins on 20x1.5 mm bed-printed springs deflect into \u00d83.00 mm mounting holes.",
+      "samples": [
+        {
+          "dz_print_mm": 48.0,
+          "rigid_interference_mm3": 0.0,
+          "total_with_detents_mm3": 0.0
+        },
+        {
+          "dz_print_mm": 35.0,
+          "rigid_interference_mm3": 0.0,
+          "total_with_detents_mm3": 0.0
+        },
+        {
+          "dz_print_mm": 20.0,
+          "rigid_interference_mm3": 0.00104,
+          "total_with_detents_mm3": 0.001
+        },
+        {
+          "dz_print_mm": 10.0,
+          "rigid_interference_mm3": 0.0,
+          "total_with_detents_mm3": 0.0
+        },
+        {
+          "dz_print_mm": 5.0,
+          "rigid_interference_mm3": 0.0,
+          "total_with_detents_mm3": 0.0
+        },
+        {
+          "dz_print_mm": 2.0,
+          "rigid_interference_mm3": 0.0,
+          "total_with_detents_mm3": 5.517
+        },
+        {
+          "dz_print_mm": 0.0,
+          "rigid_interference_mm3": 0.0,
+          "total_with_detents_mm3": 0.0
+        }
+      ]
+    },
+    "oled_active_visibility_and_glass_check": {
+      "oled_glass_contact_mm3": 0.0,
+      "full_active_rectangle_ray_clearance_mm3": {
+        "straight_0deg": 0.0,
+        "left_12deg": 0.0,
+        "right_12deg": 0.0,
+        "left_15deg": 0.0,
+        "right_15deg": 0.0,
+        "up_10deg": 0.0,
+        "down_10deg": 0.0,
+        "up_15deg": 0.0,
+        "down_15deg": 0.0
+      }
+    }
+  },
+  "supportless_printability": {
+    "body_layer_islands": {
+      "layers_checked": 290,
+      "floating_island_count": 0,
+      "floating_islands": []
+    },
+    "pod_layer_islands": {
+      "layers_checked": 241,
+      "floating_island_count": 0,
+      "floating_islands": []
+    },
+    "body_overhang_audit": {
+      "threshold_deg_from_vertical": 52.0,
+      "flagged_face_count": 224,
+      "flagged_total_area_mm2": 52.963,
+      "worst_faces": [
+        {
+          "center_mm": [
+            -8.42,
+            23.82,
+            0.22
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 1.11
+        },
+        {
+          "center_mm": [
+            1.68,
+            23.82,
+            0.22
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 1.11
+        },
+        {
+          "center_mm": [
+            11.59,
+            23.82,
+            0.22
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 1.11
+        },
+        {
+          "center_mm": [
+            1.39,
+            24.64,
+            0.22
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 0.79
+        },
+        {
+          "center_mm": [
+            -10.5,
+            26.89,
+            0.46
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 0.77
+        },
+        {
+          "center_mm": [
+            -11.83,
+            26.89,
+            0.46
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 0.74
+        },
+        {
+          "center_mm": [
+            -9.34,
+            26.76,
+            0.46
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 0.73
+        },
+        {
+          "center_mm": [
+            -2.32,
+            26.76,
+            0.46
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 0.73
+        },
+        {
+          "center_mm": [
+            22.19,
+            26.85,
+            0.46
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 0.73
+        },
+        {
+          "center_mm": [
+            3.72,
+            26.87,
+            0.46
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 0.73
+        }
+      ]
+    },
+    "pod_overhang_audit": {
+      "threshold_deg_from_vertical": 52.0,
+      "flagged_face_count": 83,
+      "flagged_total_area_mm2": 113.52,
+      "worst_faces": [
+        {
+          "center_mm": [
+            12.66,
+            -38.67,
+            36.49
+          ],
+          "normal_z": -0.819,
+          "overhang_from_vertical_deg": 55.0,
+          "area_mm2": 18.37
+        },
+        {
+          "center_mm": [
+            -1.06,
+            -38.67,
+            36.49
+          ],
+          "normal_z": -0.819,
+          "overhang_from_vertical_deg": 55.0,
+          "area_mm2": 18.37
+        },
+        {
+          "center_mm": [
+            16.93,
+            -37.93,
+            34.61
+          ],
+          "normal_z": -0.819,
+          "overhang_from_vertical_deg": 55.0,
+          "area_mm2": 12.76
+        },
+        {
+          "center_mm": [
+            -5.33,
+            -37.93,
+            34.61
+          ],
+          "normal_z": -0.819,
+          "overhang_from_vertical_deg": 55.0,
+          "area_mm2": 12.76
+        },
+        {
+          "center_mm": [
+            19.0,
+            -33.4,
+            39.06
+          ],
+          "normal_z": -0.897,
+          "overhang_from_vertical_deg": 63.8,
+          "area_mm2": 6.67
+        },
+        {
+          "center_mm": [
+            18.65,
+            -29.6,
+            40.93
+          ],
+          "normal_z": -0.897,
+          "overhang_from_vertical_deg": 63.8,
+          "area_mm2": 6.67
+        },
+        {
+          "center_mm": [
+            7.7,
+            -37.93,
+            37.68
+          ],
+          "normal_z": -0.814,
+          "overhang_from_vertical_deg": 54.5,
+          "area_mm2": 6.09
+        },
+        {
+          "center_mm": [
+            3.9,
+            -37.93,
+            37.68
+          ],
+          "normal_z": -0.814,
+          "overhang_from_vertical_deg": 54.5,
+          "area_mm2": 6.09
+        },
+        {
+          "center_mm": [
+            28.93,
+            -10.0,
+            5.75
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 3.6
+        },
+        {
+          "center_mm": [
+            27.6,
+            -9.4,
+            5.75
+          ],
+          "normal_z": -1.0,
+          "overhang_from_vertical_deg": 90.0,
+          "area_mm2": 2.7
+        }
+      ]
+    },
+    "snapmaker_orca_slicer_check": {
+      "slicer": "BambuStudio CLI (0.4mm PLA, support=off, raft=off, arrange=0)",
+      "note": "Snapmaker_Orca CLI exited non-zero on headless multi-extruder U1 slice; BambuStudio CLI fallback generated 0.4mm PLA support-free G-code.",
+      "exit_code": 0,
+      "snapmaker_orca_mesh_info": {
+        "size_x": "108.000000",
+        "size_y": "152.100002",
+        "size_z": "58.000000",
+        "min_x": "-54.000000",
+        "min_y": "-47.600002",
+        "min_z": "0.000000",
+        "max_x": "54.000000",
+        "max_y": "104.500000",
+        "max_z": "58.000000",
+        "number_of_facets": "24250",
+        "manifold": "yes",
+        "number_of_parts": "2",
+        "volume": "95524.296875"
+      },
+      "gcode_verification": {
+        "gcode_file": "plate_1.gcode",
+        "gcode_bytes": 9717544,
+        "layer_count": 290,
+        "support_toolpaths_present": false,
+        "raft_toolpaths_present": false
+      }
+    }
+  },
+  "tabletop_stability_and_gravity_hold": {
+    "empty_pla_shells_only": {
+      "total_mass_g": 118.4,
+      "min_front_margin_mm": 12.96,
+      "min_rear_margin_mm": 33.04,
+      "min_side_margin_mm": 50.91,
+      "stable_0_to_180": true,
+      "endpoint_gravity_hold": {
+        "0deg_dy_mm": 21.67,
+        "0deg_holding_Nmm": 6.97,
+        "180deg_dy_mm": -21.67,
+        "180deg_holding_Nmm": 6.97
+      }
+    },
+    "light_hw_no_batteries": {
+      "total_mass_g": 192.4,
+      "min_front_margin_mm": 11.89,
+      "min_rear_margin_mm": 33.98,
+      "min_side_margin_mm": 52.54,
+      "stable_0_to_180": true,
+      "endpoint_gravity_hold": {
+        "0deg_dy_mm": 21.3,
+        "0deg_holding_Nmm": 11.45,
+        "180deg_dy_mm": -21.3,
+        "180deg_holding_Nmm": 11.45
+      }
+    },
+    "nominal_hw_lipo_no_18650": {
+      "total_mass_g": 220.4,
+      "min_front_margin_mm": 10.88,
+      "min_rear_margin_mm": 32.39,
+      "min_side_margin_mm": 52.71,
+      "stable_0_to_180": true,
+      "endpoint_gravity_hold": {
+        "0deg_dy_mm": 21.14,
+        "0deg_holding_Nmm": 15.93,
+        "180deg_dy_mm": -21.14,
+        "180deg_holding_Nmm": 15.93
+      }
+    },
+    "full_hw_lipo_plus_18650": {
+      "total_mass_g": 274.4,
+      "min_front_margin_mm": 11.11,
+      "min_rear_margin_mm": 33.84,
+      "min_side_margin_mm": 53.27,
+      "stable_0_to_180": true,
+      "endpoint_gravity_hold": {
+        "0deg_dy_mm": 21.11,
+        "0deg_holding_Nmm": 17.56,
+        "180deg_dy_mm": -21.11,
+        "180deg_holding_Nmm": 17.56
+      }
+    }
+  }
+}

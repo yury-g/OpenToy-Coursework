@@ -1,0 +1,13 @@
+{
+  "Camera-print.3mf": "c84caab742214237e12fcb953f25338b8daf7d398f389a518db981a4e2aefaff",
+  "parameters.json": "5c2071d11a0cdd06d5099dec971a744bc54deb0ca8275892b9b13371eab828f4",
+  "Camera.scad": "04f08f09f1289ff6a7dc8ddca70248c3e6146755ebb3cb388469d2e738207e37",
+  "body.stl": "b41a81f5097a8dfc349eecebfc437fa478566bcb7cf63426db781a235469d6a9",
+  "hw_xiao_stack.stl": "c9b3c9b21a37ff8c94cb295fdb4f51d17745f277e6b1f58a1490804fba51e7c0",
+  "hw_xiao_pod.stl": "6936bfa7760578eca43e0fed6fefdae3135947651e0ce9bb119ce2a6d4f659ae",
+  "pod.stl": "8661fcea3cf6bed0cac2063bdeca971a41decf2aa0df73a355f603ff5e7cbe2a",
+  "hw_lens_cone.stl": "9eb60d73a0b74a0955cc5d75a58279cc1d80b3d15a74fc0a48c353cfbdbecc0c",
+  "Camera-print.stl": "12daa7501b12f63aa9f26cab4f3e7364f6c73e894815a2a1cc0235dd0dc81260",
+  "hw_oled_active.stl": "1a8fe385f36db0219b09e68e9d4c52d9a173b8a415f5c2b7d2e7eb62798bfe5f",
+  "hw_rlcd.stl": "1f6c92e6140c4de08975d28e3b10d5bb0af5dbc513f7b6354ecaa35174329ef6"
+}

@@ -1,0 +1,27 @@
+{
+  "renderer": "Blender 5.1.1",
+  "source": "../originals/Tab5.stl",
+  "source_axis_bounds": [
+    [
+      -7.51620987671231e-14,
+      -475.55352783203125,
+      -12.0
+    ],
+    [
+      128.0,
+      80.89014434814453,
+      -7.4451556031363e-13
+    ]
+  ],
+  "source_extent": [
+    128.0,
+    556.4436645507812,
+    12.0
+  ],
+  "units": "STL has no encoded units; compare with vendor dimension drawing before using for fit",
+  "views": [
+    "Tab5-front.png",
+    "Tab5-back.png"
+  ],
+  "material": "Neutral visualization material; not a product color claim"
+}

@@ -1,0 +1,58 @@
+{
+  "blue": [
+    {
+      "present": "1",
+      "ready": "1",
+      "address": "6f",
+      "id": "5d",
+      "firmware": "1.3",
+      "pressed": "0",
+      "led": "16",
+      "led_readback": "16",
+      "io": "1",
+      "presses": "4",
+      "errors": "5"
+    },
+    {
+      "present": "1",
+      "ready": "1",
+      "address": "6f",
+      "id": "5d",
+      "firmware": "1.3",
+      "pressed": "0",
+      "led": "16",
+      "led_readback": "16",
+      "io": "1",
+      "presses": "4",
+      "errors": "5"
+    }
+  ],
+  "green": [
+    {
+      "present": "1",
+      "ready": "1",
+      "address": "6f",
+      "id": "5d",
+      "firmware": "1.3",
+      "pressed": "0",
+      "led": "16",
+      "led_readback": "16",
+      "io": "1",
+      "presses": "0",
+      "errors": "0"
+    },
+    {
+      "present": "1",
+      "ready": "1",
+      "address": "6f",
+      "id": "5d",
+      "firmware": "1.3",
+      "pressed": "0",
+      "led": "16",
+      "led_readback": "16",
+      "io": "1",
+      "presses": "0",
+      "errors": "0"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "recorded_utc": "2026-10-19T22:30:26.855700+00:00",
+  "tests": [
+    {
+      "test": "battery_diagnostics_test",
+      "passed": true
+    },
+    {
+      "test": "battery_led_test",
+      "passed": true
+    },
+    {
+      "test": "battery_test",
+      "passed": true
+    },
+    {
+      "test": "cached_face_test",
+      "passed": true
+    },
+    {
+      "test": "display_test",
+      "passed": true
+    },
+    {
+      "test": "display_test_watch",
+      "passed": true
+    },
+    {
+      "test": "layout_test",
+      "passed": true
+    },
+    {
+      "test": "microtrend_test",
+      "passed": true
+    },
+    {
+      "test": "monitor_packet_test",
+      "passed": true
+    },
+    {
+      "test": "navigation_test",
+      "passed": true
+    },
+    {
+      "test": "peer_battery_test",
+      "passed": true
+    },
+    {
+      "test": "voltage_estimate_test",
+      "passed": true
+    }
+  ]
+}

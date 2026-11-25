@@ -1,0 +1,52 @@
+{
+  "active_surface_bounds_print_mm": [
+    [
+      -5.069999997317794,
+      -25.950000000000003,
+      18.520000000298026
+    ],
+    [
+      16.669999997317788,
+      -25.6,
+      29.37999999970198
+    ]
+  ],
+  "shell_visibility": [
+    {
+      "horizontal_deg": 0,
+      "vertical_deg": 0,
+      "sample_count": 135,
+      "blocked_count": 0,
+      "blocked_points": []
+    },
+    {
+      "horizontal_deg": -15,
+      "vertical_deg": 0,
+      "sample_count": 135,
+      "blocked_count": 0,
+      "blocked_points": []
+    },
+    {
+      "horizontal_deg": 15,
+      "vertical_deg": 0,
+      "sample_count": 135,
+      "blocked_count": 0,
+      "blocked_points": []
+    },
+    {
+      "horizontal_deg": 0,
+      "vertical_deg": -15,
+      "sample_count": 135,
+      "blocked_count": 0,
+      "blocked_points": []
+    },
+    {
+      "horizontal_deg": 0,
+      "vertical_deg": 15,
+      "sample_count": 135,
+      "blocked_count": 0,
+      "blocked_points": []
+    }
+  ],
+  "scope": "Shell occlusion only, modeled OLED plane; no live video or physical optical measurement."
+}

@@ -1,0 +1,47 @@
+{
+  "checked_date": "2026-11-17",
+  "provenance_and_license": "README.md",
+  "note": "Original CAD/mesh bytes retained; schematic PNGs are conversions of manufacturer drawings. Refer to README for pinned releases and revision evidence.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2856,
+      "sha256": "0916814bda90a81c4f159c6b26ae22b5b22e788531f256922559a5a4cdb2417b"
+    },
+    {
+      "path": "licenses/Arduino-hardware.txt",
+      "bytes": 211,
+      "sha256": "0bccb1994c9dbd6c8fd50f51fd1c7b6c68b3463b823b37595884f36d89e096a5"
+    },
+    {
+      "path": "licenses/M5Stack-MIT.txt",
+      "bytes": 1063,
+      "sha256": "44611d917bece311f5c8eeffce83d8bf9e9ca3f815d262f694ff4a7996af50ea"
+    },
+    {
+      "path": "originals/Arduino_Nesso_N1.stl",
+      "bytes": 1034884,
+      "sha256": "38ca3562423fe099824d071ae537cf600b6475a1dcf4571e8414c1dc3741b04e"
+    },
+    {
+      "path": "previews/nesso-all.png",
+      "bytes": 124563,
+      "sha256": "d0d6535191e7bb760c9240ff5870ef4a22e6133b36fa95aac26da18d84c4fbbb"
+    },
+    {
+      "path": "previews/nesso-model.png",
+      "bytes": 98397,
+      "sha256": "3b7762f217cd9c2f2f34f6b5c70e7a3576b3f7f6f1dfac0cfd0ed383bc5957f0"
+    },
+    {
+      "path": "previews/nesso-n1.png",
+      "bytes": 62426,
+      "sha256": "10c6984eec9737ec00d378d934292799eafebccca2a726ca20c32ff431338a20"
+    },
+    {
+      "path": "schematics/nesso-n1.png",
+      "bytes": 308321,
+      "sha256": "e15b98d384d0cb0ddbbe79fe514327928a390176f22116f39981ca1decd38e9d"
+    }
+  ]
+}

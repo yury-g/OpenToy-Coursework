@@ -1,0 +1,59 @@
+{
+  "recorded_utc": "2026-10-20T22:55:13.692836+00:00",
+  "branch": "feature/qwiic-accessories",
+  "installed_feathers": "BatteryFaces-v26-strong-haptics",
+  "tab5_unchanged": "BatteryMonitor-v25-accessory-outline",
+  "identities": {
+    "blue": "02:00:00:00:00:01",
+    "green": "02:00:00:00:00:02"
+  },
+  "app_sha256": "7d780adeb3c3a819afb1cb44e531d548c0a27c56955ed60601f3392bf0d55821",
+  "firmware_sources": {
+    "firmware/FeatherFace/AccessoryProtocol.h": "060554a8a60533b545d23e3eb18cb09a55e2bddbcdde032a072a8d9f9f4176ff",
+    "firmware/FeatherFace/BatteryDiagnostics.h": "3793afcf9294a14425e099b8daf81ec13a3a4c0ded8cb2e391d61cbe9d978e73",
+    "firmware/FeatherFace/BatteryLed.h": "9b07ccb74c1b3bf0506c63b599cf48da4fc9bff8a78f1c5eec4d90734035003e",
+    "firmware/FeatherFace/BatteryMicroTrend.h": "06a07fcfa321bbeabc5196571d5bbed86598034505bdeafc9b75c7877f2d30c7",
+    "firmware/FeatherFace/BatteryState.h": "7ac96e49a0c1654f3e46edbd0d447bccdeca1048aa4b1ddaa2f242eb158613dd",
+    "firmware/FeatherFace/CachedFace.h": "dbdba313817d1cb0451cadd15d8b7f7f59cd12a07f3ccbd33a1c17f5b29858c7",
+    "firmware/FeatherFace/CreatureBreathing.h": "f225e94b465e51b65fdac7106de55f25a86269ad9dd7a3390f83a08ce4eabfd4",
+    "firmware/FeatherFace/DoodlePixels.h": "8d025c8fce2f42289dbc57b20d95331baef1f6ac50611a5fe172ccdc14fdad1a",
+    "firmware/FeatherFace/DoodleProtocol.h": "d9f5bfd1e83ffb80ef2ea3695cd7a7ae04aa322d75237eb1aa2c9b04e3fcdec5",
+    "firmware/FeatherFace/FaceDisplay.h": "15998f89bdce98411b66183d82b65a4c343c013f1277c3e5246419ee228280b3",
+    "firmware/FeatherFace/FaceHardware.h": "6e3dbd7ba7d415fbc8b88e5ce86c4b5e017d848006cff3dc2e4d629d7400092f",
+    "firmware/FeatherFace/FaceLinkConfig.example.h": "1b40597a99759cb5bcf4f9dd311f471dab030706ff831927f1d60e728e60b392",
+    "firmware/FeatherFace/FaceNavigation.h": "4eae11341cfd3474b2935934b9fa628fdc6b063d4c1cdf736c17649415e61659",
+    "firmware/FeatherFace/FaceProtocol.h": "02dd6fd8d6bf1f612bdc3eddafe5420a585f23d0763bfc498ad45c37ccf6306f",
+    "firmware/FeatherFace/FeatherFace.ino": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "firmware/FeatherFace/FeatherFind.h": "41edb3e91f2df2da73315b5ad8bba3ba0a2ddc24980ddc33a38669849e0ec72c",
+    "firmware/FeatherFace/FeatherHaptic.h": "e7a95d63deb53db13d44ff0f97cf3b2a03dbe1334eabea026c0499ae506a67e7",
+    "firmware/FeatherFace/FeatherQwiicButton.h": "b54a22faf96013d5f0ab262197aa9850ac6a0505e27496bdf555ff0774ee9b93",
+    "firmware/FeatherFace/FindState.h": "59b1c6f8aa3057dfc82f9a090db9a9568613200ba952ea7c7439d56843c88099",
+    "firmware/FeatherFace/HapticBreathing.h": "c41cac2167958a01977a886850d34855f7e402348f0c5bd2cdc96a848b656419",
+    "firmware/FeatherFace/HapticPulse.h": "4843e7514e4c12314df32bd61981a76580f97b83cabe9af8a1ce857183b85b89",
+    "firmware/FeatherFace/MonitorPacket.h": "e864cf9969a2fa60c3b647eee8c37b6b8f45af3b66a67c0572893951e0f406e9",
+    "firmware/FeatherFace/PeerBattery.h": "c64db5308b968e732b2a42b58f3c63343ddbf0d6c7618a3a72e0bf9be36e2358",
+    "firmware/FeatherFace/Protocol.h": "fa892599901565cf7d391dd7b7a8e57a6b7f70874f098eadb2b9935e3654f669",
+    "firmware/FeatherFace/QwiicButtonLed.h": "c195da67d019ff78e2010b0c4ead28bb4b10787c35f543ed00c2ff613dd9dbbc",
+    "firmware/FeatherFace/QwiicButtonState.h": "90c190f43edcf5bb157f30d3319ed23957736f436f9064f086acf8ca45850613",
+    "firmware/FeatherFace/SilverRlcd.h": "6c7c27cbe37ff418832876fad3c61a9b496ae22773a5f9bc81fb7307681e24b9",
+    "firmware/FeatherFace/TileLayout.h": "414e4c4054ed460b40a63f9ed4ec697bffc071b38ff88cab9fccc3c8c4b03d63",
+    "firmware/FeatherFace/VoltageEstimate.h": "9be7d9c21016b71b535f80bf8612f9c1587b4b96e63a3dd24f5279356e40dc2f",
+    "firmware/FeatherFace/main.cpp": "dc09a955d8a4e2b3125cfe6d412c7031330bc6186e9e27f0c1ac965f37bb62a6",
+    "firmware/FeatherFace/src/haptic/Haptic_Driver.cpp": "265154e6a2418be9232277da237218eff116e090bb970a269233fb6e41f286df",
+    "firmware/FeatherFace/src/haptic/Haptic_Driver.h": "9a809a8b06caf6fbb857b74b3e115122114e9a2245eb8f73a850dec0d2133e6b"
+  },
+  "host_cpp_modes": 29,
+  "python_tests": 38,
+  "live_smoke_complete": true,
+  "proof_sha256": "76c007e3e9ab62ec0a840a58e0a7e02e3e670fcaa3c1b395b88b9aef94b1a55a",
+  "controls": {
+    "Qwiic_hold": 127,
+    "creature_peak_range": [
+      64,
+      96
+    ],
+    "Find_Me": 64
+  },
+  "warning_policy": "Fresh diag40/80/c0 supply/acceleration limiting may continue with hardware limits intact; all critical/temp/config/unknown warnings stop",
+  "limits": "Short USB-powered register/cell-voltage checks only; no measured current/fast rails/temperature/continuous full-power/battery-only qualification. Manufacturer motor settings unchanged; no battery race/charger changes."
+}

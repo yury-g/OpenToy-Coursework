@@ -1,0 +1,61 @@
+{
+  "recorded_utc": "2026-10-19T22:36:56.391605+00:00",
+  "build": "v15-purple-family",
+  "active_battery_reporters": [
+    "blue",
+    "orange",
+    "yellow",
+    "rainbow"
+  ],
+  "usb_presence_viewer": "purple",
+  "monitor": "tab5",
+  "green": "EXCLUDED after renewed board heat; no USB access or update",
+  "application_sha256": {
+    "blue": "25239161664336faf51fea679fe191bfc40baf285470a14a2ac4e30d159281c1",
+    "orange": "aac67beb543646bf5e11e2e89ce92eaf8c2f07233349ab9f89098249a9e837ff",
+    "yellow": "e0ac2abd570ad52fc7ed9c995f8cbb1727ae6647c590bedaf4d2cbe6cafe8e8a",
+    "rainbow": "e0ac2abd570ad52fc7ed9c995f8cbb1727ae6647c590bedaf4d2cbe6cafe8e8a",
+    "purple": "4cc684d6ff6ac48c9fb49026f2b5fd95ea77b73333fb65fc0f1fdc7fd288880f",
+    "tab5": "647c67ae8100efe95da4e8de6d9f78061017e98d1d74c6d85b20311a073359d7"
+  },
+  "source_sha256": {
+    "firmware/FaceMonitor/FaceMonitor.ino": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "firmware/FaceMonitor/main.cpp": "e6707f59ff07ca75570b54122e2f425331019349b798a57af8bc1c5a17a9bec9",
+    "firmware/FeatherFace/BatteryDiagnostics.h": "3793afcf9294a14425e099b8daf81ec13a3a4c0ded8cb2e391d61cbe9d978e73",
+    "firmware/FeatherFace/BatteryLed.h": "9b07ccb74c1b3bf0506c63b599cf48da4fc9bff8a78f1c5eec4d90734035003e",
+    "firmware/FeatherFace/BatteryMicroTrend.h": "06a07fcfa321bbeabc5196571d5bbed86598034505bdeafc9b75c7877f2d30c7",
+    "firmware/FeatherFace/BatteryState.h": "7ac96e49a0c1654f3e46edbd0d447bccdeca1048aa4b1ddaa2f242eb158613dd",
+    "firmware/FeatherFace/CachedFace.h": "dbdba313817d1cb0451cadd15d8b7f7f59cd12a07f3ccbd33a1c17f5b29858c7",
+    "firmware/FeatherFace/DoodlePixels.h": "8d025c8fce2f42289dbc57b20d95331baef1f6ac50611a5fe172ccdc14fdad1a",
+    "firmware/FeatherFace/DoodleProtocol.h": "d9f5bfd1e83ffb80ef2ea3695cd7a7ae04aa322d75237eb1aa2c9b04e3fcdec5",
+    "firmware/FeatherFace/FaceDisplay.h": "eb1c50bc60219f6be5ce498b7b519622cbe44d7bf912ba81d133b340f3861cce",
+    "firmware/FeatherFace/FaceHardware.h": "e5b140090cb5d298f449cbebe82f4ae746122449d585487a3e91f57bb8f5a260",
+    "firmware/FeatherFace/FaceLinkConfig.example.h": "1b40597a99759cb5bcf4f9dd311f471dab030706ff831927f1d60e728e60b392",
+    "firmware/FeatherFace/FaceNavigation.h": "e69c2793f93d7433db62ebf75faf3b0e8194981c8c009c98fb4f25b15c5d20cf",
+    "firmware/FeatherFace/FaceProtocol.h": "02dd6fd8d6bf1f612bdc3eddafe5420a585f23d0763bfc498ad45c37ccf6306f",
+    "firmware/FeatherFace/FeatherFace.ino": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "firmware/FeatherFace/MonitorPacket.h": "e864cf9969a2fa60c3b647eee8c37b6b8f45af3b66a67c0572893951e0f406e9",
+    "firmware/FeatherFace/PeerBattery.h": "39b3eaf953e333a0801029c5cb90c403ed91a4bcbe2c7f7903a38038c3843683",
+    "firmware/FeatherFace/Protocol.h": "fa892599901565cf7d391dd7b7a8e57a6b7f70874f098eadb2b9935e3654f669",
+    "firmware/FeatherFace/TileLayout.h": "414e4c4054ed460b40a63f9ed4ec697bffc071b38ff88cab9fccc3c8c4b03d63",
+    "firmware/FeatherFace/VoltageEstimate.h": "9be7d9c21016b71b535f80bf8612f9c1587b4b96e63a3dd24f5279356e40dc2f",
+    "firmware/FeatherFace/main.cpp": "1ae7ef1568999131e7833e94b36a3056db175b47f51c4a67f47338014a2faf39"
+  },
+  "backup_digest_verified": {
+    "rainbow": true,
+    "purple": true
+  },
+  "app_slots": {
+    "purple": "factory 0x10000 / 0x100000",
+    "rainbow": "app0 0x10000 / 0x140000",
+    "yellow": "app0 0x10000 / 0x330000"
+  },
+  "limits": "No runtime/load/discharge tests or automatic charging cycles; Purple has no battery sensor; Waveshare SOC is a voltage estimate",
+  "owner_physical_confirmation": "Purple display and touch work; text orientation corrected and owner confirmed normal reading",
+  "evidence": [
+    "family-v15-live.json",
+    "usb-idle-v15-live.json",
+    "host-tests-v15.json",
+    "purple-touch-v15.json"
+  ]
+}

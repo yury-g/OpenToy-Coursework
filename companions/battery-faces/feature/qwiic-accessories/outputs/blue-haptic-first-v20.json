@@ -1,0 +1,32 @@
+{
+  "PEER": {
+    "green": "PEER color=green seen=1 fresh=1 age_ms=1485 rx=4 seq=3156 uptime_ms=6310028 valid=1 pct=13.36 volts=3.751 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "pink": "PEER color=pink seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "yellow": "PEER color=yellow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "rainbow": "PEER color=rainbow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "purple": "PEER color=purple seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "orange": "PEER color=orange seen=1 fresh=1 age_ms=118 rx=5 seq=3143 uptime_ms=6284018 valid=1 pct=99.80 volts=4.198 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "silver": "PEER color=silver seen=1 fresh=1 age_ms=1731 rx=4 seq=3178 uptime_ms=6354000 valid=1 pct=84.70 volts=4.047 current_valid=0 ma=0.0 charger=UNKNOWN"
+  },
+  "ACK": {
+    "green": "ACK color=green ok=0 lost=0",
+    "pink": "ACK color=pink ok=0 lost=0",
+    "yellow": "ACK color=yellow ok=0 lost=0",
+    "rainbow": "ACK color=rainbow ok=0 lost=0",
+    "purple": "ACK color=purple ok=0 lost=0",
+    "orange": "ACK color=orange ok=0 lost=0",
+    "silver": "ACK color=silver ok=0 lost=0"
+  },
+  "FACE": "FACE build=BatteryFaces-v20-feather-haptics mac=02:00:00:00:00:01 mood=happy demo=0 frames=186 uptime_ms=10100 settled=1 hash=cb6c0435 tft=135x240 gauge=1",
+  "BATT": "BATT valid=1 pct=97.50 volts=4.164 rate=-4.160 hours=-1.000 state=CHECKING TREND",
+  "DIAG": "DIAG evidence=LEARNING warm=0 window=0 dp=0.000 dv=0.0000 page=0 auto=1 test=1 outcome=0 seconds=0 saved=1",
+  "MICRO": "MICRO seconds=8 dp=0.0000 dv=0.00000 direction=0 samples=5",
+  "DISPLAY": "DISPLAY selected=blue page=0 gestures=0",
+  "RADIO": "RADIO ready=1 paused=0 channel=1 wifi_status=6 sent=6 errors=0 sta=02:00:00:00:00:01",
+  "GATEWAY": "GATEWAY ready=1 clients=1 sent=34",
+  "POWER": "POWER current_valid=0 ma=0.0 charger=UNKNOWN",
+  "HW": "HW board=feather power=1 backlight=1 panel_reset=1",
+  "HAPTIC": "HAPTIC present=1 ready=1 io=1 address=4a chip=ba button=D2 active=0 duration_ms=180 amplitude=20 mode=0 drive=0 events=00 pulses=1 errors=0",
+  "PERF": "PERF max_render_ms=35",
+  "DEVICE": "DEVICE color=blue face_ink=041f output=tft led=0,0,0"
+}

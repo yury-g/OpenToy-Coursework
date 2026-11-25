@@ -1,0 +1,94 @@
+[
+  {
+    "file": "docs/design-history/layout-options.png",
+    "caption": "Earlier design/dashboard preview; not current firmware UI."
+  },
+  {
+    "file": "docs/design-history/preview.png",
+    "caption": "Earlier design/dashboard preview; not current firmware UI."
+  },
+  {
+    "file": "docs/design-history/ui/preview.png",
+    "caption": "Earlier design/dashboard preview; not current firmware UI."
+  },
+  {
+    "file": "docs/design-history/assembly/preview.jpg",
+    "caption": "Earlier design/dashboard preview; not current firmware UI."
+  },
+  {
+    "file": "docs/design-history/deliverables/dashboard-preview.png",
+    "caption": "CAD study. Blue cone illustrates lens field of view; not a physical lens."
+  },
+  {
+    "file": "docs/design-history/deliverables/render-forward.png",
+    "caption": "CAD study. Blue cone illustrates lens field of view; not a physical lens."
+  },
+  {
+    "file": "docs/design-history/deliverables/render-print.png",
+    "caption": "CAD study. Blue cone illustrates lens field of view; not a physical lens."
+  },
+  {
+    "file": "docs/design-history/deliverables/render-selfie.png",
+    "caption": "CAD study. Blue cone illustrates lens field of view; not a physical lens."
+  },
+  {
+    "file": "docs/design-history/previous-faceplate-baseline/dashboard-preview.png",
+    "caption": "CAD study. Blue cone illustrates lens field of view; not a physical lens."
+  },
+  {
+    "file": "docs/design-history/previous-faceplate-baseline/render-forward.png",
+    "caption": "CAD study. Blue cone illustrates lens field of view; not a physical lens."
+  },
+  {
+    "file": "docs/design-history/previous-faceplate-baseline/render-print.png",
+    "caption": "CAD study. Blue cone illustrates lens field of view; not a physical lens."
+  },
+  {
+    "file": "docs/design-history/previous-faceplate-baseline/render-selfie.png",
+    "caption": "CAD study. Blue cone illustrates lens field of view; not a physical lens."
+  },
+  {
+    "file": "docs/design-history/ui-mockups/04-settings-screen.png",
+    "caption": "Historical interactive mockup; recording/settings/deletion UI differs from current photos-only firmware."
+  },
+  {
+    "file": "docs/design-history/ui-mockups/05-outward-xray.png",
+    "caption": "Historical interactive mockup; recording/settings/deletion UI differs from current photos-only firmware."
+  },
+  {
+    "file": "docs/design-history/ui-mockups/02-recording-live.png",
+    "caption": "Historical interactive mockup; recording/settings/deletion UI differs from current photos-only firmware."
+  },
+  {
+    "file": "docs/design-history/ui-mockups/06-mobile-390px.png",
+    "caption": "Historical interactive mockup; recording/settings/deletion UI differs from current photos-only firmware."
+  },
+  {
+    "file": "docs/design-history/ui-mockups/03-gallery-confirm-delete.png",
+    "caption": "Historical interactive mockup; recording/settings/deletion UI differs from current photos-only firmware."
+  },
+  {
+    "file": "docs/design-history/ui-mockups/01-desktop-initial-selfie.png",
+    "caption": "Historical interactive mockup; recording/settings/deletion UI differs from current photos-only firmware."
+  },
+  {
+    "file": "docs/design-history/earlier-camera-cases/Prototype-v1/Exploded-preview.png",
+    "caption": "Earlier standalone camera-case retention study, not the final top-flip enclosure."
+  },
+  {
+    "file": "docs/design-history/earlier-camera-cases/Prototype-v1/Assembled-preview.png",
+    "caption": "Earlier standalone camera-case retention study, not the final top-flip enclosure."
+  },
+  {
+    "file": "docs/design-history/earlier-camera-cases/Prototype-v5/Assembled.png",
+    "caption": "Earlier standalone camera-case retention study, not the final top-flip enclosure."
+  },
+  {
+    "file": "docs/design-history/earlier-camera-cases/Prototype-v6/Keeper-comparison.jpg",
+    "caption": "Earlier standalone camera-case retention study, not the final top-flip enclosure."
+  },
+  {
+    "file": "docs/design-history/earlier-camera-cases/Prototype-v6/Assembled.png",
+    "caption": "Earlier standalone camera-case retention study, not the final top-flip enclosure."
+  }
+]

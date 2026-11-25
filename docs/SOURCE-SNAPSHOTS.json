@@ -1,0 +1,107 @@
+[
+  {
+    "name": "device/crowpanel-p4",
+    "source": "OpenToy",
+    "revision": "a90580f505b29d9fe33945541b6cabab2d27cfac"
+  },
+  {
+    "name": "device/waveshare-rlcd-4.2",
+    "source": "OpenToy",
+    "revision": "ff93f1a11b0cb382084f8f137c2d5dacf27a4f83"
+  },
+  {
+    "name": "feature/animatronic-eyes-nesso-touch",
+    "source": "OpenToy",
+    "revision": "cdf44e7af4a5acabbe45d3d26c96f9df0332cdae"
+  },
+  {
+    "name": "feature/copy-face",
+    "source": "OpenToy",
+    "revision": "7cf4f6549408e988df157804b59da9d7b5348775"
+  },
+  {
+    "name": "feature/face-feather-puppetry",
+    "source": "OpenToy",
+    "revision": "b4b5a940f63caa8f60b4f3490aba7f9c41a0d6d3"
+  },
+  {
+    "name": "feature/gravity-water",
+    "source": "OpenToy",
+    "revision": "483bf433d336572a8448a9064d00e1505fac5216"
+  },
+  {
+    "name": "feature/gravity-water-feather",
+    "source": "OpenToy",
+    "revision": "f9402edb624442750fdf2c05d67cc058c34b2911"
+  },
+  {
+    "name": "feature/nearby-buddy",
+    "source": "OpenToy",
+    "revision": "abc451e2409d5fca5b1468bdc906ab988d61b134"
+  },
+  {
+    "name": "feature/nesso-n1",
+    "source": "OpenToy",
+    "revision": "7196c33e75886d617a66a8cbef0d919a9cb8ef3f"
+  },
+  {
+    "name": "feature/orange-face",
+    "source": "OpenToy",
+    "revision": "44ecd87575de75197d87457c2d00c7d2010a0eac"
+  },
+  {
+    "name": "main",
+    "source": "OpenToy",
+    "revision": "08e5dec69797018f7608ee5732547ec7da4c2ae0"
+  },
+  {
+    "name": "checkpoint-2026-10-01-face-v2",
+    "source": "OpenToy",
+    "revision": "c3f46d934f410a5c66e79658b777d696ac688b0c"
+  },
+  {
+    "name": "checkpoint-2026-10-02-visual-history",
+    "source": "OpenToy",
+    "revision": "9a859341fb7fcf85aa6dd40b8b3ad7c295fcce62"
+  },
+  {
+    "name": "gravity-water-v0.3.0",
+    "source": "OpenToy",
+    "revision": "40dcf5f5884eb243025617e0a559f36d75690630"
+  },
+  {
+    "name": "v1.0.0-eyes",
+    "source": "OpenToy",
+    "revision": "86cde7923b811361f218af16b387bd26227b4a55"
+  },
+  {
+    "name": "v2.0.0-face",
+    "source": "OpenToy",
+    "revision": "6070bd067813c3a287b46e34132a6723ac663af9"
+  },
+  {
+    "name": "companions/battery-faces/main",
+    "source": "battery-faces",
+    "revision": "af0b776dddb324c1637f6ba5f1f263f5c713ddcd"
+  },
+  {
+    "name": "companions/battery-faces/feature/seesaw-gamepad",
+    "source": "battery-faces",
+    "revision": "2305f0eb7f2c8fbf8cdbe847bee2aa7d702f992f"
+  },
+  {
+    "name": "companions/battery-faces/feature/qwiic-accessories",
+    "source": "battery-faces",
+    "revision": "f83f2f985f18c4b3b122b9e9fa0e7b7948589256"
+  },
+  {
+    "name": "companions/battery-faces/archive/camera-test-v17",
+    "source": "battery-faces",
+    "revision": "88efb1778d41e74c92ca2764c7d3314a0c796fe1"
+  },
+  {
+    "name": "companions/nearby-buddy/main",
+    "source": "nearby-buddy",
+    "revision": "a73cad5d15b1551e6ef8d9c5e2aee632bf693b0e"
+  }
+]

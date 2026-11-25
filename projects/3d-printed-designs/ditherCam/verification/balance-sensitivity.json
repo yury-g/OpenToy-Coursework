@@ -1,0 +1,24 @@
+{
+  "status": "estimated_sensitivity_only_not_measured_balance",
+  "cases": 2048,
+  "min_front_margin_mm": 0.7984381163894477,
+  "min_rear_margin_mm": 24.11291812634905,
+  "worst_front_case": {
+    "angle": 180,
+    "mass_g": 131.93197707906668,
+    "cg_y_mm": 0.7984381163894477,
+    "body_fraction_of_solid": 0.2,
+    "pod_fraction_of_solid": 1,
+    "camera_mass_g": 32,
+    "camera_cg_above_base_mm": 10,
+    "lipo_mass_g": 0,
+    "cell_18650_g": 0
+  },
+  "assumptions": [
+    "Shell masses varied between 20% and 100% of solid PLA volume; this is not a slicer mass prediction.",
+    "Body centroid varied +/-5 mm; moving shell centroid +/-3 mm in its print-space Y direction.",
+    "Bare RLCD 50-68 g at 6-15 mm behind front sole edge; optional 18650 0-48 g at 25 mm.",
+    "XIAO plus base 22-32 g with center 3-10 mm above its base PCB; LiPo 0-24 g at assumed 58x42.5x4 mm bay center.",
+    "Only gravity on a level table; no cable pull, shove, slope, dynamic flipping, or actual measurements."
+  ]
+}

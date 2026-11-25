@@ -1,0 +1,26 @@
+{
+  "printer_model": "Snapmaker U1",
+  "printer_settings_id": "Snapmaker U1 (0.4 nozzle)",
+  "filament_type": [
+    "PLA"
+  ],
+  "filament_settings_id": [
+    "Snapmaker PLA SnapSpeed @U1"
+  ],
+  "nozzle_diameter": [
+    "0.4",
+    "0.4",
+    "0.4",
+    "0.4"
+  ],
+  "layer_height": "0.2",
+  "initial_layer_print_height": "0.2",
+  "wall_loops": "4",
+  "sparse_infill_density": "20%",
+  "enable_support": "0",
+  "raft_layers": "0",
+  "brim_type": "no_brim",
+  "brim_width": "0",
+  "status": "Opened in Snapmaker Orca; toolpath preview not generated",
+  "limitation": "GUI Slice Plate command did not respond through computer-use controls. Native Snapmaker Orca CLI failed: newer-file version guard; retry with supported boolean newer-file override crashed after calc_exclude_triangles error. No printer action."
+}

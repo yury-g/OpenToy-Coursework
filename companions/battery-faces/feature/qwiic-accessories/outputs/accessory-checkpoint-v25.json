@@ -1,0 +1,86 @@
+{
+  "recorded_utc": "2026-10-20T22:46:06.004702+00:00",
+  "branch": "feature/qwiic-accessories",
+  "battery_only_main": "af0b776dddb324c1637f6ba5f1f263f5c713ddcd",
+  "scope": "Blue 02:00:00:00:00:01, replacement Green 02:00:00:00:00:02, Tab5 02:00:00:00:00:0a; application-only installs",
+  "excluded": "Retired Green and other family firmwares not programmed",
+  "host_cpp_modes": 29,
+  "python_unittests": 32,
+  "host_suites_passed": true,
+  "installed_apps": {
+    "Blue/Green": "99a225f8afb59ee3b8e73a1e5e8cd82a9cabd379630bce2892e8203ba7e8cb0c",
+    "Tab5": "bbd69cdeedfffd0bbb40208579953a163c568ece2903ab66dbb5bd217dabb144"
+  },
+  "firmware_sources": {
+    "firmware/FeatherFace/AccessoryProtocol.h": "060554a8a60533b545d23e3eb18cb09a55e2bddbcdde032a072a8d9f9f4176ff",
+    "firmware/FeatherFace/BatteryDiagnostics.h": "3793afcf9294a14425e099b8daf81ec13a3a4c0ded8cb2e391d61cbe9d978e73",
+    "firmware/FeatherFace/BatteryLed.h": "9b07ccb74c1b3bf0506c63b599cf48da4fc9bff8a78f1c5eec4d90734035003e",
+    "firmware/FeatherFace/BatteryMicroTrend.h": "06a07fcfa321bbeabc5196571d5bbed86598034505bdeafc9b75c7877f2d30c7",
+    "firmware/FeatherFace/BatteryState.h": "7ac96e49a0c1654f3e46edbd0d447bccdeca1048aa4b1ddaa2f242eb158613dd",
+    "firmware/FeatherFace/CachedFace.h": "dbdba313817d1cb0451cadd15d8b7f7f59cd12a07f3ccbd33a1c17f5b29858c7",
+    "firmware/FeatherFace/CreatureBreathing.h": "3d80570259a562101a609f09d6948484ad975f4bce3972ee989ed2b08d26229c",
+    "firmware/FeatherFace/DoodlePixels.h": "8d025c8fce2f42289dbc57b20d95331baef1f6ac50611a5fe172ccdc14fdad1a",
+    "firmware/FeatherFace/DoodleProtocol.h": "d9f5bfd1e83ffb80ef2ea3695cd7a7ae04aa322d75237eb1aa2c9b04e3fcdec5",
+    "firmware/FeatherFace/FaceDisplay.h": "15998f89bdce98411b66183d82b65a4c343c013f1277c3e5246419ee228280b3",
+    "firmware/FeatherFace/FaceHardware.h": "6e3dbd7ba7d415fbc8b88e5ce86c4b5e017d848006cff3dc2e4d629d7400092f",
+    "firmware/FeatherFace/FaceLinkConfig.example.h": "1b40597a99759cb5bcf4f9dd311f471dab030706ff831927f1d60e728e60b392",
+    "firmware/FeatherFace/FaceNavigation.h": "4eae11341cfd3474b2935934b9fa628fdc6b063d4c1cdf736c17649415e61659",
+    "firmware/FeatherFace/FaceProtocol.h": "02dd6fd8d6bf1f612bdc3eddafe5420a585f23d0763bfc498ad45c37ccf6306f",
+    "firmware/FeatherFace/FeatherFace.ino": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "firmware/FeatherFace/FeatherFind.h": "41edb3e91f2df2da73315b5ad8bba3ba0a2ddc24980ddc33a38669849e0ec72c",
+    "firmware/FeatherFace/FeatherHaptic.h": "44ff1dee2e0af15839b7a5f19a73c39ea95b3cc01de077c56451876e179692ab",
+    "firmware/FeatherFace/FeatherQwiicButton.h": "b54a22faf96013d5f0ab262197aa9850ac6a0505e27496bdf555ff0774ee9b93",
+    "firmware/FeatherFace/FindState.h": "59b1c6f8aa3057dfc82f9a090db9a9568613200ba952ea7c7439d56843c88099",
+    "firmware/FeatherFace/HapticBreathing.h": "c41cac2167958a01977a886850d34855f7e402348f0c5bd2cdc96a848b656419",
+    "firmware/FeatherFace/HapticPulse.h": "4843e7514e4c12314df32bd61981a76580f97b83cabe9af8a1ce857183b85b89",
+    "firmware/FeatherFace/MonitorPacket.h": "e864cf9969a2fa60c3b647eee8c37b6b8f45af3b66a67c0572893951e0f406e9",
+    "firmware/FeatherFace/PeerBattery.h": "c64db5308b968e732b2a42b58f3c63343ddbf0d6c7618a3a72e0bf9be36e2358",
+    "firmware/FeatherFace/Protocol.h": "fa892599901565cf7d391dd7b7a8e57a6b7f70874f098eadb2b9935e3654f669",
+    "firmware/FeatherFace/QwiicButtonLed.h": "c195da67d019ff78e2010b0c4ead28bb4b10787c35f543ed00c2ff613dd9dbbc",
+    "firmware/FeatherFace/QwiicButtonState.h": "90c190f43edcf5bb157f30d3319ed23957736f436f9064f086acf8ca45850613",
+    "firmware/FeatherFace/SilverRlcd.h": "6c7c27cbe37ff418832876fad3c61a9b496ae22773a5f9bc81fb7307681e24b9",
+    "firmware/FeatherFace/TileLayout.h": "414e4c4054ed460b40a63f9ed4ec697bffc071b38ff88cab9fccc3c8c4b03d63",
+    "firmware/FeatherFace/VoltageEstimate.h": "9be7d9c21016b71b535f80bf8612f9c1587b4b96e63a3dd24f5279356e40dc2f",
+    "firmware/FeatherFace/main.cpp": "f8080e9079cdaea371ed7f807e66c577b9f5cd46bcf9b5c3ed8555fb23f4b0c5",
+    "firmware/FeatherFace/src/haptic/Haptic_Driver.cpp": "265154e6a2418be9232277da237218eff116e090bb970a269233fb6e41f286df",
+    "firmware/FeatherFace/src/haptic/Haptic_Driver.h": "9a809a8b06caf6fbb857b74b3e115122114e9a2245eb8f73a850dec0d2133e6b",
+    "firmware/FaceMonitor/FaceMonitor.ino": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "firmware/FaceMonitor/FindController.h": "31dfee62f5d7369fe23dfa91daa958c1dba17068f85a73a90c053e346eb7ca4d",
+    "firmware/FaceMonitor/FindUi.h": "e3fd41d21ec1ed0818765233c34eaec78dd29c7dea50512ef030b257ed2af556",
+    "firmware/FaceMonitor/RuntimeObserver.h": "12593108078e09f4ec87b981f21ae5fc2f9fda189c778ef8c8c5dc60940f2a3b",
+    "firmware/FaceMonitor/RuntimeStorage.h": "4030a81d0c3388fef2c70198cc8a616064867856fa2d87f7beb96e5206e68753",
+    "firmware/FaceMonitor/RuntimeView.h": "2dd463d8eb4b89d9c021fbc953e4ec5c35f99635dd80cb34011acda4bb40d3d0",
+    "firmware/FaceMonitor/main.cpp": "2082fb29b89b52563a07c014cc1d476221c965fff2bd5a9fa9a26fc605c765ea"
+  },
+  "proof_files": {
+    "outputs/accessories-owner-recovery-v25.json": "717024d107e5b94fd676530a441e2a8663f8fcbe4e660fb7492f098a3eb0fe9c",
+    "outputs/accessory-fault-readback-v25.json": "cef80e76ce343bc043a40e7df5271fec1eef01866ea2697a18312d926ed5bfc4",
+    "outputs/blue-explicit-reprobe-v25.json": "28827e60372a04f41a992cd61bbe9d6b81256fbf0aa7ea783391cd6ebe687037",
+    "outputs/button-led-reassert-v25.json": "23a0a1ce779e8b48ed3ffcfb92c3dd762b480de3f6cb1851fa7929f78b7e3602",
+    "outputs/creatures-v25-first-resume-observation.json": "20bc58f8bdddddeb896c3eff21d4c90b4be6ee92be1ac04d5c934599db612abc",
+    "outputs/creatures-v25-live.json": "c1fa17ff3a3cf9552c2c1cb7b13d7991eac70ae87711a019fa63e2d1751dc9c4",
+    "outputs/creatures-v25-physical-press-interruption.json": "9174031d05ec4a6e903d7ab1f42c14aa55fed3388afb8080feee39df63d1d19e",
+    "outputs/host-tests-v25.json": "68cd265cff2d24b0b34cf852f754c15fc87d84478b7ec84167b83879cd368e71",
+    "outputs/outline-live-v25.json": "8c132900f873c7fe8ed58bc2b54645c9767e1f96d0faf5b935a7f2ce7208cdd3",
+    "outputs/tab5-outline-capture-v25.json": "0947573cadd5d70c447d347c08ac8b55123aaf7d410dba5482de225c1887b072"
+  },
+  "limits": [
+    "USB-powered register and sampled cell voltage checks, no measured current/fast rail transients/temperature/battery-only runtime",
+    "Full uninterrupted v25 creature/Find resume test remains incomplete; prior checkpoints and host tests are separate evidence",
+    "Qwiic LED cache can require explicit reassertion after a powered module is disconnected/reconnected",
+    "No battery race, charger configuration changes or automatic charge/discharge cycle"
+  ],
+  "installed_versions": {
+    "Blue/Green": "BatteryFaces-v25-accessory-outline",
+    "Tab5": "BatteryMonitor-v25-accessory-outline"
+  },
+  "current_hardware_verification": {
+    "outline_capture": "passed both sources and Tab5, both outputs confirmed off",
+    "continuous_creature_full_two_board_run": "incomplete: physical owner presses interrupted strict automated collector",
+    "blue_historical_counters": {
+      "haptic_errors": 64,
+      "qwiic_errors": 5
+    },
+    "owner_recovery": "Owner confirmed moving/disconnecting Qwiic cable, fixing it, and subsequently Blue working. Explicit reprobe recovered readiness; no new errors in current capture."
+  }
+}

@@ -1,0 +1,27 @@
+COORDINATOR REVIEW: Read COORDINATOR-REVIEW.md. Existing top-down insertion has hard obstructions, not only snap deflection. Full rigid-path gate is appended below.
+{
+  "sweep": {
+    "-0.6": {
+      "poses": 181,
+      "max_shell_intersection_mm3": 0,
+      "worst_angle": 0,
+      "max_moving_hardware_intersection_mm3": 0
+    },
+    "0": {
+      "poses": 181,
+      "max_shell_intersection_mm3": 0,
+      "worst_angle": 0,
+      "max_moving_hardware_intersection_mm3": 0
+    },
+    "0.6": {
+      "poses": 181,
+      "max_shell_intersection_mm3": 0,
+      "worst_angle": 0,
+      "max_moving_hardware_intersection_mm3": 0
+    }
+  },
+  "static_rlcd_intersections": [],
+  "assembly_difference_mm3": 0.0
+}
+Required deliverables and essential geometry checks passed; physical fit/release still unverified.
+Independent rigid insertion gate passed at 0.5 mm samples; bottom detent tip deflection excluded explicitly.

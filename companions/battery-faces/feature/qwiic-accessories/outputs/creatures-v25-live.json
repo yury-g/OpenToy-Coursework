@@ -1,0 +1,1510 @@
+{
+  "recorded_utc": "2026-10-20T22:44:20.330977+00:00",
+  "boards": {
+    "blue": {
+      "passed": false,
+      "baseline_stop": {
+        "motor": {
+          "present": "1",
+          "ready": "1",
+          "io": "1",
+          "address": "4a",
+          "chip": "ba",
+          "button": "D2",
+          "active": "0",
+          "duration_ms": "180",
+          "at_ms": "492574",
+          "start_ms": "94461",
+          "amplitude": "20",
+          "level": "LOW",
+          "mode": "0",
+          "drive": "0",
+          "events": "00",
+          "pulses": "15",
+          "errors": "64",
+          "held": "0",
+          "creature": "0"
+        },
+        "lines": [
+          "HAPTIC_STOP accepted=1",
+          "BREATH active=0 peak=0 drive=0 elapsed_ms=0 remaining_ms=0 phase=off",
+          "HAPTIC present=1 ready=1 io=1 address=4a chip=ba button=D2 active=0 duration_ms=180 at_ms=492574 start_ms=94461 amplitude=20 level=LOW mode=0 drive=0 events=00 pulses=15 errors=64 held=0 creature=0"
+        ]
+      },
+      "initial": {
+        "PEER": {
+          "green": "PEER color=green seen=1 fresh=1 age_ms=1059 rx=238 seq=228 uptime_ms=454032 valid=1 pct=96.39 volts=4.169 current_valid=0 ma=0.0 charger=UNKNOWN",
+          "pink": "PEER color=pink seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+          "yellow": "PEER color=yellow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+          "rainbow": "PEER color=rainbow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+          "purple": "PEER color=purple seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+          "orange": "PEER color=orange seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+          "silver": "PEER color=silver seen=1 fresh=1 age_ms=882 rx=243 seq=6429 uptime_ms=12856000 valid=1 pct=49.40 volts=3.798 current_valid=0 ma=0.0 charger=UNKNOWN"
+        },
+        "ACK": {
+          "green": "ACK color=green ok=0 lost=0",
+          "pink": "ACK color=pink ok=0 lost=0",
+          "yellow": "ACK color=yellow ok=0 lost=0",
+          "rainbow": "ACK color=rainbow ok=0 lost=0",
+          "purple": "ACK color=purple ok=0 lost=0",
+          "orange": "ACK color=orange ok=0 lost=0",
+          "silver": "ACK color=silver ok=0 lost=0"
+        },
+        "FACE": "FACE build=BatteryFaces-v25-accessory-outline mac=02:00:00:00:00:01 mood=happy demo=0 frames=9781 uptime_ms=492580 settled=0 hash=e15b182e tft=135x240 gauge=1",
+        "BATT": "BATT valid=1 pct=97.18 volts=4.161 rate=-2.080 hours=46.723 state=DISCHARGING",
+        "DIAG": "DIAG evidence=NEAR FULL warm=1 window=1 dp=-0.160 dv=-0.0012 page=0 auto=1 test=1 outcome=0 seconds=0 saved=1",
+        "MICRO": "MICRO seconds=118 dp=-0.1602 dv=0.00250 direction=0 samples=61",
+        "DISPLAY": "DISPLAY selected=blue page=0 gestures=0",
+        "RADIO": "RADIO ready=1 paused=0 channel=1 wifi_status=6 sent=247 errors=0 sta=02:00:00:00:00:01",
+        "GATEWAY": "GATEWAY ready=1 clients=1 sent=1468",
+        "POWER": "POWER current_valid=0 ma=0.0 charger=UNKNOWN",
+        "HW": "HW board=feather power=1 backlight=1 panel_reset=1",
+        "CREATURE": "CREATURE enabled=0 active=0 seed=3579999283 peak=22 drive=0 phase=off inhale_ms=3682 exhale_ms=6242 rest_ms=1826 cycle_elapsed_ms=13300 held=0",
+        "HAPTIC": "HAPTIC present=1 ready=1 io=1 address=4a chip=ba button=D2 active=0 duration_ms=180 at_ms=492590 start_ms=94461 amplitude=20 level=LOW mode=0 drive=0 events=00 pulses=15 errors=64 held=0 creature=0",
+        "QWIIC_BUTTON": "QWIIC_BUTTON present=1 ready=1 address=6f id=5d firmware=1.3 pressed=0 led=16 led_readback=16 io=1 presses=7 errors=5",
+        "PERF": "PERF max_render_ms=36",
+        "DEVICE": "DEVICE color=blue face_ink=041f output=tft led=0,0,0"
+      },
+      "live_io_led_verification": true,
+      "enable": {
+        "motor": {
+          "present": "1",
+          "ready": "1",
+          "io": "1",
+          "address": "4a",
+          "chip": "ba",
+          "button": "D2",
+          "active": "0",
+          "duration_ms": "180",
+          "at_ms": "493135",
+          "start_ms": "94461",
+          "amplitude": "20",
+          "level": "LOW",
+          "mode": "0",
+          "drive": "0",
+          "events": "00",
+          "pulses": "15",
+          "errors": "64",
+          "held": "0",
+          "creature": "0"
+        },
+        "lines": [
+          "CREATURE_SET accepted=1 enabled=1",
+          "CREATURE enabled=1 active=0 seed=3579999283 peak=22 drive=0 phase=off inhale_ms=3682 exhale_ms=6242 rest_ms=1826 cycle_elapsed_ms=13846 held=0",
+          "HAPTIC present=1 ready=1 io=1 address=4a chip=ba button=D2 active=0 duration_ms=180 at_ms=493135 start_ms=94461 amplitude=20 level=LOW mode=0 drive=0 events=00 pulses=15 errors=64 held=0 creature=0"
+        ]
+      },
+      "startup": [
+        {
+          "motor": {
+            "present": "1",
+            "ready": "1",
+            "io": "1",
+            "address": "4a",
+            "chip": "ba",
+            "button": "D2",
+            "active": "1",
+            "duration_ms": "0",
+            "at_ms": "493153",
+            "start_ms": "493138",
+            "amplitude": "20",
+            "level": "LOW",
+            "mode": "0",
+            "drive": "0",
+            "events": "00",
+            "pulses": "16",
+            "errors": "64",
+            "held": "0",
+            "creature": "1"
+          },
+          "cell": {
+            "at_ms": "493149",
+            "volts": "4.161",
+            "pct": "97.18"
+          },
+          "breath": {
+            "active": "0",
+            "peak": "0",
+            "drive": "0",
+            "elapsed_ms": "0",
+            "remaining_ms": "0",
+            "phase": "off"
+          },
+          "creature": {
+            "enabled": "1",
+            "active": "1",
+            "seed": "3579999283",
+            "peak": "19",
+            "drive": "0",
+            "phase": "inhale",
+            "inhale_ms": "4936",
+            "exhale_ms": "6366",
+            "rest_ms": "2434",
+            "cycle_elapsed_ms": "11",
+            "held": "0"
+          },
+          "button": {
+            "present": "1",
+            "ready": "1",
+            "address": "6f",
+            "id": "5d",
+            "firmware": "1.3",
+            "pressed": "0",
+            "led": "0",
+            "led_readback": "0",
+            "io": "1",
+            "presses": "7",
+            "errors": "5"
+          }
+        }
+      ],
+      "continuous": {
+        "samples": [
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "493153",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "0",
+              "drive": "0",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "493149",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "0",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "0",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "11",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "0",
+              "led_readback": "0",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "493165",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "0",
+              "drive": "0",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "493160",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "0",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "0",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "23",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "0",
+              "led_readback": "0",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "493252",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "0",
+              "drive": "0",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "493248",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "0",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "0",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "110",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "0",
+              "led_readback": "0",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "493353",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "0",
+              "drive": "0",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "493349",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "0",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "0",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "212",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "0",
+              "led_readback": "0",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "493451",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "0",
+              "drive": "0",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "493446",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "0",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "0",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "309",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "0",
+              "led_readback": "0",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "493553",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "0",
+              "drive": "0",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "493549",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "0",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "0",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "411",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "0",
+              "led_readback": "0",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "493657",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "1",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "493653",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "1",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "1",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "515",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "6",
+              "led_readback": "6",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "493757",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "1",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "493753",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "1",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "1",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "616",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "6",
+              "led_readback": "6",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "493855",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "1",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "493851",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "1",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "1",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "714",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "6",
+              "led_readback": "6",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "493957",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "1",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "493953",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "1",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "1",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "815",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "6",
+              "led_readback": "6",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "494055",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "2",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "494050",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "2",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "2",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "913",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "12",
+              "led_readback": "12",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "494157",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "2",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "494152",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "2",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "2",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "1015",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "12",
+              "led_readback": "12",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "494255",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "2",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "494250",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "2",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "2",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "1113",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "12",
+              "led_readback": "12",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "494358",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "3",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "494353",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "3",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "3",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "1216",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "18",
+              "led_readback": "18",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "494455",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "3",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "494451",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "3",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "3",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "1313",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "18",
+              "led_readback": "18",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "494557",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "4",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "494553",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "4",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "4",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "1415",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "24",
+              "led_readback": "24",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "494656",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "4",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "494652",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "4",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "4",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "1515",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "24",
+              "led_readback": "24",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "494762",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "5",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "494757",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "5",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "5",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "1620",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "30",
+              "led_readback": "30",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "494859",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "5",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "494854",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "5",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "5",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "1717",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "30",
+              "led_readback": "30",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          },
+          {
+            "motor": {
+              "present": "1",
+              "ready": "1",
+              "io": "1",
+              "address": "4a",
+              "chip": "ba",
+              "button": "D2",
+              "active": "1",
+              "duration_ms": "0",
+              "at_ms": "494961",
+              "start_ms": "493138",
+              "amplitude": "20",
+              "level": "LOW",
+              "mode": "1",
+              "drive": "6",
+              "events": "00",
+              "pulses": "16",
+              "errors": "64",
+              "held": "0",
+              "creature": "1"
+            },
+            "cell": {
+              "at_ms": "494956",
+              "volts": "4.161",
+              "pct": "97.18"
+            },
+            "breath": {
+              "active": "0",
+              "peak": "0",
+              "drive": "6",
+              "elapsed_ms": "0",
+              "remaining_ms": "0",
+              "phase": "off"
+            },
+            "creature": {
+              "enabled": "1",
+              "active": "1",
+              "seed": "3579999283",
+              "peak": "19",
+              "drive": "6",
+              "phase": "inhale",
+              "inhale_ms": "4936",
+              "exhale_ms": "6366",
+              "rest_ms": "2434",
+              "cycle_elapsed_ms": "1819",
+              "held": "0"
+            },
+            "button": {
+              "present": "1",
+              "ready": "1",
+              "address": "6f",
+              "id": "5d",
+              "firmware": "1.3",
+              "pressed": "0",
+              "led": "36",
+              "led_readback": "36",
+              "io": "1",
+              "presses": "7",
+              "errors": "5"
+            }
+          }
+        ],
+        "monitor": [],
+        "observed_seconds": 1.9080729158595204
+      }
+    }
+  },
+  "complete": false,
+  "scope": "35s continuous creature envelope per Blue/Green, short Tab5 find preemption/resume, direct stop",
+  "measurement_limit": "Cell voltage and driver register/fault checks only; no physical input simulation, temperature/current/coil-rail measurement or battery-only certification",
+  "abort": {
+    "type": "TestAbort",
+    "message": "{'error': 'physical input interference or Q button fault', 'sample': {'motor': {'present': '1', 'ready': '1', 'io': '1', 'address': '4a', 'chip': 'ba', 'button': 'D2', 'active': '1', 'duration_ms': '0', 'at_ms': '495061', 'start_ms': '495002', 'amplitude': '20', 'level': 'LOW', 'mode': '1', 'drive': '20', 'events': '00', 'pulses': '17', 'errors': '64', 'held': '1', 'creature': '0'}, 'cell': {'at_ms': '495057', 'volts': '4.161', 'pct': '97.18'}, 'breath': {'active': '0', 'peak': '0', 'drive': '20', 'elapsed_ms': '0', 'remaining_ms': '0', 'phase': 'off'}, 'creature': {'enabled': '1', 'active': '0', 'seed': '3579999283', 'peak': '19', 'drive': '20', 'phase': 'off', 'inhale_ms': '4936', 'exhale_ms': '6366', 'rest_ms': '2434', 'cycle_elapsed_ms': '1920', 'held': '1'}, 'button': {'present': '1', 'ready': '1', 'address': '6f', 'id': '5d', 'firmware': '1.3', 'pressed': '1', 'led': '128', 'led_readback': '128', 'io': '1', 'presses': '8', 'errors': '5'}}}"
+  },
+  "cleanup": {
+    "tab_stop_requested": true,
+    "blue": {
+      "confirmed_off": true,
+      "motor": {
+        "present": "1",
+        "ready": "1",
+        "io": "1",
+        "address": "4a",
+        "chip": "ba",
+        "button": "D2",
+        "active": "0",
+        "duration_ms": "180",
+        "at_ms": "495074",
+        "start_ms": "94461",
+        "amplitude": "20",
+        "level": "LOW",
+        "mode": "0",
+        "drive": "0",
+        "events": "00",
+        "pulses": "17",
+        "errors": "64",
+        "held": "0",
+        "creature": "0"
+      },
+      "sample": {
+        "motor": {
+          "present": "1",
+          "ready": "1",
+          "io": "1",
+          "address": "4a",
+          "chip": "ba",
+          "button": "D2",
+          "active": "0",
+          "duration_ms": "180",
+          "at_ms": "495086",
+          "start_ms": "94461",
+          "amplitude": "20",
+          "level": "LOW",
+          "mode": "0",
+          "drive": "0",
+          "events": "00",
+          "pulses": "17",
+          "errors": "64",
+          "held": "0",
+          "creature": "0"
+        },
+        "cell": {
+          "at_ms": "495081",
+          "volts": "4.161",
+          "pct": "97.18"
+        },
+        "breath": {
+          "active": "0",
+          "peak": "0",
+          "drive": "0",
+          "elapsed_ms": "0",
+          "remaining_ms": "0",
+          "phase": "off"
+        },
+        "creature": {
+          "enabled": "0",
+          "active": "0",
+          "seed": "3579999283",
+          "peak": "19",
+          "drive": "0",
+          "phase": "off",
+          "inhale_ms": "4936",
+          "exhale_ms": "6366",
+          "rest_ms": "2434",
+          "cycle_elapsed_ms": "1944",
+          "held": "0"
+        },
+        "button": {
+          "present": "1",
+          "ready": "1",
+          "address": "6f",
+          "id": "5d",
+          "firmware": "1.3",
+          "pressed": "1",
+          "led": "128",
+          "led_readback": "128",
+          "io": "1",
+          "presses": "8",
+          "errors": "5"
+        }
+      },
+      "lines": [
+        "HAPTIC_STOP accepted=1",
+        "BREATH active=0 peak=0 drive=0 elapsed_ms=0 remaining_ms=0 phase=off",
+        "HAPTIC present=1 ready=1 io=1 address=4a chip=ba button=D2 active=0 duration_ms=180 at_ms=495074 start_ms=94461 amplitude=20 level=LOW mode=0 drive=0 events=00 pulses=17 errors=64 held=0 creature=0"
+      ]
+    }
+  }
+}

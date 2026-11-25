@@ -1,0 +1,35 @@
+idf_component_register(
+    SRCS
+        "App.cpp"
+        "BoardTab5.cpp"
+        "CameraTab5.cpp"
+        "FaceDetectorTab5.cpp"
+    INCLUDE_DIRS
+        "."
+        "adapter"
+        "shared"
+    REQUIRES
+        esp_codec_dev
+        esp_driver_gpio
+        esp_driver_i2c
+        esp_driver_i2s
+        esp_driver_jpeg
+        esp_driver_ledc
+        esp_driver_usb_serial_jtag
+        esp_hw_support
+        esp_lcd
+        esp_lcd_ili9881c
+        esp_lcd_st7123
+        esp_lcd_touch
+        esp_lcd_touch_gt911
+        esp_lcd_touch_st7123
+        esp_mm
+        esp_timer
+        esp_video
+        freertos
+        heap
+        human_face_detect
+        log
+        vfs
+)
+target_compile_options(${COMPONENT_LIB} PRIVATE -std=gnu++20)

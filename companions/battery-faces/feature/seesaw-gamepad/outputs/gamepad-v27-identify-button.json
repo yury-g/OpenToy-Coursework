@@ -1,0 +1,205 @@
+{
+  "recorded_utc": "2026-10-21T19:07:16.333732+00:00",
+  "purpose": "Identify which physical Feather is attached to USB by observed user D1 press",
+  "events": [
+    {
+      "at_utc": "2026-10-21T19:07:48.632828+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=95 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:48.682707+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:48.782560+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=72 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:48.832728+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=65 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:49.182501+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=-100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:49.382687+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=-99 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:49.482610+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=-1 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:49.533724+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:49.633863+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=1 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:49.783761+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:49.833617+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=10 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:49.933587+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=-100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:50.084731+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=-99 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:52.535726+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=29 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:52.585648+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=33 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:52.685504+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=36 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:52.835526+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=38 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:52.885574+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=33 y=64 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:52.985402+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=-100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:53.285426+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=-99 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:53.535756+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=-100 y=10 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:53.585589+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=-100 y=5 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:53.635771+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=-100 y=4 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:53.685566+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=-100 y=1 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:53.735914+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=-100 y=0 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:54.085577+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=100 y=0 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:54.485742+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=-88 y=0 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:54.535839+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=-100 y=0 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:54.785427+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=79 y=0 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:54.835376+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=100 y=82 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:54.885438+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=50 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:54.935592+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=37 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:54.985688+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=15 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:55.035581+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:55.085388+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=-93 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:55.135374+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=neutral x=0 y=-100 presses=0"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:55.785732+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=happy x=0 y=0 presses=1"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:55.885603+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=surprised x=0 y=0 presses=2"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:56.285465+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=angry x=0 y=0 presses=3"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:56.686460+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=sorry x=0 y=0 presses=4"
+    },
+    {
+      "at_utc": "2026-10-21T19:07:57.086372+00:00",
+      "line": "GAMEPAD_EVENT manual=1 mood=surprised x=0 y=0 presses=6"
+    }
+  ],
+  "initial": {
+    "PEER": {
+      "green": "PEER color=green seen=1 fresh=1 age_ms=883 rx=52 seq=13927 uptime_ms=27852053 valid=1 pct=1.35 volts=3.515 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "pink": "PEER color=pink seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "yellow": "PEER color=yellow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "rainbow": "PEER color=rainbow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "purple": "PEER color=purple seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "orange": "PEER color=orange seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "silver": "PEER color=silver seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN"
+    },
+    "ACK": {
+      "green": "ACK color=green ok=0 lost=0",
+      "pink": "ACK color=pink ok=0 lost=0",
+      "yellow": "ACK color=yellow ok=0 lost=0",
+      "rainbow": "ACK color=rainbow ok=0 lost=0",
+      "purple": "ACK color=purple ok=0 lost=0",
+      "orange": "ACK color=orange ok=0 lost=0",
+      "silver": "ACK color=silver ok=0 lost=0"
+    },
+    "FACE": "FACE build=BatteryFaces-v27-seesaw-gamepad mac=02:00:00:00:00:01 mood=happy demo=0 frames=2087 uptime_ms=105182 settled=0 hash=5fbde991 tft=135x240 gauge=1",
+    "BATT": "BATT valid=1 pct=100.00 volts=4.207 rate=-2.288 hours=43.706 state=DISCHARGING",
+    "DIAG": "DIAG evidence=LEARNING warm=0 window=0 dp=0.000 dv=0.0000 page=0 auto=1 test=1 outcome=0 seconds=0 saved=1",
+    "MICRO": "MICRO seconds=102 dp=0.0000 dv=0.00000 direction=0 samples=52",
+    "DISPLAY": "DISPLAY selected=blue page=0 gestures=0",
+    "RADIO": "RADIO ready=1 paused=0 channel=1 wifi_status=6 sent=53 errors=0 sta=02:00:00:00:00:01",
+    "GATEWAY": "GATEWAY ready=1 clients=1 sent=207",
+    "POWER": "POWER current_valid=0 ma=0.0 charger=UNKNOWN",
+    "HW": "HW board=feather power=1 backlight=1 panel_reset=1",
+    "CREATURE": "CREATURE enabled=0 active=0 seed=3579999283 peak=0 drive=0 phase=off inhale_ms=0 exhale_ms=0 rest_ms=0 cycle_elapsed_ms=105189 held=0",
+    "HAPTIC": "HAPTIC present=1 ready=1 io=1 address=4a chip=ba button=D2 active=0 duration_ms=180 at_ms=105192 start_ms=0 amplitude=127 level=HIGH mode=0 drive=0 events=00 pulses=0 errors=0 held=0 creature=0 warning_diag=00",
+    "QWIIC_BUTTON": "QWIIC_BUTTON present=1 ready=1 address=6f id=5d firmware=1.3 pressed=0 led=16 led_readback=16 io=1 presses=0 errors=0",
+    "GAMEPAD": "GAMEPAD ready=0 address=50 hw=00 product=0 samples=0 errors=0 age_ms=0 raw_x=512 raw_y=512 x=0 y=0 buttons=00000000 manual=0 mood=neutral look_x=0.00 look_y=0.00 presses=0",
+    "PERF": "PERF max_render_ms=36",
+    "DEVICE": "DEVICE color=blue face_ink=041f output=tft led=0,0,0"
+  }
+}

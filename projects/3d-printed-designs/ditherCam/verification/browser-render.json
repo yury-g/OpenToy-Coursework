@@ -1,0 +1,22 @@
+{
+  "title": "Top-flip camera \u2014 design review",
+  "errors": [],
+  "state": {
+    "angle": 180,
+    "orientation": "tabletop",
+    "meshcounts": 5,
+    "movingtransform": {
+      "position": [
+        0,
+        22,
+        21.999999999999996
+      ],
+      "quaternion": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    }
+  }
+}

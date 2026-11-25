@@ -1,0 +1,115 @@
+{
+  "recorded_utc": "2026-10-20T16:11:23.280018+00:00",
+  "firmware": "v16-pink-camera",
+  "applications": {
+    "blue": {
+      "bytes": 1034256,
+      "sha256": "2d85e00100739058b6ef8647ca1504dbaef0e835eefbe7d7539e335eeaa27f58",
+      "app_offset": "0x10000",
+      "original_slot_capacity": "0x2c0000",
+      "installed": true,
+      "status": "app-only upload hash verified"
+    },
+    "orange": {
+      "bytes": 1127088,
+      "sha256": "e703904988e6483aad50e6503220801423f50fbd782b1a8861cdbb5f9d65248e",
+      "app_offset": "0x10000",
+      "original_slot_capacity": "0x140000",
+      "installed": false,
+      "status": "built; USB absent; installation deferred by owner"
+    },
+    "yellow": {
+      "bytes": 992624,
+      "sha256": "d3c5dd1cf54f7bd631078e86247fd752e4c0bee6d06ce9e2f97ab3e725459903",
+      "app_offset": "0x10000",
+      "original_slot_capacity": "0x330000",
+      "installed": false,
+      "status": "built; USB absent; installation deferred by owner"
+    },
+    "rainbow": {
+      "bytes": 992624,
+      "sha256": "d3c5dd1cf54f7bd631078e86247fd752e4c0bee6d06ce9e2f97ab3e725459903",
+      "app_offset": "0x10000",
+      "original_slot_capacity": "0x140000",
+      "installed": true,
+      "status": "app-only upload hash verified"
+    },
+    "purple": {
+      "bytes": 1001168,
+      "sha256": "a4849da6ef002b749782356cbb6a1f9c50d199421f3ebcf5170783f3d8790f69",
+      "app_offset": "0x10000",
+      "original_slot_capacity": "0x100000",
+      "installed": true,
+      "status": "app-only upload hash verified"
+    },
+    "pink": {
+      "bytes": 981680,
+      "sha256": "fd6145b7d744d6d051d317cfdd218e24d220f78b2a28b81b7bf7f4be4d74235a",
+      "app_offset": "0x10000",
+      "original_slot_capacity": "0x100000",
+      "installed": true,
+      "status": "app-only upload hash verified"
+    },
+    "teal": {
+      "bytes": 941280,
+      "sha256": "9ce18d31c1ba312b0e3f6c4ccaef2c696805a43161e344921a0fb9ee32520bd3",
+      "app_offset": "0x1d0000",
+      "original_slot_capacity": "0x1c0000",
+      "installed": true,
+      "status": "app-only upload hash verified"
+    },
+    "tab5": {
+      "bytes": 1000736,
+      "sha256": "e179d61bd8a8aa7810cde4c0822fe9fcf727981d575a15200c8c5331064a3407",
+      "app_offset": "0x10000",
+      "original_slot_capacity": "0xa00000",
+      "installed": true,
+      "status": "app-only upload hash verified"
+    }
+  },
+  "source_sha256": {
+    "firmware/FaceCamera/FaceCamera.ino": "0478d7ba12892b5a780be18dc10316293771f90b37cea5ff4db6debf2fe419dd",
+    "firmware/FaceCamera/main.cpp": "c7c199658d5588dda47cccba52de52cce7dab5479d04d298732efd31be5ea2ab",
+    "firmware/FaceMonitor/CameraTcpReceiver.h": "10d6bf77ee0911fff71886ddff639bf02d9f87faac6505c74e4a982e0fcefedd",
+    "firmware/FaceMonitor/FaceMonitor.ino": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "firmware/FaceMonitor/main.cpp": "f60a23bb483adb275c878cbbfaafe4911ef328973f785a9f08589c5713fb7f8e",
+    "firmware/FeatherFace/BatteryDiagnostics.h": "3793afcf9294a14425e099b8daf81ec13a3a4c0ded8cb2e391d61cbe9d978e73",
+    "firmware/FeatherFace/BatteryLed.h": "9b07ccb74c1b3bf0506c63b599cf48da4fc9bff8a78f1c5eec4d90734035003e",
+    "firmware/FeatherFace/BatteryMicroTrend.h": "06a07fcfa321bbeabc5196571d5bbed86598034505bdeafc9b75c7877f2d30c7",
+    "firmware/FeatherFace/BatteryState.h": "7ac96e49a0c1654f3e46edbd0d447bccdeca1048aa4b1ddaa2f242eb158613dd",
+    "firmware/FeatherFace/CachedFace.h": "dbdba313817d1cb0451cadd15d8b7f7f59cd12a07f3ccbd33a1c17f5b29858c7",
+    "firmware/FeatherFace/CameraCapture.h": "c0d82386e14545c067ee7139c882dd960e34a40e3dba1229a3a1826dc436d825",
+    "firmware/FeatherFace/CameraProtocol.h": "98620cafe9a712fd5f08fc66abe12cdc1322e8efb07df05fafbc772c28ab2aee",
+    "firmware/FeatherFace/CameraSnapshot.h": "b9a0e52f0605f231320480bd9bdbaf6eb821519bad6e0ff42822ad06d7993244",
+    "firmware/FeatherFace/CameraSocket.h": "5c72908547b988d69bc679c1d05b7857efeea585131f89727adc457341dfb4ab",
+    "firmware/FeatherFace/CameraTcpGateway.h": "316bece2966068b93292eec2cfc13872f693973f7ca58fbd435794dbcfcb1111",
+    "firmware/FeatherFace/CameraView.h": "52d7d1714d9a6a2f3eef523aa16a88ce8c58815dfc75ad0e337e03f7af39676b",
+    "firmware/FeatherFace/DoodlePixels.h": "8d025c8fce2f42289dbc57b20d95331baef1f6ac50611a5fe172ccdc14fdad1a",
+    "firmware/FeatherFace/DoodleProtocol.h": "d9f5bfd1e83ffb80ef2ea3695cd7a7ae04aa322d75237eb1aa2c9b04e3fcdec5",
+    "firmware/FeatherFace/FaceDisplay.h": "eb1c50bc60219f6be5ce498b7b519622cbe44d7bf912ba81d133b340f3861cce",
+    "firmware/FeatherFace/FaceHardware.h": "4764acb54a028afe5e18bb1b60366ff982f49a328918a59700eb18567c7497a5",
+    "firmware/FeatherFace/FaceLinkConfig.example.h": "1b40597a99759cb5bcf4f9dd311f471dab030706ff831927f1d60e728e60b392",
+    "firmware/FeatherFace/FaceNavigation.h": "e69c2793f93d7433db62ebf75faf3b0e8194981c8c009c98fb4f25b15c5d20cf",
+    "firmware/FeatherFace/FaceProtocol.h": "02dd6fd8d6bf1f612bdc3eddafe5420a585f23d0763bfc498ad45c37ccf6306f",
+    "firmware/FeatherFace/FeatherFace.ino": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "firmware/FeatherFace/MonitorPacket.h": "e864cf9969a2fa60c3b647eee8c37b6b8f45af3b66a67c0572893951e0f406e9",
+    "firmware/FeatherFace/PeerBattery.h": "54447dfe3258c581a44e7bb69eac859e91979992f7349fb13f22771ac0d3bf53",
+    "firmware/FeatherFace/Protocol.h": "fa892599901565cf7d391dd7b7a8e57a6b7f70874f098eadb2b9935e3654f669",
+    "firmware/FeatherFace/TileLayout.h": "414e4c4054ed460b40a63f9ed4ec697bffc071b38ff88cab9fccc3c8c4b03d63",
+    "firmware/FeatherFace/VoltageEstimate.h": "9be7d9c21016b71b535f80bf8612f9c1587b4b96e63a3dd24f5279356e40dc2f",
+    "firmware/FeatherFace/main.cpp": "d4fb92733e7deffe4282499d1f53bc76ef68e5d709819df30c54bb07037bf527"
+  },
+  "pink_physical_owner_confirmation": "Upside-down initial view corrected with rotation2; owner confirms upright; button seems to work",
+  "camera": "OV3660 sensorPID0x3660; 80x60RGB332 stills nominal0.5fps; small-screen ESP-NOW and Tab5 TCP relay via Blue",
+  "network_checks": "outputs/camera-family-v16-live.json",
+  "host_test_count": 18,
+  "python_transport_tests": 3,
+  "review": "No important remaining defects after independent code review; real TCP backpressure deadline test passed",
+  "private_backups": {
+    "pink": "8MB full flash, hardware digest and local SHA verified",
+    "teal": "8MB stable full flash, hardware digest and local SHA verified; earlier read preserved separately"
+  },
+  "green": "excluded heat-retired; no port access, reset, flash or tests",
+  "battery_test_started_by_tools": false,
+  "physical_touch_check": "Serial selections and gesture unit tests verified; no new physical Tab5 touch event capture claimed"
+}

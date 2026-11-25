@@ -1,0 +1,22 @@
+{
+  "recorded_utc": "2026-10-20T17:45:42.485709+00:00",
+  "scale_px_per_mm": 6,
+  "active_devices": 9,
+  "front_area_largest_first": [
+    "tab5",
+    "silver",
+    "purple",
+    "yellow",
+    "rainbow",
+    "blue",
+    "green",
+    "orange",
+    "pink"
+  ],
+  "svg_scale_and_dimensions_verified": true,
+  "family_png_size": [
+    1680,
+    1580
+  ],
+  "simplified_not_precision_cad": true
+}

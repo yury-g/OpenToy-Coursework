@@ -1,0 +1,56 @@
+{
+  "generator_blender": "projects/3d-printed-designs/ditherCam/blender/render_dithercam.py",
+  "generator_assembler": "projects/3d-printed-designs/ditherCam/blender/assemble_media.py",
+  "source_stl_sha256": {
+    "body.stl": "b41a81f5097a8dfc349eecebfc437fa478566bcb7cf63426db781a235469d6a9",
+    "hw_lens_cone.stl": "9eb60d73a0b74a0955cc5d75a58279cc1d80b3d15a74fc0a48c353cfbdbecc0c",
+    "hw_oled_active.stl": "1a8fe385f36db0219b09e68e9d4c52d9a173b8a415f5c2b7d2e7eb62798bfe5f",
+    "hw_rlcd.stl": "1f6c92e6140c4de08975d28e3b10d5bb0af5dbc513f7b6354ecaa35174329ef6",
+    "hw_xiao_pod.stl": "6936bfa7760578eca43e0fed6fefdae3135947651e0ce9bb119ce2a6d4f659ae",
+    "hw_xiao_stack.stl": "c9b3c9b21a37ff8c94cb295fdb4f51d17745f277e6b1f58a1490804fba51e7c0",
+    "pod.stl": "8661fcea3cf6bed0cac2063bdeca971a41decf2aa0df73a355f603ff5e7cbe2a"
+  },
+  "hero": {
+    "file": "images/ditherCam-hero.png",
+    "width": 1200,
+    "height": 900,
+    "bytes": 823976,
+    "sha256": "3c887676e3ac481e155219750ed46b9dabb313dbf87de075bc80f64828f8b41b",
+    "provenance": "Blender 5.1.1 BLENDER_EEVEE render of exact CAD STLs in standing Selfie (180 deg) pose with firmware-rendered ui-selfie-live.png texture on ST7305 active area; no lens FOV cone"
+  },
+  "animations": [
+    {
+      "file": "images/ditherCam-flip.gif",
+      "width": 800,
+      "height": 600,
+      "frame_count": 36,
+      "total_duration_ms": 5210,
+      "bytes": 6744605,
+      "mean_interframe_l1": 1.706,
+      "max_interframe_l1": 2.574,
+      "sha256": "317decd7e9a356bd6e98ea92aa0a01a6d55a6c826894db010d64d9fe992fc6c4"
+    },
+    {
+      "file": "images/ditherCam-rlcd-insert.gif",
+      "width": 800,
+      "height": 600,
+      "frame_count": 32,
+      "total_duration_ms": 5300,
+      "bytes": 7212052,
+      "mean_interframe_l1": 1.667,
+      "max_interframe_l1": 2.768,
+      "sha256": "bcaf41b0049acc9c15866b81b268fe2921cc451e771fa3e515a0bedbf1fc437d"
+    },
+    {
+      "file": "images/ditherCam-pod-insert.gif",
+      "width": 800,
+      "height": 600,
+      "frame_count": 30,
+      "total_duration_ms": 4820,
+      "bytes": 6660137,
+      "mean_interframe_l1": 0.713,
+      "max_interframe_l1": 1.026,
+      "sha256": "ab81b0ceb8206546b0537e1c5b7488a73e60026d9860f6335f0c22cf1aa398ac"
+    }
+  ]
+}

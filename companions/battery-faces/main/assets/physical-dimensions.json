@@ -1,0 +1,187 @@
+{
+  "checked_on": "2026-10-20",
+  "scale_px_per_mm": 6,
+  "methodology": [
+    "All active device outlines in individual illustrations and family share 6 SVG units (PNG pixels) per millimeter; caption space is independent of device size. Whole-image resizing preserves relative scale, but this is not an actual-size print guide.",
+    "Outlines represent the front-facing outer board or enclosure, excluding cables, detached antennas, batteries protruding behind the front plane and rear stands. Hardware details and screen placement are simplified, not precision CAD.",
+    "Screen captures are unchanged source pixels. Their aspect ratio is preserved with uniform scaling. CYD has a 240x320 physical panel with a centered 135x240 capture; the unused panel width stays black.",
+    "Screen sizes are manufacturer active-area dimensions when available. For the 1.14-inch and 5-inch panels, nominal active dimensions are calculated from the advertised diagonal and native pixel ratio, assuming square pixels; nominal diagonals are rounded specifications, not measured precision.",
+    "Silver uses the outer 92.5x70.1 mm housing envelope rather than the 92.5x69.1 mm PCB. Both linked hardware revisions share the same front envelope; their depth differs.",
+    "Waveshare1.69 drawing is rotated 90 degrees to portrait: its labeled 41.13x33.13 mm front becomes 33.13x41.13 mm; active area becomes 27.972x32.634 mm.",
+    "Manufacturer Nesso datasheet mechanical section takes precedence over conflicting 18x45 mm store/application copy."
+  ],
+  "devices": {
+    "blue": {
+      "model": "Adafruit Feather ESP32-S3 Reverse TFT",
+      "orientation": "portrait",
+      "outer_mm": [
+        22.86,
+        50.8
+      ],
+      "panel_pixels": [
+        135,
+        240
+      ],
+      "source_urls": [
+        "https://learn.adafruit.com/esp32-s3-reverse-tft-feather/downloads",
+        "https://github.com/adafruit/Adafruit-ESP32-S3-Reverse-TFT-Feather-PCB/blob/main/Adafruit%20ESP32-S3%20Reverse%20TFT%20Feather.brd"
+      ],
+      "outline_basis": "PCB Eagle layer20 extents x=0..50.8, y=0..22.86; rotated portrait",
+      "screen_diagonal_in": 1.14
+    },
+    "green": {
+      "model": "Adafruit Feather ESP32-S3 Reverse TFT",
+      "orientation": "portrait",
+      "outer_mm": [
+        22.86,
+        50.8
+      ],
+      "panel_pixels": [
+        135,
+        240
+      ],
+      "source_urls": [
+        "https://learn.adafruit.com/esp32-s3-reverse-tft-feather/downloads",
+        "https://github.com/adafruit/Adafruit-ESP32-S3-Reverse-TFT-Feather-PCB/blob/main/Adafruit%20ESP32-S3%20Reverse%20TFT%20Feather.brd"
+      ],
+      "outline_basis": "PCB Eagle layer20 extents x=0..50.8, y=0..22.86; rotated portrait",
+      "screen_diagonal_in": 1.14
+    },
+    "orange": {
+      "model": "M5Stack StickS3",
+      "orientation": "portrait",
+      "outer_mm": [
+        24,
+        48
+      ],
+      "panel_pixels": [
+        135,
+        240
+      ],
+      "source_urls": [
+        "https://docs.m5stack.com/en/core/StickS3"
+      ],
+      "outline_basis": "Enclosure product size 48x24x15 mm, portrait",
+      "screen_diagonal_in": 1.14
+    },
+    "pink": {
+      "model": "Arduino Nesso N1",
+      "orientation": "portrait",
+      "outer_mm": [
+        24,
+        48
+      ],
+      "panel_pixels": [
+        135,
+        240
+      ],
+      "source_urls": [
+        "https://docs.arduino.cc/resources/datasheets/TPX00227-datasheet.pdf",
+        "https://docs.arduino.cc/hardware/nesso-n1/"
+      ],
+      "outline_basis": "Datasheet mechanical enclosure 48x24 mm front (depth14 /21.1 mm with antenna storage)",
+      "screen_diagonal_in": 1.14
+    },
+    "yellow": {
+      "model": "Waveshare ESP32-S3-Touch-LCD-1.69",
+      "orientation": "portrait",
+      "outer_mm": [
+        33.13,
+        41.13
+      ],
+      "panel_pixels": [
+        240,
+        280
+      ],
+      "source_urls": [
+        "https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.69/Resources-And-Documents",
+        "https://raw.githubusercontent.com/waveshareteam/ESP32-S3-Touch-LCD-1.69/main/hardware/mechanical/ESP32-S3-Touch-LCD-1.69-Size.webp"
+      ],
+      "outline_basis": "Front screen assembly; wider than underlying37.12x29.85 mm PCB in drawing",
+      "screen_active_mm": [
+        27.972,
+        32.634
+      ]
+    },
+    "rainbow": {
+      "model": "Waveshare ESP32-S3-Touch-LCD-1.69",
+      "orientation": "portrait",
+      "outer_mm": [
+        33.13,
+        41.13
+      ],
+      "panel_pixels": [
+        240,
+        280
+      ],
+      "source_urls": [
+        "https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.69/Resources-And-Documents",
+        "https://raw.githubusercontent.com/waveshareteam/ESP32-S3-Touch-LCD-1.69/main/hardware/mechanical/ESP32-S3-Touch-LCD-1.69-Size.webp"
+      ],
+      "outline_basis": "Front screen assembly; wider than underlying37.12x29.85 mm PCB in drawing",
+      "screen_active_mm": [
+        27.972,
+        32.634
+      ]
+    },
+    "purple": {
+      "model": "Guition ESP32-2432S028R CYD",
+      "orientation": "portrait",
+      "outer_mm": [
+        50,
+        86
+      ],
+      "panel_pixels": [
+        240,
+        320
+      ],
+      "source_urls": [
+        "https://www.guition.com/esp32-display-module/2-8-inch-esp32-display-module"
+      ],
+      "outline_basis": "Module dimensions86x50 mm, portrait",
+      "screen_active_mm": [
+        43.2,
+        57.6
+      ]
+    },
+    "silver": {
+      "model": "Waveshare ESP32-S3-RLCD-4.2",
+      "orientation": "landscape",
+      "outer_mm": [
+        92.5,
+        70.1
+      ],
+      "panel_pixels": [
+        400,
+        300
+      ],
+      "source_urls": [
+        "https://docs.waveshare.com/ESP32-S3-RLCD-4.2/Resources-And-Documents",
+        "https://files.waveshare.com/wiki/ESP32-S3-RLCD-4.2/ESP32-S3-RLCD-4.2-3dFile.rar",
+        "https://files.waveshare.com/wiki/ESP32-S3-RLCD-4.2/ESP32-S3-RLCD-4.2_20261010.zip"
+      ],
+      "outline_basis": "V1/V2 mechanical drawing outer housing70.10x92.50 mm, landscape; PCB69.1x92.5",
+      "screen_active_mm": [
+        84.8,
+        63.6
+      ]
+    },
+    "tab5": {
+      "model": "M5Stack Tab5",
+      "orientation": "landscape",
+      "outer_mm": [
+        128,
+        80
+      ],
+      "panel_pixels": [
+        1280,
+        720
+      ],
+      "source_urls": [
+        "https://docs.m5stack.com/en/core/Tab5"
+      ],
+      "outline_basis": "Enclosure product size128x80x12 mm; rear battery does not change front silhouette",
+      "screen_diagonal_in": 5
+    }
+  }
+}

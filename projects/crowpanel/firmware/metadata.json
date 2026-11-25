@@ -1,0 +1,8 @@
+{
+  "app_id": "eyes1",
+  "display_name_short": "EYES1",
+  "firmware_version": "0.3.0",
+  "version_created": "2026-11-17",
+  "hardware_target": "crowpanel-dhe04209d-v1.0-p4",
+  "battery_source": "unqualified-stc8-candidate-diagnostics-only"
+}

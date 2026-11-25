@@ -1,0 +1,20 @@
+{
+  "NODE": {
+    "blue": "NODE color=blue seen=1 fresh=1 valid=1 pct=97.50 volts=4.164 age_ms=1331 rx=23 seq=670 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "green": "NODE color=green seen=1 fresh=1 valid=1 pct=2.16 volts=3.596 age_ms=1273 rx=20 seq=659 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "pink": "NODE color=pink seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "yellow": "NODE color=yellow seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "rainbow": "NODE color=rainbow seen=0 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=0 rx=0 seq=0 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "purple": "NODE color=purple seen=1 fresh=0 valid=0 pct=0.00 volts=0.000 age_ms=883809 rx=19 seq=189 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "orange": "NODE color=orange seen=1 fresh=1 valid=1 pct=96.00 volts=4.160 age_ms=1855 rx=18 seq=645 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "silver": "NODE color=silver seen=1 fresh=1 valid=1 pct=11.80 volts=3.618 age_ms=1475 rx=17 seq=681 current_valid=0 ma=0.0 charger=UNKNOWN"
+  },
+  "RUNNER": {
+    "blue": "RUNNER color=blue fresh=1 pct=97.50 volts=4.164 points=1 bg_points=1 observed_s=34 run_observed_s=0 last_contact_s=37 low_at_s=0 resets=0 interrupted=0 rate_valid=0 pph=0.000 vph=0.0000 eta10_min=-1.0",
+    "green": "RUNNER color=green fresh=1 pct=2.16 volts=3.596 points=1 bg_points=1 observed_s=31 run_observed_s=0 last_contact_s=37 low_at_s=0 resets=0 interrupted=0 rate_valid=0 pph=0.000 vph=0.0000 eta10_min=-1.0",
+    "orange": "RUNNER color=orange fresh=1 pct=96.00 volts=4.160 points=1 bg_points=1 observed_s=33 run_observed_s=0 last_contact_s=37 low_at_s=0 resets=0 interrupted=0 rate_valid=0 pph=0.000 vph=0.0000 eta10_min=-1.0",
+    "silver": "RUNNER color=silver fresh=1 pct=11.80 volts=3.618 points=1 bg_points=1 observed_s=33 run_observed_s=0 last_contact_s=37 low_at_s=0 resets=0 interrupted=0 rate_valid=0 pph=0.000 vph=0.0000 eta10_min=-1.0"
+  },
+  "MONITOR": "MONITOR build=BatteryMonitor-v19-runtime-observer connected=1 width=1280 height=720 packets=97 uptime_ms=42255 ip=192.168.4.2 panel=1 tiles=4 i2c_mask=511 sda=1 scl=1",
+  "RUNTIME": "RUNTIME phase=WAITING session=0 ready=2 elapsed_s=38 clock_s=38 page=faces demo=0 storage=1 saved=1 restored=0 writes=1 snapshot_bytes=3292"
+}

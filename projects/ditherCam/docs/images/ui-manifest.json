@@ -1,0 +1,63 @@
+{
+  "generator": "projects/ditherCam/tools/generate_ui_previews.py",
+  "renderer_cpp": "projects/ditherCam/tools/render_ui.cpp",
+  "label": "firmware renderer \u00b7 synthetic scene",
+  "crc32": {
+    "selfie_crc32": "7b910716",
+    "hold_crc32": "00c4ac82",
+    "rear_crc32": "8a877ea2",
+    "gallery_crc32": "a692e80b",
+    "oled_selfie_crc32": "daac29ed",
+    "oled_rear_crc32": "2e931eac"
+  },
+  "files": {
+    "ui-selfie-live.png": {
+      "width": 400,
+      "height": 300,
+      "sha256": "d5857f036070d556010ac8a6a992b91696e83d6179371dd27ca50456506b2a13",
+      "bytes": 3981
+    },
+    "ui-snap-hold.png": {
+      "width": 400,
+      "height": 300,
+      "sha256": "8ecc5d29f6efef24a406192055611001d9242a3a1d3b8ecaaed55b1f6286656a",
+      "bytes": 4003
+    },
+    "ui-rear-live.png": {
+      "width": 400,
+      "height": 300,
+      "sha256": "9d0dcd312a9489a1c66e13a7041a7f48bfc70011c3df75dd662642a4f102609c",
+      "bytes": 3970
+    },
+    "ui-rear-upright.png": {
+      "width": 400,
+      "height": 300,
+      "sha256": "3c1dd1d60d2f535599f1717135dd6eaff96b95c759fc9cc2cf5d818cd43d1ce0",
+      "bytes": 4009
+    },
+    "ui-gallery.png": {
+      "width": 400,
+      "height": 300,
+      "sha256": "d7dec781ca252b766ea752af052ffdb265618c681a03c1cfd31557640fcbb549",
+      "bytes": 4153
+    },
+    "ui-oled-selfie.png": {
+      "width": 384,
+      "height": 192,
+      "sha256": "15b26103af35bbd3725e4040b8b6a8410baeccf45be7f1a8c329680a978e7772",
+      "bytes": 1181
+    },
+    "ui-oled-rear.png": {
+      "width": 384,
+      "height": 192,
+      "sha256": "1e039f22e2a2bfe9d88ba6546bf43a02c920e525515922bd7165592ba1992f2d",
+      "bytes": 1188
+    },
+    "ui-firmware-panel.png": {
+      "width": 1340,
+      "height": 880,
+      "sha256": "80957051b451ff2629a5cc7ea372c4b26bca4701737af4e24fab3ddc036a891b",
+      "bytes": 82153
+    }
+  }
+}

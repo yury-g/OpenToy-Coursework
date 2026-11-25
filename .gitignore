@@ -1,0 +1,27 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.app/
+**/backup/
+**/evidence/
+**/build/
+**/device.json
+**/Secrets.h
+*.bin
+*.elf
+*.map
+*.hex
+*.partial
+*.so
+*.dylib
+*.a
+**/BuildConfig.h
+
+# Local provisioning and recovery material
+**/identity.json
+**/ota-key.hex
+.env
+.env.*
+!.env.example

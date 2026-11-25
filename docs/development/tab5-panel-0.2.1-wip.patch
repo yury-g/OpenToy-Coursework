@@ -1,0 +1,756 @@
+diff --git a/projects/tab5/adapter/Tab5Ui.h b/projects/tab5/adapter/Tab5Ui.h
+index d74f62f..b32d856 100644
+--- a/projects/tab5/adapter/Tab5Ui.h
++++ b/projects/tab5/adapter/Tab5Ui.h
+@@ -18,7 +18,7 @@ constexpr int kUiWidth = 640;
+ constexpr int kUiHeight = 360;
+ constexpr int kStatusBarHeight = 28;
+ 
+-constexpr char kTab5FirmwareVersion[] = "0.2.0";
++constexpr char kTab5FirmwareVersion[] = "0.2.1";
+ constexpr char kTab5VersionCreated[] = "2026-11-17";
+ 
+ enum class Tab5AppMode : uint8_t {
+@@ -197,6 +197,7 @@ class Tab5UiState {
+   bool mirrorGaze = true;       // Mirror Copy-Face horizontal gaze by default for front-facing feel
+   bool flipLandscape = false;   // 180-deg landscape flip to match bench cable edge
+   bool dimBacklight = false;
++  bool diagnosticPattern = false;  // High-contrast non-colorbar geometric panel verification pattern
+   bool micListening = false;    // Default OFF per privacy rules; opt-in via Menu or MIC 1
+   unsigned pokeMask = 0;        // bit 0 = left eye, bit 1 = right eye
+   int pressedControl = -1;
+@@ -527,6 +528,44 @@ inline void renderTab5StatusBar(uint16_t* fb,
+   uiDrawText(fb, kUiWidth - bw - 10, 7, bat_txt, 0xbefb, 2);
+ }
+ 
++// Unmistakable high-contrast boot/diagnostic pattern (white outer frame + 4 corner RGBY blocks +
++// central cyan/white diamond target; distinct from vertical RGB color bars).
++inline void renderTab5BootPattern(uint16_t* fb640x360,
++                                  const Tab5UiState& ui,
++                                  const BatterySample& bat,
++                                  uint32_t now_ms) {
++  if (!fb640x360) return;
++  std::fill(fb640x360, fb640x360 + kUiWidth * kUiHeight, uint16_t(0x0000));
++  renderTab5StatusBar(fb640x360, ui, bat, now_ms);
++
++  // Bright solid WHITE perimeter frame around body region (0, 28, 640, 332).
++  uiDrawRect(fb640x360, 0, kStatusBarHeight, kUiWidth, kUiHeight - kStatusBarHeight, 0xffff, 14);
++
++  // Asymmetric corner blocks (NOT vertical bars): Red TL, Green TR, Blue BL, Yellow BR.
++  uiFillRect(fb640x360, 18, 46, 156, 126, 0xf800);
++  uiFillRect(fb640x360, 466, 46, 156, 126, 0x07e0);
++  uiFillRect(fb640x360, 18, 214, 156, 128, 0x001f);
++  uiFillRect(fb640x360, 466, 214, 156, 128, 0xffe0);
++
++  // Central diamond + cross target on black center.
++  const int cx = 320, cy = 194;
++  for (int dy = -108; dy <= 108; ++dy) {
++    for (int dx = -124; dx <= 124; ++dx) {
++      const int d = std::abs(dx) + std::abs(dy);
++      if (d >= 96 && d <= 112) {
++        fb640x360[(cy + dy) * kUiWidth + (cx + dx)] = 0xffff;
++      } else if (d >= 52 && d <= 64) {
++        fb640x360[(cy + dy) * kUiWidth + (cx + dx)] = 0x07ff;
++      }
++    }
++  }
++  uiFillRect(fb640x360, cx - 128, cy - 3, 256, 6, 0xffff);
++  uiFillRect(fb640x360, cx - 3, cy - 112, 6, 224, 0xffff);
++  uiFillRect(fb640x360, cx - 118, cy - 28, 236, 56, 0x0000);
++  uiDrawRect(fb640x360, cx - 118, cy - 28, 236, 56, 0x07ff, 3);
++  uiDrawText(fb640x360, cx - 102, cy - 14, "TAB5 0.2.1", 0xffff, 4);
++}
++
+ // Renders complete 640x360 logical RGB565 frame. preview320x180 may be nullptr if camera unavailable.
+ inline void renderTab5Frame(uint16_t* fb640x360,
+                             const Tab5UiState& ui,
+@@ -535,6 +574,10 @@ inline void renderTab5Frame(uint16_t* fb640x360,
+                             const uint16_t* preview320x180,
+                             uint32_t now_ms) {
+   if (!fb640x360) return;
++  if (ui.diagnosticPattern) {
++    renderTab5BootPattern(fb640x360, ui, bat, now_ms);
++    return;
++  }
+   std::fill(fb640x360, fb640x360 + kUiWidth * kUiHeight, uint16_t(0x0000));
+ 
+   if (ui.header || !ui.playing()) {
+@@ -675,10 +718,21 @@ inline void renderTab5Frame(uint16_t* fb640x360,
+           drow[x] = srow[(x * 320) / vw];
+         }
+       }
+-      // Framing reticle for dual-target bench inspection
+-      uiDrawRect(fb640x360, vx0, vy0, vw, vh, 0x07ff, 2);
++      // Framing border + live camera activity shuttle & pulse pill
++      uiDrawRect(fb640x360, vx0, vy0, vw, vh, 0x07ff, 3);
+       uiFillRect(fb640x360, vx0 + vw / 2 - 12, vy0 + vh / 2, 25, 1, 0x07e0);
+       uiFillRect(fb640x360, vx0 + vw / 2, vy0 + vh / 2 - 12, 1, 25, 0x07e0);
++
++      const bool live_phase = ((tel.frame_seq / 4u) & 1u) != 0u;
++      uiFillRect(fb640x360, 12, vy0, 56, 36, live_phase ? 0x07e0 : 0xffe0);
++      uiDrawText(fb640x360, 16, vy0 + 11, "LIVE", 0x0000, 2);
++
++      // Moving high-contrast frame-sequence shuttle along bottom edge of viewfinder
++      const int shuttle_w = 64;
++      const int shuttle_x = vx0 + int((tel.frame_seq * 9u) % unsigned(vw - shuttle_w));
++      uiFillRect(fb640x360, vx0, vy0 + vh + 3, vw, 8, 0x2104);
++      uiFillRect(fb640x360, shuttle_x, vy0 + vh + 3, shuttle_w, 8, 0xffff);
++
+       if (tel.primary_face.valid) {
+         const int fx = vx0 + int(tel.primary_face.x * float(vw));
+         const int fy = vy0 + int(tel.primary_face.y * float(vh));
+diff --git a/projects/tab5/firmware/main/BoardTab5.cpp b/projects/tab5/firmware/main/BoardTab5.cpp
+index b16c5a5..8eca993 100644
+--- a/projects/tab5/firmware/main/BoardTab5.cpp
++++ b/projects/tab5/firmware/main/BoardTab5.cpp
+@@ -9,6 +9,7 @@
+ #include "esp_cache.h"
+ #include "esp_codec_dev_defaults.h"
+ #include "esp_err.h"
++#include "esp_heap_caps.h"
+ #include "esp_lcd_ili9881c.h"
+ #include "esp_lcd_st7123.h"
+ #include "esp_lcd_touch_gt911.h"
+@@ -25,6 +26,9 @@ namespace tab5 {
+ 
+ namespace {
+ 
++constexpr gpio_num_t kI2c0SdaPin = GPIO_NUM_31;
++constexpr gpio_num_t kI2c0SclPin = GPIO_NUM_32;
++
+ constexpr uint8_t kPi4ioe1Addr = 0x43;
+ constexpr uint8_t kPi4ioe2Addr = 0x44;
+ constexpr uint8_t kEs8388Addr7 = 0x10;
+@@ -33,6 +37,15 @@ constexpr uint8_t kBmi270AddrLow = 0x68;
+ constexpr uint8_t kBmi270AddrHigh = 0x69;
+ constexpr uint8_t kRx8130Addr = 0x32;
+ 
++constexpr uint8_t kPi4ioRegChipReset = 0x01;
++constexpr uint8_t kPi4ioRegIoDir = 0x03;
++constexpr uint8_t kPi4ioRegOutSet = 0x05;
++constexpr uint8_t kPi4ioRegOutHIm = 0x07;
++constexpr uint8_t kPi4ioRegInDefSta = 0x09;
++constexpr uint8_t kPi4ioRegPullEn = 0x0B;
++constexpr uint8_t kPi4ioRegPullSel = 0x0D;
++constexpr uint8_t kPi4ioRegIntMask = 0x11;
++
+ constexpr gpio_num_t kLcdBacklightPin = GPIO_NUM_22;
+ constexpr gpio_num_t kTouchIntPin = GPIO_NUM_23;
+ 
+@@ -48,7 +61,11 @@ constexpr size_t kPanelFbBytes = size_t(kPanelNativeW) * size_t(kPanelNativeH) *
+ 
+ esp_err_t writeReg8(i2c_master_dev_handle_t dev, uint8_t reg, uint8_t val) {
+   const uint8_t buf[2] = {reg, val};
+-  return i2c_master_transmit(dev, buf, sizeof(buf), 50);
++  return i2c_master_transmit(dev, buf, sizeof(buf), 100);
++}
++
++esp_err_t readDevReg8(i2c_master_dev_handle_t dev, uint8_t reg, uint8_t& out) {
++  return i2c_master_transmit_receive(dev, &reg, 1, &out, 1, 100);
+ }
+ 
+ bool readReg8(i2c_master_bus_handle_t bus, uint8_t addr7, uint8_t reg, uint8_t& out) {
+@@ -58,7 +75,7 @@ bool readReg8(i2c_master_bus_handle_t bus, uint8_t addr7, uint8_t reg, uint8_t&
+   cfg.scl_speed_hz = 100000;
+   i2c_master_dev_handle_t dev = nullptr;
+   if (i2c_master_bus_add_device(bus, &cfg, &dev) != ESP_OK) return false;
+-  const esp_err_t err = i2c_master_transmit_receive(dev, &reg, 1, &out, 1, 40);
++  const esp_err_t err = i2c_master_transmit_receive(dev, &reg, 1, &out, 1, 100);
+   (void)i2c_master_bus_rm_device(dev);
+   return err == ESP_OK;
+ }
+@@ -69,13 +86,44 @@ BoardTab5::~BoardTab5() {
+   end();
+ }
+ 
+-bool BoardTab5::pulseLcdResetAndInitIo2() {
++bool BoardTab5::initI2cAndLdo(i2c_master_bus_handle_t existing_i2c_bus) {
++  if (existing_i2c_bus) {
++    i2c_bus_ = existing_i2c_bus;
++    owns_i2c_bus_ = false;
++  } else if (!i2c_bus_) {
++    i2c_master_bus_config_t bus_cfg = {};
++    bus_cfg.i2c_port = I2C_NUM_0;
++    bus_cfg.sda_io_num = kI2c0SdaPin;
++    bus_cfg.scl_io_num = kI2c0SclPin;
++    bus_cfg.clk_source = I2C_CLK_SRC_DEFAULT;
++    bus_cfg.glitch_ignore_cnt = 7;
++    bus_cfg.flags.enable_internal_pullup = true;
++    if (i2c_new_master_bus(&bus_cfg, &i2c_bus_) != ESP_OK) {
++      return false;
++    }
++    owns_i2c_bus_ = true;
++  }
++
++  if (!ldo_vo3_) {
++    esp_ldo_channel_config_t ldo_cfg = {};
++    ldo_cfg.chan_id = 3;
++    ldo_cfg.voltage_mv = 2500;
++    if (esp_ldo_acquire_channel(&ldo_cfg, &ldo_vo3_) == ESP_OK) {
++      qual_.ldo_vo3_ok = true;
++    }
++  } else {
++    qual_.ldo_vo3_ok = true;
++  }
++  return i2c_bus_ != nullptr;
++}
++
++bool BoardTab5::initExpandersAndTouchReset() {
+   if (!i2c_bus_) return false;
+ 
+-  // Safely pulse LCD_RST (P4 on PI4IOE1 0x43) open-drain:
+-  // OUT_SET bit4=0 (0V latch), P6=1 (CAM_RST high), P5=1 (TOUCH_EN high), P2=1, P1=0 (SPEAKER_EN off).
+-  // Drive IO_DIR bit4=1 briefly to pull LCD_RST low, then IO_DIR bit4=0 to release via pull-up
+-  // without driving 3.3V push-pull onto 1.8V LCD_RST.
++  // 1. Exact M5Tab5-UserDemo bsp_io_expander_pi4ioe_init() for PI4IOE1 (0x43):
++  //    LCD_RST (P4) has NO 1.8V pull-up on panel side -> NEVER drive P4 3.3V push-pull HIGH!
++  //    Keep OUT_SET bit 4 = 0 ALWAYS; pulse IO_DIR bit 4 = 1 (low), then IO_DIR bit 4 = 0 (input pull-up).
++  //    Keep P6=1 (CAM_RST released), P5=1 (TP_RST), P2=1 (EXT_5V_EN), P1=0 (SPK muted).
+   i2c_device_config_t cfg1 = {};
+   cfg1.dev_addr_length = I2C_ADDR_BIT_LEN_7;
+   cfg1.device_address = kPi4ioe1Addr;
+@@ -83,32 +131,87 @@ bool BoardTab5::pulseLcdResetAndInitIo2() {
+   i2c_master_dev_handle_t io1 = nullptr;
+   if (i2c_master_bus_add_device(i2c_bus_, &cfg1, &io1) != ESP_OK) return false;
+ 
+-  esp_err_t err = writeReg8(io1, 0x05 /*OUT_SET*/, 0b01100100);
+-  if (err == ESP_OK) err = writeReg8(io1, 0x03 /*IO_DIR*/, 0b01111111);  // P4 output low
+-  vTaskDelay(pdMS_TO_TICKS(15));
+-  if (err == ESP_OK) err = writeReg8(io1, 0x03 /*IO_DIR*/, 0b01101111);  // P4 input pull-up release
+-  (void)i2c_master_bus_rm_device(io1);
+-  if (err != ESP_OK) return false;
++  uint8_t dummy = 0;
++  (void)writeReg8(io1, kPi4ioRegChipReset, 0xFF);
++  (void)readDevReg8(io1, kPi4ioRegChipReset, dummy);
+ 
+-  // Probe PI4IOE2 (0x44) non-destructively.
+-  if (i2c_master_probe(i2c_bus_, kPi4ioe2Addr, 40) == ESP_OK) {
+-    qual_.pi4ioe2_ok = true;
++  esp_err_t err = writeReg8(io1, kPi4ioRegPullSel, 0b01111111);
++  if (err == ESP_OK) err = writeReg8(io1, kPi4ioRegPullEn, 0b01111111);
++  if (err == ESP_OK) err = writeReg8(io1, kPi4ioRegOutSet, 0b01100100);  // P4 latched 0!
++  if (err == ESP_OK) err = writeReg8(io1, kPi4ioRegOutHIm, 0b00000000);
++  if (err == ESP_OK) err = writeReg8(io1, kPi4ioRegIoDir, 0b01111111);   // P4 output -> pulls LCD_RST low
++  vTaskDelay(pdMS_TO_TICKS(10));
++  if (err == ESP_OK) err = writeReg8(io1, kPi4ioRegIoDir, 0b01101111);   // P4 input pull-up -> releases LCD_RST
++  vTaskDelay(pdMS_TO_TICKS(50));
++  if (err == ESP_OK) qual_.pi4ioe1_ok = true;
++
++  // 2. Exact M5Tab5-UserDemo bsp_io_expander_pi4ioe_init() for PI4IOE2 (0x44):
++  //    P0=WLAN_PWR_EN, P3=USB5V_EN high; P4(PWROFF)=0; P5(QC_EN_N)=0; P7(CHG_EN)=0.
++  i2c_device_config_t cfg2 = {};
++  cfg2.dev_addr_length = I2C_ADDR_BIT_LEN_7;
++  cfg2.device_address = kPi4ioe2Addr;
++  cfg2.scl_speed_hz = 400000;
++  i2c_master_dev_handle_t io2 = nullptr;
++  if (i2c_master_bus_add_device(i2c_bus_, &cfg2, &io2) == ESP_OK) {
++    (void)writeReg8(io2, kPi4ioRegChipReset, 0xFF);
++    (void)readDevReg8(io2, kPi4ioRegChipReset, dummy);
++    esp_err_t err2 = writeReg8(io2, kPi4ioRegIoDir, 0b10111001);
++    if (err2 == ESP_OK) err2 = writeReg8(io2, kPi4ioRegOutHIm, 0b00000110);
++    if (err2 == ESP_OK) err2 = writeReg8(io2, kPi4ioRegPullSel, 0b10111001);
++    if (err2 == ESP_OK) err2 = writeReg8(io2, kPi4ioRegPullEn, 0b11111001);
++    if (err2 == ESP_OK) err2 = writeReg8(io2, kPi4ioRegInDefSta, 0b01000000);
++    if (err2 == ESP_OK) err2 = writeReg8(io2, kPi4ioRegIntMask, 0b10111111);
++    if (err2 == ESP_OK) err2 = writeReg8(io2, kPi4ioRegOutSet, 0b00001001);
++    qual_.pi4ioe2_ok = (err2 == ESP_OK);
++    (void)i2c_master_bus_rm_device(io2);
+   }
+ 
+-  // Allow LCD + touch controller internal MCU boot time before I2C touch probe.
+-  vTaskDelay(pdMS_TO_TICKS(280));
+-  return true;
++  // 3. Exact M5Tab5-UserDemo bsp_reset_tp() (m5stack_tab5.c lines 511-553):
++  //    Reset GPIO23, pull TP_RST (P5=0) + LCD_RST (P4 latched 0, IO_DIR bit4=1) low for 100 ms,
++  //    then release TP_RST (P5=1) and restore P4 to input pull-up (OUT_SET bit4=0, IO_DIR bit4=0) for 100 ms.
++  (void)gpio_reset_pin(kTouchIntPin);
++  if (err == ESP_OK) {
++    uint8_t cur_out = 0b01100100;
++    (void)readDevReg8(io1, kPi4ioRegOutSet, cur_out);
++    cur_out &= uint8_t(~((1u << 4) | (1u << 5)));  // P4=0, P5=0
++    err = writeReg8(io1, kPi4ioRegOutSet, cur_out);
++  }
++  if (err == ESP_OK) {
++    uint8_t cur_dir = 0b01101111;
++    (void)readDevReg8(io1, kPi4ioRegIoDir, cur_dir);
++    cur_dir |= uint8_t(1u << 4);  // P4 output low
++    err = writeReg8(io1, kPi4ioRegIoDir, cur_dir);
++  }
++  vTaskDelay(pdMS_TO_TICKS(100));
++
++  if (err == ESP_OK) {
++    uint8_t cur_out = 0b01000100;
++    (void)readDevReg8(io1, kPi4ioRegOutSet, cur_out);
++    cur_out &= uint8_t(~(1u << 4));  // P4 MUST remain latched 0!
++    cur_out |= uint8_t(1u << 5);     // P5=1 (TP_RST high)
++    err = writeReg8(io1, kPi4ioRegOutSet, cur_out);
++  }
++  if (err == ESP_OK) {
++    uint8_t cur_dir = 0b01111111;
++    (void)readDevReg8(io1, kPi4ioRegIoDir, cur_dir);
++    cur_dir &= uint8_t(~(1u << 4));  // Restore P4 input pull-up release!
++    err = writeReg8(io1, kPi4ioRegIoDir, cur_dir);
++  }
++  (void)i2c_master_bus_rm_device(io1);
++  vTaskDelay(pdMS_TO_TICKS(100));
++
++  return err == ESP_OK;
+ }
+ 
+ void BoardTab5::probePeripherals() {
+   if (!i2c_bus_) return;
+ 
+-  if (i2c_master_probe(i2c_bus_, kEs8388Addr7, 40) == ESP_OK ||
+-      i2c_master_probe(i2c_bus_, 0x11, 40) == ESP_OK) {
++  if (i2c_master_probe(i2c_bus_, kEs8388Addr7, 60) == ESP_OK ||
++      i2c_master_probe(i2c_bus_, 0x11, 60) == ESP_OK) {
+     qual_.es8388_ok = true;
+   }
+ 
+-  if (i2c_master_probe(i2c_bus_, kEs7210Addr7, 40) == ESP_OK) {
++  if (i2c_master_probe(i2c_bus_, kEs7210Addr7, 60) == ESP_OK) {
+     qual_.es7210_ok = true;
+     uint8_t id_hi = 0, id_lo = 0;
+     if (readReg8(i2c_bus_, kEs7210Addr7, 0x3D, id_lo) &&
+@@ -124,14 +227,15 @@ void BoardTab5::probePeripherals() {
+     qual_.bmi270_ok = (bmi_id == 0x24 || bmi_id != 0x00);
+   }
+ 
+-  if (i2c_master_probe(i2c_bus_, kRx8130Addr, 40) == ESP_OK) {
++  if (i2c_master_probe(i2c_bus_, kRx8130Addr, 60) == ESP_OK) {
+     qual_.rx8130_ok = true;
+   }
+ }
+ 
+ Tab5PanelRev BoardTab5::detectPanelRevision() {
+-  // 1. Probe ST712x touch at 0x55 (Board Ver 2 ST7123 or Ver 3 ST7121).
+-  if (i2c_master_probe(i2c_bus_, ESP_LCD_TOUCH_IO_I2C_ST7123_ADDRESS, 80) == ESP_OK) {
++  // Match M5Tab5-UserDemo bsp_detect_display_type(): probe GT911 (0x14/0x5D) and ST712x (0x55).
++  if (i2c_master_probe(i2c_bus_, ESP_LCD_TOUCH_IO_I2C_ST7123_ADDRESS, 100) == ESP_OK) {
++    qual_.touch_i2c_addr = ESP_LCD_TOUCH_IO_I2C_ST7123_ADDRESS;
+     esp_lcd_panel_io_handle_t io = nullptr;
+     esp_lcd_panel_io_i2c_config_t io_cfg = {};
+     io_cfg.dev_addr = ESP_LCD_TOUCH_IO_I2C_ST7123_ADDRESS;
+@@ -144,34 +248,22 @@ Tab5PanelRev BoardTab5::detectPanelRevision() {
+       const esp_err_t rx_err = esp_lcd_panel_io_rx_param(io, 0x0000, &fw_ver, sizeof(fw_ver));
+       (void)esp_lcd_panel_io_del(io);
+       if (rx_err == ESP_OK) {
+-        qual_.touch_i2c_addr = ESP_LCD_TOUCH_IO_I2C_ST7123_ADDRESS;
+         qual_.touch_fw_ver = fw_ver;
+         if (fw_ver == 1) {
+           qual_.panel_rev = Tab5PanelRev::St7121;
+           qual_.panel_name = "ST7121";
+           return Tab5PanelRev::St7121;
+         }
+-        qual_.panel_rev = Tab5PanelRev::St7123;
+-        qual_.panel_name = "ST7123";
+-        return Tab5PanelRev::St7123;
+       }
+     }
++    qual_.panel_rev = Tab5PanelRev::St7123;
++    qual_.panel_name = "ST7123";
++    return Tab5PanelRev::St7123;
+   }
+ 
+-  // 2. Drive GPIO23 low per official Tab5 BSP Ver 1 fix, then probe GT911 (0x14 backup / 0x5D primary).
+-  gpio_config_t int_cfg = {};
+-  int_cfg.mode = GPIO_MODE_OUTPUT;
+-  int_cfg.intr_type = GPIO_INTR_DISABLE;
+-  int_cfg.pull_down_en = GPIO_PULLDOWN_DISABLE;
+-  int_cfg.pull_up_en = GPIO_PULLUP_ENABLE;
+-  int_cfg.pin_bit_mask = (1ULL << kTouchIntPin);
+-  (void)gpio_config(&int_cfg);
+-  (void)gpio_set_level(kTouchIntPin, 0);
+-  vTaskDelay(pdMS_TO_TICKS(10));
+-
+   for (uint8_t addr : {uint8_t(ESP_LCD_TOUCH_IO_I2C_GT911_ADDRESS_BACKUP),
+                        uint8_t(ESP_LCD_TOUCH_IO_I2C_GT911_ADDRESS)}) {
+-    if (i2c_master_probe(i2c_bus_, addr, 80) == ESP_OK) {
++    if (i2c_master_probe(i2c_bus_, addr, 100) == ESP_OK) {
+       qual_.touch_i2c_addr = addr;
+       qual_.panel_rev = Tab5PanelRev::Ili9881cGt911;
+       qual_.panel_name = "ILI9881C-GT911";
+@@ -185,10 +277,12 @@ Tab5PanelRev BoardTab5::detectPanelRevision() {
+ }
+ 
+ bool BoardTab5::initBacklight() {
++  // Match M5Tab5-UserDemo bsp_display_brightness_init() on GPIO22 (12-bit, 5000 Hz, active-high),
++  // using LEDC_TIMER_1 / LEDC_CHANNEL_1 so Camera MCLK on LEDC_TIMER_2 / LEDC_CHANNEL_2 never collides.
+   ledc_timer_config_t tcfg = {};
+   tcfg.speed_mode = LEDC_LOW_SPEED_MODE;
+-  tcfg.duty_resolution = LEDC_TIMER_10_BIT;
+-  tcfg.timer_num = LEDC_TIMER_0;  // Camera MCLK uses LEDC_TIMER_2
++  tcfg.duty_resolution = LEDC_TIMER_12_BIT;
++  tcfg.timer_num = LEDC_TIMER_1;
+   tcfg.freq_hz = 5000;
+   tcfg.clk_cfg = LEDC_AUTO_CLK;
+   if (ledc_timer_config(&tcfg) != ESP_OK) return false;
+@@ -196,9 +290,9 @@ bool BoardTab5::initBacklight() {
+   ledc_channel_config_t ccfg = {};
+   ccfg.gpio_num = kLcdBacklightPin;
+   ccfg.speed_mode = LEDC_LOW_SPEED_MODE;
+-  ccfg.channel = LEDC_CHANNEL_0;  // Camera MCLK uses LEDC_CHANNEL_2
++  ccfg.channel = LEDC_CHANNEL_1;
+   ccfg.intr_type = LEDC_INTR_DISABLE;
+-  ccfg.timer_sel = LEDC_TIMER_0;
++  ccfg.timer_sel = LEDC_TIMER_1;
+   ccfg.duty = 0;
+   ccfg.hpoint = 0;
+   if (ledc_channel_config(&ccfg) != ESP_OK) return false;
+@@ -210,9 +304,28 @@ bool BoardTab5::initBacklight() {
+ bool BoardTab5::setBacklightPercent(int percent) {
+   if (!backlight_inited_) return false;
+   percent = std::max(0, std::min(100, percent));
+-  const uint32_t duty = uint32_t((1023 * percent) / 100);
+-  if (ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, duty) != ESP_OK) return false;
+-  return ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0) == ESP_OK;
++  const uint32_t duty = uint32_t((4095 * percent) / 100);
++  if (ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_1, duty) != ESP_OK) return false;
++  return ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_1) == ESP_OK;
++}
++
++void BoardTab5::paintInitialBootPattern() {
++  if (!dpi_fb_) return;
++  uint16_t* scratch = static_cast<uint16_t*>(
++      heap_caps_calloc(1, size_t(kUiWidth) * size_t(kUiHeight) * sizeof(uint16_t),
++                       MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT));
++  if (scratch) {
++    Tab5UiState boot_ui;
++    boot_ui.diagnosticPattern = true;
++    BatterySample bat_unknown;
++    renderTab5BootPattern(scratch, boot_ui, bat_unknown, 0);
++    blitLandscape640x360ToPortrait720x1280(scratch, dpi_fb_, false);
++    heap_caps_free(scratch);
++  } else {
++    std::fill(dpi_fb_, dpi_fb_ + (kPanelNativeW * kPanelNativeH), uint16_t(0xffff));
++  }
++  (void)esp_cache_msync(
++      dpi_fb_, kPanelFbBytes, ESP_CACHE_MSYNC_FLAG_DIR_C2M | ESP_CACHE_MSYNC_FLAG_UNALIGNED);
+ }
+ 
+ bool BoardTab5::initDisplayPanel(Tab5PanelRev rev) {
+@@ -221,11 +334,13 @@ bool BoardTab5::initDisplayPanel(Tab5PanelRev rev) {
+     return false;
+   }
+ 
++  // Match M5Tab5-UserDemo bsp_display_new_with_handles_to_st7123():
++  // ST7123 & ST7121 BOTH use 965 Mbps 2-lane MIPI-DSI; ILI9881C uses 1000 Mbps.
+   esp_lcd_dsi_bus_config_t bus_cfg = {};
+   bus_cfg.bus_id = 0;
+   bus_cfg.num_data_lanes = 2;
+   bus_cfg.phy_clk_src = MIPI_DSI_PHY_CLK_SRC_DEFAULT;
+-  bus_cfg.lane_bit_rate_mbps = (rev == Tab5PanelRev::St7121) ? 965 : 1000;
++  bus_cfg.lane_bit_rate_mbps = (rev == Tab5PanelRev::Ili9881cGt911) ? 1000 : 965;
+ 
+   esp_err_t err = esp_lcd_new_dsi_bus(&bus_cfg, &dsi_bus_);
+   if (err != ESP_OK) {
+@@ -246,10 +361,12 @@ bool BoardTab5::initDisplayPanel(Tab5PanelRev rev) {
+   esp_lcd_dpi_panel_config_t dpi_cfg = {};
+   dpi_cfg.virtual_channel = 0;
+   dpi_cfg.dpi_clk_src = MIPI_DSI_DPI_CLK_SRC_DEFAULT;
++  dpi_cfg.pixel_format = LCD_COLOR_PIXEL_FORMAT_RGB565;
+   dpi_cfg.in_color_format = LCD_COLOR_FMT_RGB565;
+   dpi_cfg.num_fbs = 1;
+   dpi_cfg.video_timing.h_size = kPanelNativeW;
+   dpi_cfg.video_timing.v_size = kPanelNativeH;
++  dpi_cfg.flags.use_dma2d = true;
+ 
+   if (rev == Tab5PanelRev::Ili9881cGt911) {
+     dpi_cfg.dpi_clock_freq_mhz = 60;
+@@ -273,54 +390,65 @@ bool BoardTab5::initDisplayPanel(Tab5PanelRev rev) {
+     pcfg.bits_per_pixel = 16;
+     pcfg.vendor_config = &vcfg;
+     err = esp_lcd_new_panel_ili9881c(dbi_io_, &pcfg, &panel_);
++    if (err != ESP_OK) {
++      qual_.display_err = err;
++      return false;
++    }
++    (void)esp_lcd_panel_reset(panel_);
++    err = esp_lcd_panel_init(panel_);
++    if (err != ESP_OK) {
++      qual_.display_err = err;
++      return false;
++    }
++    (void)esp_lcd_panel_disp_on_off(panel_, true);
+   } else {
++    // Exact M5Tab5-UserDemo ST7123 / ST7121 initialization (m5stack_tab5.c lines 1403-1458 +
++    // vendor esp_lcd_st7123.c lines 236-363):
++    // 1) Create MIPI-DPI panel
++    // 2) Wait 20 ms (NO 0x01 SWRESET over DBI after hardware reset)
++    // 3) Transmit vendor init commands directly with exact delay_ms (NO 5 ms inter-cmd injection)
++    // 4) Pre-load DPI framebuffer with boot pattern + cache writeback
++    // 5) Enable DPI High-Speed Video Mode (esp_lcd_panel_init) with NO post-HS DBI commands!
+     dpi_cfg.dpi_clock_freq_mhz = 70;
+-    dpi_cfg.video_timing.hsync_back_porch = 40;
+     dpi_cfg.video_timing.hsync_pulse_width = 2;
++    dpi_cfg.video_timing.hsync_back_porch = 40;
+     dpi_cfg.video_timing.hsync_front_porch = 40;
+     if (rev == Tab5PanelRev::St7121) {
+-      dpi_cfg.video_timing.vsync_back_porch = 24;
+       dpi_cfg.video_timing.vsync_pulse_width = 20;
++      dpi_cfg.video_timing.vsync_back_porch = 24;
+       dpi_cfg.video_timing.vsync_front_porch = 200;
+     } else {
+-      dpi_cfg.video_timing.vsync_back_porch = 8;
+       dpi_cfg.video_timing.vsync_pulse_width = 2;
++      dpi_cfg.video_timing.vsync_back_porch = 8;
+       dpi_cfg.video_timing.vsync_front_porch = 220;
+     }
+ 
+-    st7123_vendor_config_t vcfg = {};
+-    if (rev == Tab5PanelRev::St7121) {
+-      vcfg.init_cmds = disp_init_data_st7121;
+-      vcfg.init_cmds_size = sizeof(disp_init_data_st7121) / sizeof(disp_init_data_st7121[0]);
+-    } else {
+-      vcfg.init_cmds = disp_init_data_st7123;
+-      vcfg.init_cmds_size = sizeof(disp_init_data_st7123) / sizeof(disp_init_data_st7123[0]);
++    err = esp_lcd_new_panel_dpi(dsi_bus_, &dpi_cfg, &panel_);
++    if (err != ESP_OK) {
++      qual_.display_err = err;
++      return false;
+     }
+-    vcfg.mipi_config.dsi_bus = dsi_bus_;
+-    vcfg.mipi_config.dpi_config = &dpi_cfg;
+ 
+-    esp_lcd_panel_dev_config_t pcfg = {};
+-    pcfg.reset_gpio_num = GPIO_NUM_NC;
+-    pcfg.rgb_ele_order = LCD_RGB_ELEMENT_ORDER_RGB;
+-    pcfg.bits_per_pixel = 16;
+-    pcfg.vendor_config = &vcfg;
+-    err = esp_lcd_new_panel_st7123(dbi_io_, &pcfg, &panel_);
+-  }
++    vTaskDelay(pdMS_TO_TICKS(20));
+ 
+-  if (err != ESP_OK) {
+-    qual_.display_err = err;
+-    return false;
+-  }
++    const st7123_lcd_init_cmd_t* cmds =
++        (rev == Tab5PanelRev::St7121) ? disp_init_data_st7121 : disp_init_data_st7123;
++    const size_t cmds_count =
++        (rev == Tab5PanelRev::St7121)
++            ? (sizeof(disp_init_data_st7121) / sizeof(disp_init_data_st7121[0]))
++            : (sizeof(disp_init_data_st7123) / sizeof(disp_init_data_st7123[0]));
+ 
+-  (void)esp_lcd_panel_reset(panel_);
+-  err = esp_lcd_panel_init(panel_);
+-  if (err != ESP_OK) {
+-    qual_.display_err = err;
+-    return false;
++    for (size_t i = 0; i < cmds_count; ++i) {
++      err = esp_lcd_panel_io_tx_param(dbi_io_, cmds[i].cmd, cmds[i].data, cmds[i].data_bytes);
++      if (err != ESP_OK) {
++        qual_.display_err = err;
++        return false;
++      }
++      if (cmds[i].delay_ms > 0) {
++        vTaskDelay(pdMS_TO_TICKS(cmds[i].delay_ms));
++      }
++    }
+   }
+-  (void)esp_lcd_panel_invert_color(panel_, false);
+-  (void)esp_lcd_panel_mirror(panel_, false, false);
+-  (void)esp_lcd_panel_disp_on_off(panel_, true);
+ 
+   void* fb0 = nullptr;
+   err = esp_lcd_dpi_panel_get_frame_buffer(panel_, 1, &fb0);
+@@ -329,9 +457,17 @@ bool BoardTab5::initDisplayPanel(Tab5PanelRev rev) {
+     return false;
+   }
+   dpi_fb_ = static_cast<uint16_t*>(fb0);
+-  std::memset(dpi_fb_, 0, kPanelFbBytes);
+-  (void)esp_cache_msync(
+-      dpi_fb_, kPanelFbBytes, ESP_CACHE_MSYNC_FLAG_DIR_C2M | ESP_CACHE_MSYNC_FLAG_UNALIGNED);
++
++  // Paint bright geometric boot pattern into DPI framebuffer BEFORE / AT HS video stream start!
++  paintInitialBootPattern();
++
++  if (rev != Tab5PanelRev::Ili9881cGt911) {
++    err = esp_lcd_panel_init(panel_);
++    if (err != ESP_OK) {
++      qual_.display_err = err;
++      return false;
++    }
++  }
+ 
+   qual_.display_ready = true;
+   return true;
+@@ -346,7 +482,7 @@ bool BoardTab5::initTouchController(Tab5PanelRev rev) {
+ 
+   esp_err_t err = ESP_ERR_NOT_SUPPORTED;
+   if (rev == Tab5PanelRev::Ili9881cGt911) {
+-    tp_cfg.int_gpio_num = GPIO_NUM_NC;  // Held low on Ver 1
++    tp_cfg.int_gpio_num = GPIO_NUM_NC;
+     esp_lcd_panel_io_i2c_config_t io_cfg = {};
+     io_cfg.dev_addr = qual_.touch_i2c_addr ? qual_.touch_i2c_addr
+                                            : uint8_t(ESP_LCD_TOUCH_IO_I2C_GT911_ADDRESS_BACKUP);
+@@ -360,7 +496,6 @@ bool BoardTab5::initTouchController(Tab5PanelRev rev) {
+       err = esp_lcd_touch_new_i2c_gt911(tp_io_, &tp_cfg, &tp_);
+     }
+   } else if (rev == Tab5PanelRev::St7123 || rev == Tab5PanelRev::St7121) {
+-    // Release GPIO23 as input pull-up for ST712x touch IRQ.
+     gpio_config_t int_in = {};
+     int_in.mode = GPIO_MODE_INPUT;
+     int_in.pull_up_en = GPIO_PULLUP_ENABLE;
+@@ -384,18 +519,18 @@ bool BoardTab5::initTouchController(Tab5PanelRev rev) {
+   return qual_.touch_ready;
+ }
+ 
+-bool BoardTab5::begin(i2c_master_bus_handle_t i2c_bus) {
+-  i2c_bus_ = i2c_bus;
++bool BoardTab5::begin(i2c_master_bus_handle_t existing_i2c_bus) {
+   qual_ = BoardQualification{};
+-  if (!i2c_bus_) return false;
++  if (!initI2cAndLdo(existing_i2c_bus)) return false;
+ 
+   (void)initBacklight();
+-  if (!pulseLcdResetAndInitIo2()) return false;
++  if (!initExpandersAndTouchReset()) return false;
+   probePeripherals();
+ 
+   const Tab5PanelRev rev = detectPanelRevision();
+   if (initDisplayPanel(rev)) {
+-    (void)setBacklightPercent(75);
++    // Match M5Tab5-UserDemo bsp_display_backlight_on() -> 100% active-high brightness.
++    (void)setBacklightPercent(100);
+   }
+   (void)initTouchController(rev);
+   return qual_.display_ready;
+@@ -417,11 +552,10 @@ UiTouchPoint BoardTab5::pollTouch(bool flip_180) {
+ }
+ 
+ bool BoardTab5::presentLandscape640x360(const uint16_t* fb640x360, bool flip_180) {
+-  if (!qual_.display_ready || !dpi_fb_ || !fb640x360) return false;
++  if (!qual_.display_ready || !dpi_fb_ || !fb640x360 || !panel_) return false;
+   blitLandscape640x360ToPortrait720x1280(fb640x360, dpi_fb_, flip_180);
+-  (void)esp_cache_msync(
+-      dpi_fb_, kPanelFbBytes, ESP_CACHE_MSYNC_FLAG_DIR_C2M | ESP_CACHE_MSYNC_FLAG_UNALIGNED);
+-  return true;
++  // esp_lcd_panel_draw_bitmap on dpi_fb_ performs exact in-place esp_cache_msync writeback.
++  return esp_lcd_panel_draw_bitmap(panel_, 0, 0, kPanelNativeW, kPanelNativeH, dpi_fb_) == ESP_OK;
+ }
+ 
+ bool BoardTab5::setMicEnabled(bool enable) {
+@@ -469,7 +603,7 @@ bool BoardTab5::setMicEnabled(bool enable) {
+   if (!mic_dev_) {
+     audio_codec_i2c_cfg_t i2c_cfg = {};
+     i2c_cfg.port = I2C_NUM_0;
+-    i2c_cfg.addr = ES7210_CODEC_DEFAULT_ADDR;  // 0x80 (8-bit for 7-bit 0x40)
++    i2c_cfg.addr = ES7210_CODEC_DEFAULT_ADDR;
+     i2c_cfg.bus_handle = i2c_bus_;
+     mic_ctrl_if_ = audio_codec_new_i2c_ctrl(&i2c_cfg);
+     if (!mic_ctrl_if_) return false;
+@@ -509,7 +643,6 @@ opentoy_sound::PcmBlockSummary BoardTab5::sampleMicVolatile() {
+     return out;
+   }
+   out = opentoy_sound::analyzePcm16Mono(pcm, 256);
+-  // Immediately scrub volatile stack buffer.
+   std::memset(pcm, 0, sizeof(pcm));
+   return out;
+ }
+@@ -539,6 +672,15 @@ void BoardTab5::end() {
+     (void)esp_lcd_del_dsi_bus(dsi_bus_);
+     dsi_bus_ = nullptr;
+   }
++  if (ldo_vo3_) {
++    (void)esp_ldo_release_channel(ldo_vo3_);
++    ldo_vo3_ = nullptr;
++  }
++  if (owns_i2c_bus_ && i2c_bus_) {
++    (void)i2c_del_master_bus(i2c_bus_);
++    i2c_bus_ = nullptr;
++    owns_i2c_bus_ = false;
++  }
+   dpi_fb_ = nullptr;
+ }
+ 
+diff --git a/projects/tab5/firmware/main/BoardTab5.h b/projects/tab5/firmware/main/BoardTab5.h
+index e2965ad..dc8362a 100644
+--- a/projects/tab5/firmware/main/BoardTab5.h
++++ b/projects/tab5/firmware/main/BoardTab5.h
+@@ -7,6 +7,7 @@
+ #include "driver/i2s_std.h"
+ #include "esp_codec_dev.h"
+ #include "audio_codec_ctrl_if.h"
++#include "esp_ldo_regulator.h"
+ #include "esp_lcd_mipi_dsi.h"
+ #include "esp_lcd_panel_io.h"
+ #include "esp_lcd_panel_ops.h"
+@@ -33,7 +34,9 @@ struct BoardQualification {
+   bool display_ready = false;
+   bool touch_ready = false;
+ 
++  bool pi4ioe1_ok = false;
+   bool pi4ioe2_ok = false;
++  bool ldo_vo3_ok = false;
+   bool es8388_ok = false;
+   bool es7210_ok = false;
+   uint16_t es7210_id = 0;
+@@ -51,11 +54,14 @@ class BoardTab5 {
+   BoardTab5() = default;
+   ~BoardTab5();
+ 
+-  // Initializes peripherals, auto-detects display/touch revision, and starts 720x1280 MIPI-DSI.
+-  // Expects LDO_VO3 (2500 mV) and I2C0 (GPIO31/32) already initialized by CameraTab5.
+-  bool begin(i2c_master_bus_handle_t i2c_bus);
++  // Standalone board/display bring-up (independent of camera): initializes I2C0 (GPIO31/32),
++  // LDO_VO3 (2500 mV), PI4IOE1/PI4IOE2, ST7123/ST7121/ILI9881C MIPI-DSI, and immediately paints
++  // the unmistakable geometric boot pattern at 100% backlight.
++  bool begin(i2c_master_bus_handle_t existing_i2c_bus = nullptr);
+   void end();
+ 
++  i2c_master_bus_handle_t i2cBus() const { return i2c_bus_; }
++  bool ldoVo3Acquired() const { return ldo_vo3_ != nullptr; }
+   const BoardQualification& qualification() const { return qual_; }
+ 
+   bool setBacklightPercent(int percent);
+@@ -71,14 +77,18 @@ class BoardTab5 {
+   opentoy_sound::PcmBlockSummary sampleMicVolatile();
+ 
+  private:
+-  bool pulseLcdResetAndInitIo2();
++  bool initI2cAndLdo(i2c_master_bus_handle_t existing_i2c_bus);
++  bool initExpandersAndTouchReset();
+   void probePeripherals();
+   Tab5PanelRev detectPanelRevision();
+   bool initDisplayPanel(Tab5PanelRev rev);
+   bool initTouchController(Tab5PanelRev rev);
+   bool initBacklight();
++  void paintInitialBootPattern();
+ 
+   i2c_master_bus_handle_t i2c_bus_ = nullptr;
++  bool owns_i2c_bus_ = false;
++  esp_ldo_channel_handle_t ldo_vo3_ = nullptr;
+   BoardQualification qual_{};
+ 
+   esp_lcd_dsi_bus_handle_t dsi_bus_ = nullptr;
+diff --git a/projects/tab5/firmware/main/panel_init/disp_init_data_1.h b/projects/tab5/firmware/main/panel_init/disp_init_data_1.h
+index b847524..fe59f74 100644
+--- a/projects/tab5/firmware/main/panel_init/disp_init_data_1.h
++++ b/projects/tab5/firmware/main/panel_init/disp_init_data_1.h
+@@ -30,8 +30,8 @@ static const st7123_lcd_init_cmd_t disp_init_data_st7123[] = {
+     {0xA9, (uint8_t[]){0x00, 0x00, 0x73, 0xFF, 0x00, 0x00, 0x03, 0x00, 0x00, 0x03}, 10, 0},
+     {0xC8, (uint8_t[]){0x00, 0x00, 0x10, 0x1F, 0x36, 0x00, 0x5D, 0x04, 0x9D, 0x05, 0x10, 0xF2, 0x06, 0x60, 0x03, 0x11, 0xAD, 0x00, 0xEF, 0x01, 0x22, 0x2E, 0x0E, 0x74, 0x08, 0x32, 0xDC, 0x09, 0x33, 0x0F, 0xF3, 0x77, 0x0D, 0xB0, 0xDC, 0x03, 0xFF}, 37, 0},
+     {0xC9, (uint8_t[]){0x00, 0x00, 0x10, 0x1F, 0x36, 0x00, 0x5D, 0x04, 0x9D, 0x05, 0x10, 0xF2, 0x06, 0x60, 0x03, 0x11, 0xAD, 0x00, 0xEF, 0x01, 0x22, 0x2E, 0x0E, 0x74, 0x08, 0x32, 0xDC, 0x09, 0x33, 0x0F, 0xF3, 0x77, 0x0D, 0xB0, 0xDC, 0x03, 0xFF}, 37, 0},
+-    {0x36, (uint8_t[]){0x03}, 1, 0},
+-    {0x11, (uint8_t[]){0x00}, 1, 120},
+-    {0x29, (uint8_t[]){0x00}, 1, 50},
+-    {0x35, (uint8_t[]){0x00}, 1, 0},
++    {0x36, (uint8_t[]){0x00}, 1, 0},
++    {0x11, (uint8_t[]){0x00}, 1, 100},
++    {0x29, (uint8_t[]){0x00}, 1, 0},
++    {0x35, (uint8_t[]){0x00}, 1, 100},
+ };
+diff --git a/projects/tab5/firmware/metadata.json b/projects/tab5/firmware/metadata.json
+index 5b4c567..2d2edef 100644
+--- a/projects/tab5/firmware/metadata.json
++++ b/projects/tab5/firmware/metadata.json
+@@ -2,7 +2,7 @@
+   "app_id": "vibe-coding-camera-eye",
+   "display_name_short": "CAMEYE",
+   "display_name": "Tab5 Camera Eye + Copy-Face + Eyes 1",
+-  "firmware_version": "0.2.0",
++  "firmware_version": "0.2.1",
+   "version_created": "2026-11-17",
+   "hardware_target": "m5stack-tab5-p4-rev1.3",
+   "battery_source": "ina226-2s-or-unknown",

@@ -1,0 +1,13 @@
+{
+  "app_id": "vibe-coding-camera-eye",
+  "display_name_short": "CAMEYE",
+  "display_name": "Tab5 Camera Eye + Copy-Face + Eyes 1",
+  "firmware_version": "0.2.0",
+  "version_created": "2026-11-17",
+  "hardware_target": "m5stack-tab5-p4-rev1.3",
+  "battery_source": "ina226-2s-or-unknown",
+  "vision_source": "sc202cs-mipi-csi-v4l2-hwjpeg-and-msrmnp-0.5.2",
+  "display_source": "mipi-dsi-720x1280-auto-ili9881c-st7123-st7121",
+  "audio_source": "es7210-optin-volatile-mic-and-es8388",
+  "transport": "usb-serial-jtag-otcam1"
+}

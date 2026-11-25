@@ -1,0 +1,42 @@
+{
+  "simulation": true,
+  "autonomous": true,
+  "duration_ms": 24000,
+  "frames": 324,
+  "distinct_frames": [
+    89,
+    105,
+    88
+  ],
+  "observations": [
+    {
+      "name": "CURIOUS",
+      "left_blinks": 14,
+      "right_blinks": 10,
+      "looks": 11
+    },
+    {
+      "name": "DREAMY",
+      "left_blinks": 3,
+      "right_blinks": 3,
+      "looks": 6
+    },
+    {
+      "name": "CHEEKY",
+      "left_blinks": 8,
+      "right_blinks": 8,
+      "looks": 10
+    }
+  ],
+  "sha256": "b08f7936e00317275ecc03ea0f22073e409713625165259c3fe56f4b9fde7d34",
+  "source_sha256": {
+    "firmware/AnimatronicEyes/Personality.h": "1071123b07a3dc537ca3c484a519ae852e1a1ab1e68350c098f97d9e632de14d",
+    "firmware/AnimatronicEyes/Companion.h": "99b9744c06d50321409c7d539f9e62c9756dae7155f597d8344605fd49351b1f",
+    "firmware/NessoEyes/Idle.h": "da8c1b084640e95e74703e7bb1de8c82ccb882840867b94b2c2e5e072b9d27a8",
+    "firmware/NessoEyes/TouchReaction.h": "bd84a3167fe864e581c49c6703602761a41379799b29b78dd82df87f397b3659",
+    "firmware/NessoEyes/Presentation.h": "648c862bc1d2192e0b4f56e079f661ca4db968034c016b38202668f84916ee69",
+    "shared/opentoy/EyePixels.h": "37353fd955238f644bd6fa8d380471503799aac65a61b6f6eb46a469667fcaa9",
+    "tools/personality_frames.cpp": "7a18045b6feb64a0757510c2ab04fbde78ac26b99f384b73a06ffa5ca94c39c5",
+    "tools/render_personalities.py": "c8333767619dad9f73703ebe10a0fb00f30cd21421450ae1330915f89f907f14"
+  }
+}

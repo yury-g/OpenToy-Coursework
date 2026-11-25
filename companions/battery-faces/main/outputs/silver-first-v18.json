@@ -1,0 +1,31 @@
+{
+  "PEER": {
+    "blue": "PEER color=blue seen=1 fresh=1 age_ms=1912 rx=12 seq=31 uptime_ms=60027 valid=1 pct=98.13 volts=4.165 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "green": "PEER color=green seen=1 fresh=1 age_ms=884 rx=13 seq=127 uptime_ms=252021 valid=1 pct=0.15 volts=3.466 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "orange": "PEER color=orange seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "yellow": "PEER color=yellow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "rainbow": "PEER color=rainbow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "purple": "PEER color=purple seen=1 fresh=1 age_ms=1529 rx=13 seq=19 uptime_ms=36008 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+    "pink": "PEER color=pink seen=1 fresh=1 age_ms=185 rx=13 seq=1404 uptime_ms=2806856 valid=1 pct=84.80 volts=4.048 current_valid=0 ma=0.0 charger=UNKNOWN"
+  },
+  "ACK": {
+    "blue": "ACK color=blue ok=0 lost=0",
+    "green": "ACK color=green ok=0 lost=0",
+    "orange": "ACK color=orange ok=0 lost=0",
+    "yellow": "ACK color=yellow ok=0 lost=0",
+    "rainbow": "ACK color=rainbow ok=0 lost=0",
+    "purple": "ACK color=purple ok=0 lost=0",
+    "pink": "ACK color=pink ok=0 lost=0"
+  },
+  "FACE": "FACE build=BatteryFaces-v18-green-silver-faces mac=02:00:00:00:00:09 mood=angry demo=0 frames=518 uptime_ms=26277 settled=0 hash=46e9ed6f tft=135x240 gauge=1",
+  "BATT": "BATT valid=1 pct=4.73 volts=3.489 rate=nan hours=-1.000 state=TREND UNKNOWN",
+  "DIAG": "DIAG evidence=LEARNING warm=0 window=0 dp=0.000 dv=0.0000 page=0 auto=1 test=1 outcome=0 seconds=0 saved=1",
+  "MICRO": "MICRO seconds=25 dp=0.0750 dv=0.00300 direction=0 samples=14",
+  "DISPLAY": "DISPLAY selected=silver page=0 gestures=0",
+  "RADIO": "RADIO ready=1 paused=0 channel=1 wifi_status=6 sent=14 errors=0 sta=02:00:00:00:00:09",
+  "GATEWAY": "GATEWAY ready=0 clients=0 sent=0",
+  "POWER": "POWER current_valid=0 ma=0.0 charger=UNKNOWN",
+  "HW": "HW board=waveshare-rlcd42 ready=1 width=300 height=400 logical=135x240 monochrome=1 backlight=none adc_mv=1163 estimator=voltage buttons=0,18 presents=131 transfer_us=12559",
+  "PERF": "PERF max_render_ms=31",
+  "DEVICE": "DEVICE color=silver face_ink=c618 output=rlcd led=0,0,0"
+}

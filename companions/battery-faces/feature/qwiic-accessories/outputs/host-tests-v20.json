@@ -1,0 +1,85 @@
+{
+  "recorded_utc": "2026-10-20T19:03:52.049982+00:00",
+  "tests": [
+    {
+      "test": "battery_diagnostics_test",
+      "passed": true
+    },
+    {
+      "test": "battery_led_test",
+      "passed": true
+    },
+    {
+      "test": "battery_test",
+      "passed": true
+    },
+    {
+      "test": "cached_face_test",
+      "passed": true
+    },
+    {
+      "test": "display_test",
+      "passed": true
+    },
+    {
+      "test": "display_test_watch",
+      "passed": true
+    },
+    {
+      "test": "display_test_silver",
+      "passed": true
+    },
+    {
+      "test": "family_registry_test",
+      "passed": true
+    },
+    {
+      "test": "green_replacement_test",
+      "passed": true
+    },
+    {
+      "test": "haptic_pulse_test",
+      "passed": true
+    },
+    {
+      "test": "layout_test",
+      "passed": true
+    },
+    {
+      "test": "microtrend_test",
+      "passed": true
+    },
+    {
+      "test": "monitor_packet_test",
+      "passed": true
+    },
+    {
+      "test": "navigation_test",
+      "passed": true
+    },
+    {
+      "test": "peer_battery_test",
+      "passed": true
+    },
+    {
+      "test": "runtime_observer_test",
+      "passed": true
+    },
+    {
+      "test": "runtime_view_test",
+      "passed": true
+    },
+    {
+      "test": "silver_registry_test",
+      "passed": true
+    },
+    {
+      "test": "silver_rlcd_test",
+      "passed": true
+    },
+    {
+      "test": "voltage_estimate_test",
+      "passed": true
+    }
+  ]
+}

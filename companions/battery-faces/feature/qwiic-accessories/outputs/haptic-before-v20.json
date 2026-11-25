@@ -1,0 +1,65 @@
+{
+  "recorded_utc": "2026-10-20T19:02:51.827858+00:00",
+  "blue": {
+    "PEER": {
+      "green": "PEER color=green seen=1 fresh=1 age_ms=1450 rx=139 seq=3095 uptime_ms=6188028 valid=1 pct=13.10 volts=3.749 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "pink": "PEER color=pink seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "yellow": "PEER color=yellow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "rainbow": "PEER color=rainbow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "purple": "PEER color=purple seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "orange": "PEER color=orange seen=1 fresh=1 age_ms=101 rx=142 seq=3082 uptime_ms=6162018 valid=1 pct=99.60 volts=4.196 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "silver": "PEER color=silver seen=1 fresh=1 age_ms=1695 rx=142 seq=3117 uptime_ms=6232000 valid=1 pct=82.60 volts=4.026 current_valid=0 ma=0.0 charger=UNKNOWN"
+    },
+    "ACK": {
+      "green": "ACK color=green ok=0 lost=0",
+      "pink": "ACK color=pink ok=0 lost=0",
+      "yellow": "ACK color=yellow ok=0 lost=0",
+      "rainbow": "ACK color=rainbow ok=0 lost=0",
+      "purple": "ACK color=purple ok=0 lost=0",
+      "orange": "ACK color=orange ok=0 lost=0",
+      "silver": "ACK color=silver ok=0 lost=0"
+    },
+    "FACE": "FACE build=BatteryFaces-v18-green-silver-faces mac=02:00:00:00:00:01 mood=happy demo=0 frames=5718 uptime_ms=286683 settled=0 hash=cb6c0435 tft=135x240 gauge=1",
+    "BATT": "BATT valid=1 pct=97.66 volts=4.162 rate=-0.832 hours=117.380 state=DISCHARGING",
+    "DIAG": "DIAG evidence=LEARNING warm=1 window=0 dp=0.000 dv=0.0000 page=0 auto=1 test=1 outcome=0 seconds=0 saved=1",
+    "MICRO": "MICRO seconds=120 dp=0.0000 dv=0.00000 direction=0 samples=61",
+    "DISPLAY": "DISPLAY selected=blue page=0 gestures=0",
+    "RADIO": "RADIO ready=1 paused=0 channel=1 wifi_status=6 sent=144 errors=0 sta=02:00:00:00:00:01",
+    "GATEWAY": "GATEWAY ready=1 clients=1 sent=1120",
+    "POWER": "POWER current_valid=0 ma=0.0 charger=UNKNOWN",
+    "HW": "HW board=feather power=1 backlight=1 panel_reset=1",
+    "PERF": "PERF max_render_ms=35",
+    "DEVICE": "DEVICE color=blue face_ink=041f output=tft led=0,0,0"
+  },
+  "green": {
+    "PEER": {
+      "blue": "PEER color=blue seen=1 fresh=1 age_ms=697 rx=3089 seq=144 uptime_ms=286029 valid=1 pct=97.66 volts=4.162 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "pink": "PEER color=pink seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "yellow": "PEER color=yellow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "rainbow": "PEER color=rainbow seen=0 fresh=0 age_ms=0 rx=0 seq=0 uptime_ms=0 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "purple": "PEER color=purple seen=1 fresh=0 age_ms=5756028 rx=208 seq=189 uptime_ms=377547 valid=0 pct=0.00 volts=0.000 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "orange": "PEER color=orange seen=1 fresh=1 age_ms=149 rx=3090 seq=3082 uptime_ms=6162018 valid=1 pct=99.60 volts=4.196 current_valid=0 ma=0.0 charger=UNKNOWN",
+      "silver": "PEER color=silver seen=1 fresh=1 age_ms=1742 rx=3044 seq=3117 uptime_ms=6232000 valid=1 pct=82.60 volts=4.026 current_valid=0 ma=0.0 charger=UNKNOWN"
+    },
+    "ACK": {
+      "blue": "ACK color=blue ok=0 lost=0",
+      "pink": "ACK color=pink ok=0 lost=0",
+      "yellow": "ACK color=yellow ok=0 lost=0",
+      "rainbow": "ACK color=rainbow ok=0 lost=0",
+      "purple": "ACK color=purple ok=0 lost=0",
+      "orange": "ACK color=orange ok=0 lost=0",
+      "silver": "ACK color=silver ok=0 lost=0"
+    },
+    "FACE": "FACE build=BatteryFaces-v18-green-silver-faces mac=02:00:00:00:00:02 mood=angry demo=0 frames=123762 uptime_ms=6189532 settled=1 hash=46e9ed6f tft=135x240 gauge=1",
+    "BATT": "BATT valid=1 pct=13.10 volts=3.749 rate=12.272 hours=-1.000 state=CHARGING",
+    "DIAG": "DIAG evidence=UNCLEAR warm=1 window=1 dp=1.035 dv=0.0075 page=0 auto=1 test=1 outcome=0 seconds=0 saved=1",
+    "MICRO": "MICRO seconds=120 dp=0.2578 dv=0.00750 direction=1 samples=61",
+    "DISPLAY": "DISPLAY selected=green page=0 gestures=0",
+    "RADIO": "RADIO ready=1 paused=0 channel=1 wifi_status=6 sent=3095 errors=0 sta=02:00:00:00:00:02",
+    "GATEWAY": "GATEWAY ready=0 clients=0 sent=0",
+    "POWER": "POWER current_valid=0 ma=0.0 charger=UNKNOWN",
+    "HW": "HW board=feather power=1 backlight=1 panel_reset=1",
+    "PERF": "PERF max_render_ms=37",
+    "DEVICE": "DEVICE color=green face_ink=07e0 output=tft led=0,0,0"
+  }
+}

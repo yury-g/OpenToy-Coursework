@@ -1,0 +1,13 @@
+build/
+artifacts/
+artifacts.json
+shared/privatePairConfig.h
+shared/private-localPairConfig.h
+**/node_modules/
+.frame-cache/
+*.bin
+*.elf
+*.map
+*.hex
+__pycache__/
+*.py[cod]

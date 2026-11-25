@@ -1,0 +1,120 @@
+{
+  "source_sha256": {
+    "Camera.scad": "04f08f09f1289ff6a7dc8ddca70248c3e6146755ebb3cb388469d2e738207e37",
+    "parameters.json": "5c2071d11a0cdd06d5099dec971a744bc54deb0ca8275892b9b13371eab828f4",
+    "body.stl": "b41a81f5097a8dfc349eecebfc437fa478566bcb7cf63426db781a235469d6a9",
+    "pod.stl": "8661fcea3cf6bed0cac2063bdeca971a41decf2aa0df73a355f603ff5e7cbe2a",
+    "hw_rlcd.stl": "1f6c92e6140c4de08975d28e3b10d5bb0af5dbc513f7b6354ecaa35174329ef6",
+    "hw_xiao_pod.stl": "6936bfa7760578eca43e0fed6fefdae3135947651e0ce9bb119ce2a6d4f659ae",
+    "Camera-print.stl": "12daa7501b12f63aa9f26cab4f3e7364f6c73e894815a2a1cc0235dd0dc81260"
+  },
+  "mesh": {
+    "body": {
+      "watertight": true,
+      "positive_volume": true,
+      "shells": 1,
+      "bounds": [
+        [
+          -54.0,
+          -6.399999618530273,
+          0.0
+        ],
+        [
+          54.0,
+          104.5,
+          58.0
+        ]
+      ]
+    },
+    "pod": {
+      "watertight": true,
+      "positive_volume": true,
+      "shells": 1,
+      "bounds": [
+        [
+          -36.25,
+          -47.599998474121094,
+          0.0
+        ],
+        [
+          36.25,
+          5.0,
+          48.20000076293945
+        ]
+      ]
+    },
+    "hw_rlcd": {
+      "watertight": true,
+      "positive_volume": true,
+      "shells": 1,
+      "bounds": [
+        [
+          -44.65999984741211,
+          28.439998626708984,
+          5.199999809265137
+        ],
+        [
+          47.93000030517578,
+          98.55000305175781,
+          29.349998474121094
+        ]
+      ]
+    },
+    "hw_xiao_pod": {
+      "watertight": true,
+      "positive_volume": true,
+      "shells": 2,
+      "bounds": [
+        [
+          -32.040000915527344,
+          -45.36000061035156,
+          2.59999942779541
+        ],
+        [
+          31.200000762939453,
+          -10.799999237060547,
+          46.66999816894531
+        ]
+      ]
+    },
+    "Camera-print": {
+      "watertight": true,
+      "positive_volume": true,
+      "shells": 2,
+      "bounds": [
+        [
+          -54.0,
+          -47.599998474121094,
+          0.0
+        ],
+        [
+          54.0,
+          104.5,
+          58.0
+        ]
+      ]
+    }
+  },
+  "sweep": {
+    "-0.6": {
+      "poses": 181,
+      "max_shell_intersection_mm3": 0,
+      "worst_angle": 0,
+      "max_moving_hardware_intersection_mm3": 0
+    },
+    "0": {
+      "poses": 181,
+      "max_shell_intersection_mm3": 0,
+      "worst_angle": 0,
+      "max_moving_hardware_intersection_mm3": 0
+    },
+    "0.6": {
+      "poses": 181,
+      "max_shell_intersection_mm3": 0,
+      "worst_angle": 0,
+      "max_moving_hardware_intersection_mm3": 0
+    }
+  },
+  "static_rlcd_intersections": [],
+  "assembly_difference_mm3": 0.0
+}
