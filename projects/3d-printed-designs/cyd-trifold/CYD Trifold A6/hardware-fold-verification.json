@@ -1,0 +1,12 @@
+{
+  "poses": 362,
+  "max_hardware_to_shell_overlap_mm3": 1.335168954563759e-13,
+  "max_hardware_to_hardware_overlap_mm3": 0.0,
+  "failures": [],
+  "source_mesh_sha256": {
+    "left.stl": "1bb2d98a58490f33cce2498ab337006c07e9bf4e581798a17efd2a33f08da68e",
+    "middle.stl": "5072f90ec5e927a83c3279c8512463ad3f7f43ca6fccf1a3c53096dc17e95cf2",
+    "right.stl": "f593d72a624c4448492e59e02329735ae8541984de91a960687c37e1194243e0"
+  },
+  "evidence_limit": "nominal board/glass/rear envelopes, not every physical component or attached cable"
+}

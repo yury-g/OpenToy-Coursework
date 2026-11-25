@@ -1,0 +1,139 @@
+{
+  "reviewed_date": "2026-11-24",
+  "scope": "Read-only source and final print-flat mesh review; no CAD edits, slicer run, fold sweep or physical test.",
+  "status": "qualified_prototype_with_local_bridge_and_hook_overhang_risks",
+  "source_sha256": "02e4d0cc262e784a23ca45b03f527f639e3384be5c7c4e9aaa079e43607505f7",
+  "A_kernel_sha256": "9ec819a7879ef99349a32add5a3122ec4e36631da4e29e195f73d16c52456502",
+  "stale_exports_detected": false,
+  "provenance_check": "All seven unique print-flat mesh hashes match CAD verification.json, which records the requested frozen source hash. No independent OpenSCAD regeneration performed.",
+  "socket_ledge": {
+    "previous_issue": "A 0.10 mm roof was too thin for the intended 0.20 mm layers.",
+    "resolved_in_final_source": true,
+    "z_bottom_mm": 3.8,
+    "z_top_mm": 4.6,
+    "thickness_mm": 0.8,
+    "nominal_layers_at_0_20_mm": 4,
+    "measured_horizontal_roof_width_mm": 0.6,
+    "horizontal_roof_span_along_y_mm": 2.7,
+    "count_per_tray": 4,
+    "note": "Seat geometry makes the final roof 0.60 mm wide in the STL. Its 2.7 mm opening remains a short bridge requiring physical/slicer assessment."
+  },
+  "face_down_hook": {
+    "connected_to_supported_beam": true,
+    "lateral_growth_mm": 0.6,
+    "vertical_rise_mm": 0.171429,
+    "surface_slope_from_horizontal_deg": 15.9454,
+    "equivalent_overhang_from_vertical_deg": 74.0546,
+    "count_per_face": 4,
+    "note": "The revised inward hook grows a short steep cantilever in the face-down print pose. This is not a floating island, but it does not meet a blanket 45-degree-overhang criterion. Keep as an explicit trial risk or soften the hook underside in a future controlled revision."
+  },
+  "other_findings": [
+    "Every connected body in each print-flat mesh has positive flat contact at Z=0.",
+    "Faces have broad bed contact; pockets open upward in their face-down print orientation.",
+    "Rear-frame pedestal ties and support posts start from the bed; no other obvious floating starts were found by source and surface review.",
+    "Exact A cartridge has two supported bodies and no meaningful elevated downward surface area steeper than 45 degrees; degenerate numerical triangles were excluded.",
+    "This is a surface/geometry review, not a layer-by-layer toolpath or extrusion-width guarantee."
+  ],
+  "print_meshes": {
+    "A cartridge - print flat.stl": {
+      "sha256": "db1ec2cfbc8b15e2077a458f018520e58e35a3b086597c0eb298f15080de0e7c",
+      "matches_final_export_manifest": true,
+      "bodies": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 594.735
+        },
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 483.5566
+        }
+      ],
+      "elevated_downface_area_steeper_than_45_deg_mm2": 0.0,
+      "elevated_horizontal_underside_area_mm2": 0.0
+    },
+    "left face - print flat.stl": {
+      "sha256": "e474890ff02cddcd7cc0f99568d6c8b138ae767f0aad9c070530a48f1f3b365f",
+      "matches_final_export_manifest": true,
+      "bodies": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": -1.0658141036401503e-14,
+          "flat_bed_contact_mm2": 4427.0667
+        }
+      ],
+      "elevated_downface_area_steeper_than_45_deg_mm2": 5.491271,
+      "elevated_horizontal_underside_area_mm2": 0.0
+    },
+    "left tray - print flat.stl": {
+      "sha256": "7f59d35095b5859be9e46fead1d3b11dec5234100bd40102517b56c5db440765",
+      "matches_final_export_manifest": true,
+      "bodies": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 961.8619
+        }
+      ],
+      "elevated_downface_area_steeper_than_45_deg_mm2": 6.479986,
+      "elevated_horizontal_underside_area_mm2": 6.479986
+    },
+    "middle face - print flat.stl": {
+      "sha256": "8f97f117eb904f9bd4d73e82eb9a1e26381703d147591df23dd18adad6edcaa4",
+      "matches_final_export_manifest": true,
+      "bodies": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": -1.0658141036401503e-14,
+          "flat_bed_contact_mm2": 4430.6759
+        }
+      ],
+      "elevated_downface_area_steeper_than_45_deg_mm2": 5.491279,
+      "elevated_horizontal_underside_area_mm2": 0.0
+    },
+    "middle tray - print flat.stl": {
+      "sha256": "94cdf9bfabeb48ca50cac9bf5470fac1322b0f9821ce1b64cc3b766c74f046df",
+      "matches_final_export_manifest": true,
+      "bodies": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 1391.367
+        }
+      ],
+      "elevated_downface_area_steeper_than_45_deg_mm2": 6.479997,
+      "elevated_horizontal_underside_area_mm2": 6.479997
+    },
+    "right face - print flat.stl": {
+      "sha256": "a3be4c202b280641f34d8012b65d9800778f793fa4b156c36623935f8e58c1de",
+      "matches_final_export_manifest": true,
+      "bodies": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": -1.0658141036401503e-14,
+          "flat_bed_contact_mm2": 5300.3903
+        }
+      ],
+      "elevated_downface_area_steeper_than_45_deg_mm2": 5.491271,
+      "elevated_horizontal_underside_area_mm2": 0.0
+    },
+    "right tray - print flat.stl": {
+      "sha256": "db9095abfdb273a507b3b925d51db2c799daf833f58d5904d898e297b94b4563",
+      "matches_final_export_manifest": true,
+      "bodies": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 1253.3665
+        }
+      ],
+      "elevated_downface_area_steeper_than_45_deg_mm2": 6.479986,
+      "elevated_horizontal_underside_area_mm2": 6.479986
+    }
+  },
+  "limits": [
+    "PLA cooling, bridge sag, thin-feature extrusion, first-layer adhesion, snap strain/force, fatigue, hinge release and mechanical retention remain physically untested.",
+    "No printer settings were changed and no print was started."
+  ]
+}

@@ -1,0 +1,102 @@
+CYD FOLDING FOLIO  •  Prototype 1.1 · USB cable clearance revision
+Three portrait screens, one attached cover and a removable travel clip.
+
+START HERE
+
+Check the marking on the back of each board. The reference is the 2.8-inch
+ESP32-2432S028R, with an 86 × 50 mm PCB and four corner holes on a 78 × 42 mm
+pattern. If a board has a different marking, a second USB connector or headers
+installed, use the board fit gauge first. Even boards sold under the same name
+can differ. The reference has a 1.5 mm PCB and a 5.1 mm total height from the
+back of the PCB to the top of the glass. Rear components have 5.9 mm of space
+above the inside back wall, except where the corner seats support the PCB.
+
+PRINT
+
+Use PETG, a 0.4 mm nozzle, 0.20 mm layers, three walls and 15% infill. Keep
+the scale at 100%. All STL files are in millimetres and already oriented.
+Turn off supports, raft, brim and auto-orientation. Import the folio as a
+single object with its four moving shells in their supplied positions. Its
+three hinge pins print inside their barrels. The angled layout is intentional.
+
+File                             PETG       Time on A1 mini
+01 - Hinge test.stl               1.8 g      19 min
+Optional - Board fit gauge.stl    6.6 g      31 min
+02 - Hinged folio.stl            76.5 g      3 h 36 min
+03 - Closure clip.stl             2.6 g      21 min
+
+Times include startup and are estimates for separate plates using Bambu
+Studio's A1 mini and Generic PETG profiles on textured PEI. Select your own
+printer and material profile. Body build envelope is 145 × 154 × 91 mm.
+Allow additional bed margin for your machine's purge line and other exclusions.
+
+1. Print the hinge test. After it cools, hold the two tabs close to the pin
+   and gently rock them. The tabs should move independently and stay joined.
+   If fused, check for first-layer spreading or PETG strings. In OpenSCAD,
+   raise hinge_radial_gap from 0.40 to 0.50 mm and, if the flat knuckle ends
+   stick, hinge_axial_gap from 0.40 to 0.60 mm. Re-export and retry the test
+   before exporting the body with the same settings.
+2. Try one board in the fit gauge using the mounting steps below. Check that
+   the clips clear the glass, the board stays seated, and your USB plug can
+   fully engage. The gauge checks the corner fit and port approach. Check
+   tall components against the 5.9 mm rear clearance separately.
+3. Print the body and travel clip. After cooling, free the three hinges one
+   at a time, supporting the printed edges next to each hinge. Rehearse the
+   folding sequence with the empty case before installing electronics.
+
+MOUNT THE BOARDS
+
+Unplug the board. With the display facing you, tuck the two bare corners of
+one short edge under the fixed lower lips. Put the USB short edge toward the
+opposite, spring-clip end. Tilt the board down onto the four seats. Press
+each upper bare PCB corner until its spring tab catches. Apply pressure only
+to the PCB. The glass should sit below the protective long rails. To remove
+a board, ease one upper tab outward, lift that PCB corner slightly, repeat
+at the other corner, then slide the lower end free.
+
+All three boards have independent USB access through the open short ends.
+The cable end has a 42 mm wide × 9.5 mm deep relief in the back wall. A solid
+18 × 11 mm plug housing cleared all three trays at the reference Micro-USB
+location and the estimated CYD2USB port locations in the open assembly. The
+two-port positions were inferred from the CYD2USB Enclosure Bottom port
+cutouts, Printables model 840199. Try your exact plug in the supplied gauge.
+
+One powered USB hub or multiport 5 V supply can serve all three boards, with
+one cable per board. Separate LiPo packs are unnecessary. Some CYD2USB boards
+require USB-A to USB-C cables for power from USB-A ports. See the CYD community
+notes at https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display/blob/main/cyd.md
+
+The design assumes external USB power. Install a microSD card before seating
+the board if your revision places the slot behind a side rail.
+
+FOLD AND LATCH
+
+1. Unplug the cables and open all three panels with their screens facing you.
+2. Fold the outer screen without the lid face-to-face onto the middle screen.
+3. Swing the lid over its own screen. Fold that covered pair behind the
+   middle screen. Turn the stack so the solid cover faces up.
+4. Slide the travel clip onto the centre of the short edge with the two
+   matching grooves. Its arms span the solid lid and the opposite outer back.
+   A gentle click holds the stack closed. Slide the clip off to unfold.
+
+Closed body is 91 × 78.5 × 52.2 mm including the hinge barrels, before the
+travel clip. Fully flat width is 271 mm including the open lid. The hinges
+swing freely. Lay the folio on a table or angle its wings for an upright pose.
+
+DESIGN BASIS
+
+Manufacturer drawing, page 6
+https://mischianti.org/wp-content/uploads/2025/04/ESP32-2432S028-Specifications-EN.pdf
+
+Community CYD reference CAD, Havenview, Cheap Yellow Display v16
+https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display/tree/main/3dModels/Havenview_CYD_CAD
+
+Open the included Folio Dashboard/index.html in a browser for a movable
+section cut, hinge and spring-tab close-ups and a USB access view.
+
+The enclosure geometry is in CYD Folio.scad. The reference board in the
+preview is for illustration. The exported body contains four watertight parts.
+The three seated board positions, the seated closure clip, and a sampled
+five-degree folding sequence passed digital interference checks. All four
+STLs sliced in Bambu Studio. Physical fit, hinge release and clip force still
+need a first print.

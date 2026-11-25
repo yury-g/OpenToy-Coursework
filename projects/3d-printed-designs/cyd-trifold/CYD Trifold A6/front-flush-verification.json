@@ -1,0 +1,61 @@
+{
+  "all_glass_fronts_coplanar": true,
+  "glass_recess_mm": 0.40000000000000013,
+  "entire_glass_unobstructed_from_front": true,
+  "checks": [
+    {
+      "tray": "left",
+      "surface": "glass",
+      "front_sight_overlap_mm3": 0.0
+    },
+    {
+      "tray": "left",
+      "surface": "active",
+      "front_sight_overlap_mm3": 0.0
+    },
+    {
+      "tray": "left",
+      "glass_front_z_mm": 0.40000000000000013,
+      "front_rim_plane_z_mm": 0,
+      "glass_recess_mm": 0.40000000000000013
+    },
+    {
+      "tray": "middle",
+      "surface": "glass",
+      "front_sight_overlap_mm3": 0.0
+    },
+    {
+      "tray": "middle",
+      "surface": "active",
+      "front_sight_overlap_mm3": 0.0
+    },
+    {
+      "tray": "middle",
+      "glass_front_z_mm": 0.40000000000000013,
+      "front_rim_plane_z_mm": 0,
+      "glass_recess_mm": 0.40000000000000013
+    },
+    {
+      "tray": "right",
+      "surface": "glass",
+      "front_sight_overlap_mm3": 0.0
+    },
+    {
+      "tray": "right",
+      "surface": "active",
+      "front_sight_overlap_mm3": 0.0
+    },
+    {
+      "tray": "right",
+      "glass_front_z_mm": 0.40000000000000013,
+      "front_rim_plane_z_mm": 0,
+      "glass_recess_mm": 0.40000000000000013
+    }
+  ],
+  "mesh_sha256": {
+    "left.stl": "1bb2d98a58490f33cce2498ab337006c07e9bf4e581798a17efd2a33f08da68e",
+    "middle.stl": "5072f90ec5e927a83c3279c8512463ad3f7f43ca6fccf1a3c53096dc17e95cf2",
+    "right.stl": "f593d72a624c4448492e59e02329735ae8541984de91a960687c37e1194243e0"
+  },
+  "limit": "Nominal CAD glass positions; actual module thickness and mounting fit remain unmeasured."
+}

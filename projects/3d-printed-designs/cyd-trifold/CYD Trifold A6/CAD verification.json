@@ -1,0 +1,271 @@
+{
+  "source_sha256": "c3a21d4bb1d5097121234a69e73de82f7dbfa76c8851f70644be4fe47b6007f2",
+  "verification": {
+    "one_print_object": true,
+    "captive_bodies": 3,
+    "all_watertight": true,
+    "all_min_z_zero": true,
+    "fold_poses": 362,
+    "max_shell_overlap_mm3": 0,
+    "max_board_glass_rear_overlap_mm3": 1.6269028225296411e-13,
+    "USB_checks": [
+      {
+        "panel": "left",
+        "port_x_offset_mm": -10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "left",
+        "port_x_offset_mm": 10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "middle",
+        "port_x_offset_mm": -10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "middle",
+        "port_x_offset_mm": 10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "right",
+        "port_x_offset_mm": -10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "right",
+        "port_x_offset_mm": 10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      }
+    ],
+    "full_glass_front_sight_checks": [
+      {
+        "panel": "left",
+        "glass_front_z_mm": 0.4,
+        "front_sight_overlap_mm3": 0.0
+      },
+      {
+        "panel": "middle",
+        "glass_front_z_mm": 0.4,
+        "front_sight_overlap_mm3": 0.0
+      },
+      {
+        "panel": "right",
+        "glass_front_z_mm": 0.4,
+        "front_sight_overlap_mm3": 0.0
+      }
+    ],
+    "service_pose_deg": [
+      90,
+      0,
+      -90
+    ],
+    "service_pose_shell_overlap_mm3": 0.0,
+    "service_path_left_0_to90_right_minus90_max_overlap_mm3": 7.733776726664976e-14,
+    "service_checks": [
+      {
+        "panel": "left",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "Approximate button-cluster rear access",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "RESET 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "BOOT 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "Approximate button-cluster rear access",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "RESET 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "BOOT 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "Approximate button-cluster rear access",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "RESET 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "BOOT 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      }
+    ],
+    "latch_root_cut_result_bodies": 3,
+    "max_latch_travel_obstacle_overlap_mm3": 0,
+    "insertion_tilt_deg": [
+      0,
+      10
+    ],
+    "simulated_latch_release_mm": 0.9,
+    "max_insertion_overlap_mm3": 0,
+    "insertion_caveat": "Rigid catch translation approximates released position; elastic deformation/forces not simulated",
+    "layer_sections": {
+      "beam_y_edges_at_x10_z1_5": [
+        -48.4,
+        -46.4
+      ],
+      "catch_guard_x_edges_at_y_minus46_5_z6": [
+        20.0,
+        25.2,
+        26.0,
+        29.0
+      ],
+      "travel_stop_y_edges_at_x23_z3_5": [
+        -53.0,
+        -49.7,
+        -48.8,
+        -45.3
+      ],
+      "socket_wall_x_edges_at_y30_623_z7": [
+        29.7,
+        32.7,
+        35.3,
+        38.3
+      ]
+    },
+    "overhang_checks": [
+      {
+        "panel": "left",
+        "downward_surface_area_above46deg_mm2": 0.0,
+        "max_downward_angle_from_vertical_deg": 44.999984821799444
+      },
+      {
+        "panel": "middle",
+        "downward_surface_area_above46deg_mm2": 0.0,
+        "max_downward_angle_from_vertical_deg": 45.0000475143358
+      },
+      {
+        "panel": "right",
+        "downward_surface_area_above46deg_mm2": 0.0,
+        "max_downward_angle_from_vertical_deg": 45.00003563574447
+      }
+    ],
+    "physical_print": "untested"
+  },
+  "structural_dimensions_mm": {
+    "base": 3,
+    "unrelieved_side_rim": 3.5,
+    "bearing_bay_rim": 3.5,
+    "clipped_male_foot_strip": 3.1,
+    "full_glass_window": [
+      50.8,
+      69.8
+    ],
+    "end_band_depth_Y": 10.1,
+    "USB_end_full_depth_inner_band_Y": 5.6,
+    "local_USB_floor": 1.6,
+    "hinge_socket_stem_walls": 3,
+    "male_cheek_side_posts": [
+      3,
+      3
+    ],
+    "flexure_thickness_Y": 2,
+    "flexure_height_Z": 3,
+    "effective_free_flexure_span_X": 17,
+    "catch_width": 5.2,
+    "side_guard_width": 3,
+    "side_clearance": 0.8,
+    "travel_stop_gap": 0.9
+  },
+  "material": {
+    "actual_solid_volume_cm3": 38.824792211451985,
+    "same_geometry_without_relief_cm3": 41.36547177012961,
+    "CAD_volume_removed_percent": 6.142029692774533,
+    "PLA_density_assumed_g_cm3": 1.24,
+    "solid_equivalent_mass_g": 48.142742342200464,
+    "actual_sliced_mass": "not computed; depends on walls/infill/profile"
+  },
+  "STL_sha256": {
+    "left.stl": "1bb2d98a58490f33cce2498ab337006c07e9bf4e581798a17efd2a33f08da68e",
+    "middle.stl": "5072f90ec5e927a83c3279c8512463ad3f7f43ca6fccf1a3c53096dc17e95cf2",
+    "right.stl": "f593d72a624c4448492e59e02329735ae8541984de91a960687c37e1194243e0",
+    "One-piece trifold - print flat.stl": "a57678cc5a7a4e0d8ac7603c69b6530074472072046a60d361992b8cf8b55be9"
+  }
+}

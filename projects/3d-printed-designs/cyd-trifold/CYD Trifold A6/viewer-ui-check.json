@@ -1,0 +1,58 @@
+{
+  "status": "verified_in_chrome",
+  "checked_at": "2026-11-25T09:31:00-05:00",
+  "url": "http://127.0.0.1:56589/trifold-a6.html?revision=1",
+  "browser": "Chrome; in-app browser unavailable",
+  "front": "All three glass faces and wave textures render fully in the first-loaded oblique view. Hinge crowns are behind the glass.",
+  "glass_cad": {
+    "coplanar": true,
+    "recess_mm": 0.4,
+    "front_validated_in": "/Users/example/Documents/Codex/2026-11-24/i-have-three-of-those-cd/CYD Trifold A6/front-flush-verification.json"
+  },
+  "electronics_back": "Rear button reveals the illustrative electronics and the four hinge crowns.",
+  "fold_path_deg_left_right": {
+    "25%": [
+      0,
+      -90
+    ],
+    "75%": [
+      90,
+      -180
+    ],
+    "100%": [
+      180,
+      -180
+    ]
+  },
+  "controls_verified": [
+    "fold endpoints",
+    "fold slider",
+    "animate folding",
+    "board visibility",
+    "100% board inspection",
+    "section cut",
+    "hinge close-up",
+    "flat print plate"
+  ],
+  "print_view": "Front rims lie down on the plate, with bearings above the bed and board envelopes hidden.",
+  "embedded_3mf": {
+    "matches_source_byte_for_byte": true,
+    "source": "/Users/example/Documents/Codex/2026-11-24/i-have-three-of-those-cd/CYD Trifold A6/Print-in-place A6 - U1 plate.3mf",
+    "build_items": 1,
+    "bodies": 3,
+    "size_mm": [
+      194.0,
+      99.0,
+      27.35
+    ],
+    "sha256": "c0d1349931d0325e22462e13806f9fca00d7de091bad549c3d6ed29657f50e80"
+  },
+  "final_view": "Selected Chrome tab, fully unfolded, boards on, section off, front oblique.",
+  "observations": [
+    "Rear lighting is dim.",
+    "Hinge close-up keeps the generic unfolded caption."
+  ],
+  "console_errors_or_warnings_observed": [],
+  "scope": "Viewer and file checks. Physical fit and print behavior remain untested.",
+  "screenshot": "A6-front.png"
+}

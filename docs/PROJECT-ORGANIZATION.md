@@ -74,3 +74,10 @@ Add one row to [home-gallery.tsv](home-gallery.tsv) per project or interaction. 
 Edit device capabilities, app support, controls and parts rows directly in the root README. Reuse the thumbnail and hardware-guide link from the matching device row. Add a new board's manufacturer references in the hardware gallery first. Keep installed versions and outstanding physical checks tied to the dated device checkpoint.
 
 The Copy-Face previews come from the [prototype renderer gallery at 7cf4f65](https://github.com/yury-g/OpenToy-Coursework/tree/main/projects/copy-face/images). The Nesso Face loop renders scripted idle, left tickle and startled poses with the [Nesso firmware’s drawing code at 7196c33](https://github.com/yury-g/OpenToy-Coursework/tree/main/projects/nesso-n1/firmware/NessoFace). It shows the face area in the default orange shade. The controls table uses illustrated action symbols. The related hardware rows use manufacturer views and a connector identification diagram for the dual-port CYD. Accessory photographs are hosted by the manufacturers.
+
+
+## Visual storytelling for new projects
+
+Lead a project guide with its best real render, animation or screen capture and a short explanation of what the toy does. Show the interaction, then the hardware and assembly, then the source and build instructions. Keep earlier design views reachable from a visual history section. Label simulated motion and mark the current physical test status beside the relevant image.
+
+Every project belongs in the home gallery and the source map. Hardware assemblies such as ditherCam and the CYD tri-fold also belong in the printed-design index. Keep their project names consistent across those entry points. Store the editable source and original visual assets with the project so a later revision can update the story.

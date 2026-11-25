@@ -1,0 +1,52 @@
+CYD TRIFOLD A — THREE SCREENS, ONE PRINT-IN-PLACE HOLDER
+2026-11-24 • Based on Yury's preferred inward-cone hinge A
+
+This prototype holds three ESP32-2432S028 boards (86 x 50 mm PCB) in portrait,
+side by side. It unfolds flat and folds sequentially into a three-layer stack.
+The short opposed-cone bearings inherit A's nominal geometry and clearances.
+There are two bearing units on each seam, four units total, with no loose pins
+or hinge assembly. Three complete trays print already captive.
+
+FOLDING
+With all screens facing you, fold the LEFT screen face-to-face onto the middle.
+Then fold the RIGHT screen over that pair. Unfold in reverse order. The unequal
+axis heights accommodate the tray thickness: left axis Z15, right axis Z23.
+This is an inward roll fold, not an alternating S fold. Do not force the other
+fold direction. No hard stop, holding-torque feature or travel latch is included.
+The screen-to-screen seam is visible: tray pitch70, PCB width50 (20 mm PCB gap).
+Plastic tray edges have a 12 mm gap; short hinges sit beyond the tray ends.
+
+PRINT
+Use the assembled 'Trifold A - print flat.stl' or the supplied arranged 3MF.
+Do not split/auto-arrange its three captive bodies. Units mm, scale100%, as
+supplied flat. U1 270x270 bed; intended PLA, 0.4 mm nozzle, 0.20 mm layers and
+first layer, three walls, four top/bottom layers, 15% infill. Supports/raft/brim
+off. Use your calibrated PLA cooling and flow. The cones use nominal45-degree
+flanks. Tall supports and small snap lips still need a physical print trial.
+The component STLs and board proxies are inspection/viewer files, not separate
+parts to print and assemble. No slice or print has been started for this design.
+
+BOARD FIT AND USB
+Print 'Board fit tray.stl' first if you have not tested the revised tray fit.
+The PCB sits at Z8, with 6 mm nominal room above the 2 mm back plate. Glass proxy
+reaches Z13.1, below protective side rails at14.2. Four corner pads support the
+bare PCB, and four flexible tabs retain its exposed long edges. Ease the tabs
+outward and seat/remove the unplugged board by its bare PCB corners; do not
+push on the glass. Snap force, fatigue and loaded retention are not tested.
+
+Both short ends remain broadly open for USB; the back has a 40 mm wide cable
+relief at each end. USB connector position, cable overmould and fitted headers
+have not been measured. The reference screen and rear-component blocks in the
+viewer illustrate clearance assumptions, not exact board-component geometry.
+All three boards can use external USB power individually. Unplug cables before
+folding; no cable routing through the hinges or connected-cable fold is proven.
+
+WHAT IS CHECKED
+See metadata.json for final bounds and digital collision checks of the staged
+0–180° sequence, including PCB, glass and central rear-component proxy boxes.
+These do not establish physical print release, durability, all-path retention,
+USB-plug fit or exact component fit. A was selected as best by the user, but
+physical test conditions were not provided. This larger, raised-axis version
+needs its own print trial. Source is 'Trifold A.scad'; inspection components
+are left.stl, middle.stl, right.stl. Keep selected A's .40 mm normal cone gap
+and .50 mm axial face gap unless trial evidence calls for a controlled change.

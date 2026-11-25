@@ -1,0 +1,70 @@
+{
+  "status": "verified_revision_2_in_chrome",
+  "checked_at": "2026-11-24T20:17:22-05:00",
+  "url": "http://127.0.0.1:56589/compact-a3.html?revision=2",
+  "title": "CYD \u00b7 Compact A3",
+  "browser": "Chrome",
+  "in_app_browser_error": "Browser is not available: iab",
+  "initial_view": "Three assembled screen panels. Two front-side cartridges and two corresponding rear-side cartridges visible between the assembled views.",
+  "rear_access": "Open backs and two distinct-sized illustrative connector envelopes appear for each board. The rear view still uses dark lighting and offers no individual port labels. The preview flags exact locations and physical fit for a later check.",
+  "flat_plate": {
+    "visible_parts": 10,
+    "rear_frames": 3,
+    "face_frames": 3,
+    "captive_cartridges": 4,
+    "all_appear_flat": true,
+    "embedded_3mf": {
+      "build_items": 10,
+      "vertices_based_bodies_per_cartridge": {
+        "Top Front A cartridge": 2,
+        "Top Back A cartridge": 2,
+        "Bottom Front A cartridge": 2,
+        "Bottom Back A cartridge": 2
+      },
+      "sha256": "af0027cb1bf2bf5d1cc16b171551115fa6503c3a79ee6d0052bcfb6265a76cb3"
+    }
+  },
+  "fold_angles_deg": {
+    "25%": [
+      90,
+      0
+    ],
+    "75%": [
+      180,
+      90
+    ],
+    "100%": [
+      180,
+      180
+    ]
+  },
+  "controls": [
+    "fold slider and endpoints",
+    "100% exploded view",
+    "section cut",
+    "hinge close-up",
+    "rear connector access",
+    "flat print plate",
+    "drag orbit",
+    "auto-orbit",
+    "reset"
+  ],
+  "final_view": "Selected Chrome tab, fully unfolded in Orbit view with boards visible.",
+  "console_errors_or_warnings_observed": [],
+  "issues": [
+    "Rear lighting remains dark. The two illustrative USB envelopes per board differ in size and are unlabeled.",
+    "Hinge close-up uses the general fully unfolded caption after hiding the board envelopes."
+  ],
+  "scope": "Browser preview only. CAD validation and physical connector fit are outside this check.",
+  "screenshots": {
+    "front": "A3-front.png",
+    "rear": "A3-rear.png",
+    "plate": "A3-plate.png"
+  },
+  "exploded_fit": "At 100% explode, the model reframes automatically at its current oblique angle, with all projected parts within the viewport.",
+  "revision_1_fixes_verified": [
+    "Left and right fold-angle labels",
+    "Automatic framing at 100% explode",
+    "Explicit illustrative board envelopes"
+  ]
+}

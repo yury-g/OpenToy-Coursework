@@ -1,0 +1,9 @@
+{
+  "viewer_transform_samples": 41,
+  "maximum_overlap_mm3": 0,
+  "includes_snap_bezels": true,
+  "source_and_mesh_hashes_match": true,
+  "print_transform_matches_export": true,
+  "max_transformed_vertex_error_mm": 1.0789593218788873e-05,
+  "physical_test": "not performed"
+}

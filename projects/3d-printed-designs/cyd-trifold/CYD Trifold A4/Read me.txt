@@ -1,0 +1,89 @@
+A4 — ONE PRINT-IN-PLACE CYD TRIFOLD
+2026-11-24
+
+Print the complete chassis as ONE object with its THREE captive moving bodies
+kept in the supplied positions. No cartridges, hinge pins, separate bezels or
+case panels are assembled afterward. Install only the three boards.
+
+This revision restores the A opposed-cone/divot mechanism. Cone radius3.35 mm,
+cone depth2.85 mm, normal clearance0.40 mm and axial clearance0.50 mm are retained.
+The supports are taller and bed-rooted to clear the loaded trays when folded;
+non-bearing windows lighten them. There are two short units per fold, at the
+top and bottom, four units total. It is a new loaded-holder adaptation of A;
+physical strength, release and fit are not established by the earlier sample.
+
+MATERIAL REMOVED WHERE IT IS USEFUL
+Rounded rear windows, reliefs beneath the bearing lands and open side-service
+areas remove24.4% of CAD volume compared with the same A4 design with reliefs
+switched off:87.37 cm3 instead of115.58 cm3. The retained structure has3 mm bases,
+3.5 mm side rims, a6 mm center spine,8 mm cross ribs,3 mm socket walls and broad
+PCB seats and guard roots. No long1.3 mm skeletal rails or skinny exposed clip
+towers remain. Calculated mass108.34 g assumes fully solid PLA at1.24 g/cm3;
+actual slicer mass depends on the walls, infill and installed nozzle.
+
+PRINT FLAT
+Use the arranged A4 plate3MF or One-piece trifold - print flat.stl. The three
+individual panel meshes are viewer/inspection assets, not parts to print and
+assemble. Keep100% scale and the flat supplied orientation. Supports and raft
+off; keep any brim out of moving gaps. Select your actual installed nozzle in
+the slicer. The project geometry uses the original0.4 mm nozzle /0.20 mm layer
+clearance assumptions; no printer profile was changed. Inspect the sliced
+bearing clearances and horizontal flexures before printing. Use enough walls
+or local solid fill to make the flexures and bearing walls substantial with
+your chosen nozzle. Physical release, spring force and strength need a trial.
+
+All three shells contact the bed. Final mesh analysis found no elevated
+underside steeper than45 degrees from vertical. The protected catch undersides
+and support-window roofs grow at45 degrees; there are no suspended latch towers.
+The flexure beams lie directly on the bed and remain joined at their roots.
+
+BOARD INSTALLATION — NO CASE ASSEMBLY
+The trays are for the confirmed86 x50 mm dual USB-C + micro-USB CYD boards. With
+power unplugged, tuck the USB end's two bare PCB corners under the fixed lips.
+Raise the opposite end only about10 degrees. Hold the two protected catches at
+the non-USB end back slightly, lower the board onto all four seats, then release
+the catches. Apply force to bare PCB corners, not glass. To remove a board,
+release one catch and then the other, lift that end, and slide the USB end free.
+Do not force a binding catch. Actual snap/release force remains untested.
+
+Each catch is a broad5.2 mm block supported by a horizontal2 x3 mm PLA beam.
+Its effective free span is about17 mm between the rounded root and catch. Rear
+stops limit nominal motion to0.9 mm; side guards leave0.8 mm clearance. The
+CAD root-cut test separated both catch/beam sections from the body, confirming
+that neither was accidentally fused to a hinge foot or support. Released-catch
+clearance and board insertion were checked geometrically, not by force or
+elastic-strain simulation.
+
+CONNECTORS AND BUTTONS
+Raised PCB seats and the solid3 mm USB-end load band keep both USB approaches
+clear while strengthening the positive-end hinge connection. Each USB check
+uses an18 x11 mm overmould with22 mm insertion depth at X offsets+/-10 mm, then
+a6 x6 mm cable corridor continuing beyond the case. These are design envelopes,
+not measurements of the user's exact dual-USB connector positions. The power
+connector shares the generous short-end access region. Rear windows and local
+side openings provide access to BOOT, RESET, GPIO/extended IO, DHT, speaker and
+microSD. For large inner-edge plugs or card insertion, angle the neighboring
+panel away; the viewer's service pose illustrates this. Unplug cables before
+folding and account for any protruding card or added wiring.
+
+FOLD
+Start with all screens facing you. Fold the LEFT screen forward over the middle,
+then the RIGHT over the pair. Unfold in reverse order. This is an inward roll
+fold, not the rejected modular S-fold. Left axis: X=-32, Z18.3; right axis:
+X32, Z28.3. Both axes run along Y. The right panel rotates-180 degrees; left+180.
+There is no travel latch, detent or designed friction-holding feature.
+
+The64 mm board pitch gives6 mm between58 mm tray edges and20.8 mm between43.2 mm
+active images. A60 mm pitch passed folding but interfered with USB housings;
+64 mm retains lateral plug clearance without thinning the bearing supports.
+Open envelope:186 x160 x32.65 mm. Folded:72.8 x160 x56.6 mm.
+
+VERIFICATION
+CAD verification.json and CAD verification log.txt record three watertight
+bodies,362 staged fold poses, cross-panel PCB/glass/rear-component checks,
+six USB/cable corridors,15 representative service-access checks, latch travel,
+released-latch0–10 degree board insertion, actual layer cross sections and
+material comparison. Digital intersections are zero within numerical tolerance.
+These checks do not establish PLA fatigue, loaded durability or exact connector
+fit. The supplied electronic proxies are illustrative envelopes. Editable source
+is One-piece A trifold.scad; earlier rejected A3 files remain separate.

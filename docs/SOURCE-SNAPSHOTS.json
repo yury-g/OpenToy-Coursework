@@ -103,5 +103,15 @@
     "name": "companions/nearby-buddy/main",
     "source": "nearby-buddy",
     "revision": "a73cad5d15b1551e6ef8d9c5e2aee632bf693b0e"
+  },
+  {
+    "name": "projects/ditherCam and its enclosure",
+    "source": "OpenToy feature/dithercam",
+    "revision": "08e5dec69797018f7608ee5732547ec7da4c2ae0"
+  },
+  {
+    "name": "projects/3d-printed-designs/cyd-trifold",
+    "source": "CYD folding project, A6 and prior design folders",
+    "revision": "2026-11-25 local delivery"
   }
 ]

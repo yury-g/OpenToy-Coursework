@@ -1,0 +1,334 @@
+{
+  "source_sha256": "02e4d0cc262e784a23ca45b03f527f639e3384be5c7c4e9aaa079e43607505f7",
+  "A_kernel_sha256": "9ec819a7879ef99349a32add5a3122ec4e36631da4e29e195f73d16c52456502",
+  "verification": {
+    "sampled_poses": 362,
+    "max_shell_overlap_mm3": 0,
+    "max_own_part_overlap_mm3": 0,
+    "max_board_glass_rear_overlap_mm3": 2.3484312368024507e-13,
+    "exact_A_source_copy": true,
+    "all_meshes_watertight": true,
+    "print_objects": 10,
+    "printed_solid_bodies": 14,
+    "all_print_parts_flat_z0": true,
+    "usb_access_checks": [
+      {
+        "panel": "left",
+        "port_x_offset_mm": -10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "left",
+        "port_x_offset_mm": 10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "middle",
+        "port_x_offset_mm": -10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "middle",
+        "port_x_offset_mm": 10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "right",
+        "port_x_offset_mm": -10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "right",
+        "port_x_offset_mm": 10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      }
+    ],
+    "service_pose_deg": [
+      75,
+      0,
+      75
+    ],
+    "service_access_checks": [
+      {
+        "panel": "left",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "BOOT RESET rear press",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "BOOT RESET rear press",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "BOOT RESET rear press",
+        "overlap_mm3": 0
+      }
+    ],
+    "cartridge_locating_checks": [
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 0,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 20.43152600602351
+      },
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 0,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 12.147409705052677
+      },
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 1,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 15.461274006278789
+      },
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 1,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 15.461056977139398
+      },
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 2,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 3.5999908447265625
+      },
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 2,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 114.15827003030992
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 0,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 20.431526006159835
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 0,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 12.147409704916162
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 1,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 15.461057184082687
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 1,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 15.461273069107612
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 2,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 3.5999908447265625
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 2,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 114.15827001098334
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 0,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 20.431523113708536
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 0,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 12.147407890675716
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 1,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 16.03810693048226
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 1,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 15.46105503586686
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 2,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 115.20076817322338
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 2,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 3.4134930520747324
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 0,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 20.431523113572023
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 0,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 12.147407890812088
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 1,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 15.461055289341235
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 1,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 16.038107000187534
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 2,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 115.20076813363697
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 2,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 3.413493052074732
+      }
+    ],
+    "bezel_lift_0_5mm_latch_intersections_mm3": [
+      0.6505697854250492,
+      0.6505732172883721,
+      0.650569785425049
+    ],
+    "physical_validation": "A was reported printed flat by user; new mount/trays/clip force/USB fit untested"
+  },
+  "STL_sha256": {
+    "middle-0-60-hinge.stl": "0c9c96d93cde87cb931cc9af895d65d02f98121b31d5f019fe8ebf055a09984a",
+    "middle-0--60-hinge.stl": "5cee88dae1c798079a15b4ac9f8ec465b5f32f38c8540b65cbd07602486aee8c",
+    "middle-1-60-hinge.stl": "fef14f0dacb3caa4f59ef2325597d124fc70dff99ecc9f704540c5b800cdc427",
+    "right-1-60-hinge.stl": "59c35e55b938f5939f167b10a0695548a13ee373a9bc62d8151209cca3cb2722",
+    "left face - print flat.stl": "e474890ff02cddcd7cc0f99568d6c8b138ae767f0aad9c070530a48f1f3b365f",
+    "left-0-60-hinge.stl": "dde8b84ba689e82c77225727e92c3ac5a50c84c6d97193cadefb135e3b5722f9",
+    "middle face - print flat.stl": "8f97f117eb904f9bd4d73e82eb9a1e26381703d147591df23dd18adad6edcaa4",
+    "left tray - print flat.stl": "7f59d35095b5859be9e46fead1d3b11dec5234100bd40102517b56c5db440765",
+    "middle tray - print flat.stl": "94cdf9bfabeb48ca50cac9bf5470fac1322b0f9821ce1b64cc3b766c74f046df",
+    "left-face.stl": "7ec4d3239e8f8ad75b85779439a2fa8b772a5467d45f9fdbcc2724ee671df4b6",
+    "left.stl": "9ccd9c8193d112b117e2228ee1716ec2e5d526010eccc17d62c53a48cb07cc0d",
+    "right-1--60-hinge.stl": "afcda8f97e99c3682fdeecdd73e90b98cf810403ebddcb13a013f19c713d5f96",
+    "right-face.stl": "adb1c8a2e5048007c08e3215e22e04ace6c345301e777a52dc808ec02217dd7f",
+    "middle-face.stl": "223a10e10413fc6606cb84ece26f76d4517fb8e25980ca20a8f283b313e9acbb",
+    "A cartridge - print flat.stl": "db1ec2cfbc8b15e2077a458f018520e58e35a3b086597c0eb298f15080de0e7c",
+    "right tray - print flat.stl": "db9095abfdb273a507b3b925d51db2c799daf833f58d5904d898e297b94b4563",
+    "middle-1--60-hinge.stl": "f9fc25f00ceb351bb96b89cd7436f1eae31debcad9542e4a24c1f2869b86c2ee",
+    "middle.stl": "94cdf9bfabeb48ca50cac9bf5470fac1322b0f9821ce1b64cc3b766c74f046df",
+    "right.stl": "03125315fd29f3ff7ccb200941ca4e9c12b3fa091eeb6e687c266438619e27f8",
+    "right face - print flat.stl": "a3be4c202b280641f34d8012b65d9800778f793fa4b156c36623935f8e58c1de",
+    "left-0--60-hinge.stl": "6835184139dab8a7eb7104188c19bbc9d73c2efed30f747aace2fc08f4b37f7b"
+  }
+}

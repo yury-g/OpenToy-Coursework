@@ -1,0 +1,13 @@
+{
+  "viewer_transform_samples": 41,
+  "maximum_overlap_mm3": 0,
+  "source_sha256": {
+    "Trifold A.scad": "00ca3b82bb8d9c4ac59c30f99e04bbdcd70c88a24c493a2ea6e2c757e9f8a699",
+    "metadata.json": "f9e15ecde5335248bacb4ffbf4631fdbde1426fce0bb81affc9894afd374f272",
+    "Trifold A - print flat.stl": "adf6012a66b92466beef61562c157c93e68b66ecc0cd5a634d571d25737087fa",
+    "left.stl": "4a31c1fe13e2afdee5f86548760dd199a1e76fd37bcc1cc9cee3c0c06f49c7e8",
+    "middle.stl": "2f2fa7dfcfdb29a0d9bce95075e9ff1bb0233483900c0a925f8ebda9607fc0ed",
+    "right.stl": "beaf28118750894817e3b2d97c6f23d1e1e4400e249196987046d8820516ba50"
+  },
+  "assembly_volume_matches_components": true
+}

@@ -1,0 +1,130 @@
+{
+  "reviewed_date": "2026-11-24",
+  "scope": "Independent read-only review of frozen A4 structural sections, print-flat mesh bed contact and downward surfaces. No source edits, slicer/GUI/printer use, or duplicate fold sweep.",
+  "status": "geometry_review_passed_with_physical_trial_limits",
+  "source_sha256": "a5be5350086b5106454386681385727d635f35ae615f886739f69329d4fc9eed",
+  "stale_exports_detected": false,
+  "provenance": "Source hash and all four mesh hashes match CAD verification.json. No independent OpenSCAD regeneration was performed.",
+  "architecture": "One flat print object containing three captive tray bodies; no separate cartridges or face frames. Only boards are installed afterward.",
+  "structural_sections_mm": {
+    "base_thickness": 3,
+    "side_rim_width": 3.5,
+    "center_spine_width": 6,
+    "internal_cross_rib_widths": [
+      8,
+      8
+    ],
+    "negative_end_band": 7,
+    "positive_end_band": 9,
+    "male_cheek_side_post_widths": [
+      4,
+      4.4
+    ],
+    "male_cheek_axial_thickness": 4.5,
+    "socket_stem_side_walls": 3,
+    "arch_roof_slopes_deg": 45,
+    "front_connector_width": 8,
+    "negative_connector_cross_band_width": 3.5,
+    "latch_beam_bending_thickness": 2,
+    "latch_beam_height": 3,
+    "latch_effective_free_span_approx": 17,
+    "catch_post_width_x": 5.2,
+    "latch_rear_stop_gap": 0.9,
+    "latch_side_guard_gap": 0.8,
+    "latch_tip_base_to_tray_gap": 0.8
+  },
+  "resolved_findings": [
+    "Positive-end connector feet now overlap the solid USB-end load band; all bearing supports belong to their tray body.",
+    "The earlier 0.5 mm residual cross-strip is gone. The positive end retains a 9 mm band, with a 3 mm base thickness.",
+    "Negative-end connector load paths pass behind the latch band into its guard structure instead of fusing across the flexure free spans.",
+    "Rear side guards overlap the long rails; the previous line-only contact and nonmanifold edges are absent."
+  ],
+  "retention_review": {
+    "style": "Rigid USB-end corner lips and two protected horizontal base-plane flexures at the opposite end.",
+    "isolation": "Free beams and catch bases have through-air gaps rather than a floor underneath them. Source routing leaves rear connector bodies behind the flexure span.",
+    "root": "Wide central anchor and rounded root blend connect to the central base spine.",
+    "effective_length_note": "The drawn beam extends X=1..23, but the practical free segment is approximately X=3..20: about17 mm, not22 mm.",
+    "support_strategy": "Catch and fixed-lip undersides grow at45 degrees. Guards stand higher than the catches and limit overtravel.",
+    "physical_limits": "Release effort, actual PLA strain/fatigue, creep and holding strength are not established by the rigid CAD checks."
+  },
+  "print_meshes": {
+    "left.stl": {
+      "sha256": "13409c006efbbf3c432025d679011fa6e1f2d7a21626689f778d2d0e06b694d7",
+      "matches_final_export_manifest": true,
+      "body_count": 1,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 4217.5534,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ]
+    },
+    "middle.stl": {
+      "sha256": "237e1ef719aca0629d55538ed3dbd8a5acf26bcb3233b12feb1f4e76da045feb",
+      "matches_final_export_manifest": true,
+      "body_count": 1,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 5408.2505,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ]
+    },
+    "right.stl": {
+      "sha256": "5789edbf845920a8b22d4869a50ed20dc5145ef2bd25fb5c2b3b6ab15700ca53",
+      "matches_final_export_manifest": true,
+      "body_count": 1,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 4065.1967,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ]
+    },
+    "One-piece trifold - print flat.stl": {
+      "sha256": "900d7b9d28619731bf97bd5dee974b4187c7793454f4750136178c8a506541b7",
+      "matches_final_export_manifest": true,
+      "body_count": 3,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 4217.5534,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        },
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 5408.2505,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        },
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 4065.1967,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ]
+    }
+  },
+  "assembly_volume_matches_components": true,
+  "limits": [
+    "Surface-angle and bed-contact checks do not guarantee slicer extrusion paths, bridge closure quality or successful support-free printing.",
+    "No new meaningful unsupported horizontal roof or floating solid body was found. Conical facets and pointed arch closure still require normal slicer inspection and a physical trial.",
+    "First-layer spread may restrict the print-in-place bearing gaps; release and wear remain untested.",
+    "Structural widths and connected load paths are geometric observations, not a strength or drop-test certification.",
+    "PCB insertion, connector access, latch travel and fold sweeps are recorded separately by the CAD agent and parent; they were not duplicated in this review."
+  ]
+}

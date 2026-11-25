@@ -1,0 +1,162 @@
+{
+  "label": "D",
+  "design_name": "Outward-cone blind-socket fork",
+  "status": "Complete CAD experiment; mesh and sampled motion verified; physically unprinted and unsliced",
+  "units": "mm",
+  "size_mm": [
+    56,
+    30,
+    10.4
+  ],
+  "changes_relative_to_A": [
+    "Reverses bearing ownership: outward cones on center/right leaf; blind sockets on outer/left fork.",
+    "Uses pointed 3.6 mm long, 45 degree half-angle local cones rather than A's truncated inward cones.",
+    "Normal cone clearance increased from 0.40 to 0.45 mm; cheek face clearance 0.60 mm.",
+    "Axis raised from 4.2 to 5.0 mm; panels 2.8 mm thick; broad 56 x 30 footprint.",
+    "Adds 0.25 mm bottom perimeter relief and 0.60 mm deep engraved D on left flap."
+  ],
+  "clearance_definitions": {
+    "cone_normal_gap_mm": 0.45,
+    "cone_radial_offset_mm": 0.6363961031,
+    "definition": "Socket cone radius and length expanded by sqrt(2)*0.45, preserving a nominal 0.45 mm normal gap along 45 degree conical faces. Faceted mesh approximation applies.",
+    "axial_cheek_to_hub_face_gap_mm": 0.6,
+    "tip_axial_clearance_mm": 0.6363961031,
+    "engagement_beyond_socket_entrance_mm": 3.0,
+    "first_layer_relief_mm": 0.25
+  },
+  "fold_range": {
+    "stationary_component": "D-left.stl",
+    "moving_component": "D-right.stl",
+    "pivot_point_mm": [
+      0,
+      0,
+      5
+    ],
+    "hinge_axis_unit_vector": [
+      0,
+      1,
+      0
+    ],
+    "signed_rotation_range_deg": [
+      0,
+      -180
+    ],
+    "description": "Right leaf folds upward over stationary left leaf. Coordinates match all supplied as-printed STL files.",
+    "folded_panel_face_gap_mm": 4.4
+  },
+  "print_assumptions": {
+    "printer": "Snapmaker U1",
+    "material": "PLA",
+    "nozzle_mm": 0.4,
+    "suggested_layer_height_mm": 0.2,
+    "first_layer_height_mm": 0.2,
+    "walls": 3,
+    "infill_percent": 20,
+    "orientation": "As supplied, Z minimum zero; both broad panel bottoms on plate.",
+    "supports": "Off, including inside bearings.",
+    "brim": "None crossing moving gaps; use clean plate and broad existing footprint.",
+    "assembly": "None. Print variant-D.stl as one object retaining both disconnected shells in their exact positions. Only free normal clearance/stringing after full cooling.",
+    "scale": "100%; scaling changes working clearances.",
+    "overhang_strategy": "Each solid grows from its own bed-contacting footprint. Male cone underside grows at nominal 45 degrees; blind socket roof closes with an axial 45 degree surface. Circular faceting and final roof closure remain physical print risks."
+  },
+  "captive_retention": {
+    "mechanism": "Two opposed local cones enter blind sockets 3 mm beyond their mouths. The intact fork limits axial translation, so either cone cannot withdraw by its full engagement while the opposite cone remains seated. No separate or continuous cylindrical hinge pin.",
+    "qualification": "Geometric design intent; axial/radial pullout, fork flex, off-axis tilt and destructive loads not experimentally tested."
+  },
+  "mesh_kinematic_checks": {
+    "assembly": {
+      "watertight": true,
+      "winding_consistent": true,
+      "bodies": 2,
+      "bounds_mm": [
+        [
+          -28.0,
+          -15.0,
+          0.0
+        ],
+        [
+          28.0,
+          15.0,
+          10.399999618530273
+        ]
+      ],
+      "volume_mm3": 5456.151439880872
+    },
+    "left": {
+      "watertight": true,
+      "winding_consistent": true,
+      "bodies": 1,
+      "bounds_mm": [
+        [
+          -28.0,
+          -15.0,
+          0.0
+        ],
+        [
+          5.0,
+          15.0,
+          10.399999618530273
+        ]
+      ],
+      "volume_mm3": 2957.7882470994105
+    },
+    "right": {
+      "watertight": true,
+      "winding_consistent": true,
+      "bodies": 1,
+      "bounds_mm": [
+        [
+          -3.59999942779541,
+          -15.0,
+          0.0
+        ],
+        [
+          28.0,
+          15.0,
+          8.59999942779541
+        ]
+      ],
+      "volume_mm3": 2498.3631927814617
+    },
+    "rotation_sweep": {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axis_point_mm": [
+        0,
+        0,
+        5
+      ],
+      "angle_deg": [
+        0,
+        -180
+      ],
+      "step_deg": 0.5,
+      "poses": 361,
+      "max_intersection_mm3": 0,
+      "colliding_poses": 0,
+      "limitation": "Discrete ideal-mesh sweep, not continuous proof or tolerance/deformation simulation."
+    },
+    "assembled_export_volume_difference_mm3": 0.0
+  },
+  "limitations": [
+    "Not printed, sliced or physically tested. Nominal gaps do not guarantee release on a specific PLA/process.",
+    "Discrete 0.5-degree rigid-mesh sweep is not a continuous mathematical proof; no loaded, warped or tolerance-extreme simulation.",
+    "Pointed tips may round during slicing; seam placement and extrusion can increase friction.",
+    "Socket roofs and narrow clearances may string or sag; no internal support is intended.",
+    "No detent, end stop or friction tuning. Not a load-rated enclosure joint.",
+    "Retention is based on opposed geometry, not a six-degree-of-freedom escape search or pull test."
+  ],
+  "export_notes": "Use OpenSCAD --backend CGAL --export-format binstl. Default manifold backend produced degenerate STL triangles for this geometry; supplied CGAL meshes pass raw trimesh watertightness checks without repair.",
+  "output_paths": {
+    "variant-D.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/variant-D.stl",
+    "variant-D.scad": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/variant-D.scad",
+    "D-left.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/D-left.stl",
+    "D-right.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/D-right.stl",
+    "checks.json": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/checks.json",
+    "check.py": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/check.py",
+    "RESULT.json": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/RESULT.json"
+  }
+}

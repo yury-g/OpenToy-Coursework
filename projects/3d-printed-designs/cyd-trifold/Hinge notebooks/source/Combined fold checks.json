@@ -1,0 +1,82 @@
+[
+  {
+    "label": "A",
+    "max_intersection_mm3": 0,
+    "assembly_vs_components_difference_mm3": 0.0,
+    "poses": 181,
+    "pivot": [
+      0,
+      0,
+      4.2
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ],
+    "range_degrees": [
+      0,
+      -180
+    ]
+  },
+  {
+    "label": "B",
+    "max_intersection_mm3": 0,
+    "assembly_vs_components_difference_mm3": 0.0,
+    "poses": 181,
+    "pivot": [
+      0,
+      0,
+      0
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ],
+    "range_degrees": [
+      0,
+      -180
+    ]
+  },
+  {
+    "label": "C",
+    "max_intersection_mm3": 0,
+    "assembly_vs_components_difference_mm3": 0.0,
+    "poses": 181,
+    "pivot": [
+      0,
+      0,
+      5.2
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ],
+    "range_degrees": [
+      0,
+      -180
+    ]
+  },
+  {
+    "label": "D",
+    "max_intersection_mm3": 0,
+    "assembly_vs_components_difference_mm3": 0.0,
+    "poses": 181,
+    "pivot": [
+      0,
+      0,
+      5
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ],
+    "range_degrees": [
+      0,
+      -180
+    ]
+  }
+]

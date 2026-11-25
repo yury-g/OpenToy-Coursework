@@ -1,0 +1,92 @@
+{
+  "label": "B",
+  "design_name": "Upright annular dovetail race",
+  "units": "mm",
+  "changes_relative_to_A": [
+    "Vertical print axis and edge-printed leaves replace A's horizontal axis and flat feet.",
+    "A single integral annular ridge runs in a closed mating groove. The upper and lower shoulders retain the collar axially. An overhead spoke connects the fixed hub to its leaf.",
+    "A recessed B marks the fixed leaf."
+  ],
+  "clearances_mm": {
+    "radial_at_equal_z": 0.55,
+    "normal_to_45_degree_flank": 0.389,
+    "first_layer_radial_at_z0": 1.15,
+    "first_layer_relief_fades_by_z": 0.4,
+    "overhead_spoke_to_collar": 0.8,
+    "ridge_radius": 4.7,
+    "collar_throat_radius": 3.55,
+    "radial_retention_overlap": 1.15,
+    "centered_axial_travel_before_flank_contact_each_direction": 0.55
+  },
+  "fold_range": {
+    "degrees": [
+      0,
+      180
+    ],
+    "axis": "World Z through (0,0)",
+    "direction": "Hold B-marked left leaf fixed. Looking down from +Z, turn the right leaf clockwise from the supplied open pose to parallel folded leaves.",
+    "folded_leaf_face_gap_mm": 2,
+    "hard_stop_at_180": false
+  },
+  "print_assumptions": [
+    "Snapmaker U1, PLA, 0.4 mm nozzle, nominal 0.20 mm layers, 3 walls. Import variant-B.stl at 100% in its supplied orientation, as one object. Both bodies contact the plate.",
+    "Use no generated supports or brim inside the bearing. Axis upright; groove flanks grow at 45 degrees. The fixed spoke bridges up to about 8 mm between leaf and hub; use bridge cooling and orient bridge lines along X if tuning is necessary.",
+    "Cool before moving; flex the two leaves gently to release incidental stringing. Already captured in the print."
+  ],
+  "envelope_mm": [
+    48,
+    13.8,
+    12.4
+  ],
+  "mesh_checks": {
+    "export": "OpenSCAD CGAL backend, binary STL. Regenerate using --backend CGAL.",
+    "assembly_watertight": true,
+    "consistently_wound_positive_volumes": true,
+    "assembly_shell_count": 2,
+    "individual_shell_counts": [
+      1,
+      1
+    ],
+    "individual_volumes_mm3": [
+      1058.387921,
+      1410.004817
+    ],
+    "minimum_z_mm": 0,
+    "assembly_vs_union_of_inspection_meshes": "Manifold3D boolean differences in both directions had zero volume."
+  },
+  "kinematic_checks": {
+    "method": "Manifold3D mesh intersections and surface gap for 181 poses, centered on nominal axis, 1 degree steps inclusive.",
+    "intersection_volume_mm3": 0,
+    "min_sampled_gap_mm": 0.38782,
+    "continuous_clearance_argument": "Every intermediate pose is within 0.5 degrees of a sample. The moving body's maximum XY radius is below 24.34 mm, so every surface point moves less than 0.213 mm from its nearest sample. This leaves over 0.174 mm of conservative clearance throughout the nominal sweep.",
+    "axial_capture_check": "Pure axial displacement of -1.5 and +1.5 mm at the open pose produces 28.28 and 33.51 cubic mm of interference, respectively."
+  },
+  "limitations": [
+    "CAD checks assume rigid nominal geometry and a centered axis. Physical breakaway, lateral play, bridge sag, first-layer expansion, wear and pull-out strength are untested.",
+    "An upright axis changes the plate footprint and build orientation for a future enclosure. Coupon testing does not validate the weight or clearances of three populated CYDs."
+  ],
+  "output_paths": {
+    "variant-B.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/variant-B/variant-B.stl",
+    "variant-B.scad": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/variant-B/variant-B.scad",
+    "B-left.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/variant-B/B-left.stl",
+    "B-right.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/variant-B/B-right.stl",
+    "RESULT.json": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/variant-B/RESULT.json"
+  },
+  "moving_component": "B-right.stl",
+  "stationary_component": "B-left.stl",
+  "pivot_point_mm": [
+    0,
+    0,
+    0
+  ],
+  "hinge_axis_unit_vector": [
+    0,
+    0,
+    1
+  ],
+  "signed_rotation_range_deg": [
+    0,
+    -180
+  ],
+  "status": "CAD and mesh validation passed. Unsliced and physically untested."
+}

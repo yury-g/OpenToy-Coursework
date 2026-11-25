@@ -19,6 +19,8 @@ Start with a device in the [visual home page](../README.md), open an app guide a
 | CrowPanel Eyes | [Large-screen port](../projects/crowpanel/README.md) |
 | Nearby Buddy | [Full companion source and enclosure](../companions/nearby-buddy/main/README.md) |
 | Battery Faces | [Base](../companions/battery-faces/main/README.md), [gamepad](../companions/battery-faces/feature/seesaw-gamepad/README.md), [buttons and haptics](../companions/battery-faces/feature/qwiic-accessories/README.md), [archived camera experiment](../companions/battery-faces/archive/camera-test-v17/README.md) |
+| ditherCam | [Flip camera firmware](../projects/ditherCam/README.md) and [enclosure](../projects/3d-printed-designs/ditherCam/README.md) |
+| CYD tri-fold | [A6 frame, viewer, print files and design history](../projects/3d-printed-designs/cyd-trifold/README.md) |
 | Printed parts | [Orange Face and other designs](../projects/3d-printed-designs/README.md), [Plant](../mechanical/plant-v02/README.md) |
 | Earlier XIAO toys | [Archived boards and guides](../archive/README.md) |
 | Manufacturer designs | [Eight-platform hardware gallery](../hardware/README.md) |

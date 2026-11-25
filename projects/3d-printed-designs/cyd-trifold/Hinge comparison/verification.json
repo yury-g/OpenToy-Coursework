@@ -1,0 +1,62 @@
+{
+  "plate_bounds_mm": [
+    [
+      68.49296112214874,
+      97.00232457007263,
+      0.0
+    ],
+    [
+      203.23254644801926,
+      181.0,
+      12.399999618530273
+    ]
+  ],
+  "coupons": [
+    {
+      "label": "A",
+      "filename": "A - Baseline.stl",
+      "bodies": 2,
+      "dimensions_mm": [
+        52.0,
+        26.0,
+        8.550000190734863
+      ],
+      "volume_mm3": 4675.230216715838
+    },
+    {
+      "label": "B",
+      "filename": "B - Astra 6.2.stl",
+      "bodies": 2,
+      "dimensions_mm": [
+        48.0,
+        13.799999237060547,
+        12.399999618530273
+      ],
+      "volume_mm3": 2468.3927383842806
+    },
+    {
+      "label": "C",
+      "filename": "C - Sol 6.2.stl",
+      "bodies": 2,
+      "dimensions_mm": [
+        60.000000000000014,
+        32.0,
+        10.199999809265137
+      ],
+      "volume_mm3": 6609.510824723734
+    },
+    {
+      "label": "D",
+      "filename": "D - Astra 6.stl",
+      "bodies": 2,
+      "dimensions_mm": [
+        56.0,
+        30.0,
+        10.399999618530273
+      ],
+      "volume_mm3": 5456.151439880875
+    }
+  ],
+  "all_watertight": true,
+  "three_mf_readback": true
+}

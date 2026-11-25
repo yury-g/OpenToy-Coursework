@@ -1,0 +1,135 @@
+{
+  "label": "B",
+  "model": "Astra 6.2",
+  "creation_date": "2026-11-24",
+  "design_name": "Rounded twin annular-race miniature notebook",
+  "units": "mm",
+  "status": "Complete CAD and verified STL. Unsliced and physically untested.",
+  "moving_component": "notebook-B-right.stl",
+  "stationary_component": "notebook-B-left.stl",
+  "pivot_point_mm": [
+    0,
+    0,
+    0
+  ],
+  "hinge_axis_unit_vector": [
+    0,
+    0,
+    1
+  ],
+  "signed_rotation_range_deg": [
+    0,
+    -180
+  ],
+  "changes_relative_to_A": [
+    "Upright covers and vertical fold axis. Two spaced circumferential dovetail bearings replace opposed end cones.",
+    "Each fixed boss has a circumferential ridge trapped in a matching closed collar. The two bosses share a square web and the moving collars share an open cage with four peaked windows. The mechanism prints assembled."
+  ],
+  "layout": {
+    "assembly_envelope_mm": [
+      78,
+      13.8,
+      35.6
+    ],
+    "panel_thickness_mm": 3,
+    "bearing_count": 2,
+    "bearing_pitch_mm": 23,
+    "bearing_z_bands_mm": [
+      [
+        0,
+        9.4
+      ],
+      [
+        23,
+        32.4
+      ]
+    ],
+    "interbearing_space_mm": 13.6,
+    "folded_faces_gap_mm": 2
+  },
+  "clearances_mm": {
+    "radial_same_z": 0.55,
+    "nominal_normal_on_45_degree_flanks": 0.389,
+    "bed_radial_separation": 1.15,
+    "bed_relief_blend_height": 0.4,
+    "under_top_spoke": 0.8,
+    "retaining_overlap_radial": 1.15
+  },
+  "fold_range": "Clockwise viewed from +Z. Both hinges act simultaneously from open (0) to folded (-180). No designed 180-degree stop.",
+  "cover_marking": {
+    "surface": "Exterior +Y face of the fixed panel; right-reading from outside.",
+    "text": [
+      "B",
+      "Astra 6.2",
+      "2026-11-24"
+    ],
+    "treatment": "Bold, 0.46 mm deep recesses. Date and model have approximately 3.34 and 3.64 mm actual character height respectively."
+  },
+  "print_assumptions": [
+    "Snapmaker U1, PLA, 0.4 mm nozzle. Use one assembled STL in its supplied orientation with Z minimum zero. Nominal 0.20 mm layers and 3 walls. Both panels contact the bed.",
+    "Use no generated supports or interior brim. Lower race has bed relief. Window roofs and race flanks are sloped. The flat underside of the upper spoke bridges roughly 6\u20139 mm from the rounded fixed panel to the upper hub depending on the bridge line.",
+    "Cool before freeing any incidental stringing. No insertion, snapping together or hardware is required."
+  ],
+  "mesh_kinematic_checks": {
+    "bed_contact_area_mm2_left_right": [
+      109.3764177566681,
+      185.84287751684724
+    ],
+    "shell_counts": [
+      2,
+      1,
+      1
+    ],
+    "assembly_bounds": [
+      [
+        -39.0,
+        -6.899999618530273,
+        0.0
+      ],
+      [
+        39.0,
+        6.899999618530273,
+        35.599998474121094
+      ]
+    ],
+    "volume_residual_mm3": 0.0,
+    "sampled_gap_mm": 0.38782874408280504,
+    "sweep_lower_bound_mm": 0.04630367718801642,
+    "axial_intersections_mm3": [
+      56.56845489092936,
+      61.461925262570674
+    ],
+    "incised_lettering_extent_xz_mm": {
+      "B": [
+        7.453424453735352,
+        8.408224105834961
+      ],
+      "Astra 6.2": [
+        21.375901222229004,
+        3.6381378173828125
+      ],
+      "2026-11-24": [
+        23.705411911010742,
+        3.3431520462036133
+      ]
+    }
+  },
+  "check_method": "CGAL binary STL export. Trimesh checked watertight positive solids. Manifold3D checked assembly equivalence, intersections and minimum gaps for all 181 integer-degree poses. For intermediate angles, subtract maximum surface-point travel over 0.5 degrees from minimum sampled clearance. Axial intersections are for moving body offsets of -1.5 and +1.5 mm in the open pose.",
+  "limitations": [
+    "Clearances and retention apply to rigid nominal geometry. Bed adhesion of the upright panels, bridge sag, lettering resolution, bearing drag and loaded durability need physical testing."
+  ],
+  "output_paths": {
+    "notebook-B-left.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/notebook-B/notebook-B-left.stl",
+    "notebook-B-right.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/notebook-B/notebook-B-right.stl",
+    "notebook-B.scad": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/notebook-B/notebook-B.scad",
+    "notebook-B.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/notebook-B/notebook-B.stl",
+    "verify.py": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/notebook-B/verify.py",
+    "RESULT.json": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra62/outputs/notebook-B/RESULT.json"
+  },
+  "revision": "Rounded production comparison candidate",
+  "rounding": {
+    "covers": "4.8 mm outline corner radii, 0.74 mm roll into both broad faces. The build plane truncates the lower outline 1.9 mm above its virtual bottom, retaining straight adhesion lands and printable lower slopes.",
+    "hinge": "0.85 mm roll around the collar crown, 0.65 mm roll atop the hub, 0.8 mm plan radii and 0.47 mm upper roll on the fixed spoke, 0.65 mm rounds on the peaked cage-window outlines.",
+    "functional_edges": "Both dovetail flank profiles, retention shoulders, throat dimensions, lower race relief, flat spoke bridging underside and bed-contact lands remain defined."
+  }
+}

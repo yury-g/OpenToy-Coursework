@@ -1,0 +1,188 @@
+{
+  "label": "C",
+  "design_name": "Outward-cone hinge with through-vented cheeks",
+  "status": "Meshes exported and digitally verified. Physical print and release are untested.",
+  "output_paths": {
+    "assembly": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-sol62/outputs/variant-C.stl",
+    "source": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-sol62/outputs/variant-C.scad",
+    "metadata": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-sol62/outputs/RESULT.json",
+    "left_fixed": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-sol62/outputs/C-left.stl",
+    "right_moving": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-sol62/outputs/C-right.stl"
+  },
+  "units": "mm",
+  "print_orientation": {
+    "bounds_mm": [
+      [
+        -30,
+        -16,
+        0
+      ],
+      [
+        30,
+        16,
+        10.2
+      ]
+    ],
+    "dimensions_mm": [
+      60,
+      32,
+      10.2
+    ],
+    "print_one_assembled_stl": "variant-C.stl",
+    "label": "C engraved in top of fixed flap, 6.8 mm outer diameter, 1.25 mm radial stroke, 0.64 mm deep."
+  },
+  "changes_relative_to_A": [
+    "A's cones originate in the outer cheeks and point inward into the center receiver. C's cones originate on the central moving hub and point outward into fixed cheeks.",
+    "Each fixed socket tapers outward into a 1.30 mm through-vent on the exposed cheek end.",
+    "The conical surface normal gap increased from 0.40 to 0.50 mm. The straight axial cheek-face gap increased from 0.50 to 0.65 mm.",
+    "Added paired 0.45 mm first-layer seam reliefs and raised the axis from 4.2 to 5.2 mm. Separated the sweep of the moving flap from the fixed bed rail with a local tapered hub."
+  ],
+  "clearances": {
+    "cone_surface_normal_mm": 0.5,
+    "cone_radial_offset_at_equal_y_mm": 0.7071,
+    "axial_face_gap_each_side_mm": 0.65,
+    "bed_seam_opening_mm": 1.55,
+    "seam_opening_at_z_0_20_mm": 1.15,
+    "nominal_cone_engagement_each_socket_at_center_mm": 2.5,
+    "opposite_cone_engagement_at_axial_shoulder_contact_mm": 1.85,
+    "cone_root_diameter_mm": 7.2,
+    "cone_tip_diameter_mm": 0.9,
+    "cheek_vent_diameter_mm": 1.3,
+    "minimum_wall_above_socket_entrance_mm": 1.34,
+    "closed_flap_face_gap_mm": 4.8,
+    "definitions": "Cone normal and matching cross-section radial offsets refer to ideal 45-degree surfaces. Face and seam gaps are per side. Engagement is tip extension past the inner cheek face."
+  },
+  "fold": {
+    "stationary_component": "C-left.stl",
+    "moving_component": "C-right.stl",
+    "pivot_mm": [
+      0,
+      0,
+      5.2
+    ],
+    "axis_unit_vector": [
+      0,
+      1,
+      0
+    ],
+    "signed_rotation_range_deg": [
+      0,
+      -180
+    ],
+    "convention": "Right-hand rule about positive Y. Zero is the assembled print pose. Negative angles lift the right flap above the left flap.",
+    "source_preview": "Set fold from 0 to 180. This parameter is the positive lift magnitude."
+  },
+  "print_assumptions": {
+    "printer": "Snapmaker U1",
+    "material": "PLA",
+    "nozzle_mm": 0.4,
+    "layer_height_mm": 0.2,
+    "first_layer_height_mm": 0.2,
+    "line_width_mm": 0.42,
+    "supports": "Off. The 45-degree cone surfaces are self-supporting in the intended layer direction. The socket vent leaves a local roof span up to 1.30 mm.",
+    "adhesion": "Both flaps contact the plate in the supplied pose. Keep brim and support material out of the seams and bearing gaps.",
+    "assembly": "Print as one assembled object with both shells in their supplied positions. Allow the part to cool before first articulation. No hardware or assembly step is required by the CAD design."
+  },
+  "mesh_and_kinematic_checks": {
+    "meshes": {
+      "variant-C.stl": {
+        "bodies": 2,
+        "watertight": true,
+        "consistent_winding": true,
+        "all_components_positive_volume": true,
+        "triangles": 2600,
+        "volume_mm3": 6609.510825,
+        "bbox_mm": [
+          [
+            -30.0,
+            -16.0,
+            0.0
+          ],
+          [
+            30.0,
+            16.0,
+            10.2
+          ]
+        ],
+        "sha256": "15c26e4fc5f5d6141f29436f560707c7a880999c59ffb8196ab5faa6e66c1c0f"
+      },
+      "C-left.stl": {
+        "bodies": 1,
+        "watertight": true,
+        "consistent_winding": true,
+        "all_components_positive_volume": true,
+        "triangles": 1804,
+        "volume_mm3": 3891.159744,
+        "bbox_mm": [
+          [
+            -30.0,
+            -16.0,
+            0.0
+          ],
+          [
+            5.05,
+            16.0,
+            10.2
+          ]
+        ],
+        "sha256": "081dc73bd7e84b5a294cf5b916dcc7c414a8265cc11b9107b26cef2ba7cbcb25"
+      },
+      "C-right.stl": {
+        "bodies": 1,
+        "watertight": true,
+        "consistent_winding": true,
+        "all_components_positive_volume": true,
+        "triangles": 796,
+        "volume_mm3": 2718.35108,
+        "bbox_mm": [
+          [
+            -3.75,
+            -11.55,
+            0.0
+          ],
+          [
+            30.0,
+            11.55,
+            9.15
+          ]
+        ],
+        "sha256": "6cd7880a1c8426bda0509bb2a2bc1ba5c2c4641d6e9a5eec75a8355fedd570af"
+      }
+    },
+    "inspection_mesh_triangles_match_assembly": true,
+    "fold": {
+      "pivot_mm": [
+        0,
+        0,
+        5.2
+      ],
+      "increments_deg": 0.25,
+      "poses": 721,
+      "maximum_overlap_mm3": 0.0,
+      "left_rail_x_separation_bound_mm": 1.7118,
+      "coaxial_moving_cone_radial_separation_bound_mm": 0.7051
+    },
+    "first_layer_cheek_gaps_mm": {
+      "0.001": 1.548,
+      "0.2": 1.15,
+      "0.4": 0.75,
+      "0.45": 0.65
+    },
+    "centered_axial_shift_overlap_mm3": {
+      "-0.75": 5.173066,
+      "-0.66": 0.338326,
+      "-0.64": 0.0,
+      "0.64": 0.0,
+      "0.66": 0.338326,
+      "0.75": 5.173066
+    },
+    "continuous_centered_fold": "For the nominal concentric pivot, axial lane separation excludes the cheek blocks from the moving flap. The cone socket incorporates the reported positive radial bound even with polygon facets. The fixed rail is below the pivot and outside the moving profile's lower-left sweep.",
+    "retention": "At the centered print angle, positive and negative axial shifts were clear at 0.64 mm and intersected their opposing shoulders by 0.66 mm. The remaining cone has nominal 1.85 mm axial engagement at shoulder contact. Radial engagement is provided by the enclosed socket walls."
+  },
+  "limitations": [
+    "The cone fit, first-layer release, vent roof and strength are untested on a physical printer. Real travel can be reduced by sag, first-layer spread, stringing or dimensional error.",
+    "The sweep models centered, rigid CAD geometry. Retention checks cover centered axial shifts, with no all-path tilted extraction proof, deformation analysis, load rating or fatigue testing.",
+    "The full 180-degree closing pose was checked without modeling an angular stop or detent. This is a coupon, with enclosure alignment and mounting left to a later design.",
+    "The STL geometry and section slices were checked directly. No printer toolpath was generated for C in this chat."
+  ]
+}

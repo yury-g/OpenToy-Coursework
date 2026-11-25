@@ -1,0 +1,75 @@
+{
+  "source_sha256": "06bd3d49e5b027baf3a49d250d2c9eedc8847d905d07dd01a9735daf6049b760",
+  "verification": {
+    "sampled_poses": 362,
+    "max_shell_overlap_mm3": 0,
+    "max_board_proxy_overlap_mm3": 9.237055564881302e-14,
+    "chassis_bodies": 3,
+    "cosmetic_bezels": 3,
+    "each_mesh_watertight": true,
+    "bezel_seated_overlap_mm3": 0,
+    "bezel_lift_0_5mm_intersections_mm3": [
+      0.319996337901099,
+      0.31999938964145336,
+      0.319996337901103
+    ],
+    "axial_capture_checks": [
+      {
+        "component": "left",
+        "shift_mm": -0.7,
+        "intersection_mm3": 2.45027653128412
+      },
+      {
+        "component": "left",
+        "shift_mm": -0.59,
+        "intersection_mm3": 3.7423503039367496e-06
+      },
+      {
+        "component": "left",
+        "shift_mm": 0.59,
+        "intersection_mm3": 0.0
+      },
+      {
+        "component": "left",
+        "shift_mm": 0.7,
+        "intersection_mm3": 2.2169012404747797
+      },
+      {
+        "component": "right",
+        "shift_mm": -0.7,
+        "intersection_mm3": 2.5262491831699827
+      },
+      {
+        "component": "right",
+        "shift_mm": -0.59,
+        "intersection_mm3": 3.654306878258846e-06
+      },
+      {
+        "component": "right",
+        "shift_mm": 0.59,
+        "intersection_mm3": 0.0
+      },
+      {
+        "component": "right",
+        "shift_mm": 0.7,
+        "intersection_mm3": 2.2168995640251223
+      }
+    ],
+    "physical_print": "untested",
+    "torsional_stiffness": "unmeasured; both race ridges clustered in bottom bay",
+    "all_path_extraction": "untested"
+  },
+  "file_sha256": {
+    "Chassis - print upright.stl": "0c36df6f9df3557a26512eaf6b5ed47d28549d45e0648ca0f9b039071d606251",
+    "middle-bezel.stl": "162431e24c58583a2fef52ee079fc2bc28a28b73f8fc4b4138d22dcd39cae995",
+    "middle bezel - print flat.stl": "116912d9915a2fdcbb8361bdef42d4cefed1b66f5a777c276e1112cd4f6487fd",
+    "left.stl": "b4c8a8cd4d04e78270bf269839aa255e7f4daf76c7cbeaab7d63efd0695377ad",
+    "left-bezel.stl": "3eacad904fafd752921c893001549f86b66425d95ce92e61a2bb23f4b7839c83",
+    "left bezel - print flat.stl": "320242f63d760c2e9c0b778375e08a497ea1e8806519cab60ac10a724f1f3c3a",
+    "right bezel - print flat.stl": "ee7b5c6108703ff9867cc1d2adfbbbfd406298419fe5868d3b5b52015beacb0f",
+    "Chassis - open inspection.stl": "73ad4ad7b23b26c379605252ffcc93e44fc3c28c850e5c9decfbd854c38d4854",
+    "right-bezel.stl": "15f646bd1b9191a7ebe50a8ae0034c273565a2fe02aa022fe3ba7ea38c0012ca",
+    "middle.stl": "8e3ac9ec6d8c551f0bd581b473e841d8295c24f12af4a7c5be0854deb70334d4",
+    "right.stl": "ebd66033d3e4566a4c68ea0468654f616617f7ef48d244c95bf3aecae03861f5"
+  }
+}

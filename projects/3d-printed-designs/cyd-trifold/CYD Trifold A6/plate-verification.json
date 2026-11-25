@@ -1,0 +1,34 @@
+{
+  "3mf_readback": true,
+  "objects": 1,
+  "captive_bodies": 3,
+  "separate_enclosure_parts": 0,
+  "all_body_bases_z0": true,
+  "plate_bounds_mm": [
+    [
+      38.0,
+      85.5,
+      0.0
+    ],
+    [
+      232.0,
+      184.5,
+      27.349998
+    ]
+  ],
+  "translation_mm": [
+    135.0,
+    138.5,
+    0.0
+  ],
+  "solid_CAD_volume_cm3": 38.82479221145196,
+  "solid_equivalent_mass_g_at_1_24_density": 48.14274234220042,
+  "mass_limit": "solid-equivalent only; actual sliced mass depends on walls/infill",
+  "source_mesh_sha256": {
+    "left.stl": "1bb2d98a58490f33cce2498ab337006c07e9bf4e581798a17efd2a33f08da68e",
+    "middle.stl": "5072f90ec5e927a83c3279c8512463ad3f7f43ca6fccf1a3c53096dc17e95cf2",
+    "right.stl": "f593d72a624c4448492e59e02329735ae8541984de91a960687c37e1194243e0"
+  },
+  "physical_print": "untested",
+  "profile": "geometry only; preserve assembled positions and flat orientation"
+}

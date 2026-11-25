@@ -1,0 +1,785 @@
+{
+  "name": "Flat A trifold A3",
+  "status": "digital geometry verified; case assembly and physical trials required",
+  "sequence": [
+    "left",
+    "right"
+  ],
+  "hinge_station_y": 60,
+  "case_pitch_mm": 54,
+  "plastic_seam_mm": 0.8,
+  "active_gap_mm": 10.8,
+  "components": [
+    {
+      "id": "left",
+      "name": "Left screen",
+      "mesh": "left.stl",
+      "cosmetics": [
+        {
+          "mesh": "left-face.stl"
+        }
+      ],
+      "structure": [
+        {
+          "mesh": "left-0--60-hinge.stl",
+          "station_y": -60,
+          "role": "A cartridge half"
+        },
+        {
+          "mesh": "left-0-60-hinge.stl",
+          "station_y": 60,
+          "role": "A cartridge half"
+        }
+      ],
+      "board": {
+        "center": [
+          -54,
+          0,
+          12.75
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          -54,
+          0,
+          15.3
+        ],
+        "glass_size": [
+          50,
+          69,
+          3.6
+        ],
+        "active_center": [
+          -54,
+          -2.5,
+          17.11
+        ],
+        "active_size": [
+          43.2,
+          57.6,
+          0.02
+        ],
+        "rear_center": [
+          -54,
+          0,
+          9.05
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": {
+        "pivot": [
+          -27,
+          0,
+          20.2
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "closed_degrees": 180
+      }
+    },
+    {
+      "id": "middle",
+      "name": "Middle screen",
+      "mesh": "middle.stl",
+      "cosmetics": [
+        {
+          "mesh": "middle-face.stl"
+        }
+      ],
+      "structure": [
+        {
+          "mesh": "middle-0--60-hinge.stl",
+          "station_y": -60,
+          "role": "A cartridge half"
+        },
+        {
+          "mesh": "middle-0-60-hinge.stl",
+          "station_y": 60,
+          "role": "A cartridge half"
+        },
+        {
+          "mesh": "middle-1--60-hinge.stl",
+          "station_y": -60,
+          "role": "A cartridge half"
+        },
+        {
+          "mesh": "middle-1-60-hinge.stl",
+          "station_y": 60,
+          "role": "A cartridge half"
+        }
+      ],
+      "board": {
+        "center": [
+          0,
+          0,
+          12.75
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          0,
+          0,
+          15.3
+        ],
+        "glass_size": [
+          50,
+          69,
+          3.6
+        ],
+        "active_center": [
+          0,
+          -2.5,
+          17.11
+        ],
+        "active_size": [
+          43.2,
+          57.6,
+          0.02
+        ],
+        "rear_center": [
+          0,
+          0,
+          9.05
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": null
+    },
+    {
+      "id": "right",
+      "name": "Right screen",
+      "mesh": "right.stl",
+      "cosmetics": [
+        {
+          "mesh": "right-face.stl"
+        }
+      ],
+      "structure": [
+        {
+          "mesh": "right-1--60-hinge.stl",
+          "station_y": -60,
+          "role": "A cartridge half"
+        },
+        {
+          "mesh": "right-1-60-hinge.stl",
+          "station_y": 60,
+          "role": "A cartridge half"
+        }
+      ],
+      "board": {
+        "center": [
+          54,
+          0,
+          12.75
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          54,
+          0,
+          15.3
+        ],
+        "glass_size": [
+          50,
+          69,
+          3.6
+        ],
+        "active_center": [
+          54,
+          -2.5,
+          17.11
+        ],
+        "active_size": [
+          43.2,
+          57.6,
+          0.02
+        ],
+        "rear_center": [
+          54,
+          0,
+          9.05
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": {
+        "pivot": [
+          27,
+          0,
+          -0.4
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "closed_degrees": 180
+      }
+    }
+  ],
+  "print_files": [
+    {
+      "mesh": "left tray - print flat.stl",
+      "name": "Left tray",
+      "kind": "frame"
+    },
+    {
+      "mesh": "left face - print flat.stl",
+      "name": "Left face",
+      "kind": "bezel"
+    },
+    {
+      "mesh": "middle tray - print flat.stl",
+      "name": "Middle tray",
+      "kind": "frame"
+    },
+    {
+      "mesh": "middle face - print flat.stl",
+      "name": "Middle face",
+      "kind": "bezel"
+    },
+    {
+      "mesh": "right tray - print flat.stl",
+      "name": "Right tray",
+      "kind": "frame"
+    },
+    {
+      "mesh": "right face - print flat.stl",
+      "name": "Right face",
+      "kind": "bezel"
+    },
+    {
+      "mesh": "A cartridge - print flat.stl",
+      "name": "Top Front A cartridge",
+      "kind": "cartridge"
+    },
+    {
+      "mesh": "A cartridge - print flat.stl",
+      "name": "Top Back A cartridge",
+      "kind": "cartridge"
+    },
+    {
+      "mesh": "A cartridge - print flat.stl",
+      "name": "Bottom Front A cartridge",
+      "kind": "cartridge"
+    },
+    {
+      "mesh": "A cartridge - print flat.stl",
+      "name": "Bottom Back A cartridge",
+      "kind": "cartridge"
+    }
+  ],
+  "open_envelope_mm": [
+    161.1999969482422,
+    148.0,
+    29.289731216430667
+  ],
+  "folded_envelope_mm": [
+    62.79999923706055,
+    148.0,
+    60.95
+  ],
+  "hinge_principle": "Exact preferred A opposed cones/divot sockets, unchanged",
+  "case_assembly": "Four captive A cartridges are trapped by matching pockets when three trays and three face frames snap together; no bearing assembly or pins",
+  "board_reference": "User-confirmed86x50 dual-USB CYD; USB-C and micro-USB present, exact connector placement and overmould unmeasured",
+  "verification": {
+    "sampled_poses": 362,
+    "max_shell_overlap_mm3": 0,
+    "max_own_part_overlap_mm3": 0,
+    "max_board_glass_rear_overlap_mm3": 2.3484312368024507e-13,
+    "exact_A_source_copy": true,
+    "all_meshes_watertight": true,
+    "print_objects": 10,
+    "printed_solid_bodies": 14,
+    "all_print_parts_flat_z0": true,
+    "usb_access_checks": [
+      {
+        "panel": "left",
+        "port_x_offset_mm": -10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "left",
+        "port_x_offset_mm": 10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "middle",
+        "port_x_offset_mm": -10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "middle",
+        "port_x_offset_mm": 10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "right",
+        "port_x_offset_mm": -10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "right",
+        "port_x_offset_mm": 10,
+        "plug_insertion_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      }
+    ],
+    "service_pose_deg": [
+      75,
+      0,
+      75
+    ],
+    "service_access_checks": [
+      {
+        "panel": "left",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "BOOT RESET rear press",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "BOOT RESET rear press",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "BOOT RESET rear press",
+        "overlap_mm3": 0
+      }
+    ],
+    "cartridge_locating_checks": [
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 0,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 20.43152600602351
+      },
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 0,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 12.147409705052677
+      },
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 1,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 15.461274006278789
+      },
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 1,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 15.461056977139398
+      },
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 2,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 3.5999908447265625
+      },
+      {
+        "seam": 0,
+        "station_y": -60,
+        "axis": 2,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 114.15827003030992
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 0,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 20.431526006159835
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 0,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 12.147409704916162
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 1,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 15.461057184082687
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 1,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 15.461273069107612
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 2,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 3.5999908447265625
+      },
+      {
+        "seam": 0,
+        "station_y": 60,
+        "axis": 2,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 114.15827001098334
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 0,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 20.431523113708536
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 0,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 12.147407890675716
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 1,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 16.03810693048226
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 1,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 15.46105503586686
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 2,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 115.20076817322338
+      },
+      {
+        "seam": 1,
+        "station_y": -60,
+        "axis": 2,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 3.4134930520747324
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 0,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 20.431523113572023
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 0,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 12.147407890812088
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 1,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 15.461055289341235
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 1,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 16.038107000187534
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 2,
+        "shift_mm": -0.5,
+        "locating_overlap_mm3": 115.20076813363697
+      },
+      {
+        "seam": 1,
+        "station_y": 60,
+        "axis": 2,
+        "shift_mm": 0.5,
+        "locating_overlap_mm3": 3.413493052074732
+      }
+    ],
+    "bezel_lift_0_5mm_latch_intersections_mm3": [
+      0.6505697854250492,
+      0.6505732172883721,
+      0.650569785425049
+    ],
+    "physical_validation": "A was reported printed flat by user; new mount/trays/clip force/USB fit untested"
+  },
+  "clearances_mm": {
+    "cone_normal": 0.4,
+    "axial_face": 0.5,
+    "mount_pocket_each_side": 0.2,
+    "PCB_upper_corner_stop": 0.2,
+    "snap_ledge_thickness": 0.8,
+    "snap_ledge_width": 0.45
+  },
+  "print_checks": [
+    {
+      "name": "Left tray",
+      "bodies": 1,
+      "bounds_mm": [
+        [
+          -26.599998474121094,
+          -74.0,
+          0.0
+        ],
+        [
+          26.599998474121094,
+          74.0,
+          18.349998474121094
+        ]
+      ]
+    },
+    {
+      "name": "Left face",
+      "bodies": 1,
+      "bounds_mm": [
+        [
+          -26.599998474121094,
+          -74.0,
+          -1.0658141036401503e-14
+        ],
+        [
+          26.599998474121094,
+          74.0,
+          17.25
+        ]
+      ]
+    },
+    {
+      "name": "Middle tray",
+      "bodies": 1,
+      "bounds_mm": [
+        [
+          -26.599998474121094,
+          -74.0,
+          0.0
+        ],
+        [
+          26.599998474121094,
+          74.0,
+          18.349998474121094
+        ]
+      ]
+    },
+    {
+      "name": "Middle face",
+      "bodies": 1,
+      "bounds_mm": [
+        [
+          -26.599998474121094,
+          -74.0,
+          -1.0658141036401503e-14
+        ],
+        [
+          26.599998474121094,
+          74.0,
+          17.25
+        ]
+      ]
+    },
+    {
+      "name": "Right tray",
+      "bodies": 1,
+      "bounds_mm": [
+        [
+          -26.599998474121094,
+          -74.0,
+          0.0
+        ],
+        [
+          26.599998474121094,
+          74.0,
+          18.349998474121094
+        ]
+      ]
+    },
+    {
+      "name": "Right face",
+      "bodies": 1,
+      "bounds_mm": [
+        [
+          -26.599998474121094,
+          -74.0,
+          -1.0658141036401503e-14
+        ],
+        [
+          26.599998474121094,
+          74.0,
+          17.25
+        ]
+      ]
+    },
+    {
+      "name": "Top Front A cartridge",
+      "bodies": 2,
+      "bounds_mm": [
+        [
+          -26.0,
+          -13.0,
+          0.0
+        ],
+        [
+          26.0,
+          13.0,
+          8.544865608215332
+        ]
+      ]
+    },
+    {
+      "name": "Top Back A cartridge",
+      "bodies": 2,
+      "bounds_mm": [
+        [
+          -26.0,
+          -13.0,
+          0.0
+        ],
+        [
+          26.0,
+          13.0,
+          8.544865608215332
+        ]
+      ]
+    },
+    {
+      "name": "Bottom Front A cartridge",
+      "bodies": 2,
+      "bounds_mm": [
+        [
+          -26.0,
+          -13.0,
+          0.0
+        ],
+        [
+          26.0,
+          13.0,
+          8.544865608215332
+        ]
+      ]
+    },
+    {
+      "name": "Bottom Back A cartridge",
+      "bodies": 2,
+      "bounds_mm": [
+        [
+          -26.0,
+          -13.0,
+          0.0
+        ],
+        [
+          26.0,
+          13.0,
+          8.544865608215332
+        ]
+      ]
+    }
+  ]
+}

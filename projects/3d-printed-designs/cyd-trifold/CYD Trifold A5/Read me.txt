@@ -1,0 +1,99 @@
+A5 — COMPACT ONE-PRINT CYD TRIFOLD
+2026-11-24
+
+Print the complete chassis as ONE object, keeping its THREE captive bodies in
+the supplied positions. No separate hinge pins, cartridges, panels or bezels.
+Install only the boards after printing and releasing the joints.
+
+The four hinge units now sit along the boards, with their 3 mm feet beneath
+the PCBs and their bearing supports in the side seams. Unit centers are
+Y +/-30.5 mm; they extend to Y +/-43.5 mm, just 0.5 mm past the 86 mm board.
+The frame itself is 99 mm long, including board catches and USB-end lips.
+This replaces the 160 mm A4 frame. The rounded hinge crowns remain visible
+above the screen plane: this is an integrated back frame, not a flush hidden
+hinge or a closed protective enclosure. Board edges remain exposed.
+
+A HINGE AND STRUCTURE
+The preferred A opposed-cone/divot contacts retain radius 3.35 mm, depth
+2.85 mm, normal clearance 0.40 mm and axial clearance 0.50 mm. The bed-rooted
+supports are taller than the original study; non-bearing cheek edges are
+narrowed to fit the seams and support windows remove low-load material.
+There are two aligned short units per seam, four total.
+
+The load paths use 3 mm-thick bases and hinge feet, a 6 mm center spine,
+8 mm cross ribs, 3 mm bearing-support posts/walls, broad PCB corner seats
+and protected catch roots. Original 3.5 mm perimeter ribs are locally
+relieved for the rotating bearings; the narrow remaining bay lips are
+backed by broad hinge feet. The left outside rim has a separate integral
+3 mm-wide low reinforcing rib. Short floor-level pads anchor the catch
+guards without crossing the moving flexures.
+
+CAD volume is 61.24 cm3, versus 80.01 cm3 for this same design with
+relief windows disabled: 23.46% removed. At solid PLA density 1.24 g/cm3,
+the solid-equivalent mass is 75.94 g. Actual slicer mass depends on infill,
+walls and the selected profile. No physical strength or fatigue test has
+been performed on this adaptation.
+
+PRINT FLAT
+Use the arranged A5 plate 3MF, or One-piece trifold - print flat.stl at 100%
+scale in its supplied flat orientation. The individual left/middle/right
+meshes are inspection assets; do not separately print and assemble them.
+The three shells all contact the bed. No elevated downward mesh facets
+exceed 45 degrees from vertical, within numerical tolerance. Keep supports
+and raft off, and any brim clear of the moving gaps. Inspect the sliced
+bearing clearances and horizontal flexures. Use the actual installed nozzle;
+no printer profile or hardware setting was changed. The existing A clearance
+assumptions came from 0.4 mm nozzle / 0.20 mm layer design work.
+
+BOARD INSTALLATION
+For the confirmed 86 x 50 mm CYDs with both USB-C and micro-USB: tuck the USB
+end's bare PCB corners under the fixed lips. Hold the opposite, protected
+catches back slightly, lower the other end onto all four seats, then release.
+The checked insertion tilt is 0–10 degrees about the USB end. Push bare PCB
+corners, not glass. Reverse this sequence for removal; do not force a binding
+catch. The full 50 x 69 mm glass envelope is accounted for.
+
+Each catch is 5.2 mm wide and carried by a horizontal 2 x 3 mm beam with about
+17 mm effective free span. Rear stops limit nominal travel to 0.9 mm; side
+guards have 0.8 mm clearance. Cutting the two beam roots digitally separates
+exactly two catch/beam bodies from the frame, confirming no unintended fusion.
+The released-head and insertion checks use rigid positions, not an elastic
+force simulation. Spring force, fit and print release require a trial.
+
+PORTS AND BUTTONS
+Both USB approaches on each board were checked using separate 18 x 11 mm plug
+envelopes with 22 mm insertion depth at X offsets +/-10 mm, followed by a
+6 x 6 mm cable corridor continuing beyond the frame. These are conservative
+design proxies, not measurements of this exact dual-USB board revision.
+The short end remains open for USB and the adjacent power connection.
+
+For inner-edge GPIO/extended IO, DHT, speaker and microSD access, use the
+service pose: left +90 degrees, right -90 degrees, middle fixed. This clears
+the opposite bearing support from the insertion paths. The route to that
+pose was checked with loaded boards. DHT's nominal nearest cheek margin is
+only 0.5 mm, so actual plug sizes and connector positions still need checking.
+Do not fold with protruding cables, cards or added wiring in the sweep.
+
+Each board has an 8.4 mm rear button-access opening. Approximate photo-derived
+RESET/BOOT centers were checked with separate 3 mm blunt-probe paths; this is
+not a measured fingertip-access claim. Component and port placements remain approximate envelopes.
+
+FOLDING
+Start flat, screens facing you. Fold LEFT over the middle, then RIGHT over the
+pair. Unfold in reverse order. Left axis X=-32, Z18.3 rotates +180 degrees;
+right axis X=32, Z28.3 rotates -180 degrees. Both axes run along Y. This is an
+inward roll fold. No detent, closing latch or friction-holding function is
+claimed. The 64 mm pitch gives 6 mm nominal tray-edge seams and 20.8 mm gaps
+between the 43.2 mm active display widths; the three panels are distinct LCDs.
+Open: 186 x 99 x 32.65 mm. Closed: 72.8 x 99 x 56.6 mm.
+
+CHECKS
+CAD verification.json and CAD verification log.txt include three watertight
+bodies, 362 staged fold poses, cross-panel PCB/glass/rear-envelope tests,
+six USB plug/cable corridors, 21 service and probe checks, service-pose travel,
+latch isolation/travel, released-catch insertion, actual mesh layer sections,
+overhang analysis and the material comparison. Intersections were zero within
+numerical tolerance. These checks establish geometric consistency, not print
+release, long-term PLA durability or exact connector fit.
+
+Editable source: One-piece A trifold.scad. Earlier revisions remain separate.

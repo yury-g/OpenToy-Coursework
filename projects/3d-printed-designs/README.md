@@ -1,5 +1,7 @@
 # 3D printed designs
 
+[ditherCam captive flip enclosure](ditherCam/README.md) · [CYD tri-fold A6 and design history](cyd-trifold/README.md)
+
 [All projects](../README.md) · [Feather projects](../feather/README.md) · [Nesso projects](../nesso/README.md) · [Home](../../README.md)
 
 Choose a design, check its hardware and test status, then open its print and

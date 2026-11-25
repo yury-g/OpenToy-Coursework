@@ -1,5 +1,7 @@
 # Project directory
 
+[ditherCam flip camera](ditherCam/README.md) · [CYD tri-fold A6](3d-printed-designs/cyd-trifold/README.md)
+
 **[Feather](feather/README.md) · [Nesso](nesso/README.md) · [Waveshare 1.85C BOX](waveshare-1.85c/README.md) · [CrowPanel P4](crowpanel/README.md) · [3D printed designs](3d-printed-designs/README.md) · [Archive](../archive/README.md)**
 
 Choose your device or a printed design, open a project, then follow its setup or

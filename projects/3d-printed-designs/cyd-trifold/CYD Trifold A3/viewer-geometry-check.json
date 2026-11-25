@@ -1,0 +1,23 @@
+{
+  "embedded_meshes_match_sources": [
+    "left.stl",
+    "left-face.stl",
+    "left-0--60-hinge.stl",
+    "left-0-60-hinge.stl",
+    "middle.stl",
+    "middle-face.stl",
+    "middle-0--60-hinge.stl",
+    "middle-0-60-hinge.stl",
+    "middle-1--60-hinge.stl",
+    "middle-1-60-hinge.stl",
+    "right.stl",
+    "right-face.stl",
+    "right-1--60-hinge.stl",
+    "right-1-60-hinge.stl"
+  ],
+  "original_A_kernel_exact_source_match": true,
+  "cartridge_halves": 8,
+  "plate_objects": 10,
+  "source_metadata_sha256": "6e214230360c7817a37f30230e8282ed771c080bf681e31635ac7efd497acd84",
+  "physical_fit": "untested"
+}

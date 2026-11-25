@@ -1,0 +1,294 @@
+{
+  "label": "C",
+  "design_name": "Rounded Notebook C with two through-vented outward-cone hinges",
+  "creation_date": "2026-11-24",
+  "model_attribution": "Sol 6.2",
+  "status": "Final marked, rounded meshes exported and digitally verified. Physical print and release are untested.",
+  "units": "mm",
+  "output_paths": {
+    "assembly": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-sol62/outputs/notebook-C.stl",
+    "source": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-sol62/outputs/notebook-C.scad",
+    "left_fixed": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-sol62/outputs/notebook-C-left.stl",
+    "right_moving": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-sol62/outputs/notebook-C-right.stl",
+    "metadata": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-sol62/outputs/NOTEBOOK-RESULT.json"
+  },
+  "print_orientation": {
+    "dimensions_mm": [
+      78,
+      66,
+      10.2
+    ],
+    "bounds_mm": [
+      [
+        -39,
+        -33,
+        0
+      ],
+      [
+        39,
+        33,
+        10.2
+      ]
+    ],
+    "print_one_assembled_stl": "notebook-C.stl",
+    "panel_thickness_mm": 2.8,
+    "minimum_z_mm": 0,
+    "closed_broad_panel_face_gap_mm": 4.8
+  },
+  "changes_from_single_coupon_C": [
+    "Two complete copies of C’s opposing outward cones and vented stationary cheeks share an axis, with 34 mm between station centers.",
+    "Both inboard cheek vents open to the 6 mm gap between stations. The cheek ends were shortened by 2 mm to fit the notebook layout.",
+    "Each pair of hinge stations is integral to a single 2.8 mm panel. The moving panel starts 11.8 mm from the axis in X so it swings past the fixed cheeks. Rotor tabs meet it with a one-layer shoulder.",
+    "Free panel edges align when closed. Open interior of the fixed panel carries the engraved model, creation date and C mark."
+  ],
+  "marking": {
+    "text": [
+      "C",
+      "Sol 6.2",
+      "2026-11-24"
+    ],
+    "surface": "Fixed left panel interior, top-facing in print pose",
+    "treatment": "Debossed with a flat floor and open above",
+    "depth_mm": 0.64,
+    "C_cap_height_mm": 9,
+    "C_stroke_mm": 1.55,
+    "text_font": "Arial Bold with 0.06 mm outward offset per edge",
+    "nominal_font_sizes_mm": {
+      "2026-11-24": 4,
+      "Sol 6.2": 5
+    },
+    "font_required_for_source_regeneration": "Arial Bold. Marks are baked into the supplied STLs."
+  },
+  "clearances": {
+    "cone_surface_normal_mm": 0.5,
+    "cone_radial_offset_at_equal_y_mm": 0.7071,
+    "axial_face_gap_each_side_mm": 0.65,
+    "bed_seam_opening_mm": 1.55,
+    "seam_opening_at_z_0_20_mm": 1.15,
+    "nominal_cone_engagement_each_socket_at_center_mm": 2.5,
+    "opposite_cone_engagement_at_axial_shoulder_contact_mm": 1.85,
+    "cone_root_diameter_mm": 7.2,
+    "cone_tip_diameter_mm": 0.9,
+    "cheek_vent_diameter_mm": 1.3,
+    "minimum_wall_above_socket_entrance_mm": 1.34,
+    "closed_flap_face_gap_mm": 4.8,
+    "definitions": "Cone normal and matching cross-section radial offsets refer to ideal 45-degree surfaces. Face and seam gaps are per side. Engagement is tip extension past the inner cheek face.",
+    "straight_xy_gap_between_hinge_stations_mm": 6,
+    "station_center_spacing_mm": 34
+  },
+  "fold": {
+    "stationary_component": "notebook-C-left.stl",
+    "moving_component": "notebook-C-right.stl",
+    "pivot_mm": [
+      0,
+      0,
+      5.2
+    ],
+    "axis_unit_vector": [
+      0,
+      1,
+      0
+    ],
+    "signed_rotation_range_deg": [
+      0,
+      -180
+    ],
+    "convention": "Right-hand rule about positive Y. Zero is the assembled print pose. Negative angles lift the right flap above the left flap.",
+    "source_preview": "Set fold from 0 to 180. This parameter is the positive lift magnitude.",
+    "station_centers_mm": [
+      [
+        0,
+        -17,
+        5.2
+      ],
+      [
+        0,
+        17,
+        5.2
+      ]
+    ]
+  },
+  "print_assumptions": {
+    "printer": "Snapmaker U1",
+    "material": "PLA",
+    "nozzle_mm": 0.4,
+    "layer_height_mm": 0.2,
+    "first_layer_height_mm": 0.2,
+    "line_width_mm": 0.42,
+    "supports": "Off. The 45-degree cone surfaces are self-supporting in the intended layer direction. The socket vent leaves a local roof span up to 1.30 mm.",
+    "adhesion": "Both flaps contact the plate in the supplied pose. Keep brim and support material out of the seams and bearing gaps.",
+    "assembly": "Print the assembled STL flat with both shells in the supplied position. Both units are already nested and captive. Normal clearance release after cooling is the first motion."
+  },
+  "mesh_and_kinematic_checks": {
+    "meshes": {
+      "notebook-C.stl": {
+        "bodies": 2,
+        "watertight": true,
+        "consistent_winding": true,
+        "all_components_positive_volume": true,
+        "triangles": 19570,
+        "z0_flat_contact_area_mm2": 4523.465,
+        "volume_mm3": 16894.094558,
+        "bbox_mm": [
+          [
+            -39.0,
+            -33.0,
+            0.0
+          ],
+          [
+            39.0,
+            33.0,
+            10.2
+          ]
+        ],
+        "sha256": "f885846f27c4cba2cc86827d3418998db6699780174873ca6dfec04c5a58bd58"
+      },
+      "notebook-C-left.stl": {
+        "bodies": 1,
+        "watertight": true,
+        "consistent_winding": true,
+        "all_components_positive_volume": true,
+        "triangles": 16918,
+        "z0_flat_contact_area_mm2": 2250.797,
+        "volume_mm3": 8158.958493,
+        "bbox_mm": [
+          [
+            -39.0,
+            -33.0,
+            0.0
+          ],
+          [
+            5.05,
+            33.0,
+            10.2
+          ]
+        ],
+        "sha256": "54255ab17f2d420a06d9e44f62a0409fd778a2167db5ca486f0b41dde0d71b00"
+      },
+      "notebook-C-right.stl": {
+        "bodies": 1,
+        "watertight": true,
+        "consistent_winding": true,
+        "all_components_positive_volume": true,
+        "triangles": 2652,
+        "z0_flat_contact_area_mm2": 2272.668,
+        "volume_mm3": 8735.136065,
+        "bbox_mm": [
+          [
+            -3.75,
+            -33.0,
+            0.0
+          ],
+          [
+            39.0,
+            33.0,
+            9.15
+          ]
+        ],
+        "sha256": "9ecba9756808f4b393af2b8c241c949887fa455128ed767044de4692a48dfca4"
+      }
+    },
+    "inspection_mesh_triangles_match_assembly": true,
+    "fold": {
+      "pivot_mm": [
+        0,
+        0,
+        5.2
+      ],
+      "increments_deg": 0.25,
+      "poses": 721,
+      "maximum_overlap_mm3": 0.0,
+      "connecting_moving_panel_cheek_radial_separation_bound_mm": 0.7704,
+      "hinge_station_y_gap_mm": 6.0,
+      "left_rail_x_separation_bound_mm": 1.6309,
+      "coaxial_moving_cone_radial_separation_bound_mm": 0.7051
+    },
+    "first_layer_cheek_gaps_mm": {
+      "0.001": [
+        1.548,
+        1.548,
+        1.548,
+        1.548
+      ],
+      "0.2": [
+        1.15,
+        1.15,
+        1.15,
+        1.15
+      ],
+      "0.4": [
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "0.45": [
+        0.65,
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    "engraved_marks_at_z_2_50_mm": {
+      "C": {
+        "contours_including_counters": 1,
+        "dimensions_mm": [
+          7.997,
+          9.0
+        ]
+      },
+      "Sol 6.2": {
+        "contours_including_counters": 8,
+        "dimensions_mm": [
+          21.914,
+          5.264
+        ]
+      },
+      "2026-11-24": {
+        "contours_including_counters": 13,
+        "dimensions_mm": [
+          27.973,
+          4.181
+        ]
+      }
+    },
+    "centered_axial_shift_overlap_mm3": {
+      "-0.75": 9.235866,
+      "-0.66": 0.530728,
+      "-0.64": 0.0,
+      "0.64": 0.0,
+      "0.66": 0.530728,
+      "0.75": 9.235866
+    },
+    "continuous_centered_fold": "In the printed coordinate frame the lowest moving panel radius stays outside the highest fixed cheek radius. The fixed plate is outside the lower-left sweep of the moving rotor. Separate Y bands prevent cross-station interference. Faceted cones stay radially inside their matching sockets throughout rotation.",
+    "retention": "Digital axial shifts of ±0.64 mm cleared. Both directions intersected shoulders by ±0.66 mm. Each opposite cone retains a nominal 1.85 mm axial engagement at shoulder contact.",
+    "z0_flat_contact_unchanged_by_marks": true,
+    "first_layer_gap_order": "Station at Y=-17 mm, low and high Y seam. Then station at Y=+17 mm, low and high Y seam.",
+    "material_added_vs_prior_marked_notebook_mm3": {
+      "left": 0.0,
+      "right": 0.0
+    },
+    "outer_edge_section_check": "Both free cover edges remained at their 39 mm plan limit at Z=0.20 mm and tapered inward by about 0.73 mm at Z=2.79 mm."
+  },
+  "limitations": [
+    "PLA flow and first-layer spread can reduce clearances. Parts spanning both hinges may be sensitive to warp and axis misalignment.",
+    "Physical release, engraving readability in printed PLA, vent bridging, strength, fatigue and all-path tilted extraction were not tested.",
+    "The digital check uses an ideal rigid concentric motion. No hard stop or detent is integrated.",
+    "No slicer toolpath or printer operation was run."
+  ],
+  "rounding": {
+    "cover_plan_corner_radii_mm": {
+      "free_outer_corners": 5.5,
+      "spine_side_corners": 3
+    },
+    "cover_upper_edge_radius_mm": 0.8,
+    "fixed_cheek_plan_corner_radii_mm": {
+      "outboard_end": 2,
+      "socket_face_end": 1
+    },
+    "fixed_cheek_upper_edge_radius_mm": 0.8,
+    "rotor_exposed_upper_profile_radius_mm": 0.65,
+    "functional_edges": "Bottom outlines retain a flat sole and vertical skirts. Both cone interfaces, socket and vent bores, axial shoulders and first-layer seam relief retain their working profiles.",
+    "support_approach": "Upper edge radii taper inward toward the top. Plan radii are extruded up from the plate. No underside edge roll was added."
+  }
+}

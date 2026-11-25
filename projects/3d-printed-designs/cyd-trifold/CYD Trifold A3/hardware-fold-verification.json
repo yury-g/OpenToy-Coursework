@@ -1,0 +1,23 @@
+{
+  "poses": 362,
+  "max_hardware_to_shell_overlap_mm3": 1.0651803874703325e-13,
+  "max_hardware_to_hardware_overlap_mm3": 0.0,
+  "failures": [],
+  "source_mesh_sha256": {
+    "left.stl": "9ccd9c8193d112b117e2228ee1716ec2e5d526010eccc17d62c53a48cb07cc0d",
+    "left-face.stl": "7ec4d3239e8f8ad75b85779439a2fa8b772a5467d45f9fdbcc2724ee671df4b6",
+    "left-0--60-hinge.stl": "6835184139dab8a7eb7104188c19bbc9d73c2efed30f747aace2fc08f4b37f7b",
+    "left-0-60-hinge.stl": "dde8b84ba689e82c77225727e92c3ac5a50c84c6d97193cadefb135e3b5722f9",
+    "middle.stl": "94cdf9bfabeb48ca50cac9bf5470fac1322b0f9821ce1b64cc3b766c74f046df",
+    "middle-face.stl": "223a10e10413fc6606cb84ece26f76d4517fb8e25980ca20a8f283b313e9acbb",
+    "middle-0--60-hinge.stl": "5cee88dae1c798079a15b4ac9f8ec465b5f32f38c8540b65cbd07602486aee8c",
+    "middle-0-60-hinge.stl": "0c9c96d93cde87cb931cc9af895d65d02f98121b31d5f019fe8ebf055a09984a",
+    "middle-1--60-hinge.stl": "f9fc25f00ceb351bb96b89cd7436f1eae31debcad9542e4a24c1f2869b86c2ee",
+    "middle-1-60-hinge.stl": "fef14f0dacb3caa4f59ef2325597d124fc70dff99ecc9f704540c5b800cdc427",
+    "right.stl": "03125315fd29f3ff7ccb200941ca4e9c12b3fa091eeb6e687c266438619e27f8",
+    "right-face.stl": "adb1c8a2e5048007c08e3215e22e04ace6c345301e777a52dc808ec02217dd7f",
+    "right-1--60-hinge.stl": "afcda8f97e99c3682fdeecdd73e90b98cf810403ebddcb13a013f19c713d5f96",
+    "right-1-60-hinge.stl": "59c35e55b938f5939f167b10a0695548a13ee373a9bc62d8151209cca3cb2722"
+  },
+  "evidence_limit": "nominal board/glass/rear envelopes, not every physical component or attached cable"
+}

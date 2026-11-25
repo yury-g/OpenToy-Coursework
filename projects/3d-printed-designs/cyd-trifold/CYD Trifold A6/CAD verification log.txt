@@ -1,0 +1,519 @@
+left bodies 1 True [[-97.0, -53.0, 0.0], [-29.700000762939453, 46.0, 27.299999237060547]] volume 12677.589160069218
+middle bodies 1 True [[-38.400001525878906, -53.0, 0.0], [38.29999923706055, 46.0, 27.349998474121094]] volume 15871.503377207138
+right bodies 1 True [[29.600000381469727, -53.0, 0.0], [97.0, 46.0, 21.149999618530273]] volume 10275.699674175616
+SHELL MAX 0 []
+own board 0 6.621493717912097e-16
+own board 1 2.708879127955033e-16
+own board 2 8.135582051788104e-16
+SERVICE [{'panel': 'left', 'access': 'Extended IO', 'overlap_mm3': 0}, {'panel': 'left', 'access': 'DHT/header', 'overlap_mm3': 0}, {'panel': 'left', 'access': 'microSD insertion', 'overlap_mm3': 0}, {'panel': 'left', 'access': 'speaker plug', 'overlap_mm3': 0}, {'panel': 'left', 'access': 'Approximate button-cluster rear access', 'overlap_mm3': 0}, {'panel': 'left', 'access': 'RESET 3 mm blunt-probe path', 'overlap_mm3': 0}, {'panel': 'left', 'access': 'BOOT 3 mm blunt-probe path', 'overlap_mm3': 0}, {'panel': 'middle', 'access': 'Extended IO', 'overlap_mm3': 0}, {'panel': 'middle', 'access': 'DHT/header', 'overlap_mm3': 0}, {'panel': 'middle', 'access': 'microSD insertion', 'overlap_mm3': 0}, {'panel': 'middle', 'access': 'speaker plug', 'overlap_mm3': 0}, {'panel': 'middle', 'access': 'Approximate button-cluster rear access', 'overlap_mm3': 0}, {'panel': 'middle', 'access': 'RESET 3 mm blunt-probe path', 'overlap_mm3': 0}, {'panel': 'middle', 'access': 'BOOT 3 mm blunt-probe path', 'overlap_mm3': 0}, {'panel': 'right', 'access': 'Extended IO', 'overlap_mm3': 0}, {'panel': 'right', 'access': 'DHT/header', 'overlap_mm3': 0}, {'panel': 'right', 'access': 'microSD insertion', 'overlap_mm3': 0}, {'panel': 'right', 'access': 'speaker plug', 'overlap_mm3': 0}, {'panel': 'right', 'access': 'Approximate button-cluster rear access', 'overlap_mm3': 0}, {'panel': 'right', 'access': 'RESET 3 mm blunt-probe path', 'overlap_mm3': 0}, {'panel': 'right', 'access': 'BOOT 3 mm blunt-probe path', 'overlap_mm3': 0}]
+LATCH TRAVEL 0
+INSERTION 0
+SECTIONS [-48.4, -46.4] [20.0, 25.2, 26.0, 29.0] [-53.0, -49.7, -48.8, -45.3] [29.7, 32.7, 35.3, 38.3]
+FINAL {
+  "name": "One-piece flat A trifold A6",
+  "status": "digitally checked single-print prototype; physical release/fit untested",
+  "components": [
+    {
+      "id": "left",
+      "name": "Left screen",
+      "mesh": "left.stl",
+      "board": {
+        "center": [
+          -68,
+          0,
+          4.75
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          -68,
+          0,
+          2.2
+        ],
+        "glass_size": [
+          50,
+          69,
+          3.6
+        ],
+        "active_center": [
+          -68,
+          -2.5,
+          0.39
+        ],
+        "active_size": [
+          43.2,
+          57.6,
+          0.02
+        ],
+        "front_normal": [
+          0,
+          0,
+          -1
+        ],
+        "rotation_y_degrees": 180,
+        "rear_center": [
+          -68,
+          0,
+          8.45
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": {
+        "pivot": [
+          -34.0,
+          0,
+          23
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "closed_degrees": 180
+      }
+    },
+    {
+      "id": "middle",
+      "name": "Middle screen",
+      "mesh": "middle.stl",
+      "board": {
+        "center": [
+          0,
+          0,
+          4.75
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          0,
+          0,
+          2.2
+        ],
+        "glass_size": [
+          50,
+          69,
+          3.6
+        ],
+        "active_center": [
+          0,
+          -2.5,
+          0.39
+        ],
+        "active_size": [
+          43.2,
+          57.6,
+          0.02
+        ],
+        "front_normal": [
+          0,
+          0,
+          -1
+        ],
+        "rotation_y_degrees": 180,
+        "rear_center": [
+          0,
+          0,
+          8.45
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": null
+    },
+    {
+      "id": "right",
+      "name": "Right screen",
+      "mesh": "right.stl",
+      "board": {
+        "center": [
+          68,
+          0,
+          4.75
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          68,
+          0,
+          2.2
+        ],
+        "glass_size": [
+          50,
+          69,
+          3.6
+        ],
+        "active_center": [
+          68,
+          -2.5,
+          0.39
+        ],
+        "active_size": [
+          43.2,
+          57.6,
+          0.02
+        ],
+        "front_normal": [
+          0,
+          0,
+          -1
+        ],
+        "rotation_y_degrees": 180,
+        "rear_center": [
+          68,
+          0,
+          8.45
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": {
+        "pivot": [
+          34.0,
+          0,
+          16.8
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "closed_degrees": -180
+      }
+    }
+  ],
+  "sequence": [
+    "right",
+    "left"
+  ],
+  "hinge_station_y": 30.5,
+  "case_pitch_mm": 68,
+  "plastic_seam_mm": 10,
+  "active_gap_mm": 24.799999999999997,
+  "front_plane_z_mm": 0,
+  "glass_front_z_mm": 0.4,
+  "glass_recess_mm": 0.4,
+  "glass_aperture_mm": [
+    50.8,
+    69.8
+  ],
+  "display_pose": "Screens down in flat print pose; electronics and hinges up",
+  "front_normal": [
+    0,
+    0,
+    -1
+  ],
+  "mirror_orientation": "Boards reversed 180 degrees around Y; interface X positions mirrored; hinge chassis mirrored in X",
+  "print_files": [
+    {
+      "mesh": "One-piece trifold - print flat.stl",
+      "name": "Complete captive trifold",
+      "kind": "frame"
+    }
+  ],
+  "open_envelope_mm": [
+    194.0,
+    99.0,
+    27.349998474121094
+  ],
+  "folded_envelope_mm": [
+    76.80000114440918,
+    99.0,
+    46.000000000000014
+  ],
+  "material": {
+    "actual_solid_volume_cm3": 38.824792211451985,
+    "same_geometry_without_relief_cm3": 41.36547177012961,
+    "CAD_volume_removed_percent": 6.142029692774533,
+    "PLA_density_assumed_g_cm3": 1.24,
+    "solid_equivalent_mass_g": 48.142742342200464,
+    "actual_sliced_mass": "not computed; depends on walls/infill/profile"
+  },
+  "verification": {
+    "one_print_object": true,
+    "captive_bodies": 3,
+    "all_watertight": true,
+    "all_min_z_zero": true,
+    "fold_poses": 362,
+    "max_shell_overlap_mm3": 0,
+    "max_board_glass_rear_overlap_mm3": 1.6269028225296411e-13,
+    "USB_checks": [
+      {
+        "panel": "left",
+        "port_x_offset_mm": -10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "left",
+        "port_x_offset_mm": 10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "middle",
+        "port_x_offset_mm": -10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "middle",
+        "port_x_offset_mm": 10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "right",
+        "port_x_offset_mm": -10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      },
+      {
+        "panel": "right",
+        "port_x_offset_mm": 10,
+        "plug_overlap_mm3": 0.0,
+        "cable_overlap_mm3": 0.0
+      }
+    ],
+    "full_glass_front_sight_checks": [
+      {
+        "panel": "left",
+        "glass_front_z_mm": 0.4,
+        "front_sight_overlap_mm3": 0.0
+      },
+      {
+        "panel": "middle",
+        "glass_front_z_mm": 0.4,
+        "front_sight_overlap_mm3": 0.0
+      },
+      {
+        "panel": "right",
+        "glass_front_z_mm": 0.4,
+        "front_sight_overlap_mm3": 0.0
+      }
+    ],
+    "service_pose_deg": [
+      90,
+      0,
+      -90
+    ],
+    "service_pose_shell_overlap_mm3": 0.0,
+    "service_path_left_0_to90_right_minus90_max_overlap_mm3": 7.733776726664976e-14,
+    "service_checks": [
+      {
+        "panel": "left",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "Approximate button-cluster rear access",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "RESET 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "left",
+        "access": "BOOT 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "Approximate button-cluster rear access",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "RESET 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "middle",
+        "access": "BOOT 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "Extended IO",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "DHT/header",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "microSD insertion",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "speaker plug",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "Approximate button-cluster rear access",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "RESET 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      },
+      {
+        "panel": "right",
+        "access": "BOOT 3 mm blunt-probe path",
+        "overlap_mm3": 0
+      }
+    ],
+    "latch_root_cut_result_bodies": 3,
+    "max_latch_travel_obstacle_overlap_mm3": 0,
+    "insertion_tilt_deg": [
+      0,
+      10
+    ],
+    "simulated_latch_release_mm": 0.9,
+    "max_insertion_overlap_mm3": 0,
+    "insertion_caveat": "Rigid catch translation approximates released position; elastic deformation/forces not simulated",
+    "layer_sections": {
+      "beam_y_edges_at_x10_z1_5": [
+        -48.4,
+        -46.4
+      ],
+      "catch_guard_x_edges_at_y_minus46_5_z6": [
+        20.0,
+        25.2,
+        26.0,
+        29.0
+      ],
+      "travel_stop_y_edges_at_x23_z3_5": [
+        -53.0,
+        -49.7,
+        -48.8,
+        -45.3
+      ],
+      "socket_wall_x_edges_at_y30_623_z7": [
+        29.7,
+        32.7,
+        35.3,
+        38.3
+      ]
+    },
+    "overhang_checks": [
+      {
+        "panel": "left",
+        "downward_surface_area_above46deg_mm2": 0.0,
+        "max_downward_angle_from_vertical_deg": 44.999984821799444
+      },
+      {
+        "panel": "middle",
+        "downward_surface_area_above46deg_mm2": 0.0,
+        "max_downward_angle_from_vertical_deg": 45.0000475143358
+      },
+      {
+        "panel": "right",
+        "downward_surface_area_above46deg_mm2": 0.0,
+        "max_downward_angle_from_vertical_deg": 45.00003563574447
+      }
+    ],
+    "physical_print": "untested"
+  },
+  "structural_dimensions_mm": {
+    "base": 3,
+    "unrelieved_side_rim": 3.5,
+    "bearing_bay_rim": 3.5,
+    "clipped_male_foot_strip": 3.1,
+    "full_glass_window": [
+      50.8,
+      69.8
+    ],
+    "end_band_depth_Y": 10.1,
+    "USB_end_full_depth_inner_band_Y": 5.6,
+    "local_USB_floor": 1.6,
+    "hinge_socket_stem_walls": 3,
+    "male_cheek_side_posts": [
+      3,
+      3
+    ],
+    "flexure_thickness_Y": 2,
+    "flexure_height_Z": 3,
+    "effective_free_flexure_span_X": 17,
+    "catch_width": 5.2,
+    "side_guard_width": 3,
+    "side_clearance": 0.8,
+    "travel_stop_gap": 0.9
+  },
+  "bearing": {
+    "principle": "A opposed inward cones/divot sockets",
+    "cone_radius_mm": 3.35,
+    "cone_depth_mm": 2.85,
+    "normal_gap_mm": 0.4,
+    "axial_gap_mm": 0.5,
+    "difference_from_original_A": "Taller bed-rooted supports; narrowed non-bearing male cheek edge and relief windows; original cone/divot surfaces and clearances retained"
+  },
+  "architecture": "Face-down open front frame; unobstructed glass apertures, electronics and hinges on the back",
+  "hinge_axial_extent_y_mm": [
+    -43.5,
+    43.5
+  ],
+  "button_access": "Open back; approximate mirrored photo-derived button centers checked from +Z with 3 mm blunt probe.",
+  "board_reference": "86x50 dual USB-C + micro-USB CYD confirmed; connector positions/envelopes approximate"
+}

@@ -1,0 +1,63 @@
+FOUR ROUNDED PRINT-IN-PLACE MINIATURE NOTEBOOKS
+Created 2026-11-24 for a Snapmaker U1
+
+Open START HERE - Rounded notebooks.3mf in Snapmaker Orca. It contains four
+notebooks already positioned on one plate. Each notebook has two hinge units
+joining its two panels, and each is a separate object containing both captive
+bodies. Preserve each object's internal placement and the supplied orientation.
+Choose the U1 0.4 mm nozzle preset, select your PLA, slice, and inspect the preview.
+
+A — Baseline design, adapted into a twin-hinge notebook in this parent chat.
+    Inward opposed cones, 0.40 mm normal clearance. A small underside
+    protrusion was trimmed so the broad panel feet start on the bed.
+
+B — Astra 6.2. Upright notebook with two annular dovetail races on its spine.
+    The ring shoulders grow at 45 degrees. Its overhead spoke is a short bridge.
+
+C — Sol 6.2. Flat notebook with outward cones, through-vented sockets,
+    0.50 mm normal clearance and relief at the first-layer seam.
+
+D — Astra 6. Flat notebook with pointed outward cones in blind sockets,
+    0.45 mm normal clearance and relieved bottom edges.
+
+Each notebook carries its letter, creation date and model attribution.
+Each model chose rounded panel corners and softened exposed hinge edges.
+Mating bearing surfaces retain their defined profiles and clearances.
+The models chose their own designs and panel details. This compares complete
+designs; multiple geometric differences change at once.
+
+SHARED PLA STARTING SETTINGS
+Use one PLA spool and one toolhead for all four so material changes do not
+obscure the comparison. Assumed nozzle is the U1 standard 0.4 mm.
+Layer height 0.20 mm; first layer 0.20 mm; three walls; four top/bottom layers;
+15% infill; 100% scale; print all objects by layer.
+Supports off. Brim and raft off. Preserve the supplied print orientations.
+The broad contact areas on A/C/D and the upright B are intentional.
+Start with your calibrated PLA temperature and cooling profile. Suggested
+conservative limits are 40 mm/s outer walls, 60 mm/s inner walls and
+20–25 mm/s bridges/steep overhangs. Enable the profile's overhang cooling.
+Keep a clean bed and avoid excess first-layer squish. First-layer spread and
+stringing can fuse moving parts even when the digital model has clearance.
+
+FIRST PHYSICAL COMPARISON
+Cool the plate fully and remove each notebook as a complete assembly.
+Free incidental strings gently, holding near the hinge rather than levering
+hard on the panel. No pins, screws or assembly operations are required.
+Try each at 0, 45, 90 and 180 degrees in the viewer's indicated direction.
+Compare release effort, bearing play, smoothness, whether the two hinges bind,
+and whether it stays captive. Open and close it 20 times and compare again.
+A fused, cracked or loose sample is useful evidence. Keep the labels visible.
+
+The meshes and folding motion are checked digitally. Actual release, wear,
+strength and lettering quality remain the purpose of this PLA trial.
+The 3MF is an arranged geometry file. Choose your printer and filament in
+your slicer. You control slicing and the physical print.
+
+Open Compare notebooks.html locally to inspect the whole plate, or select
+A/B/C/D to orbit, fold, explode and section an individual notebook.
+Editable SCAD files and each model's verification notes are in source/.
+
+U1 build area and printing references
+https://www.snapmaker.com/en-US/snapmaker-u1/specs
+https://wiki.snapmaker.com/en/snapmaker_u1/troubleshooting/poor_overhang_quality
+https://help.prusa3d.com/article/cooling_127569

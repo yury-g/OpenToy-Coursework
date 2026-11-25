@@ -1,0 +1,185 @@
+{
+  "reviewed_date": "2026-11-24",
+  "scope": "Independent read-only review of frozen A5 source, structural mesh sections, bed contact and downward surfaces. No CAD changes, UI, slicer, printer, or duplicate folding/access sweep.",
+  "status": "geometry_review_passed_with_physical_trial_limits",
+  "source_sha256": "3559cc73fb9d1b7bbfa07dfcb521c4173b15206b6808ac4adc80398e1a9c7c6c",
+  "stale_exports_detected": false,
+  "provenance": "Source and all four print STL hashes match CAD verification.json. No independent OpenSCAD regeneration performed.",
+  "architecture": "One flat print containing three captive trays. Four integral opposed cone/divot A bearings at Y +/-30.5 mm. Only boards are installed afterward; no separate hinge pins/cartridges.",
+  "structural_dimensions_mm": {
+    "base_thickness": 3,
+    "untrimmed_perimeter_rim_width": 3.5,
+    "center_spine_width": 6,
+    "internal_cross_band_widths": [
+      8,
+      8
+    ],
+    "negative_end_band": 7,
+    "positive_end_band": 9,
+    "male_cheek_side_posts": [
+      3,
+      3
+    ],
+    "male_cheek_axial_thickness": 4.5,
+    "socket_stem_walls": 3,
+    "bearing_foot_thickness": 3,
+    "reinforced_left_outer_low_rim": 3,
+    "bearing_bay_rim_lip_backed_by_foot": 1.4,
+    "guard_main_side_width": 3,
+    "guard_low_root_nominal_X_by_Y": [
+      5.1,
+      1.7
+    ],
+    "guard_low_root_height": 3,
+    "latch_beam_bending_thickness": 2,
+    "latch_beam_height": 3,
+    "effective_free_beam_span_approx": 17,
+    "catch_width": 5.2,
+    "rear_stop_gap": 0.9,
+    "side_guard_gap": 0.8,
+    "cone_radius": 3.35,
+    "cone_depth": 2.85,
+    "normal_bearing_gap": 0.4,
+    "axial_bearing_gap": 0.5
+  },
+  "actual_mesh_sections_mm": {
+    "male_cheek_x_edges_at_y40_5_z7": [
+      25.8,
+      28.8,
+      33.4,
+      36.4
+    ],
+    "socket_stem_x_edges_at_y30_623_z7": [
+      -36.3,
+      -33.3,
+      -30.7,
+      -27.7
+    ],
+    "guard_root_x_edges_at_y_minus44_5_z1_5": [
+      26.9,
+      29.0
+    ],
+    "beam_y_edges_at_x10_z1_5": [
+      -48.4,
+      -46.4
+    ],
+    "perimeter_x_edges_at_y0_z1_5": [
+      29.0
+    ],
+    "bearing_bay_low_rim_x_edges_at_y26_z1_5": [
+      26.9
+    ],
+    "guard_and_catch_x_edges_at_y_minus46_5_z10": [
+      20.0,
+      25.2,
+      26.0,
+      29.0
+    ]
+  },
+  "structural_observations": [
+    "Most side edges are low base rims, not full-height sidewalls. Embedded bearing feet reinforce their local rim sections; the locally 1.4 mm lip is not a standalone tower.",
+    "Male posts and socket stem walls measure 3 mm between their outside surfaces and relieved arches. Relief roofs rise at 45 degrees; feet and cheek posts start at the print bed.",
+    "USB-end fixed lips and rear retaining catches have sloped undersides. All four PCB corner seats are rooted in the base; they contact bare PCB end strips rather than the glass.",
+    "Rear guards retain a broad main body and a low root into the base. At Y=-45.1,Z=1.5 the positive root spans X=23.935..29 (about5.065 mm). It merges into the solid end band by Y=-44.9.",
+    "The rounded forward end of each rear side guard is clipped by the bearing sweep pocket. Above the base its local tapered tip is about0.614 mm wide at Y=-44.4 and0.333 mm at Y=-44.2. This short edge remains attached to the broad guard; it is not an isolated wafer or the primary root. The slicer may simplify/omit its finest edge.",
+    "Horizontal latch beams have through-air isolation and rounded central root blends. Their practical free span is approximately17 mm, not the full22 mm drawn length. Guard geometry limits rear travel to0.9 mm."
+  ],
+  "print_meshes": {
+    "left.stl": {
+      "sha256": "e028d9b38ef32c151358bd2ec29894afa33a8118b9f0223d11783f5c206a4ef8",
+      "matches_final_export_manifest": true,
+      "body_count": 1,
+      "volume_mm3": 16974.296770005476,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 3594.5846,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ]
+    },
+    "middle.stl": {
+      "sha256": "6859701ad33c15556969c0a72d0a1f74f8bac137548a87e2e89d3ad55dbe8feb",
+      "matches_final_export_manifest": true,
+      "body_count": 1,
+      "volume_mm3": 24530.495358094282,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 4323.0655,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ]
+    },
+    "right.stl": {
+      "sha256": "ca5f2fb258f3f00bd8adcb7c55c7c908f6e715b4b97de83c5ec89bbf3c43f627",
+      "matches_final_export_manifest": true,
+      "body_count": 1,
+      "volume_mm3": 19736.791888480406,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 3563.3579,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ]
+    },
+    "One-piece trifold - print flat.stl": {
+      "sha256": "b233d1276025d4baff6a8eb97280c893143155230dfc648ccbe47f4950b7b3f8",
+      "matches_final_export_manifest": true,
+      "body_count": 3,
+      "volume_mm3": 61241.58401658016,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 3594.5846,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        },
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 4323.0655,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        },
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 3563.3579,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ]
+    }
+  },
+  "delivery_file_sha256": {
+    "A5 - arranged flat plate.stl": "e86645e800b03cc38cf39159c00b42cdd7f705ccc6b97ad3f35684d81c80b8b1",
+    "Print-in-place A5 - U1 plate.3mf": "0899c01462da2e219ca6f2aeab73e203757a1c38503dac6e7a7d804c9e9b3687"
+  },
+  "assembly_volume_matches_components": true,
+  "unsupported_start_review": "Each complete tray is one bed-contacting solid. Source inspection found no elevated disconnected starts; meaningful elevated horizontal underside area and elevated downward area beyond45 degrees are zero within stated mesh tolerance. This is geometric evidence, not slicer validation.",
+  "measurement_tolerances": {
+    "face_area_filter_mm2": 1e-06,
+    "elevated_face_centroid_above_mm": 0.2,
+    "downward_normal_z_extra_tolerance_beyond_45deg": 0.0001,
+    "bed_face_centroid_z_tolerance_mm": 0.005
+  },
+  "separate_CAD_validation_reference": "CAD verification.json records362 shell/hardware fold poses,21 service/button checks at90/0/-90 degrees, released-latch insertion and travel checks. Those checks were not duplicated here.",
+  "limits": [
+    "This A5 has not been physically printed, released, assembled with the actual boards, or load/fatigue/drop tested. Prior user preference for hinge A does not validate this new larger support architecture.",
+    "Geometric thickness/connectivity does not establish PLA strength, latch release force, elastic strain, fatigue or creep. The 17 mm beam and2 mm bending thickness still require a physical trial; the tall bearing supports carry lever loads.",
+    "Face-angle and bed-contact checks do not guarantee extrusion paths, pointed arch closure, small conical facets, cooling or support-free success. Inspect the slicer layers, including the tapered guard tips, before printing.",
+    "Actual printer calibration, first-layer spread and shrinkage can close the0.4 mm normal/0.5 mm axial hinge gaps. Release effort, wear and binding are unmeasured.",
+    "Connector/button positions and overmould/access envelopes remain approximate to the particular CYD variant. The CAD clearance results are not a measured fit guarantee. Side-port service uses the stated90/0/-90 pose.",
+    "USB plug clearance was checked in its modeled access pose. Folding with cables attached, cable bend radius and pinch protection are not established.",
+    "Low perimeter ribs reduce material and clear the hinge sweep, but provide less edge shielding than tall case walls. The screen seams remain determined by the physical board/glass geometry."
+  ]
+}

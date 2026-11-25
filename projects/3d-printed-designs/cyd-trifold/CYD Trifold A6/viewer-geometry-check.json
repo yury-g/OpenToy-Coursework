@@ -1,0 +1,9 @@
+{
+  "embedded_meshes_match_sources": true,
+  "one_print_object": true,
+  "captive_bodies": 3,
+  "separate_enclosure_parts": 0,
+  "board_glass_envelopes": true,
+  "source_metadata_sha256": "1aa91cb0ec2a02f4179a94b8eb0f492628e3baed52c5a545566c88e99f29c26f",
+  "physical_fit_strength": "untested"
+}

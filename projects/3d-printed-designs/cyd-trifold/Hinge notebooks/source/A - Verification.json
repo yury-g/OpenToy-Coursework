@@ -1,0 +1,40 @@
+{
+  "label": "A",
+  "name": "Baseline opposed cones, twin hinge notebook",
+  "dimensions_mm": [
+    70.0,
+    72.0,
+    8.544865608215332
+  ],
+  "pivot": [
+    0,
+    0,
+    4.2
+  ],
+  "axis": [
+    0,
+    1,
+    0
+  ],
+  "signed_range": [
+    0,
+    -180
+  ],
+  "max_intersection_mm3": 0,
+  "sample_step_deg": 0.5,
+  "bodies": 2,
+  "physical_validation": "unprinted",
+  "rounding": {
+    "panel_corner_radius_mm": 4,
+    "hinge_foot_corner_radius_mm": 1.2,
+    "upper_edge_radius_mm": 0.6,
+    "bed_face": "flat",
+    "bearing_surfaces": "original profiles"
+  },
+  "markings": [
+    "A",
+    "2026-11-24",
+    "Astra 6"
+  ],
+  "status": "Final marked rounded geometry verified. Physical printing untested."
+}

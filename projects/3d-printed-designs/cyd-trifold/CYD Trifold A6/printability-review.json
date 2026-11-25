@@ -1,0 +1,240 @@
+{
+  "reviewed_date": "2026-11-25",
+  "status": "geometry_review_passed_with_physical_trial_limits",
+  "scope": "Independent read-only review of A6 source, print meshes, frame/bearing/retention load paths, bed contact and downward surfaces. No CAD edits, UI, slicer or printer use; no duplicate fold/access sweep.",
+  "source_sha256": "c3a21d4bb1d5097121234a69e73de82f7dbfa76c8851f70644be4fe47b6007f2",
+  "provenance": "Source and all four print STL hashes match finalized CAD verification.json and the previously independently reviewed geometry. Delivery STL/3MF hashes are unchanged. Front-flush report references the same three tray mesh hashes. No independent OpenSCAD regeneration was performed.",
+  "architecture": "One flat print with three captive trays. Physical face-down CYD mounting: glass Z0.4..4, PCB4..5.5, rear components5.5..11.4; hinges/electronics are behind the screen fronts. Right folds first, then left. No separate hinge pins or cartridges.",
+  "front_review": {
+    "glass_front_recess_mm": 0.4,
+    "glass_window_mm": [
+      50.8,
+      69.8
+    ],
+    "nominal_glass_size_mm": [
+      50,
+      69
+    ],
+    "aperture_border_clearance_per_side_mm": 0.4,
+    "all_fronts_coplanar": true,
+    "front_sight_evidence": "Parent front-flush-verification.json records zero full-glass and active-area sight-volume overlap for these same meshes. Source globally subtracts the aperture after unioning bearing feet, so feet do not cover the glass.",
+    "active_screen_gap_mm": 24.8,
+    "plastic_frame_gap_mm": 10,
+    "limits": "Nominal geometry; actual glass module thickness, seating tolerances, screen flatness and fit are unmeasured. This is near-flush, not a continuous active display."
+  },
+  "structural_dimensions_mm": {
+    "base_thickness": 3,
+    "plain_side_rim_width": 3.6,
+    "bearing_bay_rim_width": 3.5,
+    "clipped_male_foot_strip_before_rim_union": 3.1,
+    "full_end_band_depth": 10.1,
+    "USB_full_thickness_inner_band_depth": 5.6,
+    "USB_notch_floor": 1.6,
+    "USB_floor_minimum_modeled_plug_clearance": 0.5,
+    "male_cheek_side_posts": [
+      3,
+      3
+    ],
+    "male_cheek_axial_thickness": 4.5,
+    "socket_stem_walls": 3,
+    "short_catch_height": 8.3,
+    "guard_height": 9.5,
+    "fixed_corner_lip_height": 8.4,
+    "PCB_seat_height": 4,
+    "guard_main_side_width": 3,
+    "guard_low_root_nominal_X_by_Y": [
+      5.1,
+      1.7
+    ],
+    "guard_low_root_height": 3,
+    "latch_beam_bending_thickness": 2,
+    "latch_beam_height": 3,
+    "effective_free_latch_span_approx": 17,
+    "catch_width": 5.2,
+    "rear_stop_gap": 0.9,
+    "side_guard_gap": 0.8,
+    "cone_radius": 3.35,
+    "cone_depth": 2.85,
+    "bearing_normal_gap": 0.4,
+    "bearing_axial_gap": 0.5
+  },
+  "actual_mesh_sections_mm": {
+    "male_post_x_at_y40_5_z7": [
+      -38.4,
+      -35.4,
+      -30.8,
+      -27.8
+    ],
+    "socket_post_x_at_y30_623_z7": [
+      29.7,
+      32.7,
+      35.3,
+      38.3
+    ],
+    "male_side_rim_x_at_y26_z1_5": [
+      -28.9,
+      -25.4
+    ],
+    "plain_rim_x_at_y0_z1_5": [
+      -29.0,
+      -25.4
+    ],
+    "usb_floor_y_extent_at_x0_z1_59": [
+      34.9,
+      45.0
+    ],
+    "usb_floor_y_extent_at_x0_z1_61": [
+      34.9,
+      41.49286
+    ],
+    "full_thickness_usb_inner_band_y_at_x0_z2_99": [
+      34.9,
+      40.50714
+    ],
+    "guard_root_x_at_y_minus45_1_z1_5": [
+      23.93508,
+      29.0
+    ],
+    "retaining_beam_y_at_x10_z1_5": [
+      -48.4,
+      -46.4
+    ],
+    "catch_guard_x_at_y_minus46_5_z6": [
+      20.0,
+      25.2,
+      26.0,
+      29.0
+    ]
+  },
+  "structural_observations": [
+    "The full glass aperture removes all center crossbars. Loads are carried by the deliberate3 mm-thick perimeter frame and broad bare-PCB end bands. The bearing-bay rim measures3.5 mm wide rather than the fragile1.2 mm strip that a direct A5 window cut would have left.",
+    "Male feet and side posts remain united with the rims and end bands. Male and socket arch side walls measure3 mm. All bearing supports start from bed-rooted feet; no floating bearing subassembly was found.",
+    "The USB relief opens upward and outward. Its1.6 mm floor is rooted directly on the bed; there is no unsupported roof. The main end band retains5.6 mm of full3 mm thickness before the slope; side corner-seat ties remain outside the39.4 mm-wide notch.",
+    "Short retaining catches and fixed lips have45-degree underside growth. Four seats support the bare PCB end strips. Horizontal flexures are isolated from the frame along their free spans and connected through rounded central roots.",
+    "Guard roots remain broad: the measured positive root spans X23.935..29 at Y-45.1,Z1.5 and merges into the full end band. Low side rims are not full-height edge protection.",
+    "Rounded corners and the thin end of a rounded/sweep-cut edge can taper below nominal section widths. These edge tips are not independent load-bearing wafers; slicer treatment remains unverified."
+  ],
+  "port_orientation_review": {
+    "source_definition_consistent": true,
+    "orientation": "The board is reversed180 degrees about its longY axis. IO/DHT/microSD move to-X; speaker/buttons move to+X; USB stays at+Y. Rear button probes enter from+Z.",
+    "USB_model": "18x22x11 mm overmould centeredZ7.6 has bottomZ2.1, clearing the1.6 mm notch floor by0.5 mm nominally.",
+    "verification_limit": "Checked orientation and clearance/load-path definitions; CAD agent owns complete posed connector/button intersections and insertion/fold sweeps. Physical connector positions and overmould dimensions remain approximate."
+  },
+  "print_meshes": {
+    "left.stl": {
+      "sha256": "1bb2d98a58490f33cce2498ab337006c07e9bf4e581798a17efd2a33f08da68e",
+      "body_count": 1,
+      "volume_mm3": 12677.589160069218,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 2184.9648,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ],
+      "matches_final_export_manifest": true
+    },
+    "middle.stl": {
+      "sha256": "5072f90ec5e927a83c3279c8512463ad3f7f43ca6fccf1a3c53096dc17e95cf2",
+      "body_count": 1,
+      "volume_mm3": 15871.503377207138,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 2349.3078,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ],
+      "matches_final_export_manifest": true
+    },
+    "right.stl": {
+      "sha256": "f593d72a624c4448492e59e02329735ae8541984de91a960687c37e1194243e0",
+      "body_count": 1,
+      "volume_mm3": 10275.699674175616,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 2049.751,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ],
+      "matches_final_export_manifest": true
+    },
+    "One-piece trifold - print flat.stl": {
+      "sha256": "a57678cc5a7a4e0d8ac7603c69b6530074472072046a60d361992b8cf8b55be9",
+      "body_count": 3,
+      "volume_mm3": 38824.79221145198,
+      "body_metrics": [
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 2184.9648,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        },
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 2349.3078,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        },
+        {
+          "watertight_positive_volume": true,
+          "z_min_mm": 0.0,
+          "flat_bed_contact_mm2": 2049.751,
+          "meaningful_elevated_downward_area_steeper_than_45_deg_mm2": 0.0,
+          "meaningful_elevated_horizontal_underside_area_mm2": 0.0
+        }
+      ],
+      "matches_final_export_manifest": true
+    }
+  },
+  "delivery_file_sha256": {
+    "A6 - arranged flat plate.stl": "df62ea439d7e12247549627a46bc70362054c5972e48f1f320b7ec83792d22d7",
+    "Print-in-place A6 - U1 plate.3mf": "c0d1349931d0325e22462e13806f9fca00d7de091bad549c3d6ed29657f50e80"
+  },
+  "assembly_volume_matches_components": true,
+  "unsupported_start_review": "Each tray is one positive-volume watertight connected solid with substantial bed contact. Source review found no elevated disconnected starts. Meaningful elevated horizontal underside area and downward area beyond45 degrees are zero within the recorded numerical tolerance.",
+  "measurement_tolerances": {
+    "face_area_filter_mm2": 1e-06,
+    "elevated_face_centroid_above_mm": 0.2,
+    "downward_normal_z_extra_tolerance_beyond_45deg": 0.0001,
+    "bed_face_centroid_z_tolerance_mm": 0.005
+  },
+  "limits": [
+    "No physical A6 print, release, board assembly, strength, drop or fatigue test has been performed. Prior user preference for A does not validate this modified frame.",
+    "Connected3 mm posts and3.5 mm rims are geometric evidence, not a stiffness or strength certification. The large open frame can twist; do not infer that material removed across the glass has no mechanical cost.",
+    "The1.6 mm USB notch floor is local, not the main end-band load path. Cable force, actual plug shape and plug insertion force still require a physical fit check.",
+    "PLA latch strain, release force, creep and cycle life are unmeasured. Rigid latch translation in a CAD insertion check does not simulate elastic deformation.",
+    "Surface-angle and bed-contact checks do not prove extrusion paths, arch-tip closure or support-free print success. Slicer preview and a physical trial remain necessary.",
+    "First-layer spread, dimensional calibration and shrinkage can restrict the0.4 mm normal/0.5 mm axial bearing gaps. Release force, wear and binding are untested.",
+    "Folding with cables attached, cable bend radius and pinch protection are not established by this review.",
+    "The screen fronts remain separated by the CYD geometry and68 mm tray pitch. All front faces are nominally coplanar, but the active areas do not meet edge to edge."
+  ],
+  "stale_exports_detected": false,
+  "final_CAD_verification": {
+    "manifest_sha256": "8bf34cdb0261a328ccff14a43b0a3ce185ffc4ef36c6ed05e69e497d4a371d4b",
+    "metadata_sha256": "1aa91cb0ec2a02f4179a94b8eb0f492628e3baed52c5a545566c88e99f29c26f",
+    "fold_poses": 362,
+    "max_shell_overlap_mm3": 0,
+    "max_board_glass_rear_overlap_mm3": 1.6269028225296411e-13,
+    "service_checks_count": 21,
+    "all_service_checks_clear": true,
+    "USB_plug_and_cable_checks_count": 6,
+    "all_USB_checks_clear": true,
+    "latch_travel_clear": true,
+    "insertion_tilt_deg": [
+      0,
+      10
+    ],
+    "insertion_clear": true,
+    "evidence_scope": "Results from the CAD agent final manifest were checked for passing values and matching hashes; sweeps were not independently rerun. Physical fit/strength limits remain unchanged."
+  }
+}

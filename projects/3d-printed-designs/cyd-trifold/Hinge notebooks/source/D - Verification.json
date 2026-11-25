@@ -1,0 +1,244 @@
+{
+  "label": "D",
+  "design_name": "Notebook D \u2014 twin outward-cone blind-socket fork",
+  "status": "Complete rounded and marked notebook D; final meshes watertight and sampled 180-degree motion verified; unsliced and unprinted",
+  "units": "mm",
+  "size_mm": [
+    72,
+    72,
+    10.4
+  ],
+  "changes_relative_to_A": [
+    "Outward local male cones on moving leaf; blind sockets on fixed outer forks.",
+    "Pointed 3.6 mm long 45-degree cones; 0.45 mm normal gap and 0.60 mm cheek gap.",
+    "Axis height 5 mm, panel thickness 2.8 mm, two spaced units and enlarged continuous panels."
+  ],
+  "clearance_definitions": {
+    "cone_normal_gap_mm": 0.45,
+    "cone_radial_offset_mm": 0.6363961031,
+    "definition": "Socket cone radius and length expanded by sqrt(2)*0.45, preserving a nominal 0.45 mm normal gap along 45 degree conical faces. Faceted mesh approximation applies.",
+    "axial_cheek_to_hub_face_gap_mm": 0.6,
+    "tip_axial_clearance_mm": 0.6363961031,
+    "engagement_beyond_socket_entrance_mm": 3.0,
+    "first_layer_relief_mm": 0.25
+  },
+  "fold_range": {
+    "stationary_component": "notebook-D-left.stl",
+    "moving_component": "notebook-D-right.stl",
+    "pivot_point_mm": [
+      0,
+      0,
+      5
+    ],
+    "hinge_axis_unit_vector": [
+      0,
+      1,
+      0
+    ],
+    "signed_rotation_range_deg": [
+      0,
+      -180
+    ],
+    "description": "Right leaf folds upward over stationary left leaf. Coordinates match all supplied as-printed STL files.",
+    "folded_panel_face_gap_mm": 4.4
+  },
+  "print_assumptions": {
+    "printer": "Snapmaker U1",
+    "material": "PLA",
+    "nozzle_mm": 0.4,
+    "suggested_layer_height_mm": 0.2,
+    "first_layer_height_mm": 0.2,
+    "walls": 3,
+    "infill_percent": 20,
+    "orientation": "As supplied, Z minimum zero; both broad panel bottoms on plate.",
+    "supports": "Off, including inside bearings.",
+    "brim": "None crossing moving gaps; use clean plate and broad existing footprint.",
+    "assembly": "None. Print notebook-D.stl retaining both disconnected solid leaves in exact supplied positions. It is mechanically captive as printed. Separate component exports are inspection assets only; do not arrange or print them separately.",
+    "scale": "100%; scaling changes working clearances.",
+    "overhang_strategy": "Each solid grows from its own bed-contacting footprint. Male cone underside grows at nominal 45 degrees; blind socket roof closes with an axial 45 degree surface. Circular faceting and final roof closure remain physical print risks.",
+    "first_layer_relief": "0.25 mm bottom edge relief along outer footprint; concave junctions may retain full footprint."
+  },
+  "captive_retention": {
+    "mechanism": "Two opposed local cones enter blind sockets 3 mm beyond their mouths. The intact fork limits axial translation, so either cone cannot withdraw by its full engagement while the opposite cone remains seated. No separate or continuous cylindrical hinge pin.",
+    "qualification": "Geometric design intent; axial/radial pullout, fork flex, off-axis tilt and destructive loads not experimentally tested."
+  },
+  "mesh_kinematic_checks": {
+    "assembly": {
+      "watertight": true,
+      "winding_consistent": true,
+      "bodies": 2,
+      "bounds_mm": [
+        [
+          -36.0,
+          -36.0,
+          0.0
+        ],
+        [
+          36.0,
+          36.0,
+          10.399999618530273
+        ]
+      ],
+      "volume_mm3": 15180.621907282582
+    },
+    "left": {
+      "watertight": true,
+      "winding_consistent": true,
+      "bodies": 1,
+      "bounds_mm": [
+        [
+          -36.0,
+          -36.0,
+          0.0
+        ],
+        [
+          5.0,
+          36.0,
+          10.399999618530273
+        ]
+      ],
+      "volume_mm3": 8034.082688130163,
+      "flat_bed_contact_area_mm2": 2320.8953764997705
+    },
+    "right": {
+      "watertight": true,
+      "winding_consistent": true,
+      "bodies": 1,
+      "bounds_mm": [
+        [
+          -3.59999942779541,
+          -36.0,
+          0.0
+        ],
+        [
+          36.0,
+          36.0,
+          8.59999942779541
+        ]
+      ],
+      "volume_mm3": 7146.539219346832,
+      "flat_bed_contact_area_mm2": 2145.275608156964
+    },
+    "rotation_sweep": {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axis_point_mm": [
+        0,
+        0,
+        5
+      ],
+      "angle_deg": [
+        0,
+        -180
+      ],
+      "step_deg": 0.5,
+      "poses": 361,
+      "max_intersection_mm3": 0,
+      "colliding_poses": 0,
+      "limitation": "Discrete ideal-mesh sweep, not continuous proof or tolerance/deformation simulation."
+    },
+    "assembled_export_volume_difference_mm3": 1.9441267795627937e-07
+  },
+  "limitations": [
+    "Not printed, sliced or physically tested. Nominal gaps do not guarantee release on a specific PLA/process.",
+    "Discrete 0.5-degree rigid-mesh sweep is not a continuous mathematical proof; no loaded, warped or tolerance-extreme simulation.",
+    "Pointed tips may round during slicing; seam placement and extrusion can increase friction.",
+    "Socket roofs and narrow clearances may string or sag; no internal support is intended.",
+    "No detent, end stop or friction tuning. Not a load-rated enclosure joint.",
+    "Retention is based on opposed geometry, not a six-degree-of-freedom escape search or pull test.",
+    "Two separated bearings can bind if panel warp or extrusion error destroys coaxial alignment. No print or durability test has been run.",
+    "Panels have unequal widths near the hinge to preserve rotation clearance; this is a mechanism notebook, not a flush-closing enclosure."
+  ],
+  "export_notes": "Use OpenSCAD --backend CGAL --export-format binstl. Default manifold backend produced degenerate STL triangles for this geometry; supplied CGAL meshes pass raw trimesh watertightness checks without repair.",
+  "output_paths": {
+    "notebook-D.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/notebook-D.stl",
+    "notebook-D.scad": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/notebook-D.scad",
+    "notebook-D-left.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/notebook-D-left.stl",
+    "notebook-D-right.stl": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/notebook-D-right.stl",
+    "notebook-checks.json": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/notebook-checks.json",
+    "notebook-check.py": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/notebook-check.py",
+    "NOTEBOOK-RESULT.json": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/NOTEBOOK-RESULT.json",
+    "notebook-D-preview.png": "/Users/example/Documents/Codex/2026-11-24/cyd-hinge-astra6/outputs/variant-D/notebook-D-preview.png"
+  },
+  "notebook_layout": {
+    "panels": 2,
+    "hinge_units": 2,
+    "local_cones_per_unit": 2,
+    "unit_center_points_mm": [
+      [
+        0,
+        -19,
+        5
+      ],
+      [
+        0,
+        19,
+        5
+      ]
+    ],
+    "axis_separation_mm": 38,
+    "panel_thickness_mm": 2.8,
+    "stationary_panel_x_mm": [
+      -36,
+      -7
+    ],
+    "moving_panel_x_mm": [
+      10,
+      36
+    ],
+    "both_panel_y_mm": [
+      -36,
+      36
+    ],
+    "label": "D, 2026-11-24, Astra 6 engraved 0.6 mm deep on non-bearing stationary inside panel",
+    "identity": "Preserves D outward male cones on moving center rotors and opposing blind sockets on stationary fork; two complete bearing units act together on continuous panels."
+  },
+  "changes_relative_to_single_D": [
+    "Two original bearing units translated to Y=-19 and Y=19 on a common Y axis at Z=5.",
+    "Continuous 72 mm tall panels connect each pair of same-side hinge members.",
+    "Overall open width grows to 72 mm; engraved D grows to 10 mm text size.",
+    "Bearing geometry and working clearances are unchanged. Original single-coupon files preserved.",
+    "Adds creation date 2026-11-24 and model attribution Astra 6 in bold 5.5 mm top-face engraving.",
+    "Rounded revision: 4.5 mm panel plan corners; top-only rolled panel, cheek and connector edges. Functional cones remain unchanged."
+  ],
+  "markings": {
+    "texts": [
+      "D",
+      "2026-11-24",
+      "Astra 6"
+    ],
+    "treatment": "Debossed into upward-facing inside of stationary left panel",
+    "depth_mm": 0.6,
+    "panel_floor_remaining_mm": 2.2,
+    "attribution_font_size_mm": 5.5,
+    "variant_font_size_mm": 10,
+    "font": "Liberation Sans Bold",
+    "attribution_outline_expansion_mm": 0.08,
+    "orientation": "90 degrees in XY plane, text runs along 72 mm panel length",
+    "print_reason": "Upward-open recesses need no new support; bold 5.5 mm attribution with expanded strokes avoids tiny text for 0.4 mm nozzle. Readability remains subject to slicing and physical print.",
+    "footprint_change": "Engraving alone does not affect Z=0; latest outer-corner rounding intentionally removes corner material while preserving broad flat contact.",
+    "post_marking_verification": "Final rounded meshes regenerated with all three engravings included; both leaves watertight; 361 poses at 0.5 degree increments, zero intersections."
+  },
+  "rounding": {
+    "style": "Generous smooth panel corners and softly rolled upper edges; device-like tactile direction, not proprietary dimensions",
+    "panel_plan_corner_radius_mm": 4.5,
+    "panel_top_roll_radius_mm": 0.7,
+    "hinge_cheek_plan_corner_radius_mm": 1.0,
+    "hinge_cheek_top_roll_radius_mm": 0.6,
+    "connector_plan_corner_radius_mm": 1.0,
+    "connector_top_roll_radius_mm": 0.5,
+    "top_roll_segments": 8,
+    "plan_corner_circle_facets": 48,
+    "functional_edges_preserved": [
+      "Conical male and female bearing lands and cone tips",
+      "Hub axial end faces and bed-supported lower hub block",
+      "Socket mouth bearing clearance and capture engagement"
+    ],
+    "print_strategy": "Only top-side convex roundovers; no new underside fillets. Broad bed contact retained with existing 0.25 mm bottom edge relief.",
+    "envelope": "Same nominal 72 x 72 x 10.4 mm bounds; rounded corners remove material from footprint.",
+    "verification": "Final assembly exactly two disconnected watertight leaves. Bed areas: left 2320.90 mm2, right 2145.28 mm2. No intersections through sampled 180-degree sweep."
+  }
+}

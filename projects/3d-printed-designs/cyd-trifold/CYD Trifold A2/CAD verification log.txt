@@ -1,0 +1,336 @@
+left True 1 [[-80.5999984741211, -61.0, 0.0], [-21.799999237060547, 46.0, 21.200000762939453]] bezel True 1
+middle True 1 [[-30.399999618530273, -61.0, -4.699999809265137], [30.399999618530273, 46.0, 19.399999618530273]] bezel True 1
+right True 1 [[21.799999237060547, -61.0, -6.5], [80.5999984741211, 46.0, 13.199999809265137]] bezel True 1
+own bezel overlap 0 0.0
+own bezel overlap 1 4.163336342344337e-17
+own bezel overlap 2 0.0
+max shell overlap 0 bad []
+own board overlap 0 2.220446049250313e-16
+own board overlap 1 0.0
+own board overlap 2 0.0
+FINAL {
+  "name": "Compact CYD S-fold A2",
+  "status": "digital geometry verified; physical prototype unprinted",
+  "mechanism": "B-derived twin annular ridges, grouped in bottom bezel bay",
+  "sequence": [
+    "left",
+    "right"
+  ],
+  "components": [
+    {
+      "id": "left",
+      "name": "Left screen",
+      "mesh": "left.stl",
+      "cosmetics": [
+        {
+          "mesh": "left-bezel.stl"
+        }
+      ],
+      "board": {
+        "center": [
+          -54,
+          0,
+          8.45
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          -54,
+          0,
+          11
+        ],
+        "glass_size": [
+          50,
+          69,
+          3.6
+        ],
+        "active_center": [
+          -54,
+          -2.5,
+          12.81
+        ],
+        "active_size": [
+          43.2,
+          57.6,
+          0.02
+        ],
+        "rear_center": [
+          -54,
+          0,
+          4.75
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": {
+        "pivot": [
+          -27,
+          0,
+          16
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "closed_degrees": 180
+      }
+    },
+    {
+      "id": "middle",
+      "name": "Middle screen",
+      "mesh": "middle.stl",
+      "cosmetics": [
+        {
+          "mesh": "middle-bezel.stl"
+        }
+      ],
+      "board": {
+        "center": [
+          0,
+          0,
+          8.45
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          0,
+          0,
+          11
+        ],
+        "glass_size": [
+          50,
+          69,
+          3.6
+        ],
+        "active_center": [
+          0,
+          -2.5,
+          12.81
+        ],
+        "active_size": [
+          43.2,
+          57.6,
+          0.02
+        ],
+        "rear_center": [
+          0,
+          0,
+          4.75
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": null
+    },
+    {
+      "id": "right",
+      "name": "Right screen",
+      "mesh": "right.stl",
+      "cosmetics": [
+        {
+          "mesh": "right-bezel.stl"
+        }
+      ],
+      "board": {
+        "center": [
+          54,
+          0,
+          8.45
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          54,
+          0,
+          11
+        ],
+        "glass_size": [
+          50,
+          69,
+          3.6
+        ],
+        "active_center": [
+          54,
+          -2.5,
+          12.81
+        ],
+        "active_size": [
+          43.2,
+          57.6,
+          0.02
+        ],
+        "rear_center": [
+          54,
+          0,
+          4.75
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": {
+        "pivot": [
+          27,
+          0,
+          -1.3
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "closed_degrees": 180
+      }
+    }
+  ],
+  "hinge_station_y": -53.9,
+  "print_transform": [
+    [
+      1,
+      0,
+      0,
+      135
+    ],
+    [
+      0,
+      0,
+      -1,
+      140
+    ],
+    [
+      0,
+      1,
+      0,
+      61
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "case_pitch_mm": 54,
+  "plastic_seam_mm": 0.8,
+  "active_gap_mm": 10.8,
+  "window_mm": [
+    44,
+    58.4
+  ],
+  "glass_front_z_mm": 12.8,
+  "assembly": "Chassis - print upright.stl",
+  "bezel_print_files": [
+    "left bezel - print flat.stl",
+    "middle bezel - print flat.stl",
+    "right bezel - print flat.stl"
+  ],
+  "print_envelope_mm": [
+    161.1999969482422,
+    27.700000762939453,
+    107.0
+  ],
+  "open_envelope_mm": [
+    161.1999969482422,
+    107.0,
+    27.700000762939453
+  ],
+  "folded_envelope_mm": [
+    64.4000015258789,
+    107.0,
+    49.199999427795426
+  ],
+  "verification": {
+    "sampled_poses": 362,
+    "max_shell_overlap_mm3": 0,
+    "max_board_proxy_overlap_mm3": 9.237055564881302e-14,
+    "chassis_bodies": 3,
+    "cosmetic_bezels": 3,
+    "each_mesh_watertight": true,
+    "bezel_seated_overlap_mm3": 0,
+    "bezel_lift_0_5mm_intersections_mm3": [
+      0.319996337901099,
+      0.31999938964145336,
+      0.319996337901103
+    ],
+    "axial_capture_checks": [
+      {
+        "component": "left",
+        "shift_mm": -0.7,
+        "intersection_mm3": 2.45027653128412
+      },
+      {
+        "component": "left",
+        "shift_mm": -0.59,
+        "intersection_mm3": 3.7423503039367496e-06
+      },
+      {
+        "component": "left",
+        "shift_mm": 0.59,
+        "intersection_mm3": 0.0
+      },
+      {
+        "component": "left",
+        "shift_mm": 0.7,
+        "intersection_mm3": 2.2169012404747797
+      },
+      {
+        "component": "right",
+        "shift_mm": -0.7,
+        "intersection_mm3": 2.5262491831699827
+      },
+      {
+        "component": "right",
+        "shift_mm": -0.59,
+        "intersection_mm3": 3.654306878258846e-06
+      },
+      {
+        "component": "right",
+        "shift_mm": 0.59,
+        "intersection_mm3": 0.0
+      },
+      {
+        "component": "right",
+        "shift_mm": 0.7,
+        "intersection_mm3": 2.2168995640251223
+      }
+    ],
+    "physical_print": "untested",
+    "torsional_stiffness": "unmeasured; both race ridges clustered in bottom bay",
+    "all_path_extraction": "untested"
+  },
+  "clearances_mm": {
+    "race_radial": 0.6,
+    "race_45deg_normal": 0.42426406871192845,
+    "spoke_above_rotating_collar": 0.8,
+    "glass_to_bezel_back": 0.5,
+    "PCB_side_fit": 0.3,
+    "hinge_outer_cage_to_case_relief": 0.4
+  },
+  "print_assumptions": {
+    "material": "PLA",
+    "nozzle_mm": 0.4,
+    "layer_mm": 0.2,
+    "supports": false,
+    "chassis_orientation": "upright on short edge, global open +Y becomes print +Z",
+    "bezel_orientation": "front face on plate",
+    "spoke_bridge_mm": 3.8
+  }
+}

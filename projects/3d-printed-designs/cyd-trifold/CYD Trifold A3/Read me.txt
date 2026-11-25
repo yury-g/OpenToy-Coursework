@@ -1,0 +1,77 @@
+CYD TRIFOLD A3 — EXACT A HINGES, ALL PARTS PRINT FLAT
+2026-11-24
+
+Use Compact A3 - U1 plate.3mf for the arranged print geometry.
+Read Assembly and access.md for assembly and connector-access instructions.
+There are 10 print objects: three rear trays, three face frames and four captive
+A cartridges. The cartridges each contain two already nested bodies; do not
+split or separately arrange those bodies. The case panels snap around them.
+No separate hinge pin or bearing assembly is needed.
+
+WHAT THIS VERSION PRESERVES
+A kernel.scad is an exact copy of the selected rounded A single-unit geometry,
+including its feet and the A mark. Cone radius3.35, cone depth2.85, axis height4.2,
+normal cone gap0.40 and axial face gap0.50 mm are unchanged. All four cartridges
+print in the same flat orientation as that study. Two mount normally at the
+front fold; two are turned over when mounted at the back fold. There is one
+cartridge at the top and bottom of each fold, four total. Original A was reported
+by the user to have printed flat; this larger mounting system is a new prototype.
+
+CASE AND PRINT
+Nominal case pitch54 mm; face frame width53.2 mm; visible case seams0.8 mm.
+The hardware's active image width43.2 mm leaves10.8 mm between active displays.
+The frame hides the yellow PCB but does not erase the LCDs' own inactive borders.
+Open assembly is about161.2 x148 x29.29 mm; folded about62.8 x148 x60.95 mm.
+The larger end bays and raised board seats leave plug space around the original
+A feet. Rounded A bearing shapes remain visible in the end bays and obliquely.
+
+PLA starting settings:0.4 mm nozzle,0.20 mm layers and first layer, three walls,
+four top/bottom layers,15% infill,100% scale. Supports and raft off. Keep brim
+out of the captive bearing gaps. Use your calibrated PLA cooling and flow.
+The supplied trays sit on Z0; face frames are already face-down; cartridges are
+already flat. Preserve these orientations. The 3MF has geometry, not a validated
+slicer profile. Inspect thin clip beams and latch ledges in the preview: beams
+are0.70 mm thick, retaining ledges0.45 mm wide and0.80 mm tall. Use a wall generator
+that preserves them. Actual clip force, fit, warp and hinge release need a trial.
+Engage frame clips one panel at a time with the adjacent wing angled away so the
+outward-flexing clips have room. Do not force the glass or a binding printed joint.
+
+ACCESS DESIGN BASIS
+Each confirmed board has USB-C AND micro-USB. Each panel has a largely open rear
+and long side openings for buttons, headers, speaker connector and microSD.
+PCB underside datum is Z12 mm, with upper corner stops0.2 mm above PCB top. The
+face frame clears the full50 x69 mm glass/module proxy; its underside is1.35 mm
+above reference glass top. Seats and stops act on the bare PCB corners.
+
+Both USB approach envelopes were checked on every board at X offsets+/-10 mm:
+18 mm wide x11 mm high x22 mm insertion corridor, followed by a conservative
+6 x6 mm cable corridor extending beyond the end of the case. These are generous
+illustrative envelopes, not measured connector locations for this exact dual-USB
+revision. The two overmould paths were checked independently. Side connectors
+may need the neighbor folded away; a75-degree service pose was checked with
+illustrative IO/DHT, microSD, speaker and BOOT/RESET access volumes. Exact plugs,
+buttons, microSD and added headers still need a physical fit check. The reference
+interface photograph predates the user's dual-USB revision.
+
+DIGITAL CHECKS
+The source-copy check confirms the original A kernel is unchanged. All14 printed
+solid bodies are watertight; all10 print objects start at Z0 in flat orientations.
+The staged362-pose S-fold test has zero enclosure intersections, including same-
+panel mounted parts. Cross-panel PCB, glass and rear-component envelope checks
+have only floating-point noise. All six USB approaches and cable corridors clear
+the full open assembly. The15 representative service-access checks clear at the
+illustrated service pose. Shifting an entire mounted cartridge+/-0.5 mm in any
+axis meets its locating pockets/stops; lifting a face frame0.5 mm meets its latch
+ledges. These do not establish load capacity, wear, fatigue, all-path extraction
+resistance or physical connector fit.
+
+CAD verification.json contains source/mesh hashes and numerical checks. The
+parent plate has separate plate-verification.json; its mesh hash is deliberately
+not included in the CAD-owned report. Inspection meshes and assembled-coordinate
+cartridge halves are for the viewer, not additional parts to print.
+
+FINAL PRINTABILITY REVIEW
+The socket roof repair passed the mesh review. Its short 2.7 mm bridge and the
+face-down snap hook's approximately 0.6 mm steep cantilever remain local PLA
+trial features. Inspect them in the slicer; no blanket 45-degree or guaranteed
+support-free claim is made. See printability-review.json.

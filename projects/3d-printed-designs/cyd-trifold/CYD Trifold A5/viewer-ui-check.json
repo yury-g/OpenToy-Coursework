@@ -1,0 +1,71 @@
+{
+  "status": "verified_revision_2_in_chrome",
+  "checked_at": "2026-11-24T20:57:39-05:00",
+  "url": "http://127.0.0.1:56589/trifold-a5.html?revision=2",
+  "browser": "Chrome",
+  "in_app_browser_error": "Browser is not available: iab",
+  "heading": "Hinges tucked into the frame.",
+  "final_view": "Selected Chrome tab, fully unfolded in Orbit view with all three board envelopes shown.",
+  "assembled_view": "Four integral bearing crowns are visible along the two seams. The long end extensions are gone. The hinge section shows a foot integrated into the chassis base.",
+  "fold_angles_deg": {
+    "0%": [
+      0,
+      0
+    ],
+    "25%": [
+      90,
+      0
+    ],
+    "75%": [
+      180,
+      -90
+    ],
+    "100%": [
+      180,
+      -180
+    ]
+  },
+  "board_inspection": "At 100%, only the three board envelopes lift. The three joined trays and all lifted boards remain in frame.",
+  "rear_access": "Rear preset exposes access openings through the ribs and the illustrative board envelopes.",
+  "section_closeup": "Cut plane and bright solid cross-section render for the seam bearing.",
+  "orbit": {
+    "drag": true,
+    "automatic": true
+  },
+  "flat_plate": "One assembled chassis lies flat on the white square plate, without loose frames or hinge cartridges.",
+  "embedded_3mf": {
+    "filename": "Print-in-place A5 - U1 plate.3mf",
+    "build_items": 1,
+    "bodies": 3,
+    "dimensions_mm": [
+      186.0,
+      99.0,
+      32.65
+    ],
+    "bounds_mm": [
+      [
+        42.0,
+        85.5,
+        0.0
+      ],
+      [
+        228.0,
+        184.5,
+        32.65
+      ]
+    ],
+    "fits_270_mm_xy": true,
+    "sha256": "0899c01462da2e219ca6f2aeab73e203757a1c38503dac6e7a7d804c9e9b3687"
+  },
+  "ui_observations": [
+    "The rear preset remains dim, which makes connector detail difficult to identify.",
+    "Hinge close-up retains the general unfolded caption."
+  ],
+  "console_errors_or_warnings_observed": [],
+  "scope": "Browser and embedded 3MF geometry verification. Mechanical fit and print behavior were not tested.",
+  "screenshots": {
+    "front": "A5-front.png",
+    "rear": "A5-rear.png",
+    "plate": "A5-plate.png"
+  }
+}

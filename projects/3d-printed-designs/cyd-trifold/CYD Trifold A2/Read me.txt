@@ -1,0 +1,91 @@
+COMPACT CYD S-FOLD — A2 CASE REVISION
+2026-11-24 • Three ESP32-2432S028 boards, 86 x 50 mm PCB
+
+WHAT CHANGED
+The case uses 54 mm board pitch and 53.2 mm face frames, leaving 0.8 mm plastic
+seams. A common dark bezel masks the yellow boards. It cannot make three LCDs
+physically seamless: each active display is 43.2 mm wide, so active image gaps
+are 10.8 mm at this pitch. The reference active height is 57.6 mm. The viewer
+uses the full 50 x 69 mm glass/module envelope and a 44 x 58.4 mm bezel opening.
+The active area's longitudinal center (-2.5 mm) is inferred from reference CAD.
+
+No long projecting hinge arms remain. Captive bearings sit in the bottom bezel
+bay, within the overall rectangular footprint. Small rounded bearing portions
+remain visible at the bottom/oblique views; this is not a fully flush concealed
+hinge. Both race ridges per seam are clustered in that bay. Torsional stiffness
+of the far/top ends of the panels has not been measured.
+
+The A hinge remains Yury's selected earlier sample. This compact revision uses
+B-derived annular dovetail races because the new upright build orientation and
+front/back S-fold axes need a different self-supporting bearing construction.
+It is a new mechanical prototype, not a validated cosmetic change to A.
+
+WHAT TO PRINT
+The arranged 3MF has four objects: one assembled upright chassis containing
+three captive moving bodies, plus three flat face frames. Keep the orientation
+and the three chassis bodies together. No loose hinge pins or hinge assembly
+are needed. The separate face frames snap on after the boards are inserted.
+They print flat to avoid an unsupported 44 mm window bridge in the upright case.
+
+'Chassis - print upright.stl' is already in build orientation. The open-view
+left/middle/right STLs, 'Chassis - open inspection.stl', and assembled bezel
+meshes are for inspection, not separate print-and-assemble chassis parts.
+The three files ending 'bezel - print flat.stl' are the printable face frames.
+
+Use PLA, 0.4 mm nozzle, 0.20 mm layers and first layer, three walls, four top and
+bottom layers, 15% infill, 100% scale and supports off. The race ramps are 45°;
+the fixed spoke bridges approximately 3.8 mm. The lower USB-back relief has a
+45° peaked closure; the upper opening stays open. Snap features include thin
+beams and small latch ledges: inspect them in the slicer and use a wall generator
+that preserves thin features. Actual adhesion, bridge sag and release are not
+verified. Do not automatically lay the chassis flat or add supports in bearings.
+
+BUILD ENVELOPES
+Unfolded assembly including bearings: about 161.2 x 107 x 27.7 mm.
+Folded assembly including face frames: about 64.4 x 107 x 49.2 mm.
+Upright chassis print: about 161.2 x 27.7 mm footprint, 107 mm tall.
+The front-side bearing makes the lower end thicker than the screen region.
+
+BOARD INSTALLATION AND USB
+Unplug the boards. Place each PCB onto its four corner seats, with the display
+facing the frame opening. Press the correct face frame into place by its bare
+plastic edges, avoiding glass pressure. Four underside stops per frame contact
+bare PCB corners after nominal 0.2 mm lift. The frame is 0.5 mm clear of the
+reference glass when seated. Side spring legs latch into the chassis. Physical
+snap force and exact board tolerances still need a fit trial. The left and
+middle frames have a different bottom-edge notch from the right frame; retain
+their labels/file identities.
+
+Short ends and 40 mm wide back reliefs provide USB approach space. Connector
+revision, overmould size and fitted headers are not measured. The central rear
+component envelope in the checks is 40 x 70 x 5.9 mm; it does not replace an
+exact component model. Verify your populated board and cable before installing
+all three. Unplug USB cables before folding; connected-cable folding is not
+validated. The design still uses external USB power, one cable per board.
+
+FOLD
+Start with all screens forward. Fold the LEFT screen forward over the middle;
+then fold the RIGHT screen backward behind the middle. Unfold in reverse order.
+The left axis is X=-27, Z=16; the right axis is X=27, Z=-1.3. Both rotations are
++180° around global +Y in the supplied open-coordinate meshes. This is an S fold.
+There are no positive angle stops, friction-holding feature or travel latch.
+
+VERIFICATION AND LIMITS
+The final CAD has three watertight chassis bodies and three watertight face
+frames. A 362-pose staged 0–180° check found no shell intersections and only
+floating-point noise against PCB/glass/rear-component proxy envelopes. Seated
+frame clips have zero solid overlap; raising a frame 0.5 mm intersects its latch
+ledges. Rigid axial bearing displacement of +/-0.7 mm intersects retention
+flanks. These checks do not establish all-path extraction resistance, holding
+torque, loaded stiffness, wear, print release, snap life, or exact USB fit.
+Nothing has been sliced or physically printed for this revision.
+
+Editable source: Compact trifold.scad. Metadata includes exact pivots, geometry,
+open-to-print transform and checks. CAD verification.json records source and
+STL hashes. The original A and earlier trifold files remain preserved.
+
+DIMENSION SOURCES
+Manufacturer specification, page 4, gives the 43.2 x 57.6 mm active area and
+50 x 86 mm board: https://mischianti.org/wp-content/uploads/2025/04/ESP32-2432S028-Specifications-EN.pdf
+The existing community CAD reference supplies the glass/module envelope and
+inferred window offset: https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display/tree/main/3dModels/Havenview_CYD_CAD

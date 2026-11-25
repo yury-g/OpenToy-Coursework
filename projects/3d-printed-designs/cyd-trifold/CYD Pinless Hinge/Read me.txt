@@ -1,0 +1,54 @@
+CYD folio revision 2 — one-fold print trial
+
+Print 01 - Two-panel cone hinge.stl first. It is a small mechanism sample,
+52 × 26 × 8.65 mm, designed to test the joint before extending the design
+to three board trays. The case cover has been dropped from the revision.
+
+Two short opposed cones, integral to the fixed cheeks, are captured inside
+two sockets in the other half. This adapts the cone bearing arrangement
+from the November 23 CrowPanel folding enclosure stand. Each cone projects
+2.85 mm and tapers at 45 degrees, with 0.40 mm nominal normal clearance and
+a 0.50 mm gap between the cheek and socket body. The cones and sockets print
+together. There is no shaft to insert.
+
+Print flat as supplied, at 100% scale. Keep the two captive bodies in place
+as one object. Suggested first trial uses PLA, a 0.4 mm nozzle, 0.20 mm
+layers, three walls and 15% infill. Supports, raft and brim are off. All
+parts have feet on the plate. Select the profile for your actual printer.
+Bambu Studio A1 mini / Generic PLA estimates about 17 minutes with startup.
+
+After cooling, separate any strings between the two halves. Hold the solid
+cheeks close to the joint and gently lift the narrower flap from the bed
+plane. It should swing upward through 180 degrees over the wider flap.
+The dashboard fold slider illustrates that path. Reverse motion has less
+travel because of the thickness of the flaps.
+
+Check that the joint releases, reaches the folded position, stays captured
+when gently pulled, and moves repeatedly without cracking or heavy wobble.
+If it is fused, change gap from 0.40 to 0.50 in the SCAD file, export the
+test again, and repeat. Avoid forcing a stuck joint.
+
+The two moving bodies are closed, watertight meshes. Interference checks
+at one-degree intervals found zero overlap through the intended upward
+0–180 degree fold. Bambu Studio sliced it with supports disabled. These
+are digital checks. Physical release, retention strength and cycle life
+are unverified.
+
+Once the joint works on your printer, its dimensions and clearances can be
+carried into the three-screen case. Board retaining tabs will remain flexible,
+and the USB edge will remain accessible. The choice of spine offsets and
+fold directions for the thick three-board assembly follows this trial.
+
+The updated local dashboard is in Folio Dashboard/index.html in the ZIP.
+It includes orbit, fold, exploded separation and movable solid cross-sections.
+Use Inside the cones to see the two local cone bearings along their axis.
+
+Reference used
+Local CrowPanel stand
+/Users/example/Documents/Codex/2026-11-23/f/outputs/PLA/CrowPanel-9-PLA-Stand.scad
+modules hinge_cone, bearings and leg
+
+Additional mechanism research
+https://mechanics.ju.se/Printing/Flexures.html
+https://www.youtube.com/watch?v=TDup81csbAE
+The sample geometry was created locally. No external mesh was copied.

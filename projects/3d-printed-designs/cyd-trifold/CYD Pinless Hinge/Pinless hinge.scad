@@ -1,0 +1,48 @@
+// Opposed cone bearings adapted from the CrowPanel folding stand.
+// Units mm. Print as supplied, broad feet on the build plate.
+part="test"; // test, left, right, section
+gap=0.4; // normal clearance, use 0.5 if the first print fuses
+$fn=64;
+axis_height=4.2;
+radius=3.35;
+cone_depth=2.85;
+axial_gap=0.5;
+// Hinge axis is Y. The cheeks and socket feet all touch the bed.
+module cone(y,d,clearance=0){
+    translate([0,y,axis_height]) rotate([-90*d,0,0])
+        cylinder(h=cone_depth+clearance*sqrt(2),
+        r1=radius+clearance*sqrt(2),r2=radius-cone_depth);
+}
+module foot(x0,x1,y0,y1,h){
+    translate([x0,y0,0]) cube([x1-x0,y1-y0,h]);
+}
+module left(){
+    union(){
+        foot(-26,-7,-13,13,3);
+        // Each cheek connects to its own broad foot.
+        for(d=[-1,1]){
+            foot(-12,4.4,d<0?-13:8.5,d<0?-8.5:13,axis_height+radius+1);
+            cone(d*8.5,-d);
+        }
+    }
+}
+module right(){
+    difference(){
+        union(){
+            foot(7,26,-8,8,3);
+            foot(0,12,-8,8,3);
+            // Round top, bed-supported lower half, like the earlier stand.
+            foot(-4.3,4.3,-8,8,axis_height);
+            translate([0,-8,axis_height]) rotate([-90,0,0])
+                cylinder(h=16,r=4.3);
+        }
+        for(d=[-1,1]) cone(d*8.5,-d,gap);
+    }
+}
+if(part=="test"){left();right();}
+if(part=="left")left();
+if(part=="right")right();
+if(part=="section")intersection(){
+    union(){left();right();}
+    translate([-30,-20,-1])cube([60,20,20]);
+}

@@ -1,0 +1,107 @@
+A6 — FACE-DOWN, NEAR-FLUSH CYD TRIFOLD
+2026-11-25
+
+ONE flat print with THREE captive moving frames. No separate hinge pins,
+cartridges, bezels or case panels. Install only the three CYD boards.
+
+The boards are actually remounted face-down, rotated 180 degrees about their
+long Y axis. USB stays at the +Y end; left/right interfaces swap sides.
+In the flat print pose, all screens face -Z. The electronics and four
+integrated A hinges are on the +Z back. This is not a flipped camera view.
+
+NEAR-FLUSH FRONT
+The front frame plane is Z0. All three glass faces are at Z0.4: a 0.4 mm
+protective recess. Every frame has a full 50.8 x 69.8 mm clear glass aperture;
+there are no ribs, grids or hinge feet crossing the glass or active image.
+PCB screen-side seats are Z4.0; PCB occupies Z4.0..5.5, full glass Z0.4..4.0,
+and the conservative rear-component envelope Z5.5..11.4.
+
+The USB clearance is a shallow top-open notch at the end band. Its local
+floor remains 1.6 mm thick, with a sloped inner transition, while a 5.6 mm
+full-depth inner crossband and the corner/side routes remain 3 mm thick.
+There is no roof or suspended bridge over the USB plug path.
+
+The board pitch is 68 mm. This is 4 mm wider than A5 to preserve approximately
+3.5 mm perimeter ribs beside the full-width glass aperture and bearing
+sweeps. The projected tray-edge seam is 10 mm, and the gap between the
+43.2 mm active image widths is 24.8 mm. Three distinct LCDs remain visible.
+Open envelope: 194 x 99 x 27.35 mm. Closed: 76.8 x 99 x 46.0 mm.
+
+A HINGES AND STRUCTURE
+A's opposed cone/divot contact geometry is retained: 3.35 mm cone radius,
+2.85 mm depth, 0.40 mm normal clearance and 0.50 mm axial clearance. Supporting
+cheeks are taller than the original study and narrowed outside the bearing
+lands; relief windows remove low-load material. The chassis is mirrored in X
+to preserve the connector corridors after reversing the boards.
+
+Two hinge units per seam have centers Y +/-30.5, spanning Y +/-43.5. They sit
+along the boards instead of far beyond their ends. Broad end bands and the
+perimeter frame carry the loads around the glass. Bearing posts/walls are
+3 mm; the clipped male-foot strip is at least 3.1 mm, backed by the frame rim.
+The frame remains open at the back and sides for components and access.
+
+CAD volume: 38.82 cm 3. The same A6 geometry without optional bearing-support
+reliefs uses 41.37 cm 3; those reliefs remove 6.14%. Mandatory glass and USB
+openings remain in both versions. Total CAD volume is 36.6% below A5, which
+had a different face-up back-frame structure. Solid-equivalent mass is
+48.14 g at assumed PLA density 1.24 g/cm 3. Actual slicer mass is profile-dependent.
+
+PRINTING
+Print the arranged A6 3MF or One-piece trifold - print flat.stl at 100% scale
+in the supplied orientation. Keep all three captive bodies together as one
+object. Individual left/middle/right STLs are inspection/viewer assets.
+All three frames contact the bed. Mesh checks found no meaningful elevated
+horizontal underside or downward facet beyond 45 degrees from vertical.
+Supports and raft are unnecessary in the intended geometry; keep any brim
+out of moving gaps. The original A clearance assumptions used a 0.4 mm nozzle
+and 0.20 mm layer. Select the actual installed nozzle; no profile was changed.
+Check the sliced gaps and flexures before printing. Physical release and fit
+are still untested for this loaded-holder adaptation.
+
+INSTALLING BOARDS
+Work from the open electronics side, with displays pointing through the
+front apertures. Tuck the USB end's bare PCB corners under the fixed lips.
+Hold both protected catches at the other end back slightly, lower the board
+onto its four corner seats, then release. The checked insertion tilt is
+0–10 degrees about the USB end. Press on bare PCB corners, not the display.
+Reverse for removal. Release/retaining force requires a physical trial.
+
+Each short catch is 5.2 mm wide, on a horizontal 2 x 3 mm beam with about 17 mm
+free span. The rear travel stop is 0.9 mm away and side guards leave 0.8 mm.
+The root-cut check confirms the two flexures are not fused into bearing feet.
+Rigid released-catch and tilted-board checks include the full glass sweep;
+these are geometric tests, not elastic force or fatigue simulations.
+
+CONNECTORS AND BUTTONS
+USB-C and micro-USB access on each board was checked using 18 x 11 mm plug
+proxies, 22 mm insertion depth at X offsets +/-10, and a 6 x 6 mm cable path
+continuing beyond the frame. The adjacent power connection shares the open
+short-end region. Exact connector positions/plug overmoulds remain unmeasured
+for this dual-USB revision; these are design envelopes.
+
+For GPIO/extended IO, DHT, microSD and speaker insertion on inner edges, use
+the service pose: right -90 degrees, left +90, middle fixed. Both the pose
+and its loaded approach were checked. Button probes now approach from the
+open +Z electronics side; approximate mirrored RESET/BOOT positions clear
+separate 3 mm blunt-probe paths. The checks do not imply measured fingertip
+clearance. Folding with attached plugs or protruding cards is not modeled.
+
+FOLDING
+In the supplied screen-down pose, fold the RIGHT wing upward over the middle
+first, then the LEFT over the pair. Unfold in reverse order. Right pivot:
+X34, Z16.8, rotation -180 degrees. Left pivot: X-34, Z23, rotation +180 degrees.
+Both axes run along Y. Use the viewer's right-first sequence if you turn the
+whole object over; apparent left/right changes when viewed from the front.
+No closing latch, friction-holding function or detent is claimed. Some glass
+remains on the outside of the folded stack; this is not a protective cover.
+
+VERIFICATION
+CAD verification.json and CAD verification log.txt record three watertight
+connected frames, 362 staged fold poses, transformed PCB/glass/rear-component
+checks, full-glass front sight volumes, six USB/cable corridors, 21 mirrored
+service/probe checks, service-path travel, latch isolation/travel and tilted
+insertion. Mesh layer sections and overhangs were checked, with intersections
+zero within numerical tolerance. Digital checks do not establish PLA fatigue,
+loaded durability, print release or exact real-board/plug fit.
+
+Editable source: One-piece A trifold.scad. Earlier revisions are preserved.

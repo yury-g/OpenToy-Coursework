@@ -1,0 +1,222 @@
+left bounds [[-99.0, -75.0, 0.0], [-30.600000381469727, 75.0, 19.349998474121094]] bodies 1 watertight True
+middle bounds [[-39.29999923706055, -75.0, 0.0], [39.400001525878906, 75.0, 27.349998474121094]] bodies 1 watertight True
+right bounds [[30.700000762939453, -70.0, 0.0], [99.0, 70.0, 27.299999237060547]] bodies 1 watertight True
+shell maximum intersection 0 offending []
+board envelope maximum intersection 3.1972558281467833e-13
+{
+  "name": "CYD Trifold A",
+  "revision": "2026-11-24",
+  "units": "mm",
+  "board_reference": "ESP32-2432S028, 86 x 50 mm confirmed by user; populated components and USB connector variant unmeasured",
+  "sequence": [
+    "left",
+    "right"
+  ],
+  "print_angles": [
+    0,
+    0,
+    0
+  ],
+  "print_envelope_mm": [
+    198.0,
+    150.0,
+    27.349998474121094
+  ],
+  "print_bounds_mm": [
+    [
+      -99.0,
+      -75.0,
+      0.0
+    ],
+    [
+      99.0,
+      75.0,
+      27.349998474121094
+    ]
+  ],
+  "folded_envelope_mm": [
+    78.80000114440918,
+    150.0,
+    46.000000000000014
+  ],
+  "folded_bounds_mm": [
+    [
+      -39.39999961853027,
+      -75.0,
+      0.0
+    ],
+    [
+      39.400001525878906,
+      75.0,
+      46.000000000000014
+    ]
+  ],
+  "components": [
+    {
+      "id": "left",
+      "name": "Left screen",
+      "mesh": "left.stl",
+      "board": {
+        "center": [
+          -70,
+          0,
+          8.75
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          -70,
+          0,
+          11.3
+        ],
+        "glass_size": [
+          43,
+          58,
+          3.6
+        ],
+        "rear_center": [
+          -70,
+          0,
+          5.05
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": {
+        "pivot": [
+          -35,
+          0,
+          15
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "closed_degrees": 180
+      }
+    },
+    {
+      "id": "middle",
+      "name": "Middle screen",
+      "mesh": "middle.stl",
+      "board": {
+        "center": [
+          0,
+          0,
+          8.75
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          0,
+          0,
+          11.3
+        ],
+        "glass_size": [
+          43,
+          58,
+          3.6
+        ],
+        "rear_center": [
+          0,
+          0,
+          5.05
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": null
+    },
+    {
+      "id": "right",
+      "name": "Right screen",
+      "mesh": "right.stl",
+      "board": {
+        "center": [
+          70,
+          0,
+          8.75
+        ],
+        "size": [
+          50,
+          86,
+          1.5
+        ],
+        "glass_center": [
+          70,
+          0,
+          11.3
+        ],
+        "glass_size": [
+          43,
+          58,
+          3.6
+        ],
+        "rear_center": [
+          70,
+          0,
+          5.05
+        ],
+        "rear_size": [
+          40,
+          70,
+          5.9
+        ]
+      },
+      "joint": {
+        "pivot": [
+          35,
+          0,
+          23
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "closed_degrees": -180
+      }
+    }
+  ],
+  "clearances_mm": {
+    "cone_normal": 0.4,
+    "axial_face": 0.5,
+    "glass_face_to_face_closed": 3.8,
+    "left_middle_rail_gap_closed": 1.6,
+    "top_tray_rail_to_middle_stack_back": 1.8
+  },
+  "verification": {
+    "shells": 3,
+    "all_watertight": true,
+    "sequential_poses": 362,
+    "maximum_shell_overlap_mm3": 0,
+    "maximum_board_proxy_overlap_mm3": 3.1972558281467833e-13,
+    "physical_print": "untested",
+    "holding_torque": "not designed or tested",
+    "stops": "No positive stops; use illustrated fold sequence"
+  },
+  "print_assumptions": {
+    "material": "PLA",
+    "nozzle_mm": 0.4,
+    "layer_mm": 0.2,
+    "supports": false,
+    "scale_percent": 100,
+    "bed_mm": [
+      270,
+      270
+    ]
+  }
+}
