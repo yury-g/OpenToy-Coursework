@@ -14,6 +14,10 @@ Arduino Nesso N1 + Adafruit Feather · 400 particles · MIT licensed
 
 </div>
 
+## Full-screen update · November 27, 2026
+
+Water now runs edge-to-edge beneath the status text: Waveshare 1.69 `0.2.2-dev`, Nesso `0.3.1`, and Feather `0.3.0`. All three target builds and the host checks passed. Rainbow 1.69 is installed and USB-checked; the disconnected Feather and Nesso boards have not been updated. Physical screen/touch checks remain open. [1.69 preview and controls](../waveshare-1.69/README.md).
+
 ## Play on either device
 
 **Gravity Water runs on Arduino Nesso N1 and Adafruit Feather ESP32-S3 Reverse TFT.**
@@ -76,9 +80,9 @@ small buzzer gives it a compact, grainy character; deep bass is limited.
 | --- | --- | --- | --- |
 | **Arduino Nesso N1** | Built-in motion sensor | Yellow button: heat; shake: scatter | Screen repulsion + generated buzzer texture |
 | **[Adafruit Reverse TFT Feather](FEATHER.md)** | Kit LSM6DS3TR-C breakout | D1: heat; D2: scatter; tilt and shake; optional gamepad fingertip | External IMU + optional QT gamepad; no speaker |
+| **[Waveshare 1.69 touch](../waveshare-1.69/README.md)** | Built-in QMI8658 IMU | Tilt, shake, touch/drag; swipe L/R cycles `EYES1` ↔ `WATER` | `240x280` edge-to-edge water under 2-row overlay; buzzer kept quiet |
 
-Both use the same particle code and energy colors. The saved v0.3.0 release is
-the Nesso checkpoint; use this branch for the newer Feather adapter.
+All three targets share the same 400-bead particle model and energy palette. On `main`, Nesso (`gravity-water-v0.3.1`), Feather (`gravity-water-feather-v0.3.0`), and Waveshare 1.69 (`0.2.2-dev`) render edge-to-edge under overlaid 2-row status text (with host-checked partial/dirty-row updates). The saved `v0.3.0` Nesso release and `v0.2.0` Feather notes remain preserved as historical installed/bench checkpoints.
 
 ## Get it onto a Nesso
 

@@ -13,15 +13,17 @@
 #include "src/fluid/Gravity.h"
 #include "src/fluid/Particles.h"
 #include "NessoPixels.h"
+#include "WaterOverlay.h"
 #include "NessoAxes.h"
 SET_LOOP_TASK_STACK_SIZE(16 * 1024);
 using namespace gravity_water;
 namespace {
-constexpr int width=135,height=240,bar=13;
+constexpr int width=135,height=240;
 constexpr uint32_t framePeriod=16667;
-constexpr char version[]="gravity-water-v0.3.0";
+constexpr char version[]="gravity-water-v0.3.1";
+constexpr char shortVersion[]="0.3.1",created[]="2026-11-27";
 M5Canvas canvas(&M5.Display);
-Particles<width,height-bar,400> particles;
+Particles<width,height,400> particles;
 uint32_t simulationSteps=0,simulationMax=0;
 uint64_t simulationTotal=0;
 uint32_t accumulator=0;
@@ -122,8 +124,8 @@ void sensorTask(void*) {
    bool touch=false;
    if(M5.Touch.getCount()) {
     const auto &point=M5.Touch.getDetail(0);
-    if(point.isPressed() && point.y>=bar && point.y<height && point.x>=0 && point.x<width) {
-     touch=true;s.touchX=point.x;s.touchY=point.y-bar;
+    if(point.isPressed() && point.y>=0 && point.y<height && point.x>=0 && point.x<width) {
+     touch=true;s.touchX=point.x;s.touchY=point.y;
     }
    }
    if(touch && !s.touched)++s.touches;s.touched=touch;
@@ -132,22 +134,6 @@ void sensorTask(void*) {
   portENTER_CRITICAL(&stateMux); state=s; portEXIT_CRITICAL(&stateMux);
   vTaskDelay(1);
  }
-}
-uint16_t rgb(int r,int g,int b) {return canvas.color565(r,g,b);}
-void drawBar(int battery,bool fresh) {
- const uint16_t bg=rgb(7,17,25),ink=rgb(192,225,222);
- canvas.fillRect(0,0,width,bar,bg);
- canvas.drawFastHLine(0,bar-1,width,rgb(28,59,70));
- // Tiny face, with neutral/unknown states between full and low.
- canvas.drawPixel(6,4,ink); canvas.drawPixel(10,4,ink);
- if(battery>=70) {canvas.drawPixel(5,7,ink);canvas.drawFastHLine(6,8,5,ink);canvas.drawPixel(11,7,ink);}
- else if(battery>=0 && battery<=15) {canvas.drawPixel(5,8,ink);canvas.drawFastHLine(6,7,5,ink);canvas.drawPixel(11,8,ink);}
- else canvas.drawFastHLine(6,8,5,ink);
- if(!fresh) {canvas.setTextColor(ink,bg);canvas.setCursor(18,2);canvas.print("IMU?");}
- canvas.drawRect(width-27,3,22,7,ink); canvas.fillRect(width-5,5,2,3,ink);
- if(battery>=0) canvas.fillRect(width-25,5,(18*std::min(100,battery))/100,3,battery<=15?rgb(239,133,100):rgb(115,222,188));
- canvas.setTextColor(ink,bg);canvas.setCursor(width-53,2);
- if(battery<0) canvas.print("--"); else canvas.printf("%d",battery);
 }
 void draw(State s) {
  const uint32_t start=micros();
@@ -171,19 +157,18 @@ void draw(State s) {
  uint32_t simTime=micros()-simStart;
  simulationTotal+=simTime;simulationMax=std::max(simulationMax,simTime);
  audioLevels=uint32_t(particles.heat())|(uint32_t(particles.meanEnergy())<<8)|(uint32_t(fresh && s.touched)<<16);
- nesso_water::drawParticles(static_cast<uint16_t*>(canvas.getBuffer()),width,height,bar,particles);
- drawBar(s.battery,s.lastUs && start-s.lastUs<100000);
+ auto* buf=static_cast<uint16_t*>(canvas.getBuffer());
+ nesso_water::drawParticles(buf,width,height,0,particles);
+ nesso_water::drawWaterOverlay(buf,width,height,"WATER",shortVersion,created,s.battery,fresh,true);
  const uint32_t prepared=micros();
- // Clear old bead locations as well as drawing new ones; omit unchanged sky.
- static nesso_water::Rows previousRows{bar,height-1};
- static int previousBattery=-999;static bool previousFresh=false;
- auto rows=nesso_water::occupiedRows(particles,bar,height);
- int top=std::min(rows.first,previousRows.first),bottom=std::max(rows.last,previousRows.last);
+ // Clear old bead locations as well as drawing new ones; audit spans under overlaid labels.
+ static nesso_water::WaterDirtyTracker dirty;
+ auto rows=nesso_water::occupiedRows(particles,0,height);
+ nesso_water::DirtySpan spanA,spanB;
+ dirty.compute(rows,height,s.battery,fresh,true,spanA,spanB);
  const auto *pixels=static_cast<const lgfx::swap565_t*>(canvas.getBuffer());
- if(!frames || previousBattery!=s.battery || previousFresh!=fresh)
-  M5.Display.pushImage(0,0,width,bar,pixels);
- M5.Display.pushImage(0,top,width,bottom-top+1,pixels+top*width);
- previousRows=rows;previousBattery=s.battery;previousFresh=fresh;
+ if(spanA.valid()) M5.Display.pushImage(0,spanA.first,width,spanA.last-spanA.first+1,pixels+spanA.first*width);
+ if(spanB.valid()) M5.Display.pushImage(0,spanB.first,width,spanB.last-spanB.first+1,pixels+spanB.first*width);
  const uint32_t end=micros();
  uint32_t drawUs=prepared-start,pushUs=end-prepared;
  drawTotal+=drawUs;pushTotal+=pushUs;drawMax=std::max(drawMax,drawUs);pushMax=std::max(pushMax,pushUs);
@@ -220,7 +205,7 @@ void setup() {
  if(!configureImu()) {M5.Display.fillScreen(TFT_RED);Serial.println("ERR BMI270 configuration");return;}
  uint8_t mac[6];esp_read_mac(mac,ESP_MAC_EFUSE_FACTORY);
  const auto *part=esp_ota_get_running_partition();
- Serial.printf("BOOT %s factory=%02x:%02x:%02x:%02x:%02x:%02x app=0x%lx size=0x%lx imu=0x%02x accel_conf=0xa9 gyro_conf=0xe9 display=135x240 bar=13\n",version,mac[0],mac[1],mac[2],mac[3],mac[4],mac[5],(unsigned long)part->address,(unsigned long)part->size,imuAddress);
+ Serial.printf("BOOT %s factory=%02x:%02x:%02x:%02x:%02x:%02x app=0x%lx size=0x%lx imu=0x%02x accel_conf=0xa9 gyro_conf=0xe9 display=135x240 overlay=1\n",version,mac[0],mac[1],mac[2],mac[3],mac[4],mac[5],(unsigned long)part->address,(unsigned long)part->size,imuAddress);
  M5.BtnA.setDebounceThresh(5);
  audioReady=startSound();
  if(!audioReady)Serial.println("NOTE audio unavailable; visual simulation remains active");

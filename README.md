@@ -82,6 +82,14 @@ Snapshot: **2026-11-17**. Hardware capability, installed firmware and owner-conf
 | [<img src="docs/images/projects/nesso-face.gif" width="110" alt="Nesso’s orange line face smiling and looking startled">](https://github.com/yury-g/OpenToy-Coursework/tree/main/projects/nesso-n1)<br>[Nesso Face](https://github.com/yury-g/OpenToy-Coursework/tree/main/projects/nesso-n1) | Assess | Source | Assess | Assess | Assess |
 | [<img src="docs/images/projects/copy-face.png" width="110" alt="Simulated gaze and lip contours in the Copy-Face renderer">](https://github.com/yury-g/OpenToy-Coursework/tree/main/projects/copy-face)<br>[Copy-Face](https://github.com/yury-g/OpenToy-Coursework/tree/main/projects/copy-face) | Not targeted yet | Not targeted yet | Not targeted yet | Not targeted yet | Installed prototype/simulation; real camera and mouth copying unverified |
 
+### Waveshare 1.69 touch
+
+[![Full-screen Water and Curious eyes — firmware simulation](projects/waveshare-1.69/previews/water-fullscreen.png)](projects/waveshare-1.69/README.md)
+
+| Device | Apps and controls | Status |
+| --- | --- | --- |
+| [Waveshare ESP32-S3-Touch-LCD-1.69](hardware/waveshare-1.69/README.md) | Curious eyes + Gravity Water. Swipe sideways to switch; down for hardware, up for settings. Water fills the screen beneath the labels. | `0.2.2-dev`: host tests and target build passed. [Install and physical-check status](projects/waveshare-1.69/README.md#verification-and-next-physical-checks). Battery remains `BAT --` until qualified. |
+
 ### New platform and camera-helper tracks
 
 | App | Tab5 | UNO Q + TFT |
@@ -177,7 +185,7 @@ For a complete **Nearby Buddy pair**, start with two #5691 boards and use the [s
 
 ### Related Battery Faces hardware
 
-These belong to the [separate Battery Faces family](https://github.com/yury-g/OpenToy-Coursework/tree/main/companions/battery-faces/feature/qwiic-accessories#current-family). Their presence there does not establish an OpenToy Eyes/Water port. Tab5 now also has the separate unfinished OpenToy camera track listed above; the Battery Faces dashboard is not that implementation.
+These belong to the [separate Battery Faces family](https://github.com/yury-g/OpenToy-Coursework/tree/main/companions/battery-faces/feature/qwiic-accessories#current-family). These are historical companion roles. Waveshare 1.69 now also has the separate [Eyes + Water port](projects/waveshare-1.69/README.md); other companion roles do not establish an OpenToy Eyes/Water port. Tab5 now also has the separate unfinished OpenToy camera track listed above; the Battery Faces dashboard is not that implementation.
 
 | Device / role | Quantity for that role | Source and selection note |
 | --- | --- | --- |
