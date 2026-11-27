@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include "../firmware/GravityWaterNesso/src/fluid/Particles.h"
-using Pool=gravity_water::Particles<135,227,400>;
+using Pool=gravity_water::Particles<135,240,400>;
 int main(){
  Pool p;
  for(int i=0;i<600;i++)p.step(0,256);
@@ -32,12 +32,12 @@ int main(){
  // Simultaneous sustained controls: heat, changing gravity, touch and bursts.
  for(int tick=0;tick<3600;tick++) {
   if(tick%3==0)p.burst((tick%1800)-900,900-(tick%1800),255);
-  p.repel((tick*7)%135,(tick*11)%227);
+  p.repel((tick*7)%135,(tick*11)%240);
   p.step(tick%120<60?256:-256,tick%180<90?256:-256,tick%120<90,true);
   for(int n=0;n<400;n++) {
    const auto &a=p.particle(n);
    assert(a.x>=Pool::radius && a.x<=135*256-Pool::radius);
-   assert(a.y>=Pool::radius && a.y<=227*256-Pool::radius);
+   assert(a.y>=Pool::radius && a.y<=240*256-Pool::radius);
   }
  }
  puts("Thermal: quiet rest, heating, quick cooling, immediate shake/touch wake and tilt passed");

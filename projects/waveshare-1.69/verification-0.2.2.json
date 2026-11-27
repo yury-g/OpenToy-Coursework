@@ -1,0 +1,16 @@
+{
+  "version": "0.2.2-dev",
+  "created": "2026-11-27",
+  "host_tests": "ASan/UBSan: 1.69 interaction and water_imu plus all10 Gravity Water suites passed; leak detection excluded",
+  "target_compile": {
+    "esp32_core": "2.0.17",
+    "flash_bytes": 328289,
+    "static_ram_bytes": 37368
+  },
+  "bench": {
+    "rainbow": "app-only install independently digest-verified; first64KiB unchanged; post-boot version/touch/freshIMU and advancing frame/sample counts confirmed, zero reported touch/IMU errors in five reports",
+    "yellow": "disconnected; last verified0.2.0-dev"
+  },
+  "physical_display_touch_tilt_acceptance": "pending",
+  "previews": "firmware simulation, not camera footage"
+}

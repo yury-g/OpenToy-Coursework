@@ -30,6 +30,8 @@ For XIAO and earlier mechanical work, use the **[archive](../archive/README.md)*
 
 [CrowPanel P4 + optional XIAO](crowpanel/README.md) — device guides and earlier smooth Eyes verification. Current checkpoint is Copy-Face prototype/simulation with no camera attached.
 
+[Waveshare 1.69 touch](waveshare-1.69/README.md) — Curious Face + Gravity Water (`0.2.2-dev`) on `ESP32-S3-Touch-LCD-1.69` (`240x280` edge-to-edge canvas under 2-row overlaid status and compact control overlays; QMI8658 IMU; physical recheck pending).
+
 [Waveshare 4.2 RLCD](https://github.com/yury-g/OpenToy-Coursework/tree/main/projects/waveshare-rlcd-4.2) — historical Eyes 0.2.0 build with native contours and KEY-only menu; source remains on its device branch. The camera prototype below uses the RLCD with ditherCam firmware.
 
 **[ditherCam](ditherCam/README.md)** — active two-board wireless photos-only camera (Waveshare RLCD 4.2 + XIAO ESP32-S3 Sense on Expansion Base), with [captive flip enclosure](3d-printed-designs/ditherCam/README.md).
@@ -54,6 +56,7 @@ below distinguish those locations from files included in OpenToy's `main` branch
 | Battery Faces — buttons / haptics | Blue + Green Feathers; Tab5 dashboard | [Battery Faces `feature/qwiic-accessories`](https://github.com/yury-g/OpenToy-Coursework/tree/main/companions/battery-faces/feature/qwiic-accessories) |
 | Battery Faces — base | Feathers and other documented boards | [Battery Faces `main`](https://github.com/yury-g/OpenToy-Coursework/tree/main/companions/battery-faces/main) |
 | Gravity Water — Nesso | Arduino Nesso N1 | [Saved v0.3.0 release](https://github.com/yury-g/OpenToy-Coursework/tree/gravity-water-v0.3.0); [current guide](https://github.com/yury-g/OpenToy-Coursework/blob/main/projects/gravity-water/README.md) |
+| Waveshare 1.69 touch (`Curious169`) | Waveshare ESP32-S3-Touch-LCD-1.69 | [Project guide & firmware in this repository](waveshare-1.69/README.md) |
 | Nesso Face | Arduino Nesso N1 | [OpenToy `feature/nesso-n1`](https://github.com/yury-g/OpenToy-Coursework/tree/main/projects/nesso-n1) |
 | Animatronic Eyes 1 — eye puppetry | Reverse TFT + QT gamepad; Nesso N1 touchscreen + motion + autonomous idle | [Feather controls](animatronic-eyes/README.md) · [Nesso touch](animatronic-eyes/NESSO.md) · [History](../docs/V1-EYES.md) · [Saved source release](https://github.com/yury-g/OpenToy-Coursework/tree/v1.0.0-eyes) |
 | Animatronic Eyes 1 — round touch/personality port | Waveshare ESP32-S3-Touch-LCD-1.85C-BOX-EN V2 | [Source + controls](animatronic-eyes/WAVESHARE.md) · [Compatibility / test matrix](waveshare-1.85c/README.md) |

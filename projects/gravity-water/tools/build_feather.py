@@ -17,6 +17,7 @@ with tempfile.TemporaryDirectory(prefix='water-feather-source-',dir=build.parent
  shutil.copytree(root/'firmware/GravityWaterFeather',sketch)
  shutil.copytree(root/'firmware/GravityWaterNesso/src/fluid',sketch/'src/fluid')
  shutil.copy2(root/'firmware/GravityWaterNesso/NessoPixels.h',sketch/'NessoPixels.h')
+ shutil.copy2(root/'firmware/GravityWaterNesso/WaterOverlay.h',sketch/'WaterOverlay.h')
  cmd=['arduino-cli']
  if a.config_file:cmd+=['--config-file',str(a.config_file)]
  cmd+=['compile','--fqbn','esp32:esp32:adafruit_feather_esp32s3_reversetft:PartitionScheme=tinyuf2','--build-path',str(build),'--build-property','compiler.cpp.extra_flags=-std=gnu++14']

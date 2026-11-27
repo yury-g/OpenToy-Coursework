@@ -13,14 +13,16 @@
 #include "src/fluid/Gravity.h"
 #include "src/fluid/Motion.h"
 #include "NessoPixels.h"
+#include "WaterOverlay.h"
 #include "FeatherAxes.h"
 #include "Telemetry.h"
 #include "GamepadCursor.h"
 SET_LOOP_TASK_STACK_SIZE(16*1024);
 namespace {
 feather_water::Telemetry telemetry;
-constexpr int width=135,height=240,bar=13;
-constexpr char version[]="gravity-water-feather-v0.2.0";
+constexpr int width=135,height=240;
+constexpr char version[]="gravity-water-feather-v0.3.0";
+constexpr char shortVersion[]="0.3.0",created[]="2026-11-27";
 Adafruit_ST7789 display(TFT_CS,TFT_DC,TFT_RST);
 GFXcanvas16 canvas(width,height);
 Adafruit_LSM6DS3TRC imu;
@@ -39,14 +41,14 @@ public:
 } gamepad;
 constexpr uint32_t padMask=(1UL<<0)|(1UL<<1)|(1UL<<2)|(1UL<<5)|(1UL<<6)|(1UL<<16);
 bool padReady=false;
-gravity_water::Particles<width,height-bar,400> particles;
+gravity_water::Particles<width,height,400> particles;
 portMUX_TYPE mux=portMUX_INITIALIZER_UNLOCKED;
 struct State {
  gravity_water::Gravity gravity;gravity_water::Motion motion;
  float ax=0,ay=0,az=0;
  uint32_t samples=0,lastUs=0,shakeUs=0,stirs=0,presses=0,maxGap=0;
  bool heating=false;int battery=-1;
- bool padOk=false,padTouch=false,padHeat=false;int padX=67,padY=151,stickX=512,stickY=512;
+ bool padOk=false,padTouch=false,padHeat=false;int padX=67,padY=160,stickX=512,stickY=512;
  uint32_t padUs=0,padSamples=0,padErrors=0,padTouches=0,padButtons=0;
 } state;
 uint8_t imuAddress=0;bool ready=false;
@@ -110,18 +112,6 @@ void sensorTask(void*) {
  }
 }
 uint16_t rgb(int r,int g,int b){return nesso_water::pixelColor(r,g,b);}
-void drawBar(const State& s,bool fresh) {
- auto bg=rgb(7,17,25),ink=rgb(192,225,222);canvas.fillRect(0,0,width,bar,bg);
- canvas.drawFastHLine(0,bar-1,width,rgb(28,59,70));
- canvas.drawPixel(6,4,ink);canvas.drawPixel(10,4,ink);
- if(s.battery>=70){canvas.drawPixel(5,7,ink);canvas.drawFastHLine(6,8,5,ink);canvas.drawPixel(11,7,ink);}
- else if(s.battery>=0&&s.battery<=15){canvas.drawPixel(5,8,ink);canvas.drawFastHLine(6,7,5,ink);canvas.drawPixel(11,8,ink);}
- else canvas.drawFastHLine(6,8,5,ink);
- canvas.setTextColor(ink,bg);canvas.setCursor(18,2);if(!fresh)canvas.print("IMU?");
- canvas.drawRect(width-27,3,22,7,ink);canvas.fillRect(width-5,5,2,3,ink);
- if(s.battery>=0)canvas.fillRect(width-25,5,18*s.battery/100,3,s.battery<=15?rgb(239,133,100):rgb(115,222,188));
- canvas.setCursor(width-53,2);if(s.battery<0)canvas.print("--");else canvas.print(s.battery);
-}
 void pushRows(int top,int bottom) {
  display.startWrite();display.setAddrWindow(0,top,width,bottom-top+1);
  display.writePixels(canvas.getBuffer()+top*width,width*(bottom-top+1),true,true);display.endWrite();
@@ -136,17 +126,20 @@ void draw(const State& s) {
  if(fresh&&s.motion.sequence!=lastShake){lastShake=s.motion.sequence;particles.burst(s.motion.kickX,s.motion.kickY,s.motion.power);++shockFrames;shakeAgeMax=std::max(shakeAgeMax,start-s.shakeUs);}
  if(s.stirs!=lastStir){lastStir=s.stirs;particles.burst(0,-800,220);}
  while(accumulator>=16666){particles.step(int(d.x*strength*256),int(d.y*strength*256),s.heating,(fresh&&s.motion.moving)||touch);accumulator-=16666;++steps;}
- nesso_water::drawParticles(canvas.getBuffer(),width,height,bar,particles);drawBar(s,fresh);
+ nesso_water::drawParticles(canvas.getBuffer(),width,height,0,particles);
  if(padFresh){
-  canvas.drawCircle(s.padX,s.padY+bar,5,touch?rgb(255,216,126):rgb(140,180,192));
-  canvas.drawPixel(s.padX,s.padY+bar,rgb(240,248,246));
+  canvas.drawCircle(s.padX,s.padY,5,touch?rgb(255,216,126):rgb(140,180,192));
+  canvas.drawPixel(s.padX,s.padY,rgb(240,248,246));
  }
+ nesso_water::drawWaterOverlay(canvas.getBuffer(),width,height,"WATER",shortVersion,created,s.battery,fresh,true);
  uint32_t prepared=micros();
- static nesso_water::Rows old{bar,height-1};static int oldBattery=-999;static bool oldFresh=false;
- auto rows=nesso_water::occupiedRows(particles,bar,height);
- if(padFresh){rows.first=std::min(rows.first,s.padY+bar-5);rows.last=std::max(rows.last,s.padY+bar+5);}
- if(!frames||oldBattery!=s.battery||oldFresh!=fresh)pushRows(0,bar-1);
- pushRows(std::min(rows.first,old.first),std::max(rows.last,old.last));old=rows;oldBattery=s.battery;oldFresh=fresh;
+ static nesso_water::WaterDirtyTracker dirty;
+ auto rows=nesso_water::occupiedRows(particles,0,height);
+ if(padFresh){rows.first=std::min(rows.first,std::max(0,s.padY-5));rows.last=std::max(rows.last,std::min(height-1,s.padY+5));}
+ nesso_water::DirtySpan spanA,spanB;
+ dirty.compute(rows,height,s.battery,fresh,true,spanA,spanB);
+ if(spanA.valid())pushRows(spanA.first,spanA.last);
+ if(spanB.valid())pushRows(spanB.first,spanB.last);
  uint32_t end=micros();drawTotal+=prepared-start;pushTotal+=end-prepared;
  drawMax=std::max(drawMax,prepared-start);pushMax=std::max(pushMax,end-prepared);
  if(s.lastUs)sampleAgeMax=std::max(sampleAgeMax,end-s.lastUs);++frames;
@@ -177,7 +170,7 @@ void setup() {
  SPI.begin(SCK,MISO,MOSI,TFT_CS);display.init(width,height);display.setRotation(0);display.setSPISpeed(24000000);display.fillScreen(ST77XX_BLACK);analogWrite(TFT_BACKLITE,115);
  if(!canvas.getBuffer()){telemetry.append("ERR framebuffer\n");return;}
  auto *part=esp_ota_get_running_partition();uint8_t mac[6];esp_read_mac(mac,ESP_MAC_WIFI_STA);
- telemetry.append("BOOT %s factory=%02x:%02x:%02x:%02x:%02x:%02x app=0x%lx size=0x%lx imu=0x%02x display=135x240 buttons=D1:heat,D2:stir\n",version,mac[0],mac[1],mac[2],mac[3],mac[4],mac[5],(unsigned long)part->address,(unsigned long)part->size,imuAddress);
+ telemetry.append("BOOT %s factory=%02x:%02x:%02x:%02x:%02x:%02x app=0x%lx size=0x%lx imu=0x%02x display=135x240 overlay=1 buttons=D1:heat,D2:stir\n",version,mac[0],mac[1],mac[2],mac[3],mac[4],mac[5],(unsigned long)part->address,(unsigned long)part->size,imuAddress);
  if(!imuAddress)telemetry.append("NOTE IMU missing; check STEMMA QT cable\n");
  ready=xTaskCreatePinnedToCore(sensorTask,"water-sensor",4096,nullptr,2,nullptr,0)==pdPASS;
  if(!ready)telemetry.append("ERR sensor task\n");

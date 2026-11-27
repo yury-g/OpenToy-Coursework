@@ -100,6 +100,44 @@ inline void drawText3x5(uint16_t* buf,
   }
 }
 
+// Draws 3x5 text directly over an existing scene with a compact 1-pixel halo/shadow
+// for readability without reserving an opaque background bar.
+inline void drawText3x5Shadow(uint16_t* buf,
+                              int buf_w,
+                              int buf_h,
+                              int x,
+                              int y,
+                              const char* text,
+                              uint16_t color,
+                              uint16_t shadow_color = 0x0000,
+                              int scale = 1,
+                              int clip_w = -1) {
+  if (!buf || !text || scale < 1) return;
+  const int max_x = (clip_w >= 0) ? std::min(buf_w, clip_w) : buf_w;
+  int cur_x = x;
+  for (size_t i = 0; text[i] != '\0'; ++i) {
+    const uint8_t* g = glyph3x5(text[i]);
+    for (int r = 0; r < 5; ++r) {
+      const uint8_t bits = g[r];
+      for (int c = 0; c < 3; ++c) {
+        if (!(bits & (4u >> c))) continue;
+        const int x0 = cur_x + c * scale;
+        const int y0 = y + r * scale;
+        for (int py = y0 - 1; py <= y0 + scale; ++py) {
+          if (py < 0 || py >= buf_h) continue;
+          for (int px = x0 - 1; px <= x0 + scale; ++px) {
+            if (px >= 0 && px < max_x) {
+              buf[py * buf_w + px] = shadow_color;
+            }
+          }
+        }
+      }
+    }
+    cur_x += 4 * scale;
+  }
+  drawText3x5(buf, buf_w, buf_h, x, y, text, color, scale, clip_w);
+}
+
 inline int textWidth3x5(const char* text, int scale = 1) {
   if (!text || !text[0]) return 0;
   return int(std::strlen(text)) * 4 * scale - scale;

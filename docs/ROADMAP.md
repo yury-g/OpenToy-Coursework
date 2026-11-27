@@ -1,5 +1,10 @@
 # OpenToy family roadmap
 
+## November 27 — full-screen apps
+
+Gravity Water uses the full native canvas under overlaid status text on Waveshare 1.69, Feather and Nesso. The 1.69 Eyes app does too. All three target builds and host regressions passed; Rainbow 1.69 `0.2.2-dev` is installed and USB-checked. Other boards remain untouched. Next: physical screen/touch/tilt acceptance and the remaining apps in the [status overlay migration table](APP-STATUS-BAR.md#adoption-and-compatibility-tracking). No parked device work resumes automatically.
+
+
 Updated 2026-11-17. These are planned capabilities, not claims of installed or tested features. Follow the [device-family strategy](DEVICE-FAMILY-ARCHITECTURE.md), [status-bar standard](APP-STATUS-BAR.md) and each device's dated verification record.
 
 ## Unfinished work at the November 17 stopping point

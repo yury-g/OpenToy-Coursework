@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0-dev",
+  "created": "2026-11-27",
+  "base_revision": "08e5dec69797018f7608ee5732547ec7da4c2ae0",
+  "host_tests": "passed ASan and UBSan; leak detection disabled on ptrace host",
+  "target_compile": "passed",
+  "flash_bytes": 311757,
+  "static_ram_bytes": 20124,
+  "runtime_framebuffer_bytes": 134400,
+  "flashed": false,
+  "physical_touch_tested": false,
+  "physical_fit_tested": false
+}
